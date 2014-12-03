@@ -7,9 +7,9 @@ using System.Collections;
 /// </summary>
 public class mySkyBox : MonoBehaviour {
 
-	public Vector3 skyBoxCenter;
+	private Vector3 skyBoxCenter;
 	public float skyBoxSize; 			// square box for convinience, this value is no visual box
-	public float skyBoxScaleFac = 1f;
+	//public float skyBoxScaleFac = 1f;
 
 	private Vector3 worldBoxCenter = new Vector3(0, 0, 0); //always origin
 
@@ -25,8 +25,8 @@ public class mySkyBox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// find main camera
-		mainCamera = Camera.main;//GameObject.FindGameObjectWithTag("MainCamera");
+
+		skyBoxCenter = this.transform.position;
 
 		skyCam = new GameObject();
 		skyboxCamera = skyCam.AddComponent<Camera>() as Camera;
@@ -49,8 +49,12 @@ public class mySkyBox : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		if (Camera.main != null){
+			// set parameters of the main camera to the skybox camera
 			skyboxCamera.transform.rotation = Camera.main.transform.rotation;
-			skyboxCamera.transform.position = skyBoxCenter + Camera.main.transform.position/skyBoxSize * skyBoxScaleFac;
+
+			//float lolSize = skyBoxSize * (1f + Mathf.Sin (Time.time)*0.8f);
+
+			skyboxCamera.transform.position = skyBoxCenter + Camera.main.transform.position/skyBoxSize;
 
 			skyboxCamera.fieldOfView = Camera.main.fieldOfView;
 		}
