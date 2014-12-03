@@ -50,6 +50,7 @@
      <Compile Include="Assets\DynamicRope2.cs" />
      <Compile Include="Assets\DynamicRopeR.cs" />
      <Compile Include="Assets\DynamicRopeR2.cs" />
+     <Compile Include="Assets\SkyBox\mySkyBox.cs" />
      <Compile Include="Assets\World\Generation.cs" />
      <Compile Include="Assets\World\InsertMesh.cs" />
      <Compile Include="Assets\World\ObjectCreator.cs" />
