@@ -65,6 +65,9 @@
      <Compile Include="Assets\_Scripts\Player\PlayerManager.cs" />
      <Compile Include="Assets\_Scripts\Player\VelocityInfo.cs" />
      <Compile Include="Assets\_Scripts\Spawner.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHole.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook.cs" />
      <Compile Include="Assets\_Weapons\Pogostick\PogoStick.cs" />
      <Compile Include="Assets\newRopetest.cs" />

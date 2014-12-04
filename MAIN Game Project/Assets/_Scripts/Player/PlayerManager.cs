@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour {
 	// Weapons / tools
 	public GameObject grapplingHook;
 	public GameObject pogoStick;
+	public GameObject blackHoleGun;
 	
 	public int useWeaponID = 0;
 
@@ -88,6 +89,27 @@ public class PlayerManager : MonoBehaviour {
 					currentWeapon.transform.parent = this.transform;
 
 				}
+
+				if (useWeaponID == 2){
+					currentWeapon = Instantiate(blackHoleGun, weaponAttachObject.transform.position, weaponAttachObject.transform.rotation) as GameObject;
+					currentWeapon.transform.parent = weaponAttachObject.transform;
+					
+					//GrapplingHook gh = currentWeapon.GetComponent<GrapplingHook>();
+					
+					// projectile spawn location gameobject
+					//gh.projectileSpawnObject = projectileSpawnObject;
+
+					/*
+					currentWeapon = Instantiate(blackHoleGun, this.transform.position, this.transform.rotation) as GameObject;
+					float offsetY = 0.0f;
+					float offsetZ = 0.45f;
+					Vector3 offset = this.transform.position + this.transform.up * offsetY + this.transform.forward * offsetZ;
+					currentWeapon.transform.position = offset;
+					
+					currentWeapon.transform.parent = this.transform;
+					*/
+				}
+
 			}
 			// remove weapon when one is already active
 			else if (key1 == true && currentWeapon != null){
@@ -100,6 +122,13 @@ public class PlayerManager : MonoBehaviour {
 
 				if (useWeaponID == 1){
 					// pogostick delete
+					Destroy(currentWeapon.gameObject);
+
+				}
+
+				if (useWeaponID == 2){
+					// Destroy BlackHoleGun and a black hole if there is one left in the game
+					currentWeapon.GetComponent<BlackHoleGun>().destroyBlackHole();
 					Destroy(currentWeapon.gameObject);
 
 				}
