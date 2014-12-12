@@ -9,13 +9,10 @@ public class PlatformMotion : MonoBehaviour {
 	public float Amplitude = 10.0f;
 
 	private Vector3 initialPosition;
-	private Vector3 lastPosition;
-
 
 	// Use this for initialization
 	void Start () {
 		initialPosition = transform.position;
-		lastPosition = transform.position;
 	}
 	
 	// Update is called once per frame

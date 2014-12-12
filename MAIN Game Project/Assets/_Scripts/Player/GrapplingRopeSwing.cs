@@ -36,10 +36,6 @@ public class GrapplingRopeSwing : MonoBehaviour {
 			
 			Vector3 current_Velocity =  rigidbody.velocity;
 			
-			float vSqr = current_Velocity.sqrMagnitude;
-			
-			Vector3 cVel_dir = current_Velocity.normalized;
-			
 			Vector3 vel_tan = current_Velocity - dir * (Vector3.Dot(dir, current_Velocity) / dir.sqrMagnitude);
 			
 			

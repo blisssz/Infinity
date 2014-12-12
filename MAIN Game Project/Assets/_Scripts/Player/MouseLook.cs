@@ -21,8 +21,6 @@ public class MouseLook : MonoBehaviour {
 
 	private float accum_rot_y = 0.0f;
 
-	float rotationY = 0F;
-
 	void Update ()
 	{	
 		

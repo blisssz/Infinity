@@ -8,8 +8,6 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
 
-	private GameObject thisPlayer;
-
 	public GameObject weaponAttachObject {get; set;}
 	public GameObject projectileSpawnObject {get; set;}
 	public GameObject playerHeadObject {get; set;}
@@ -20,10 +18,11 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject grapplingHook;
 	public GameObject pogoStick;
 	public GameObject blackHoleGun;
+	public GameObject grapplingHookV2;
 	
 	public int useWeaponID = 0;
 
-	private int[] weaponID = {0, 1, 2, 3, 4};
+//	private int[] weaponID = {0, 1, 2, 3, 4};
 
 	// example: private Weapon[] = {gun1, gun2...etc}
 
@@ -31,7 +30,6 @@ public class PlayerManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		thisPlayer = this.gameObject;
 
 		currentWeapon = null;
 
@@ -110,6 +108,18 @@ public class PlayerManager : MonoBehaviour {
 					*/
 				}
 
+				// spawn grapplingHook
+				if (useWeaponID == 3){
+					currentWeapon = Instantiate(grapplingHookV2, weaponAttachObject.transform.position, weaponAttachObject.transform.rotation) as GameObject;
+					currentWeapon.transform.parent = weaponAttachObject.transform;
+					
+					GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+					
+					// projectile spawn location gameobject
+					gh.projectileSpawnObject = projectileSpawnObject;
+					
+				}
+
 			}
 			// remove weapon when one is already active
 			else if (key1 == true && currentWeapon != null){
@@ -130,8 +140,14 @@ public class PlayerManager : MonoBehaviour {
 					// Destroy BlackHoleGun and a black hole if there is one left in the game
 					currentWeapon.GetComponent<BlackHoleGun>().destroyBlackHole();
 					Destroy(currentWeapon.gameObject);
-
 				}
+
+				// Delete GrapplingHookV2
+				if (useWeaponID == 0){
+					GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+					gh.DestroyAll();
+				}
+
 			}
 		}
 	}

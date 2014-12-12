@@ -23,6 +23,7 @@ public class Movement1 : MonoBehaviour {
 	public float KiClamp = 35.0f;
 
 	public float walkForceMax = 2500.0f;	// Newton, (a 90kg Human Force is about 750N)
+	private Vector3 inputForce;
 
 	public float c_air = 0.5f;
 	public float A_obj = 1.0f;
@@ -94,7 +95,7 @@ public class Movement1 : MonoBehaviour {
 		if (movementEnabled){
 			float mass = rigidbody.mass;
 			
-			bool shiftKey = KeyManager.leftShift == 2;
+//			bool shiftKey = KeyManager.leftShift == 2;
 
 			bool jump = KeyManager.jump == 2;
 
@@ -158,7 +159,7 @@ public class Movement1 : MonoBehaviour {
 				if (JumpState == 1 && jump_time < jump_maxtime){
 					jump_time += Time.deltaTime;
 					// jump force
-					rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude) *Time.deltaTime, ForceMode.Impulse);
+					rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude), ForceMode.Force);
 				}
 				else{
 					JumpState = 2;
@@ -222,8 +223,10 @@ public class Movement1 : MonoBehaviour {
 				U = transform.localToWorldMatrix.MultiplyVector (V_ref/v_max*vfac)*mass - rigidbody.velocity * rigidbody.velocity.magnitude * c_air * A_obj;
 			}
 
+			inputForce = U;
+
 			// apply forces
-			rigidbody.AddForce (U *Time.deltaTime, ForceMode.Impulse);
+			rigidbody.AddForce (U, ForceMode.Force);
 			}
 	}
 
@@ -333,6 +336,10 @@ public class Movement1 : MonoBehaviour {
 	/// <returns>The local velocity.</returns>
 	public Vector3 getLocalVelocity(){
 		return this.rigidbody.velocity - V_inherit;
+	}
+
+	public Vector3 getInputForce(){
+		return inputForce;
 	}
 
 

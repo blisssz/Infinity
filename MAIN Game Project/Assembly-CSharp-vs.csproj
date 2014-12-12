@@ -46,10 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DynamicRope.cs" />
-     <Compile Include="Assets\DynamicRope2.cs" />
-     <Compile Include="Assets\DynamicRopeR.cs" />
-     <Compile Include="Assets\DynamicRopeR2.cs" />
      <Compile Include="Assets\SkyBox\mySkyBox.cs" />
      <Compile Include="Assets\World\Generation.cs" />
      <Compile Include="Assets\World\InsertMesh.cs" />
@@ -69,8 +65,11 @@
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook.cs" />
+     <Compile Include="Assets\_Weapons\GrapplingHookV2\DynamicRope5.cs" />
+     <Compile Include="Assets\_Weapons\GrapplingHookV2\GrapplingHookV2.cs" />
+     <Compile Include="Assets\_Weapons\GrapplingHookV2\RopeMesh.cs" />
+     <Compile Include="Assets\_Weapons\GrapplingHookV2\RopeParams.cs" />
      <Compile Include="Assets\_Weapons\Pogostick\PogoStick.cs" />
-     <Compile Include="Assets\newRopetest.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -28,9 +28,11 @@ public class PogoStick : MonoBehaviour {
 
 //	private GameObject pogo;
 	private GameObject pogoMain;	// body that has as child the visual pogo
+
+/*
 	private Transform handleRight;
 	private Transform handleLeft;
-	
+*/	
 	private float offsetY = -0.0f;
 	private float offsetZ = 0.45f;
 	
@@ -104,7 +106,8 @@ public class PogoStick : MonoBehaviour {
 			if (t.name.Equals("PogoRotatorZ")){
 				pogoMain = t.gameObject;
 			}
-			
+
+		/*
 			if (t.name.Equals("HandLeft")){
 				handleLeft = t;
 			}
@@ -112,7 +115,7 @@ public class PogoStick : MonoBehaviour {
 			if (t.name.Equals("HandRight")){
 				handleRight = t;
 			}
-
+		*/
 			// animation component of hands and pogo
 			if (t.name.Equals("FPhandsWithPogo") && t.GetComponent<Animation>() != null){
 
@@ -151,8 +154,8 @@ public class PogoStick : MonoBehaviour {
 	void Update () {
 
 		bool leftMouseTap = KeyManager.leftMouse == 1;
-		bool leftMouse = KeyManager.leftMouse == 2;
-		bool rightMouse = KeyManager.rightMouse == 2;
+	//	bool leftMouse = KeyManager.leftMouse == 2;
+	//	bool rightMouse = KeyManager.rightMouse == 2;
 
 		if (leftMouseTap && lockAnimation == false){
 			if (pogoState == PogoState.inHand){
@@ -367,6 +370,7 @@ Old anims -*/
 				}
 				else{
 					springCompressing = true;
+					// play compressing sound 
 				}
 				
 				// offset pogo by factor ds for jump effect so you know when to apply force to increase junp or decrease.
