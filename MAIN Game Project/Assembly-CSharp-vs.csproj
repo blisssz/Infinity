@@ -51,9 +51,12 @@
      <Compile Include="Assets\World\InsertMesh.cs" />
      <Compile Include="Assets\World\ObjectCreator.cs" />
      <Compile Include="Assets\World\SwitchHelp.cs" />
+     <Compile Include="Assets\_Enemies\PogoBoss\PogoBoss.cs" />
+     <Compile Include="Assets\_Enemies\PogoBoss\PogoBossLaser.cs" />
      <Compile Include="Assets\_Scripts\Crosshair.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
+     <Compile Include="Assets\_Scripts\HPmanager.cs" />
      <Compile Include="Assets\_Scripts\PlatformMotion.cs" />
      <Compile Include="Assets\_Scripts\Player\GrapplingRopeSwing.cs" />
      <Compile Include="Assets\_Scripts\Player\MouseLook.cs" />
@@ -65,11 +68,14 @@
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook.cs" />
+     <Compile Include="Assets\_Scripts\testAI.cs" />
      <Compile Include="Assets\_Weapons\GrapplingHookV2\DynamicRope5.cs" />
      <Compile Include="Assets\_Weapons\GrapplingHookV2\GrapplingHookV2.cs" />
      <Compile Include="Assets\_Weapons\GrapplingHookV2\RopeMesh.cs" />
      <Compile Include="Assets\_Weapons\GrapplingHookV2\RopeParams.cs" />
      <Compile Include="Assets\_Weapons\Pogostick\PogoStick.cs" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

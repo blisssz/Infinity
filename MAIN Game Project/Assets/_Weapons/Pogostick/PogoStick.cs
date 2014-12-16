@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -40,6 +40,11 @@ public class PogoStick : MonoBehaviour {
 	public float pogoSpring = 15000f;
 	public float maxCompression = 0.5f;
 	public float pogoJumpForce = 14000f;
+
+	public float pogoMaxDamage = 100f;
+	public float pogoMinDamage = 0f;
+	public float maxDamageAtVel = 100f;
+	public float minDamageAtVel = 5f;
 	
 	
 	private float currentRotX = 0.0f;
@@ -259,85 +264,7 @@ Old anims -*/
 			Vector3 force = new Vector3();
 			
 
-			
-			
-			
-			// pogo controls
-			bool forward = KeyManager.forward == 2;
-			bool backward = KeyManager.backward == 2;
-			bool left = KeyManager.left == 2;
-			bool right = KeyManager.right == 2;
-			
-			if ((forward && !backward) && !(left || right) ){
-				rotX = 1;
-				rotZ = 0;
-			}
-			else if ((!forward && backward) && !(left || right) ) {
-				rotX = -1;
-				rotZ = 0;
-			} 
-			else if (!(forward || backward) && (left && !right)) {
-				rotX = 0;
-				rotZ = 1;
-			}
-			else if (!(forward || backward) && (!left && right)) {
-				rotX = 0;
-				rotZ = -1;
-			}
-			else if ((forward && left) && !(backward || right)){
-				rotX = 1;
-				rotZ = 1;
-			}
-			else if ((forward && right) && !(backward || left)){
-				rotX = 1;
-				rotZ = -1;
-			}
-			else if ((backward && left) && !(forward || right)){
-				rotX = -1;
-				rotZ = 1;
-			}
-			else if ((backward && right) && !(forward || left)){
-				rotX = -1;
-				rotZ = -1;
-			}
-			else {
-				rotX = 0;
-				rotZ = 0;
-			}
-			
-
-			// Control Rotation pivots
-			currentRotX = stepRotate * rotX;
-			currentRotZ = stepRotate * rotZ;
-			
-			if (rotX == 0){
-				currentRotX = -acummulatedRotX/10f;
-			}
-			if (rotZ == 0){
-				currentRotZ = -acummulatedRotZ/10f;
-			}
-			
-			if ((acummulatedRotX + currentRotX) > maxRotateX){
-				currentRotX = maxRotateX - acummulatedRotX;
-			}
-			else if ((acummulatedRotX + currentRotX) < -maxRotateX){
-				currentRotX = -maxRotateX - acummulatedRotX;
-			}
-			acummulatedRotX += currentRotX;
-			
-			if ((acummulatedRotZ + currentRotZ) > maxRotateZ){
-				currentRotZ = maxRotateX - acummulatedRotZ;
-			}
-			else if ((acummulatedRotZ + currentRotZ) < -maxRotateZ){
-				currentRotZ = -maxRotateZ - acummulatedRotZ;
-			}
-			
-			acummulatedRotZ += currentRotZ;
-			
-			
-			this.transform.Rotate(new Vector3(currentRotX, 0, 0));
-			pogoMain.transform.Rotate (new Vector3(0, 0, currentRotZ) );
-
+			ControlPogo();
 			
 			//handleLeft.Rotate(new Vector3(-currentRotX*0.5f, 0, 0));
 			//handleRight.Rotate(new Vector3(-currentRotX*0.5f, 0, 0));
@@ -353,7 +280,7 @@ Old anims -*/
 				
 				if (firstContact == false){
 					// let the hitted object know that he was hit
-					noticeHitObjectGotHit(hit.transform.gameObject);
+					noticeHitObjectGotHit(hit.transform.gameObject, velocity);
 					// can only compress with a high enough velocity in up dir;
 					velSigned = Vector3.Dot (velocity, this.transform.up);
 				}
@@ -396,8 +323,15 @@ Old anims -*/
 		}
 	}
 
-	private void noticeHitObjectGotHit(GameObject hitObj){
-		// do something
+	/// <summary>
+	/// Notices the hit object got hit. And do dmg or something else
+	/// </summary>
+	/// <param name="hitObj">Hit object.</param>
+	private void noticeHitObjectGotHit(GameObject hitObj, Vector3 velocity){
+		if (hitObj.GetComponent<HPmanager>()){
+			hitObj.GetComponent<HPmanager>().doDamage(calcPogoDamage(velocity));
+		}
+
 	}
 
 
@@ -436,4 +370,101 @@ Old anims -*/
 		
 	}
 
+	private void ControlPogo(){
+		// pogo controls
+		bool forward = KeyManager.forward == 2;
+		bool backward = KeyManager.backward == 2;
+		bool left = KeyManager.left == 2;
+		bool right = KeyManager.right == 2;
+		
+		if ((forward && !backward) && !(left || right) ){
+			rotX = 1;
+			rotZ = 0;
+		}
+		else if ((!forward && backward) && !(left || right) ) {
+			rotX = -1;
+			rotZ = 0;
+		} 
+		else if (!(forward || backward) && (left && !right)) {
+			rotX = 0;
+			rotZ = 1;
+		}
+		else if (!(forward || backward) && (!left && right)) {
+			rotX = 0;
+			rotZ = -1;
+		}
+		else if ((forward && left) && !(backward || right)){
+			rotX = 1;
+			rotZ = 1;
+		}
+		else if ((forward && right) && !(backward || left)){
+			rotX = 1;
+			rotZ = -1;
+		}
+		else if ((backward && left) && !(forward || right)){
+			rotX = -1;
+			rotZ = 1;
+		}
+		else if ((backward && right) && !(forward || left)){
+			rotX = -1;
+			rotZ = -1;
+		}
+		else {
+			rotX = 0;
+			rotZ = 0;
+		}
+		
+		
+		// Control Rotation pivots
+		currentRotX = stepRotate * rotX;
+		currentRotZ = stepRotate * rotZ;
+		
+		if (rotX == 0){
+			currentRotX = -acummulatedRotX/10f;
+		}
+		if (rotZ == 0){
+			currentRotZ = -acummulatedRotZ/10f;
+		}
+		
+		if ((acummulatedRotX + currentRotX) > maxRotateX){
+			currentRotX = maxRotateX - acummulatedRotX;
+		}
+		else if ((acummulatedRotX + currentRotX) < -maxRotateX){
+			currentRotX = -maxRotateX - acummulatedRotX;
+		}
+		acummulatedRotX += currentRotX;
+		
+		if ((acummulatedRotZ + currentRotZ) > maxRotateZ){
+			currentRotZ = maxRotateX - acummulatedRotZ;
+		}
+		else if ((acummulatedRotZ + currentRotZ) < -maxRotateZ){
+			currentRotZ = -maxRotateZ - acummulatedRotZ;
+		}
+		
+		acummulatedRotZ += currentRotZ;
+		
+		
+		this.transform.Rotate(new Vector3(currentRotX, 0, 0));
+		pogoMain.transform.Rotate (new Vector3(0, 0, currentRotZ) );
+
+	}
+	/// <summary>
+	/// Calculates the pogo damage based on the current velocity.
+	/// </summary>
+	/// <returns>The pogo damage.</returns>
+	/// <param name="vel">Vel.</param>
+	private float calcPogoDamage(Vector3 vel){
+		float dmg;
+		float absVel = vel.magnitude;
+
+		if (absVel < minDamageAtVel) {dmg = 0;}
+		else{
+			absVel = Mathf.Min(absVel, maxDamageAtVel);
+			dmg = (absVel - minDamageAtVel)/(maxDamageAtVel-minDamageAtVel) * (pogoMaxDamage - pogoMinDamage) + pogoMinDamage;
+		}
+
+		print (absVel);
+		print (dmg);
+		return dmg;
+	}
 }

@@ -1,0 +1,984 @@
+fileFormatVersion: 2
+guid: 9b99a68bb279464498b5218a339de402
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: PogoBoss
+    100002: PogoBossArmature
+    100004: PogoBossArmature|Body1
+    100006: PogoBossArmature|Body2
+    100008: PogoBossArmature|Body3
+    100010: PogoBossArmature|Body4
+    100012: PogoBossArmature|Eye1
+    100014: PogoBossArmature|Eye1A
+    100016: PogoBossArmature|Eye1B
+    100018: PogoBossArmature|Eye2
+    100020: PogoBossArmature|Eye2A
+    100022: PogoBossArmature|Eye2B
+    100024: PogoBossArmature|Eye3
+    100026: PogoBossArmature|Eye3A
+    100028: PogoBossArmature|Eye3B
+    100030: PogoBossArmature|Eye4
+    100032: PogoBossArmature|Eye4A
+    100034: PogoBossArmature|Eye4B
+    100036: PogoBossArmature|EyeBIG
+    100038: PogoBossArmature|EyeBigA
+    100040: PogoBossArmature|EyeBigB
+    100042: PogoBossArmature|Root
+    100044: //RootNode
+    400000: PogoBoss
+    400002: PogoBossArmature
+    400004: PogoBossArmature|Body1
+    400006: PogoBossArmature|Body2
+    400008: PogoBossArmature|Body3
+    400010: PogoBossArmature|Body4
+    400012: PogoBossArmature|Eye1
+    400014: PogoBossArmature|Eye1A
+    400016: PogoBossArmature|Eye1B
+    400018: PogoBossArmature|Eye2
+    400020: PogoBossArmature|Eye2A
+    400022: PogoBossArmature|Eye2B
+    400024: PogoBossArmature|Eye3
+    400026: PogoBossArmature|Eye3A
+    400028: PogoBossArmature|Eye3B
+    400030: PogoBossArmature|Eye4
+    400032: PogoBossArmature|Eye4A
+    400034: PogoBossArmature|Eye4B
+    400036: PogoBossArmature|EyeBIG
+    400038: PogoBossArmature|EyeBigA
+    400040: PogoBossArmature|EyeBigB
+    400042: PogoBossArmature|Root
+    400044: //RootNode
+    4300000: PogoBoss
+    7400000: PogoBossArmature|BodyMotion1
+    7400002: PogoBossArmature|BodyMotionHit
+    7400004: PogoBossArmature|Eye1Close
+    7400006: PogoBossArmature|Eye1Open
+    7400008: PogoBossArmature|Eye2Close
+    7400010: PogoBossArmature|Eye2Open
+    7400012: PogoBossArmature|Eye3Close
+    7400014: PogoBossArmature|Eye3Open
+    7400016: PogoBossArmature|Eye4Close
+    7400018: PogoBossArmature|Eye4Open
+    7400020: PogoBossArmature|EyeBigOpenEvent
+    7400022: PogoBossArmature|EyeBigOpenIdle
+    9500000: //RootNode
+    13700000: PogoBoss
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: PogoBossArmature|BodyMotion1
+      takeName: PogoBossArmature|BodyMotion1
+      firstFrame: 0
+      lastFrame: 450
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|BodyMotionHit
+      takeName: PogoBossArmature|BodyMotionHit
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye1Close
+      takeName: PogoBossArmature|Eye1Close
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye1Open
+      takeName: PogoBossArmature|Eye1Open
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye2Close
+      takeName: PogoBossArmature|Eye2Close
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye2Open
+      takeName: PogoBossArmature|Eye2Open
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye3Close
+      takeName: PogoBossArmature|Eye3Close
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye3Open
+      takeName: PogoBossArmature|Eye3Open
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye4Close
+      takeName: PogoBossArmature|Eye4Close
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|Eye4Open
+      takeName: PogoBossArmature|Eye4Open
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|EyeBigOpenEvent
+      takeName: PogoBossArmature|EyeBigOpenEvent
+      firstFrame: 0
+      lastFrame: 401
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PogoBossArmature|EyeBigOpenIdle
+      takeName: PogoBossArmature|EyeBigOpenIdle
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PogoBoss
+        weight: 1
+      - path: PogoBossArmature
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|EyeBIG
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Body4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye1B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye2B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye3B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4A
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|Eye4B
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigA
+        weight: 1
+      - path: PogoBossArmature/PogoBossArmature|Root/PogoBossArmature|EyeBigB
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: PogoBoss
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

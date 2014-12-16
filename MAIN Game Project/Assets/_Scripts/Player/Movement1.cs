@@ -69,6 +69,11 @@ public class Movement1 : MonoBehaviour {
 	private bool airControlEnabled;
 	private bool groundControlEnabled;
 
+	// stat tracking
+	private float distanceTravelled = 0f;
+	private float timeInit;
+	private Vector3 prevPos;
+
 
 	// Use this for initialization
 	void Start () {
@@ -87,6 +92,11 @@ public class Movement1 : MonoBehaviour {
 		movementEnabled = true;
 		airControlEnabled = true;
 		groundControlEnabled = true;
+
+
+		distanceTravelled = 0f;
+		timeInit = Time.time;
+		prevPos = this.transform.position;
 	}
 	
 
@@ -137,6 +147,9 @@ public class Movement1 : MonoBehaviour {
 					else{
 						V_inherit = new Vector3(0.0f, 0.0f, 0.0f);
 					}
+				}
+				else{
+					MovementState = 1;
 				}
 			}
 			else{
@@ -228,6 +241,10 @@ public class Movement1 : MonoBehaviour {
 			// apply forces
 			rigidbody.AddForce (U, ForceMode.Force);
 			}
+	}
+
+	void Update(){
+		updateDistanceTraveled();
 	}
 
 
@@ -340,6 +357,20 @@ public class Movement1 : MonoBehaviour {
 
 	public Vector3 getInputForce(){
 		return inputForce;
+	}
+
+	//++++++++++++ Stat Tracking
+	private void updateDistanceTraveled(){
+		distanceTravelled += (transform.position - prevPos).magnitude;
+		prevPos = transform.position;
+	}
+
+	public float getDistanceTraveled(){
+		return distanceTravelled;
+	}
+
+	public float getTimeAlive(){
+		return Time.time - timeInit;
 	}
 
 
