@@ -75,6 +75,7 @@
      <Compile Include="Assets\_Weapons\GrapplingHookV2\RopeParams.cs" />
      <Compile Include="Assets\_Weapons\Pogostick\PogoStick.cs" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

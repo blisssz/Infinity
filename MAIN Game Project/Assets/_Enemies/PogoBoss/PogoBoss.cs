@@ -5,6 +5,7 @@ using System.Collections;
 public class EyeParams{
 
 	public float hp = 100f;
+	public HPmanager eyeHP{get; set;}
 
 	public float openT1 = 8f;
 	public float openT2 = 12f;
@@ -22,6 +23,7 @@ public class EyeParams{
 	private float lookTimer = 0f;
 
 	public float targetAngle = 25f;
+	public float laserCutAccuracy = 5f;
 		
 	public GameObject laser;
 	private GameObject laserOB;
@@ -49,6 +51,13 @@ public class EyeParams{
 	private bool targetLocked = false;
 
 	private Transform eyeOB;
+
+	public bool eyeAlive{get; set;}
+
+	public EyeParams(){
+		eyeAlive = true;
+	}
+
 
 	public void setEyeOB(Transform eye){
 		eyeOB = eye;
@@ -82,7 +91,7 @@ public class EyeParams{
 			prevLookRot = eyeOB.rotation;
 		}
 
-		if (eyeOpen){
+		if (eyeOpen && eyeAlive){
 			if (lookTimer == 0f){
 				rad = Random.Range (0f, 1f) * 2f * Mathf.PI;
 				float UP = Random.Range (0.4f, 1f);//Mathf.Sin (Random.Range (0f, 1f) *0.5f* Mathf.PI);
@@ -139,7 +148,10 @@ public class EyeParams{
 			targetLocked = false;
 			firing = false;
 			fireTimer = 0f;
-			GameObject.Destroy(laserOB);
+			if (laserOB != null){
+				GameObject.Destroy(laserOB);
+				eyeOB.renderer.material.SetFloat("_fac", 0);
+			}
 		}
 	}
 
@@ -147,13 +159,14 @@ public class EyeParams{
 	public void chargeAndFire(Vector3 targetPos){
 
 		bool rdy2Fire = (ocTimer + chargeTime + fireTime) <= openTime;
-
-		if (fireTimer < chargeTime){
-			// charge effect code here
-			// -shader that transitions color to red when fully charges for example;
-		}
-
 		if (rdy2Fire){
+			if (fireTimer < chargeTime){
+				// charge effect code here
+				// -shader that transitions color to red when fully charges for example;
+				eyeOB.renderer.material.SetFloat("_fac", fireTimer/chargeTime);
+			}
+
+
 			if (fireTimer >= chargeTime && firing == false){
 				firing = true;
 				laserOB = GameObject.Instantiate(laser, eyeOB.position, eyeOB.rotation) as GameObject;
@@ -169,15 +182,19 @@ public class EyeParams{
 				float rad1 = Random.Range (0f, 1f) * 2f * Mathf.PI;
 				float rad2 = rad1 + (1f+Random.Range (-0.2f, 0.2f)) * Mathf.PI;
 
-				offsetFrom = 5f*(new Vector3(Mathf.Cos (rad1), 0, Mathf.Sin(rad1) ) );
-				offsetTo = 5f*(new Vector3(Mathf.Cos (rad2), 0, Mathf.Sin(rad2) ) );
+				offsetFrom = laserCutAccuracy *(new Vector3(Mathf.Cos (rad1), 0, Mathf.Sin(rad1) ) );
+				offsetTo = laserCutAccuracy * (new Vector3(Mathf.Cos (rad2), 0, Mathf.Sin(rad2) ) );
 
 			}
+		}
+		else{
+			eyeOB.renderer.material.SetFloat("_fac", 0);
 		}
 
 		if (fireTimer >= (chargeTime + fireTime) && firing){
 			firing = false;
 			fireTimer = 0f;
+			eyeOB.renderer.material.SetFloat("_fac", 0);
 			GameObject.Destroy(laserOB);
 		}
 
@@ -188,6 +205,7 @@ public class EyeParams{
 			Quaternion q1 = Quaternion.LookRotation ((targetPos + offsetFrom)-eyeOB.position);
 			Quaternion q2 = Quaternion.LookRotation ((targetPos + offsetTo)-eyeOB.position);
 			laserOB.transform.rotation = Quaternion.Lerp(q1 ,q2 ,interp);
+			eyeOB.renderer.material.SetFloat("_fac", 1-(fireTimer - chargeTime)/fireTime);
 
 		}
 
@@ -195,12 +213,131 @@ public class EyeParams{
 		fireTimer += Time.deltaTime;
 
 	}
+
+	public void eyeStatus(){
+		if (eyeAlive && eyeHP.getHP() <= 0){
+			deadEye ();
+			eyeAlive = false;
+		}
+	}
+
+
+	public void deadEye(){
+		// replace mesh + make it inactive
+		GameObject.Destroy(eyeOB.gameObject);
+
+	}
+
 }
 
 
 
 
 
+
+[System.Serializable]
+public class EyeBigParams{
+	public float DMG = 0f;
+	public float hp = 100f;
+	public HPmanager eyeHP{get; set;}
+	public float targetAngle = 25f;
+
+	public float laserCutAccuracyMin = 3f;
+	public float laserCutAccuracyMax = 8f;
+
+	public float laserSpawnRate = 0.5f;
+
+	public int nLasers = 4;
+	public GameObject laserOB;
+	public float laserLife = 1f;
+	public float laserOffset = 6.5f;
+	public float rotateY = 0.1f;
+
+	private float t;
+
+	private Transform eyeOB;
+
+	public EyeBigParams(){
+
+	}
+
+	public void setEyeOB(Transform e){
+		eyeOB = e;
+	}
+
+
+	public void eyeControl(Transform target){
+		t += Time.deltaTime;		
+		eyeOB.Rotate(0f, rotateY, 0f);
+
+		if ((t % laserSpawnRate) <= Time.deltaTime){
+			for (int i = 0; i < nLasers; i++){
+				eyeTargets(target);
+			}
+		}
+	}
+
+
+	public void eyeTargets(Transform target){
+
+		float r1 = Random.Range(0f,1f)-0.5f;
+		float r2 = Random.Range(0f,1f)-0.5f;
+		float r3 = Random.Range(0f,1f)-0.25f;
+
+		Vector3 direction = (new Vector3(r1,r3,r2)).normalized;
+
+		// raycast
+		RaycastHit rayhit;
+		Vector3 targetDir = (target.position - eyeOB.position).normalized;
+		Physics.Raycast(eyeOB.position, targetDir, out rayhit, 10000f);
+		
+		float angle = Mathf.Acos (Vector3.Dot (targetDir, direction));
+		
+		if (angle < (targetAngle/180f * Mathf.PI) && rayhit.transform.tag.Equals("Player") ){
+			// spawn laser
+			GameObject laser = GameObject.Instantiate(laserOB) as GameObject;
+			laser.transform.position = eyeOB.position + direction * laserOffset;
+			laser.transform.parent = eyeOB;
+
+			PogoBossLaser pbl = laser.AddComponent<PogoBossLaser>();
+			pbl.lifetime = laserLife;
+			pbl.DMG = DMG;
+
+
+			// create target offsets
+			float rad1 = Random.Range (0f, 1f) * 2f * Mathf.PI;
+			float rad2 = rad1 + (1f+Random.Range (-0.2f, 0.2f)) * Mathf.PI;
+
+			float laserCutAccuracy = laserCutAccuracyMin +  Random.Range (0f, 1f) *(laserCutAccuracyMax - laserCutAccuracyMin);
+
+			Vector3 offsetFrom = laserCutAccuracy *(new Vector3(Mathf.Cos (rad1), 0, Mathf.Sin(rad1) ) );
+			Vector3 offsetTo = laserCutAccuracy * (new Vector3(Mathf.Cos (rad2), 0, Mathf.Sin(rad2) ) );
+
+			// assign to laser
+			pbl.LERP = true;
+			pbl.setLerpTarget(target, offsetFrom, offsetTo);
+
+//			PogoBossLaser pbL
+
+			// set targets of laser
+		}
+
+
+
+
+	}
+
+}
+
+
+
+
+
+
+
+/// <summary>
+/// Pogo boss.
+/// </summary>
 public class PogoBoss : MonoBehaviour {
 
 	// ideas
@@ -209,6 +346,7 @@ public class PogoBoss : MonoBehaviour {
 	// - eyeX charges laser fast and others targets player faster.
 	// etc
 	public EyeParams[] eyeParams = new EyeParams[4];		// index 0 == eye1 ... 3 == eye4
+	public EyeBigParams eyeBigParam;
 
 	private float[] timeArray;
 	private float[] openTimeArray;
@@ -219,6 +357,11 @@ public class PogoBoss : MonoBehaviour {
 	private string[] eyeNames = new string[]{"Eye1", "Eye2", "Eye3", "Eye4"};
 
 	private Transform[] eyeTransfArray;
+
+	public bool dmgOnVelHitsOnly = true;
+	public float maxVelHit = 30f;
+	public float minVelHit = 25f;
+
 
 	public float eyeHP = 200f;
 
@@ -239,6 +382,9 @@ public class PogoBoss : MonoBehaviour {
 	private enum BossState {FourEyes, FinalEye};
 	private BossState bossState;
 
+	private int finalStateHash = Animator.StringToHash("BigEye.BigEyeIdle");
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -256,13 +402,33 @@ public class PogoBoss : MonoBehaviour {
 
 		eyeTransfArray = new Transform[5];
 
+
+
 		// initiate eye HPs
 		foreach (Transform t in GetComponentsInChildren<Transform>()){
-			if (t.name.Equals("PogoBossEyeNormal1")){
+
+			// find 4 normal eyes;
+			for (int i = 0; i < 4; i++){
+				if (t.name.Equals("PogoBossEyeNormal" + (i+1) )){
+					eyeParams[i].eyeHP = t.gameObject.AddComponent<HPmanager>();
+					eyeParams[i].eyeHP.setHP(eyeParams[i].hp);
+					eyeParams[i].eyeHP.velBasedDmg = dmgOnVelHitsOnly;
+					eyeParams[i].eyeHP.setMinMaxVel(minVelHit, maxVelHit);
+					eyeParams[i].setEyeOB(t);
+					eyeTransfArray[i] = t;				
+					print (t.name);
+				}
+
+			}
+
+		/*	if (t.name.Equals("PogoBossEyeNormal1")){
 				hpEye1 = t.gameObject.AddComponent<HPmanager>();
 				hpEye1.setHP(eyeHP);
 				eyeParams[0].setEyeOB(t);
 				eyeTransfArray[0] = t;
+				eyeParams[0].eyeHP = hpEye1;
+				eyeParams[0].eyeHP.setHP(eyeParams[0].hp);
+
 			}
 			else if (t.name.Equals("PogoBossEyeNormal2")){
 				hpEye2 = t.gameObject.AddComponent<HPmanager>();
@@ -281,11 +447,11 @@ public class PogoBoss : MonoBehaviour {
 				hpEye4.setHP(eyeHP);
 				eyeParams[3].setEyeOB(t);
 				eyeTransfArray[3] = t;
-			}
-			else if (t.name.Equals("PogoBossEyeBig")){
-				hpEyeBig = t.gameObject.AddComponent<HPmanager>();
-				hpEyeBig.setHP(eyeHP);
-				eyeTransfArray[4] = t;
+			}*/
+			if (t.name.Equals("PogoBossEyeBig")){
+				eyeBigParam.eyeHP = t.gameObject.AddComponent<HPmanager>();
+				eyeBigParam.eyeHP.setHP(eyeBigParam.hp);
+				eyeBigParam.setEyeOB(t);
 			}
 		}
 
@@ -295,7 +461,7 @@ public class PogoBoss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (hpEye1.getHP());
+		//print (hpEye1.getHP());
 
 		int rng = Random.Range(0, 100);
 
@@ -340,6 +506,9 @@ public class PogoBoss : MonoBehaviour {
 	private void controlEyes(){
 
 		GameObject player = GameObject.FindGameObjectWithTag ("Player") as GameObject;
+		//print (player.rigidbody.velocity.magnitude);
+
+		bool fourEyesAlive = false;
 
 		for (int i = 0; i < 4; i++){
 
@@ -347,13 +516,37 @@ public class PogoBoss : MonoBehaviour {
 			bool eyeOpen = eyeParams[i].eyeOpenClose();
 			openCloseEye(eyeOpen, eyeNames[i]);
 
+			if (eyeParams[i].eyeAlive && eyeParams[i].eyeHP.getHP() <= 0){
+				anim.SetTrigger("Hit");	
+			}
+
+			eyeParams[i].eyeStatus();
+
+
+
 
 			//eyeTransfArray[i].LookAt(player.transform.position);
 
 			eyeParams[i].eyeFindTarget( player.transform); //eyeTransfArray[i],
-
-
+			if (i == 0){
+				fourEyesAlive = eyeParams[0].eyeAlive;
+			}
+			else{
+				fourEyesAlive = fourEyesAlive || eyeParams[i].eyeAlive;
+			}
 		}
+
+		if (!fourEyesAlive){
+			bossState = BossState.FinalEye;
+			anim.SetBool("EyeBig", true);
+			if (anim.GetCurrentAnimatorStateInfo(5).IsTag("FinalState")){ //(finalStateHash == anim.GetCurrentAnimatorStateInfo(5).nameHash){
+				eyeBigParam.eyeControl(player.transform);
+			}
+		}
+
+
+
+
 	}
 
 	private void eyeFindTarget(GameObject player, float t){
@@ -362,10 +555,14 @@ public class PogoBoss : MonoBehaviour {
 		Vector3 lookDir = new Vector3(Mathf.Cos (rad),0 , Mathf.Sin(rad));
 
 		if (player != null){
+
 		}
 	}
 
 	private void aimEye(){
+	}
+
+	private void checkEyeHP(){
 	}
 
 }

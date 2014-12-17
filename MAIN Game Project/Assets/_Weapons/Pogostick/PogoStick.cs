@@ -329,7 +329,8 @@ Old anims -*/
 	/// <param name="hitObj">Hit object.</param>
 	private void noticeHitObjectGotHit(GameObject hitObj, Vector3 velocity){
 		if (hitObj.GetComponent<HPmanager>()){
-			hitObj.GetComponent<HPmanager>().doDamage(calcPogoDamage(velocity));
+			//hitObj.GetComponent<HPmanager>().doDamage(calcPogoDamage(velocity));
+			hitObj.GetComponent<HPmanager>().doDamage(calcPogoDamage(velocity), velocity, false);
 		}
 
 	}

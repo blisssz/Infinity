@@ -12,6 +12,11 @@ public class PogoBossLaser : MonoBehaviour {
 	public float xyScale = 1f;
 	private float t = 0f;
 
+	public bool LERP = false;
+	private Vector3 fromOffset;
+	private Vector3 toOffset;
+	private Transform target;
+
 	void Update () {
 
 		RaycastHit hit;
@@ -31,6 +36,27 @@ public class PogoBossLaser : MonoBehaviour {
 			transform.localScale = new Vector3(xyS, xyS, 10000f);
 		}
 
+		if (LERP == true && target != null){
+			lerp2Target();
+		}
+
+		if (t > lifetime){
+			Destroy (this.gameObject);
+		}
+
 	
+	}
+
+	public void setLerpTarget(Transform tr, Vector3 from, Vector3 to){
+		target = tr;
+		fromOffset = from;
+		toOffset = to;
+	}
+
+	private void lerp2Target(){
+		float interp = (t/lifetime);
+		Quaternion q1 = Quaternion.LookRotation ((target.position + fromOffset)-this.transform.position);
+		Quaternion q2 = Quaternion.LookRotation ((target.position + toOffset)-this.transform.position);
+		this.transform.rotation = Quaternion.Lerp(q1 ,q2 ,interp);
 	}
 }
