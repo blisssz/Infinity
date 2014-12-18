@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameStart.cs" />
      <Compile Include="Assets\SkyBox\mySkyBox.cs" />
      <Compile Include="Assets\World\Generation.cs" />
      <Compile Include="Assets\World\InsertMesh.cs" />

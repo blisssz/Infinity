@@ -120,7 +120,6 @@ public class Generation : MonoBehaviour
 		void Start ()
 		{
 	
-	
 				Position = SpawnPosition;
 				for (int i=0; i<50; i++) {
 			moveStandard ();
