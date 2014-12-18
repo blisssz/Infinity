@@ -8,8 +8,9 @@ public class Generation : MonoBehaviour
 	public GameObject endPoint;
 		private Vector3 Position;
 	public GameObject enemy;
-		private static float minsize = 1;
-		private static float maxsize = 5;
+	public static bool spawnEnemy;
+		private static float minsize;
+		private static float maxsize;
 		private int b = 15;
 		public Material F;
 		public GameObject C;
@@ -17,20 +18,9 @@ public class Generation : MonoBehaviour
 		private int[] Triangles;
 		private int up = 0;
 		private int iteration = 20;
-		private static float jumpDistance = 3f;
+		private static float jumpDistance = 100;
 		private Vector3[] lastPositions = new Vector3[3];
-		public static Vector3[][] Moves = new Vector3[4][] {
-				new Vector3[1]{new Vector3 (0f, 0f, jumpDistance)},
-				new Vector3[1]{new Vector3 (0f, jumpDistance / 3f, jumpDistance / 2f)},
-				new Vector3[2] {
-						new Vector3 (0f, jumpDistance * 2f, jumpDistance * 2f),
-						new Vector3 (0f, 0f, jumpDistance * 4f)
-				},
-		new Vector3[2] {
-			new Vector3 (0f, jumpDistance * 2f, jumpDistance * 2f),
-			new Vector3 (jumpDistance * 2f, 0f, jumpDistance * 2f)
-		}
-	};
+		public static Vector3[][] Moves;
 	
 		public Vector3[][] AddAllDirections (Vector3[][] Movs)
 		{
@@ -347,7 +337,9 @@ public class Generation : MonoBehaviour
 								up--;
 								iteration--;
 						}
-			enemySpawn.checkForEnemy(Position,enemy);	
+				if(spawnEnemy){
+					enemySpawn.checkForEnemy(Position,enemy);	
+				}
 			}
 
 		}
@@ -456,7 +448,10 @@ public class Generation : MonoBehaviour
 	
 		// Use this for initialization
 		void Start ()
-		{
+		{		
+				GameController.fallingPossible = true;
+				settingSetter ();
+				setMoves();
 				Vector3 a = new Vector3 (0, 2, 0);
 				//GameObject x = CreatePlane (a, minsize * 10);
 				Vector3 b = new Vector3 (10, 2, 0);
@@ -492,7 +487,6 @@ public class Generation : MonoBehaviour
 
 		void Update ()
 		{
-
 				float delta = Time.time / 10f;
 				Color E = Color.Lerp (Color.white, Color.black, delta);
 				delta = delta % 3f;
@@ -505,4 +499,54 @@ public class Generation : MonoBehaviour
 				}
 				F.color = E;
 		}
+
+	public static void hookSettings(){
+		minsize = 3;
+		maxsize = 10;
+		jumpDistance = 12;
+	}
+
+	public static void blackHoleSettings(){
+		minsize = 1.5f;
+		maxsize = 5;
+		jumpDistance = 3;
+	}
+
+	public static void pogoStickSettings(){
+		minsize = 3;
+		maxsize = 7;
+		jumpDistance = 8;
+	}
+
+	void settingSetter(){
+		switch (PlayerManager.useWeaponID) {
+		case 1:
+			pogoStickSettings ();
+			break;
+		case 2:
+			blackHoleSettings ();
+			break;
+		case 3: 
+			hookSettings ();
+			spawnEnemy = true;
+			break;
+		default:
+			break;
+		}
+	}
+
+	void setMoves(){
+		Moves	= new Vector3[4][] {
+			new Vector3[1]{new Vector3 (0f, 0f, jumpDistance)},
+			new Vector3[1]{new Vector3 (0f, jumpDistance / 3f, jumpDistance / 2f)},
+			new Vector3[2] {
+				new Vector3 (0f, jumpDistance * 2f, jumpDistance * 2f),
+				new Vector3 (0f, 0f, jumpDistance * 4f)
+			},
+			new Vector3[2] {
+				new Vector3 (0f, jumpDistance * 2f, jumpDistance * 2f),
+				new Vector3 (jumpDistance * 2f, 0f, jumpDistance * 2f)
+			}
+		};
+	}
 }

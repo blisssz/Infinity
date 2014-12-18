@@ -7,6 +7,7 @@ using System.Collections;
 /// </summary>
 
 public class PlayerManager : MonoBehaviour {
+	public static Vector3 playerPosition;
 
 	public GameObject weaponAttachObject {get; set;}
 	public GameObject projectileSpawnObject {get; set;}
@@ -20,7 +21,7 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject blackHoleGun;
 	public GameObject grapplingHookV2;
 	
-	public int useWeaponID = 0;
+	public static int useWeaponID = 0;
 
 //	private int[] weaponID = {0, 1, 2, 3, 4};
 
@@ -55,7 +56,7 @@ public class PlayerManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		playerPosition = transform.position;
 		// spawn a tool/weapon
 		if (hasWeapon == false){
 

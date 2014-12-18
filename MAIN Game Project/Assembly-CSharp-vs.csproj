@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\World\SkyBox\mySkyBox.cs" />
      <Compile Include="Assets\_Prefabs\Boss1\Boss1ArmAnimations.cs" />
      <Compile Include="Assets\_Scripts\Crosshair.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\BOSS1script.cs" />
@@ -79,6 +78,7 @@
      <Compile Include="Assets\_Scripts\GameWorld\checkPoint.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\endPoint.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\enemySpawn.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\mySkyBox.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\platformCounter.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
@@ -92,6 +92,7 @@
      <Compile Include="Assets\_Scripts\Player\Movement1.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerManager.cs" />
      <Compile Include="Assets\_Scripts\Player\VelocityInfo.cs" />
+     <Compile Include="Assets\_Scripts\SoundWindScript.cs" />
      <Compile Include="Assets\_Scripts\Spawner.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHole.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />

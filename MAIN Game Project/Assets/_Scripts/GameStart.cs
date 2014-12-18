@@ -6,6 +6,7 @@ public class GameStart : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int weapon = Mathf.RoundToInt (Random.Range (1,4));
+		PlayerManager.useWeaponID = weapon;
 		switch(weapon){
 		case 1: 
 			selectLevel ();
@@ -18,6 +19,7 @@ public class GameStart : MonoBehaviour {
 			break;
 		default: 
 			Debug.Log ("wrong number");
+			break;
 		}
 	}
 	

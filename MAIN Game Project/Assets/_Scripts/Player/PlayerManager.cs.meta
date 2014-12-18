@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: 0a70d95066b0772499640be67f0adc9b
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - grapplingHook: {fileID: 100052, guid: 355f38ec8fd4800438f6da1b5fa08b33, type: 2}
+  - pogoStick: {fileID: 100002, guid: ff939d7706acad645bc75aefcb9bb363, type: 2}
+  - blackHoleGun: {fileID: 100086, guid: 2cf0e1b64def3478f983fb09c8ba63eb, type: 2}
+  - grapplingHookV2: {fileID: 100004, guid: 529215cff85cd1d4e841d3de3d116939, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

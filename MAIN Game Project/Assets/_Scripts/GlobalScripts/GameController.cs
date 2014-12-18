@@ -3,7 +3,7 @@ using System.Collections;
 
 
 public class GameController : MonoBehaviour {
-
+	public static bool fallingPossible;
 	public static bool dead;
 
 	public GameObject mainPlayer;
@@ -40,13 +40,13 @@ public class GameController : MonoBehaviour {
 			mainPlayerAlive = false;
 			dead = true;
 		}
-		if (healthBar.playerHealth <= 0){
+		if (thePlayer.GetComponent<HPmanager>().hp <= 0){
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;
 		}
 
-		if (thePlayer.transform.position.y <= -200) {
+		if (thePlayer.transform.position.y <= -50 && fallingPossible) {
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;
