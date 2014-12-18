@@ -1,21 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Enemies\PogoBoss\PogoBoss.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\GameStart.cs">
     <Files>
-      <File FileName="Assets\_Enemies\PogoBoss\PogoBoss.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Enemies\PogoBoss\BossEye.shader" Line="32" Column="4" />
-      <File FileName="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" Line="1" Column="1" />
-      <File FileName="Assets\_Weapons\GrapplingHookV2\GrapplingHookV2.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Player\PlayerManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Player\Movement1.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Weapons\GrapplingHookV2\DynamicRope5.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Weapons\Pogostick\PogoStick.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Weapons\GrapplingHook.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Player\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\PlatformMotion.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\HPmanager.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\testAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Enemies\PogoBoss\PogoBossLaser.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\Enemies\Bosses\shatteredGlass.cs" Line="41" Column="7" />
+      <File FileName="Assets\_Scripts\GameWorld\Generation.cs" Line="20" Column="40" />
+      <File FileName="Assets\_Scripts\GameWorld\enemySpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameWorld\endPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameWorld\Generation2.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameWorld\GenerateCases.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameStart.cs" Line="7" Column="17" />
+      <File FileName="Assets\_Scripts\GlobalScripts\GameController.cs" Line="49" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

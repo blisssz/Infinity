@@ -30,7 +30,19 @@ public class BlackHole : MonoBehaviour {
 		if (fading == false){
 			foreach (GravityObject target in rigidbodiesWithGravity)
 			{	//attract all rigidbodies that are affected by the gravity of the blackhole towards the black hole (if within range)
-				target.rigidbody.AddExplosionForce(-gravity, transform.position, radius, 0.0f, ForceMode.Acceleration);
+				if(target != null){
+					// Make it possible to shoot projectiles at boss/enemies 
+					if(target.tag.Equals ("projectile")){
+						float dist = (transform.position - target.transform.position).magnitude;
+							if(dist < radius){
+								Vector3 projectileForce = gravity * transform.forward * (radius - dist);
+								target.rigidbody.AddForce(projectileForce);
+						}
+					}
+					else{
+						target.rigidbody.AddExplosionForce(-gravity, transform.position, radius, 0.0f, ForceMode.Acceleration);
+					}
+				}
 			}
 		}
 	}
@@ -65,13 +77,22 @@ public class BlackHole : MonoBehaviour {
 				//Play explosion animation NOT IMPLEMENTED
 
 				//Make sure the player is definitely affected by the explosion but it's only once in the list
-				BlackHole.DeleteRigidbody(player.GetComponent<GravityObject>()); //Remove the player from the list of objects affected by the orb
-				BlackHole.AddRigidbody(player.GetComponent<GravityObject>()); //Make the player affected by the gravitational effect of the blackhole
-				foreach (GravityObject target in rigidbodiesWithGravity)
-				{	//Add explosion force
-					target.rigidbody.AddExplosionForce(this.gravity * 500, transform.position, this.radius);
-				}
+				if(player != null){
+					BlackHole.DeleteRigidbody(player.GetComponent<GravityObject>()); //Remove the player from the list of objects affected by the orb
+					BlackHole.AddRigidbody(player.GetComponent<GravityObject>()); //Make the player affected by the gravitational effect of the blackhole
+					foreach (GravityObject target in rigidbodiesWithGravity)
+					{ //Add explosion force
+						if(target != null){
+							//if(target.tag.Equals("projectile")){
+							//	
+							//	}
+							//}
+							//else{
+							target.rigidbody.AddExplosionForce(this.gravity * 500, transform.position, this.radius);
 
+						}	
+					}
+				}
 				//Destroy this object;
 				BlackHole.DeleteRigidbody (player.GetComponent<GravityObject>()); //Remove the player from the list of objects affected by the orb after explosion
 				fading = false;
@@ -85,6 +106,7 @@ public class BlackHole : MonoBehaviour {
 		if (shot == true){
 			if(collision.gameObject.tag.Equals("Player") == false){
 				BlackHole.AddRigidbody (player.GetComponent<GravityObject>()); //Make the player affected by the gravitational effect of the blackhole
+				transform.parent = collision.collider.transform;
 				Destroy (this.rigidbody);
 				shot = false;
 			}

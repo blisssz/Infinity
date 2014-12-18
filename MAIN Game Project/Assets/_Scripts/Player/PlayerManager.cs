@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject blackHoleGun;
 	public GameObject grapplingHookV2;
 	
-	public static int useWeaponID = 0;
+	public int useWeaponID = 0;
 
 //	private int[] weaponID = {0, 1, 2, 3, 4};
 
@@ -150,9 +150,5 @@ public class PlayerManager : MonoBehaviour {
 
 			}
 		}
-	}
-
-	public static void setWeaponId(int x){
-		useWeaponID = x;
 	}
 }

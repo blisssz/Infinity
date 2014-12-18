@@ -38,7 +38,7 @@ public class BlackHoleGun : MonoBehaviour {
 		//Spawn black hole on begin of left mouseclick
 		if (fire == true){
 			//If the gun has been used previously there might be a blackhole left in the game. If so, destroy it. 
-			if(firstShotFired == true){
+			if(firstShotFired == true && projectile != null){
 				projectile.GetComponent<BlackHole>().setFadeOut();
 			}
 			projectile = Instantiate(blackHole, gunPoint.transform.position, Gun.transform.rotation) as GameObject; //Instantiate the black hole orb
@@ -106,6 +106,7 @@ public class BlackHoleGun : MonoBehaviour {
 		if (retract == true){
 			destroyBlackHole();
 		}
+
 	}
 
 	public void destroyBlackHole(){
@@ -116,4 +117,7 @@ public class BlackHoleGun : MonoBehaviour {
 			firstShotFired = false;
 		}
 	}
+
+	void OnDestroy(){if(GameController.dead){Destroy(projectile); destroyBlackHole ();}}
+
 }
