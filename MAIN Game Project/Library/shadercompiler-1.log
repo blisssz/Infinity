@@ -237,3 +237,19 @@ Cmd: compileSnippet
   api=4 type=1 insize=4545 outsize=1705 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_OFF ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=4545 outsize=1656 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_ON ok=1
+Cmd: preprocess
+  insize=933 outsize=1363 ok=1
+Cmd: preprocess
+  insize=1691 outsize=1646 ok=1
+Cmd: preprocess
+  insize=2963 outsize=1462 ok=1
+Cmd: preprocess
+  insize=1872 outsize=1514 ok=1
+Cmd: preprocess
+  insize=2596 outsize=1781 ok=1
+Cmd: preprocess
+  insize=2308 outsize=1740 ok=1
+Cmd: preprocess
+  insize=1834 outsize=1421 ok=1
+Cmd: preprocess
+  insize=958 outsize=1387 ok=1
