@@ -14,6 +14,7 @@ public class shatteredGlass : MonoBehaviour {
 	private Vector3 updatedDirection;
 	private Vector3 toPlayer;
 	private float[] smartOffset;
+	private GameObject Player;
 
 	// Use this for initialization
 	void Start () {
@@ -35,11 +36,12 @@ public class shatteredGlass : MonoBehaviour {
 			Destroy(gameObject,5f);
 		}
 		if (toPlayer.magnitude < minDistance) {	missDirection ();}
+		if (Player == null){Player = GameObject.FindGameObjectWithTag ("Player");}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if(col.tag.Equals ("Player")){
-			healthBar.playerHealth -= 2;
+			Player.GetComponent<HPmanager>().doDamage (2f);
 		}
 		if(col.tag.Equals("Enemy")){
 			gravityBoss boss = col.transform.parent.gameObject.GetComponent<gravityBoss>();

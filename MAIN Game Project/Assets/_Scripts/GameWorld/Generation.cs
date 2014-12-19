@@ -314,7 +314,7 @@ public class Generation : MonoBehaviour
 
 				for (int i=0; i<Moves[o].Length; i++) {
 						float size = Random.Range (minsize, maxsize);
-						Vector3 CheckPointOffset = new Vector3 (size / 2f, size * 2f, size / 2f);
+						Vector3 CheckPointOffset = new Vector3 (size / 2f, 5f, size / 1.5f);
 						Vector3 SizeOffset = new Vector3 (size / 2f, size / 2f, size / 2f);
 						lastPositions [0] = lastPositions [1];
 						lastPositions [1] = lastPositions [2];
@@ -509,13 +509,13 @@ public class Generation : MonoBehaviour
 	public static void blackHoleSettings(){
 		minsize = 1.5f;
 		maxsize = 5;
-		jumpDistance = 3;
+		jumpDistance = 2.5f;
 	}
 
 	public static void pogoStickSettings(){
-		minsize = 3;
-		maxsize = 7;
-		jumpDistance = 8;
+		minsize = 5;
+		maxsize = 10;
+		jumpDistance = 5;
 	}
 
 	void settingSetter(){

@@ -9,7 +9,9 @@ public class Generation2 :MonoBehaviour
 	public GameObject SpikePlane;
 	public List<Path> Alfa;
 	public List<Vector3> Beta;
-
+	private bool Updating=false;
+	private float time;
+	private int AlfaIndex;
 
 	
 
@@ -42,6 +44,7 @@ public class Generation2 :MonoBehaviour
 //
 //	}
 
+
 	
 
 		
@@ -51,7 +54,10 @@ public class Generation2 :MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		GameController.fallingPossible = false;
+		Updating=true;
+		ChunkList.C=gameObject;
+		time=Time.realtimeSinceStartup;
 		float Tm2 = Time.realtimeSinceStartup;
 		Moves.StartX ();
 		GenerateCases.GenCases ();
@@ -83,6 +89,7 @@ public class Generation2 :MonoBehaviour
 		Beta=new List<Vector3>();
 		Alfa.Add (Important);
 		Beta.Add (SpawnPosition);
+		AlfaIndex=0;
 //		for (int i=0; i<40; i++) {
 //
 //		}
@@ -111,23 +118,20 @@ public class Generation2 :MonoBehaviour
 	}
 
 	void Update(){
-		if(Input.GetKeyDown(KeyCode.Q)){
+		if(ChunkList.done&&Updating){
 			float Tm = Time.realtimeSinceStartup;
-			for (int j=0; j<Alfa.Count; j++) {
-				if(Alfa[j].Impossibrah<6){
-					Beta[j]=Alfa[j].Move1 ();
+				if(Alfa[AlfaIndex].Impossibrah<6){
+					Beta[AlfaIndex]=Alfa[AlfaIndex].Move1 ();
 					float CH=Random.Range (0,1f);
-					if(CH>0.90){
+					if(CH>0.80){
 						Debug.Log ("Split");
-						Alfa.Add (new Path(Alfa[j].Position,SpikePlane));
-						Beta.Add (Beta[j]);
-						Alfa[Alfa.Count-1].UpdateList.Add (new Move(1, Alfa[j].Position,SpikePlane,Alfa[Alfa.Count-1]));
-						Alfa[Alfa.Count-1].UpdateList[0].Choose();
-						Alfa[Alfa.Count-1].index.Add (3);
+						Alfa.Add (new Path(Alfa[AlfaIndex].Position,SpikePlane));
+						Beta.Add (Beta[AlfaIndex]);
 					}
 				}
-			}
 			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMaze");
+			AlfaIndex++;
+			if(AlfaIndex==Alfa.Count){AlfaIndex=0;}
 		}
 
 		if(Input.GetKeyDown(KeyCode.E)){
@@ -143,12 +147,43 @@ public class Generation2 :MonoBehaviour
 			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
 			Tm = Time.realtimeSinceStartup;
 			ChunkList.Clear ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
+			Debug.Log (Time.realtimeSinceStartup - Tm + " for Clear");
 			Debug.Log (Time.realtimeSinceStartup - Tm2 + " for UpdateTotal");
 		}
 
+		if(Input.GetKeyDown(KeyCode.Q)){
+			Updating=!Updating;
+			Debug.Log("Updating off!");
+		}
+
+		if(!ChunkList.done&&!ChunkList.Busy){
+			ContinueCouroutine();
+
+		}
+
+
 
 	}
+
+
+	public void ContinueCouroutine ()
+	{int Stage=ChunkList.Stage;
+		Debug.Log (Time.realtimeSinceStartup-time);
+		time=Time.realtimeSinceStartup;
+		Debug.Log (Stage);
+		ChunkList.Busy=true;
+		//IEnumerator a=ChunkList.UpdateDataChunksC();
+		if(Stage==0){this.StartCoroutine(ChunkList.UpdateDataChunksC());}
+		if(Stage==1){this.StartCoroutine(ChunkList.UpdateSidesChunksC());}
+		if(Stage==2){this.StartCoroutine(ChunkList.UpdateTrianglesChunksC());}
+		if(Stage==3){this.StartCoroutine(ChunkList.UpdateMeshChunksC());}
+		if(Stage==4){ChunkList.done=true;
+			ChunkList.Clear ();
+			Debug.Log ("done!");
+			Stage=-1;
+		}
+	}
+	
 		
 }
 

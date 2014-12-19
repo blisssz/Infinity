@@ -30,6 +30,8 @@ public class KeyManager {
 	public static int keyQ {get; set;}
 	public static int keyE {get; set;}
 
+	public static int esc {get; set;}
+
 
 	private static List<int> keyStatus; 
 	private static List<string> keyCodes;
@@ -62,7 +64,8 @@ public class KeyManager {
 		jump = 0;
 		leftShift = 0;
 		key1 = 0;
-		key1 = 0;
+		key2 = 0;
+		esc = 0;
 
 		// SUGGESTION: keys can be loaded from a desired key bindings file
 
@@ -89,6 +92,8 @@ public class KeyManager {
 		keyCodes.Add ("q");
 		//keyStatus.Add(0);
 		keyCodes.Add ("e");
+
+		keyCodes.Add ("escape");
 
 		//...add more keys if needed
 
@@ -130,6 +135,8 @@ public class KeyManager {
 
 		keyQ = keyStatus[8];
 		keyE = keyStatus[9];
+
+		esc = keyStatus[10];
 
 		//...add more keys if needed
 

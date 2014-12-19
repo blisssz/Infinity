@@ -29,7 +29,8 @@ public class PogoBossLaser : MonoBehaviour {
 			transform.localScale = new Vector3(xyS, xyS, hit.distance);
 			if (!hasHit && hit.transform.tag == "Player"){
 				hasHit = true;
-				Debug.Log ("Player got Hit");
+				hit.transform.GetComponent<HPmanager>().doDamage (DMG);
+				//Debug.Log ("Player got Hit");
 			}
 		}
 		else{

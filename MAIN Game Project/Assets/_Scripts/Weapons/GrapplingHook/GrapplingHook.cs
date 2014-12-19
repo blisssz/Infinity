@@ -189,7 +189,7 @@ public class GrapplingHook : MonoBehaviour {
 						enemy.hookHit();
 						ropeShoot.Stop ();
 						ropeSwing.noHit = true;
-						}
+					}
 				}
 				else{
 

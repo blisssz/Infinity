@@ -1,16 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\GameWorld\Generation2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\GameWorld\GenerateCases.cs">
     <Files>
-      <File FileName="Assets\_Scripts\GameStart.cs" Line="18" Column="1" />
-      <File FileName="Assets\_Scripts\Player\PlayerManager.cs" Line="24" Column="15" />
-      <File FileName="Assets\_Scripts\GameWorld\Generation.cs" Line="449" Column="42" />
-      <File FileName="Assets\_Scripts\GlobalScripts\GameController.cs" Line="49" Column="63" />
-      <File FileName="Assets\_Scripts\GameWorld\Generation2.cs" Line="8" Column="31" />
+      <File FileName="Assets\_Scripts\GameStart.cs" Line="49" Column="10" />
+      <File FileName="Assets\_Scripts\GameWorld\endPoint.cs" Line="30" Column="26" />
+      <File FileName="Assets\_Scripts\Weapons\GrapplingHook\GrapplingHook.cs" Line="121" Column="21" />
+      <File FileName="Assets\_Scripts\Player\PlayerManager.cs" Line="158" Column="2" />
+      <File FileName="Assets\_Scripts\Enemies\Bosses\gravityBoss.cs" Line="88" Column="40" />
+      <File FileName="Assets\_Scripts\Enemies\Bosses\shatteredGlass.cs" Line="32" Column="36" />
+      <File FileName="Assets\_Scripts\UI\PauseMenu.cs" Line="20" Column="2" />
+      <File FileName="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" Line="624" Column="17" />
+      <File FileName="Assets\_Scripts\Crosshair.cs" Line="7" Column="39" />
+      <File FileName="Assets\_Scripts\GameWorld\GenerateCases.cs" Line="158" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\Assets\_Scripts\Player\PlayerManager.cs" line="3" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

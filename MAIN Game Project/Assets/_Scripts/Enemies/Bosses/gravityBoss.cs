@@ -84,6 +84,10 @@ public class gravityBoss : MonoBehaviour {
 		smartCount = 0;
 	}
 
+	void OnDestroy(){
+		Application.LoadLevel ("Main Scene");
+	}
+
 	public static void setSmartOffset(Vector3 updir){
 		smartCount++;
 		total = SuperSmartOffset.vecToRow (updir);

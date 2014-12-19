@@ -32,4 +32,21 @@ public class GameStart : MonoBehaviour {
 				Application.LoadLevel ("Doolhof");
 			}
 		}
+
+	public static void loadBoss(){
+		switch (PlayerManager.useWeaponID) {
+		case 1:
+			Application.LoadLevel ("PogoStickBoss");
+			break;
+		case 2: 
+			Application.LoadLevel ("GravityBoss");
+			break;
+		case 3:
+			Application.LoadLevel ("GrapplingHookBoss");
+			break;
+		default: 
+			Debug.Log ("wrong number");
+			break;
+		}
+	}
 }

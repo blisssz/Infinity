@@ -79,4 +79,8 @@ public class BOSS1script : MonoBehaviour {
 		return nearestDistanceSqr;
 	}	
 
+	void OnDestroy(){
+		Application.LoadLevel ("Main Scene");
+	}
+
 }

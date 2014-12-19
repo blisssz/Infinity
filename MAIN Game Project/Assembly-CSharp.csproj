@@ -46,9 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Prefabs\Boss1\Boss1ArmAnimations.cs" />
+     <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\HitsByVelocity.cs" />
+     <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\Lava.cs" />
+     <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\ModSurface.cs" />
+     <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\PogoBossLavaDMG.cs" />
      <Compile Include="Assets\_Scripts\Crosshair.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\BOSS1script.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1ArmAnimations.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1Ball.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1GruntBehaviour.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1HitPlayer.cs" />
@@ -57,7 +61,6 @@
      <Compile Include="Assets\_Scripts\Enemies\Bosses\shatteredGlass.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyBullet.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\Level\laadlevel.cs" />
      <Compile Include="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" />
      <Compile Include="Assets\_Scripts\Enemies\PogoBoss\PogoBossLaser.cs" />
      <Compile Include="Assets\_Scripts\Enemies\ShootingEnemy.cs" />
@@ -68,6 +71,7 @@
      <Compile Include="Assets\_Scripts\GameWorld\GenerateCases.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Generation.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Generation2.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\Help.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\HelpScript.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\InsertMesh.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Move.cs" />
@@ -94,6 +98,14 @@
      <Compile Include="Assets\_Scripts\Player\VelocityInfo.cs" />
      <Compile Include="Assets\_Scripts\SoundWindScript.cs" />
      <Compile Include="Assets\_Scripts\Spawner.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\Activate.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\BulletInfo.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\BulletsLeft.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\MagazinesLeft.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\QuitGame.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\SliderValue.cs" />
+     <Compile Include="Assets\_Scripts\UI\SlidingBar.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHole.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
@@ -104,12 +116,18 @@
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeParams.cs" />
      <Compile Include="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" />
      <Compile Include="Assets\_Scripts\testAI.cs" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA_fog.shader" />
      <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
      <None Include="Assets\World\filexx.txt" />
      <None Include="Assets\World\file.txt" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaUnlitShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA.shader" />
      <None Include="Assets\World\filex.txt" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test1.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test2.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -61,6 +61,7 @@ public class Move {
 			Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
 			Cannot.Add(3);
 			Cannot.Add(2);
+			Cannot.Add(4);
 			break;
 			
 		case 3:
@@ -81,7 +82,6 @@ public class Move {
 			clear = true;
 			Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
 			Cannot.Add(4);
-			Cannot.Add(3);
 			break;
 
 		case 4:
@@ -93,6 +93,7 @@ public class Move {
 			moved = true;
 			clear = true;
 			Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
+			Cannot.Add(2);
 			break;
 			
 		default:
@@ -112,7 +113,7 @@ public class Move {
 	public void Execute ()
 	{
 		
-		ChunkList.UpdateDataChunks (Update);
+		ChunkList.StartCouroutine (Update);
 		
 		switch (Choice) {
 		case 3:

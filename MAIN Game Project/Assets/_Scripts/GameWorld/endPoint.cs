@@ -27,7 +27,7 @@ public class endPoint : MonoBehaviour {
 		score.inGameScore = (int)Mathf.Round(((startDistance - minDistance)/startDistance)*maxScore);
 		playerPosition = PlayerManager.playerPosition;
 		if((playerPosition - transform.position).magnitude < 5){
-			Application.LoadLevel ("Main scene");
+			GameStart.loadBoss ();
 		}
 	}
 

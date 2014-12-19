@@ -11,7 +11,7 @@ public class GrapplingHookV2 : MonoBehaviour {
 	
 	private int hookStatus = 0;			// 0 ready to fire, 1 fired, 2 hook, 3 retracting;
 	
-	
+	public static bool enemyHit;
 	
 	// projectile stuff
 	public GameObject projectileSpawnObject {get; set;}		// The location where projectiles are added
@@ -51,6 +51,7 @@ public class GrapplingHookV2 : MonoBehaviour {
 	private GameObject hitObject;
 	private Vector3 localPos;
 	private Vector3 localDir;
+	public basicEnemy enemy;
 	
 	// Sound stuff
 	public AudioClip audioShoot;
@@ -167,6 +168,12 @@ public class GrapplingHookV2 : MonoBehaviour {
 					hitObject = hit.transform.gameObject;
 					
 					ropeShoot.Stop();
+					if(hit.collider.tag.Equals("Enemy")){
+						hookStatus = 3;
+						enemy = hit.transform.gameObject.GetComponent<basicEnemy>();
+						enemy.hookHit();
+						ropeShoot.Stop ();
+					}
 					
 				}
 				else{

@@ -1,11 +1,66 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class EyeParams{
 
+// TODO
+// - Big eye spawn effect
+// - Make eye explosions and destroyed eye mesh done for normal eyes
+
+// - make better map
+// - tweak pogo stick jump height
+
+public class PogoBossEye{
+	
 	public float hp = 100f;
 	public HPmanager eyeHP{get; set;}
+	
+	protected Transform eyeOB;	
+	public bool eyeAlive{get; set;}
+
+	public GameObject deadEyeOb;
+	public GameObject deadEffect;
+
+	public PogoBossEye(){
+		eyeAlive = true;
+	}
+
+	public void setEyeOB(Transform eye){
+		eyeOB = eye;
+	}
+
+	public void eyeStatus(){
+		if (eyeAlive && eyeHP.getHP() <= 0){
+			deadEye ();
+			eyeAlive = false;
+		}
+	}
+	
+	
+	public void deadEye(){
+		// replace mesh + make it inactive
+		if (deadEyeOb != null){
+			GameObject deadOB = GameObject.Instantiate(deadEyeOb, eyeOB.position, eyeOB.rotation) as GameObject;
+			deadOB.transform.parent = eyeOB.parent;
+		}
+		if (deadEffect != null){
+			GameObject deathFX = GameObject.Instantiate(deadEffect, eyeOB.position, eyeOB.rotation) as GameObject;
+			deathFX.transform.parent = eyeOB.parent;
+			GameObject.Destroy(deathFX, 3f);
+		}
+
+		GameObject.Destroy(eyeOB.gameObject);
+		
+	}
+}
+
+
+[System.Serializable]
+public class EyeNormal : PogoBossEye{
+
+	//public float hp = 100f;
+	//public HPmanager eyeHP{get; set;}
+	//private Transform eyeOB;	
+	//public bool eyeAlive{get; set;}
 
 	public float openT1 = 8f;
 	public float openT2 = 12f;
@@ -50,34 +105,46 @@ public class EyeParams{
 
 	private bool targetLocked = false;
 
-	private Transform eyeOB;
 
-	public bool eyeAlive{get; set;}
 
-	public EyeParams(){
+	public EyeNormal(){
 		eyeAlive = true;
 	}
 
 
-	public void setEyeOB(Transform eye){
-		eyeOB = eye;
+	//public void setEyeOB(Transform eye){
+	//	eyeOB = eye;
+	//}
+
+	private void setGodModeOnClose(){
+		eyeHP.dmgModifier = (eyeOpen) ? 1f : 0f;
+	}
+
+	public bool forceEyeClose(){
+		eyeOpen = false;
+		ocTimer = 0f;
+		return eyeOpen;
 	}
 
 	public bool eyeOpenClose(){
 
-		float rng = Random.Range (0f, 1f);
-		// eye can open
-		if (eyeOpen == false && ocTimer > closeTime){
-			openTime = rng * (openT2 - openT1) + openT1;
-			eyeOpen = true;
-			ocTimer = 0f;
+		if (eyeAlive){
+
+			float rng = Random.Range (0f, 1f);
+			// eye can open
+			if (eyeOpen == false && ocTimer > closeTime){
+				openTime = rng * (openT2 - openT1) + openT1;
+				eyeOpen = true;
+				ocTimer = 0f;
+				setGodModeOnClose();
+			}
+			if (eyeOpen == true &&  ocTimer > openTime){
+				closeTime = rng * (closeT2 - closeT1) + closeT1;
+				eyeOpen = false;
+				ocTimer = 0f;
+				setGodModeOnClose();
+			}
 		}
-		if (eyeOpen == true &&  ocTimer > openTime){
-			closeTime = rng * (closeT2 - closeT1) + closeT1;
-			eyeOpen = false;
-			ocTimer = 0f;
-		}
-		
 		ocTimer += Time.deltaTime;
 
 		return eyeOpen;
@@ -214,7 +281,7 @@ public class EyeParams{
 
 	}
 
-	public void eyeStatus(){
+/*	public void eyeStatus(){
 		if (eyeAlive && eyeHP.getHP() <= 0){
 			deadEye ();
 			eyeAlive = false;
@@ -226,7 +293,7 @@ public class EyeParams{
 		// replace mesh + make it inactive
 		GameObject.Destroy(eyeOB.gameObject);
 
-	}
+	}*/
 
 }
 
@@ -236,10 +303,10 @@ public class EyeParams{
 
 
 [System.Serializable]
-public class EyeBigParams{
+public class EyeBig : PogoBossEye{
 	public float DMG = 0f;
-	public float hp = 100f;
-	public HPmanager eyeHP{get; set;}
+	//public float hp = 100f;
+	//public HPmanager eyeHP{get; set;}
 	public float targetAngle = 25f;
 
 	public float laserCutAccuracyMin = 3f;
@@ -255,24 +322,35 @@ public class EyeBigParams{
 
 	private float t;
 
-	private Transform eyeOB;
+//	public bool eyeAlive = true;
 
-	public EyeBigParams(){
+//	private Transform eyeOB;
 
+	public EyeBig(){
+		eyeAlive = true;
 	}
 
-	public void setEyeOB(Transform e){
-		eyeOB = e;
-	}
+//	public void setEyeOB(Transform e){
+//		eyeOB = e;
+//	}
 
 
 	public void eyeControl(Transform target){
-		t += Time.deltaTime;		
-		eyeOB.Rotate(0f, rotateY, 0f);
 
-		if ((t % laserSpawnRate) <= Time.deltaTime){
-			for (int i = 0; i < nLasers; i++){
-				eyeTargets(target);
+		if (eyeAlive){
+			t += Time.deltaTime;		
+			eyeOB.Rotate(0f, rotateY, 0f);
+
+			foreach (Transform tr in eyeOB.GetComponentsInChildren<Transform>()){
+				tr.Rotate (0, -3f*rotateY, 0.1f);
+			}
+
+			eyeStatus(); // checks hp etc
+
+			if ((t % laserSpawnRate) <= Time.deltaTime){
+				for (int i = 0; i < nLasers; i++){
+					eyeTargets(target);
+				}
 			}
 		}
 	}
@@ -303,7 +381,6 @@ public class EyeBigParams{
 			pbl.lifetime = laserLife;
 			pbl.DMG = DMG;
 
-
 			// create target offsets
 			float rad1 = Random.Range (0f, 1f) * 2f * Mathf.PI;
 			float rad2 = rad1 + (1f+Random.Range (-0.2f, 0.2f)) * Mathf.PI;
@@ -321,10 +398,6 @@ public class EyeBigParams{
 
 			// set targets of laser
 		}
-
-
-
-
 	}
 
 }
@@ -345,42 +418,33 @@ public class PogoBoss : MonoBehaviour {
 	// - eyeX stays open between a range a to b seconds, and closed between c to d;
 	// - eyeX charges laser fast and others targets player faster.
 	// etc
-	public EyeParams[] eyeParams = new EyeParams[4];		// index 0 == eye1 ... 3 == eye4
-	public EyeBigParams eyeBigParam;
+	public EyeNormal[] eyeParams = new EyeNormal[4];		// index 0 == eye1 ... 3 == eye4
+	public EyeBig eyeBigParam;
 
-	private float[] timeArray;
-	private float[] openTimeArray;
-	private float[] closeTimeArray;
 
-	private float[] lookTimeArray;
+	public bool setEyeHpAsMaxVelTreshold = false;
+
+	private GameObject player;
 
 	private string[] eyeNames = new string[]{"Eye1", "Eye2", "Eye3", "Eye4"};
 
 	private Transform[] eyeTransfArray;
 
-	public bool dmgOnVelHitsOnly = true;
-	public float maxVelHit = 30f;
-	public float minVelHit = 25f;
+	// requires some good tweaking, note that dmg == vel.magnitude
+	public bool dmgOnVelHitsOnly = true;			// only takes hits from "velocity hits"
+	public float maxVelHit = 30f;					// [m/s]
+	public float minVelHit = 20f;					// [m/s]
+
+	public float eyeStatFac = 0.7f;
 
 
-	public float eyeHP = 200f;
-
-	private bool eye1 = false;
-	private bool eye2 = false;
-	private bool eye3 = false;
-	private bool eye4 = false;
-
-
-	private HPmanager hpEye1;
-	private HPmanager hpEye2;
-	private HPmanager hpEye3;
-	private HPmanager hpEye4;
-	private HPmanager hpEyeBig;
 
 	private Animator anim;
 
-	private enum BossState {FourEyes, FinalEye};
+	private enum BossState {FourEyes, FinalEye, BossDefeated};
 	private BossState bossState;
+
+	private int[] eyeAliveState = new int[] {0, 0, 0, 0, 0}; // 0 == alive 1 == just died, 2 == dead 
 
 	private int finalStateHash = Animator.StringToHash("BigEye.BigEyeIdle");
 
@@ -391,12 +455,6 @@ public class PogoBoss : MonoBehaviour {
 		if (eyeParams.Length != 4){
 			Debug.LogWarning("EyeParams need to have 4 entries!");
 		}
-
-
-		timeArray = new float[] {0f, 0f, 0f, 0f};
-		openTimeArray = new float[] {0f, 0f, 0f, 0f};
-		closeTimeArray = new float[] {0f, 0f, 0f, 0f};
-		lookTimeArray = new float[] {0f, 0f, 0f, 0f};
 
 		bossState = BossState.FourEyes;
 
@@ -416,42 +474,26 @@ public class PogoBoss : MonoBehaviour {
 					eyeParams[i].eyeHP.setMinMaxVel(minVelHit, maxVelHit);
 					eyeParams[i].setEyeOB(t);
 					eyeTransfArray[i] = t;				
-					print (t.name);
+
+					if (setEyeHpAsMaxVelTreshold){
+						eyeParams[i].eyeHP.setHP(maxVelHit);
+					}
+
 				}
 
 			}
-
-		/*	if (t.name.Equals("PogoBossEyeNormal1")){
-				hpEye1 = t.gameObject.AddComponent<HPmanager>();
-				hpEye1.setHP(eyeHP);
-				eyeParams[0].setEyeOB(t);
-				eyeTransfArray[0] = t;
-				eyeParams[0].eyeHP = hpEye1;
-				eyeParams[0].eyeHP.setHP(eyeParams[0].hp);
-
-			}
-			else if (t.name.Equals("PogoBossEyeNormal2")){
-				hpEye2 = t.gameObject.AddComponent<HPmanager>();
-				hpEye2.setHP(eyeHP);
-				eyeParams[1].setEyeOB(t);
-				eyeTransfArray[1] = t;
-			}
-			else if (t.name.Equals("PogoBossEyeNormal3")){
-				hpEye3 = t.gameObject.AddComponent<HPmanager>();
-				hpEye3.setHP(eyeHP);
-				eyeParams[2].setEyeOB(t);
-				eyeTransfArray[2] = t;
-			}
-			else if (t.name.Equals("PogoBossEyeNormal4")){
-				hpEye4 = t.gameObject.AddComponent<HPmanager>();
-				hpEye4.setHP(eyeHP);
-				eyeParams[3].setEyeOB(t);
-				eyeTransfArray[3] = t;
-			}*/
 			if (t.name.Equals("PogoBossEyeBig")){
 				eyeBigParam.eyeHP = t.gameObject.AddComponent<HPmanager>();
 				eyeBigParam.eyeHP.setHP(eyeBigParam.hp);
+				eyeBigParam.eyeHP.velBasedDmg = dmgOnVelHitsOnly;
+				eyeBigParam.eyeHP.setMinMaxVel(minVelHit, maxVelHit);
 				eyeBigParam.setEyeOB(t);
+
+				eyeBigParam.eyeHP.dmgModifier = 0f; // start in godmode
+
+				if (setEyeHpAsMaxVelTreshold){
+					eyeBigParam.eyeHP.setHP(maxVelHit);
+				}
 			}
 		}
 
@@ -461,28 +503,8 @@ public class PogoBoss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//print (hpEye1.getHP());
-
-		int rng = Random.Range(0, 100);
-
-	/*	if (rng == 4){
-			eyeBlink(ref eye1, "Eye1");
-		}
-
-		if (rng == 9){
-			eyeBlink(ref eye2, "Eye2");
-		}
-
-		if (rng == 54){
-			eyeBlink(ref eye3, "Eye3");
-		}
-
-		if (rng == 78){
-			eyeBlink(ref eye4, "Eye4");
-		}*/
-
-		float openTime = Random.Range (0f, 1f) * (eyeParams[0].openT2 - eyeParams[0].openT1) + eyeParams[0].openT1;
-		//float
+		// check if player has a pogostick
+		checkPlayerPogo();
 
 		controlEyes();
 	}
@@ -503,9 +525,12 @@ public class PogoBoss : MonoBehaviour {
 		anim.SetBool(stateNm, eyeState);
 	}
 
+
+
+
 	private void controlEyes(){
 
-		GameObject player = GameObject.FindGameObjectWithTag ("Player") as GameObject;
+		//GameObject player = GameObject.FindGameObjectWithTag ("Player") as GameObject;
 		//print (player.rigidbody.velocity.magnitude);
 
 		bool fourEyesAlive = false;
@@ -517,7 +542,14 @@ public class PogoBoss : MonoBehaviour {
 			openCloseEye(eyeOpen, eyeNames[i]);
 
 			if (eyeParams[i].eyeAlive && eyeParams[i].eyeHP.getHP() <= 0){
+				increaseEyeStats(eyeStatFac);
 				anim.SetTrigger("Hit");	
+				// force other eyes in closed
+				for (int j = 0; j < 4; j++){
+					if (i != j){
+						openCloseEye(eyeParams[j].forceEyeClose(), eyeNames[j]);
+					}
+				}
 			}
 
 			eyeParams[i].eyeStatus();
@@ -540,10 +572,21 @@ public class PogoBoss : MonoBehaviour {
 			bossState = BossState.FinalEye;
 			anim.SetBool("EyeBig", true);
 			if (anim.GetCurrentAnimatorStateInfo(5).IsTag("FinalState")){ //(finalStateHash == anim.GetCurrentAnimatorStateInfo(5).nameHash){
+				// final eye control
 				eyeBigParam.eyeControl(player.transform);
+				eyeBigParam.eyeHP.dmgModifier = 1f; 			// remove from godmode
+
+				// boss defeated?
+				if (eyeBigParam.eyeAlive == false){
+					bossState = BossState.BossDefeated;
+				}
 			}
 		}
 
+
+		if (bossState == BossState.BossDefeated){
+			defeated (15f);
+		}
 
 
 
@@ -559,10 +602,42 @@ public class PogoBoss : MonoBehaviour {
 		}
 	}
 
-	private void aimEye(){
+	private void increaseEyeStats(float fac){
+		for (int i = 0; i < 4; i++){
+			//eyeParams[i].fireTime *= fac;
+			eyeParams[i].chargeTime *= fac;
+		}
 	}
 
-	private void checkEyeHP(){
+	private void defeated(float t){
+		// death anim here
+		this.transform.Translate(-this.transform.up*Time.deltaTime);
+
+		// finally:
+		Destroy(this.gameObject, t);
 	}
+
+
+	private void checkPlayerPogo(){
+		player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+
+		// if no pogo:
+		if (player.GetComponent<PlayerManager>().getCurrentWeapon() == null || PlayerManager.useWeaponID != 1){
+			if (!player.GetComponent<HitsByVelocity>()){
+				player.AddComponent<HitsByVelocity>();
+			}
+		}
+		else{
+			if (player.GetComponent<HitsByVelocity>()){
+				Destroy(player.GetComponent<HitsByVelocity>());
+				print ("destroy component");
+			}
+		}
+	}
+
+	void OnDestroy(){
+		Application.LoadLevel ("Main Scene");
+	}
+
 
 }

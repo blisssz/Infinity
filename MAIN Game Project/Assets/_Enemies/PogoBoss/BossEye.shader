@@ -9,12 +9,13 @@
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		LOD 200
-		
+		ZWrite On
+		ZTest LEqual
 		//SeparateSpecular On
 		
 		CGPROGRAM
 		#pragma surface surf BlinnPhong
-		#include "UnityCG.cginc"
+	//	#include "UnityCG.cginc"
 //Lambert
 		sampler2D _MainTex;
 		half4 _Color;
@@ -32,12 +33,12 @@
 			//o.Specular = _spec;
 			
 			o.Albedo = c.rgb * cc.rgb;
-			o.Alpha = c.a;
+			//o.Alpha = 1;
 		//	o.Normal = UnpackNormal(half4(0,1,0,1));
 			
 			
 		}
 		ENDCG
 	} 
-	//FallBack "Diffuse"
+	FallBack "Diffuse"
 }

@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
 	public static bool dead;
 
 	public GameObject mainPlayer;
-	public static Vector3 spawnLocation = new Vector3(0.0f, 2.0f, 0.0f);
+	public Vector3 spawnLocation = new Vector3(0.0f, 2.0f, 0.0f);
 
 	private bool mainPlayerAlive = false;
 	private GameObject thePlayer;

@@ -43,7 +43,7 @@ public class Path  {
 		Ch.Choose();
 		bool can=!Ch.Check ();
 
-		if (can&&Ch.moved&& index [0] == 0) {
+		if (can&&Ch.moved&&index.Count>0&& index [0] == 0) {
 			List<Move> TempUpdateList = new List<Move> ();
 			List<int> TempIndex = new List<int> ();
 			for (int i=0; i<index.Count; i++) {
@@ -63,7 +63,7 @@ public class Path  {
 			//Debug.Log ("Not Impossibrauh1");
 			Impossibrah=0;
 			
-		} else if (Ch.moved && can && index [0] != 0) {
+		} else if (Ch.moved && can &&(index.Count==0|| index [0] != 0)) {
 			for (int i=0; i<index.Count; i++) {
 				index [i] = index [i] - 1;
 			}

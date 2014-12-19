@@ -151,7 +151,7 @@ public class basicEnemy : MonoBehaviour {
 	}
 
 	public void applyDamage(float damage){
-		enemyLife -= damage;
+		transform.GetComponent<HPmanager>().doDamage(1);
 	}
 
 	virtual public void attackPlayer(){

@@ -21,13 +21,17 @@ public class MouseLook : MonoBehaviour {
 
 	private float accum_rot_y = 0.0f;
 
+	float rotationY = 0F;
+
 	void Update ()
 	{	
 		
 		// Mouse Look
 		// Note that rotations are in degrees and NOT Radians!
 
-		Screen.lockCursor = true;
+
+
+		//Screen.lockCursor = true;
 		
 		// yaw
 		transform.Rotate( new Vector3(0.0f, Input.GetAxis("Mouse X") *sensitivityX , 0.0f) );

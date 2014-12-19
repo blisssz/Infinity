@@ -50,7 +50,7 @@ public class basicEnemy : MonoBehaviour {
 		playerPosition = Player.transform.position;
 		toPlayer = new Vector3((playerPosition.x - transform.position.x), 0f, playerPosition.z - transform.position.z);
 		distanceToPlayer = toPlayer.magnitude;
-		if (enemyLife <= 0) {
+		if (transform.GetComponent<HPmanager>().hp <= 0) {
 			enemyAlive = false;	//STERF-
 			score.gameScore += 20;
 			score.enemiesKilled += 1;
@@ -151,7 +151,8 @@ public class basicEnemy : MonoBehaviour {
 	}
 
 	public void applyDamage(float damage){
-		enemyLife -= damage;
+		transform.GetComponent<HPmanager> ().doDamage (damage);
+		print (transform.GetComponent<HPmanager>().hp);
 	}
 
 	virtual public void attackPlayer(){
