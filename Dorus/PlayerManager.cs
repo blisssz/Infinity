@@ -82,10 +82,12 @@ public class PlayerManager : MonoBehaviour {
 					}
 					switcher = true;
 					setCrosshair(true);
+					currentWeapon.GetComponent<HandGun>().equip(true);
 				}
 				else {
 					switcher = false;
 					setCrosshair(false);
+					currentWeapon.GetComponent<HandGun>().equip(true);
 				}
 			}
 
