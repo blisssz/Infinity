@@ -7,8 +7,7 @@ using System.Collections;
 /// </summary>
 
 public class PlayerManager : MonoBehaviour {
-
-	private GameObject thisPlayer;
+	public static Vector3 playerPosition;
 
 	public GameObject weaponAttachObject {get; set;}
 	public GameObject projectileSpawnObject {get; set;}
@@ -20,18 +19,19 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject grapplingHook;
 	public GameObject pogoStick;
 	public GameObject blackHoleGun;
+	public GameObject grapplingHookV2;
 	public GameObject handGun;
 	public GameObject SMG;
-
+	
 	//UI
 	public GameObject UIfixed;
 	private GameObject Crosshair;
 
 	private bool switcher = false;
-	
-	public int useWeaponID = 0;
 
-	private int[] weaponID = {0, 1, 2, 3, 4};
+	public static int useWeaponID = 2;
+
+//	private int[] weaponID = {0, 1, 2, 3, 4};
 
 	// example: private Weapon[] = {gun1, gun2...etc}
 
@@ -39,7 +39,6 @@ public class PlayerManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		thisPlayer = this.gameObject;
 
 		currentWeapon = null;
 
@@ -59,21 +58,22 @@ public class PlayerManager : MonoBehaviour {
 				playerHeadObject = child.gameObject;
 			}
 		}
-
+	
 		Crosshair = Instantiate(UIfixed) as GameObject;
 		Crosshair.SetActive (false);
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		playerPosition = transform.position;
 		// spawn a tool/weapon
 		if (hasWeapon == false){
 
 			bool key1 = KeyManager.key1 == 1; // tap key once
 
 			// Spawn handgun
-			if (key1 == true && useWeaponID == 3){
+			if (key1 == true && useWeaponID == 4){
 				if (switcher == false){
 					if(currentWeapon == null){
 						currentWeapon = Instantiate(handGun, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.6f + weaponAttachObject.transform.up * 0.1f , weaponAttachObject.transform.rotation) as GameObject;
@@ -92,7 +92,7 @@ public class PlayerManager : MonoBehaviour {
 			}
 
 			//Spawn SMG
-			if (key1 == true && useWeaponID == 4){
+			if (key1 == true && useWeaponID == 5){
 				if (switcher == false){
 					if(currentWeapon == null){
 						currentWeapon = Instantiate(SMG, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.375f + weaponAttachObject.transform.forward * 0.21f , weaponAttachObject.transform.rotation) as GameObject;
@@ -100,7 +100,7 @@ public class PlayerManager : MonoBehaviour {
 						Activate.setActiveCustom(true);
 					}
 					switcher = true;
-					currentWeapon.GetComponent<MachineGun>().equip(true);;
+					currentWeapon.GetComponent<MachineGun>().equip(true);
 				}
 				else {
 					switcher = false;
@@ -125,8 +125,8 @@ public class PlayerManager : MonoBehaviour {
 
 				}
 
-				// spawn pogostick
 				if (useWeaponID == 1){
+					// pogostick spawn
 					currentWeapon = Instantiate(pogoStick, this.transform.position, this.transform.rotation) as GameObject;
 					float offsetY = 0.0f;
 					float offsetZ = 0.45f;
@@ -137,12 +137,40 @@ public class PlayerManager : MonoBehaviour {
 
 				}
 
-				// spawn blackHoleGun
 				if (useWeaponID == 2){
 					currentWeapon = Instantiate(blackHoleGun, weaponAttachObject.transform.position, weaponAttachObject.transform.rotation) as GameObject;
 					currentWeapon.transform.parent = weaponAttachObject.transform;
 					setCrosshair (true);
+
+					//GrapplingHook gh = currentWeapon.GetComponent<GrapplingHook>();
+					
+					// projectile spawn location gameobject
+					//gh.projectileSpawnObject = projectileSpawnObject;
+
+					/*
+					currentWeapon = Instantiate(blackHoleGun, this.transform.position, this.transform.rotation) as GameObject;
+					float offsetY = 0.0f;
+					float offsetZ = 0.45f;
+					Vector3 offset = this.transform.position + this.transform.up * offsetY + this.transform.forward * offsetZ;
+					currentWeapon.transform.position = offset;
+					
+					currentWeapon.transform.parent = this.transform;
+					*/
 				}
+
+				// spawn grapplingHook
+				if (useWeaponID == 3){
+					currentWeapon = Instantiate(grapplingHookV2, weaponAttachObject.transform.position, weaponAttachObject.transform.rotation) as GameObject;
+					currentWeapon.transform.parent = weaponAttachObject.transform;
+					
+					GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+					
+					// projectile spawn location gameobject
+					gh.projectileSpawnObject = projectileSpawnObject;
+					setCrosshair(true);
+					
+				}
+
 			}
 			// remove weapon when one is already active
 			else if (key1 == true && currentWeapon != null){
@@ -165,25 +193,24 @@ public class PlayerManager : MonoBehaviour {
 					currentWeapon.GetComponent<BlackHoleGun>().destroyBlackHole();
 					Destroy(currentWeapon.gameObject);
 					setCrosshair (false);
-
 				}
 
-				/*
-				//Delete Handgun
-				if (useWeaponID == 3){
-					Destroy(currentWeapon.gameObject);
+				// Delete GrapplingHookV2
+				if (useWeaponID == 0){
+					GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+					gh.DestroyAll();
+					setCrosshair (false);
 				}
 
-				//Delete SMG
-				if (useWeaponID == 4){
-					Destroy(currentWeapon.gameObject);
-				}
-				*/
 			}
 		}
 	}
 
 	private void setCrosshair(bool switcher){
 		Crosshair.SetActive (switcher);
+	}
+
+	public GameObject getCurrentWeapon(){
+		return currentWeapon;
 	}
 }
