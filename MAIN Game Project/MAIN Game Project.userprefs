@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs">
     <Files>
-      <File FileName="MAIN Game Project.sln" Line="39" Column="10" />
-      <File FileName="Assets\_Enemies\PogoBoss\BossEye.shader" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\GameStart.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" Line="35" Column="2" />
-      <File FileName="Assets\_Enemies\PogoBoss\UnlitAdditiveTexture.shader" Line="1" Column="1" />
-      <File FileName="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" Line="1" Column="1" />
-      <File FileName="Assets\_Enemies\PogoBoss\BigEyeFX.cs" Line="41" Column="15" />
+      <File FileName="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" Line="319" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

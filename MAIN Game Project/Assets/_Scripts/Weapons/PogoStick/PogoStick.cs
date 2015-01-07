@@ -314,7 +314,10 @@ Old anims -*/
 				}
 				
 				force += pogoMain.transform.up * (ds * pogoSpring);// - c_damp * Vector3.Dot(thisOwner.rigidbody.velocity, this.transform.up));
-				
+
+				if (Vector3.Dot(force, -transform.root.transform.up) < 0.0f){
+					force *= 0f;
+				}
 				thisOwner.rigidbody.AddForce(force * Time.deltaTime, ForceMode.Impulse);
 				
 				firstContact = true;
