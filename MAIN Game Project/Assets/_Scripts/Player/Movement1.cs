@@ -68,6 +68,7 @@ public class Movement1 : MonoBehaviour {
 	private bool movementEnabled;
 	private bool airControlEnabled;
 	private bool groundControlEnabled;
+	private bool jumpingEnabled;
 
 	// stat tracking
 	private float distanceTravelled = 0f;
@@ -92,6 +93,7 @@ public class Movement1 : MonoBehaviour {
 		movementEnabled = true;
 		airControlEnabled = true;
 		groundControlEnabled = true;
+		jumpingEnabled = true;
 
 
 		distanceTravelled = 0f;
@@ -157,31 +159,32 @@ public class Movement1 : MonoBehaviour {
 			}
 
 
-			////////// Jumping
-			if (jump == true && JumpState != 2 ){
+			if (jumpingEnabled){
+				////////// Jumping
+				if (jump == true && JumpState != 2 ){
 
-				
-				E_integral = new Vector3(0, 0, 0);		// reset integral
+					
+					E_integral = new Vector3(0, 0, 0);		// reset integral
 
-				if (JumpState == 0 && MovementState != 1){
-					//V_inherit = rigidbody.velocity;
-					JumpState = 1;
-					MovementState = 1;
+					if (JumpState == 0 && MovementState != 1){
+						//V_inherit = rigidbody.velocity;
+						JumpState = 1;
+						MovementState = 1;
 
+					}
+					if (JumpState == 1 && jump_time < jump_maxtime){
+						jump_time += Time.deltaTime;
+						// jump force
+						rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude), ForceMode.Force);
+					}
+					else{
+						JumpState = 2;
+					}
 				}
-				if (JumpState == 1 && jump_time < jump_maxtime){
-					jump_time += Time.deltaTime;
-					// jump force
-					rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude), ForceMode.Force);
-				}
-				else{
+				else if (MovementState == 1){
 					JumpState = 2;
 				}
 			}
-			else if (MovementState == 1){
-				JumpState = 2;
-			}
-
 
 			////////// Movement And Control
 			/// 
@@ -346,6 +349,11 @@ public class Movement1 : MonoBehaviour {
 
 	public void enableGroundControl(){
 		groundControlEnabled = true;
+	}
+
+	public void enableJumping(bool b){
+		jumpingEnabled = b;
+		JumpState = 0;
 	}
 	/// <summary>
 	/// Gets the local velocity of this rigidbody;

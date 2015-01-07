@@ -5,6 +5,8 @@ using System.Collections;
 /// Pogo stick, Attach this to a PogoStick GameObject
 /// </summary>
 public class PogoStick : MonoBehaviour {
+	// Todo
+	// Sound fx
 
 	private Transform thisOwner;
 
@@ -58,8 +60,8 @@ public class PogoStick : MonoBehaviour {
 	
 	private float stepRotate = 2.0f;
 	
-	private float maxRotateX = 10f;
-	private float maxRotateZ = 10f;
+	private float maxRotateX = 15f;
+	private float maxRotateZ = 15f;
 	
 	public LayerMask ignoreLayer;
 	
@@ -188,6 +190,7 @@ public class PogoStick : MonoBehaviour {
 		if (stateInfo.nameHash == mountHash && stateInfo.normalizedTime > 0.9f){
 			pogoState = PogoState.isUsing;
 			thisOwner.GetComponent<Movement1>().disableGroundControl();
+			//thisOwner.GetComponent<Movement1>().
 			lockAnimation = false;
 		}
 		else if (stateInfo.nameHash == dismountHash && stateInfo.normalizedTime > 0.9f){
@@ -463,9 +466,6 @@ Old anims -*/
 			absVel = Mathf.Min(absVel, maxDamageAtVel);
 			dmg = (absVel - minDamageAtVel)/(maxDamageAtVel-minDamageAtVel) * (pogoMaxDamage - pogoMinDamage) + pogoMinDamage;
 		}
-
-		print (absVel);
-		print (dmg);
 		return dmg;
 	}
 }

@@ -2,16 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs">
     <Files>
-      <File FileName="Assets\_Scripts\GameStart.cs" Line="36" Column="1" />
-      <File FileName="Assets\_Scripts\GameWorld\endPoint.cs" Line="43" Column="1" />
-      <File FileName="Assets\_Scripts\Weapons\GrapplingHook\GrapplingHook.cs" Line="319" Column="1" />
-      <File FileName="Assets\_Scripts\Player\PlayerManager.cs" Line="156" Column="1" />
-      <File FileName="Assets\_Scripts\Enemies\Bosses\gravityBoss.cs" Line="101" Column="1" />
-      <File FileName="Assets\_Scripts\Enemies\Bosses\shatteredGlass.cs" Line="67" Column="1" />
-      <File FileName="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" Line="534" Column="1" />
-      <File FileName="Assets\_Scripts\Crosshair.cs" Line="82" Column="1" />
-      <File FileName="Assets\_Scripts\GameWorld\GenerateCases.cs" Line="158" Column="20" />
-      <File FileName="Assets\_Scripts\GlobalScripts\GameController.cs" Line="61" Column="1" />
+      <File FileName="MAIN Game Project.sln" Line="39" Column="10" />
+      <File FileName="Assets\_Enemies\PogoBoss\BossEye.shader" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameStart.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" Line="35" Column="2" />
+      <File FileName="Assets\_Enemies\PogoBoss\UnlitAdditiveTexture.shader" Line="1" Column="1" />
+      <File FileName="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" Line="1" Column="1" />
+      <File FileName="Assets\_Enemies\PogoBoss\BigEyeFX.cs" Line="41" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

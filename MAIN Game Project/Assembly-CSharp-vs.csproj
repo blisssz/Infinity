@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Enemies\PogoBoss\BigEyeFX.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\HitsByVelocity.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\Lava.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\ModSurface.cs" />
@@ -115,9 +116,9 @@
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeMesh.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeParams.cs" />
      <Compile Include="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" />
-     <Compile Include="Assets\_Scripts\testAI.cs" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitAdditiveTexture.shader" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA_fog.shader" />
      <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
      <None Include="Assets\World\filexx.txt" />
