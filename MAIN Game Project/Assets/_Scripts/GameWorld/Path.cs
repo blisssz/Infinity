@@ -30,14 +30,13 @@ public class Path  {
 			} else {
 				Chances[i]=DefChances[i];
 			}
-			
 		}
 		Vector3 Position2 = new Vector3 (0, 0, 0);
 		int u = 0;
 
 		bool clear = false;
 		u = HelpScript.Switch (Chances);
-		Debug.Log(u);
+//		Debug.Log(u);
 
 		Move Ch=new Move(u,Position,SpikePlane,this);
 		Ch.Choose();

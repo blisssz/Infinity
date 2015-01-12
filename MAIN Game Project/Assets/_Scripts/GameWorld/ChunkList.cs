@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public static class ChunkList {
+public class ChunkList {
 
 	//public static Vector3 SpawnPosition;
 	public static Material Fu;
@@ -307,5 +307,17 @@ public static class ChunkList {
 		Busy=false;
 	}
 
+	public static void positionsReset(){
+		Chunks = new List<Chunk>();
+		ToBeUpdated = new List<Chunk>();
+		ToBeUpdatedPositions = new List<int[]>();
+		ChunkPositions=new List<int[]>();
+		sizeChunk = 16;
+		Busy=false;
+		
+		rib=1f;
 
+		done=true;
+		Stage=-1;
+	}
 }

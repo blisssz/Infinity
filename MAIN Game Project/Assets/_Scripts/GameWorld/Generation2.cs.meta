@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 2bbcfc2b9b7dee2438df4b0fdcfc2ebb
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SpikePlane: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -1,13 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\MAIN Game Project\Assets\_Scripts\Player\PlayerManager.cs">
-    <Files>
-      <File FileName="..\..\MAIN Game Project\Assets\_Scripts\Enemies\ShootingEnemy.cs" Line="5" Column="10" />
-      <File FileName="Assets\_Scripts\Enemies\basicEnemy.cs" Line="154" Column="37" />
-      <File FileName="Assets\_Scripts\Player\PlayerManager.cs" Line="26" Column="28" />
-      <File FileName="..\..\MAIN Game Project\Assets\_Scripts\Player\PlayerManager.cs" Line="14" Column="22" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

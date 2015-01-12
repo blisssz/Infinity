@@ -40,9 +40,9 @@ public class Chunk
 								for (int k=0; k<sizeChunk; k++) {
 
 										Data [i, j, k] = 0;
-					float c1 = Position2 [0] * sizeChunk * rib;//+ Random.Range (-1F, 1F) * rib / (3);
-					float c2 = Position2 [1] * sizeChunk * rib;//+ Random.Range (-1F, 1F) * rib / (3);
-					float c3 = Position2 [2] * sizeChunk * rib;//+ Random.Range (-1F, 1F) * rib / (3);
+					float c1 = Position2 [0] * sizeChunk * rib+ Random.Range (-1F, 1F) * rib / (5);
+					float c2 = Position2 [1] * sizeChunk * rib+ Random.Range (-1F, 1F) * rib / (5);
+					float c3 = Position2 [2] * sizeChunk * rib+ Random.Range (-1F, 1F) * rib / (5);
 										Vertices [i, j, k] = new Vector3 (i * rib + c1, j * rib + c2, k * rib + c3);
 								}
 				

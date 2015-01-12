@@ -20,22 +20,25 @@ public class endPoint : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (speed, speed, speed);
-		distance = (PlayerManager.playerPosition - endPosition).magnitude;
-		if (distance < minDistance){
-			minDistance = distance;
-		}
-		score.inGameScore = (int)Mathf.Round(((startDistance - minDistance)/startDistance)*maxScore);
+		//distance = (PlayerManager.playerPosition - endPosition).magnitude;
+		//if (distance < minDistance){
+		//	minDistance = distance;
+		//}
+		//score.inGameScore = (int)Mathf.Round(((startDistance - minDistance)/startDistance)*maxScore);
 		playerPosition = PlayerManager.playerPosition;
 		if((playerPosition - transform.position).magnitude < 5){
+			GameController.spawnLocation = new Vector3(0,2,0);
 			GameStart.loadBoss ();
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.tag.Equals ("Player")) {
+			GameController.spawnLocation = new Vector3(0,2,0);
 			Application.LoadLevel("Main scene");	
 		}
 		if(col.tag.Equals ("projectile")){
+			GameController.spawnLocation = new Vector3(0,2,0);
 			Application.LoadLevel ("Main scene");
 		}
 	}

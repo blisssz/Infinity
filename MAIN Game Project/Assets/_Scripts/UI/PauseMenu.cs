@@ -47,6 +47,11 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
+	public void goToNewLevel(){
+		togglePause ();
+		Application.LoadLevel ("Main Scene");
+	}
+
 	/**
 	 * A function for toggling a specific gameObject on or off
 	 */

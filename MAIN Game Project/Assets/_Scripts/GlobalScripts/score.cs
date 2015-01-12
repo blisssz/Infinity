@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class score : MonoBehaviour {
 	public static int gameScore;
-	public static int inGameScore;
 	public static bool restart;
 	public static int enemiesKilled;
 	public static int platformsVisited;
@@ -18,14 +17,14 @@ public class score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		thisScore.text = "Score: " + (gameScore + inGameScore);
+		thisScore.text = "Score: " + (gameScore);
 		if (restart){
 			StartCoroutine(stopRestart());
 		}
 	}
 
 	public static int getGameScore(){
-		return (gameScore + inGameScore);
+		return gameScore;
 	}
 
 	public static void setToZero(){
@@ -36,5 +35,9 @@ public class score : MonoBehaviour {
 	IEnumerator stopRestart() {
 		yield return new WaitForSeconds(1);
 		restart = false;
+	}
+
+	public static void scoreUp(int x){
+		gameScore += x;
 	}
 }

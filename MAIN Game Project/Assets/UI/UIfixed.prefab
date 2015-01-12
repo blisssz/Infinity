@@ -27,14 +27,13 @@ GameObject:
   - 223: {fileID: 22357156}
   - 114: {fileID: 11457158}
   - 114: {fileID: 11457156}
-  - 114: {fileID: 11457160}
   m_Layer: 5
   m_Name: UIfixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &157160
 GameObject:
   m_ObjectHideFlags: 1
@@ -140,22 +139,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 75
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &11457160
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157158}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b860abd2def14967a7973ac58872f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switcher: 0
-  LeftCrosshair: {fileID: 157166}
-  RightCrosshair: {fileID: 157164}
-  UpperCrosshair: {fileID: 157162}
-  LowerCrosshair: {fileID: 157160}
 --- !u!114 &11457162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,7 +269,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
 --- !u!224 &22457156
 RectTransform:
   m_ObjectHideFlags: 1

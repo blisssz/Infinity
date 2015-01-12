@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Options.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\HitsByVelocity.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\Lava.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\ModSurface.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\_Scripts\GameStart.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Chunk.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\ChunkList.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\Coin.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\GenerateCases.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Generation.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Generation2.cs" />
@@ -83,7 +85,6 @@
      <Compile Include="Assets\_Scripts\GameWorld\endPoint.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\enemySpawn.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\mySkyBox.cs" />
-     <Compile Include="Assets\_Scripts\GameWorld\platformCounter.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\healthBar.cs" />
@@ -114,18 +115,26 @@
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\GrapplingHookV2.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeMesh.cs" />
      <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeParams.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\DestroyGunParticles.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\DestroyMuzzleFlashParticles.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\Gun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\HandGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\MachineGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\Sniper.cs" />
      <Compile Include="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" />
      <Compile Include="Assets\_Scripts\testAI.cs" />
+     <Compile Include="Assets\coinPickup.cs" />
+     <Compile Include="Assets\highScoreText.cs" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA_fog.shader" />
      <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
-     <None Include="Assets\World\filexx.txt" />
+     <None Include="Assets\filexx.txt" />
      <None Include="Assets\World\file.txt" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaUnlitShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA.shader" />
-     <None Include="Assets\World\filex.txt" />
+     <None Include="Assets\filex.txt" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test1.shader" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test2.shader" />
  <Reference Include="UnityEngine.UI">

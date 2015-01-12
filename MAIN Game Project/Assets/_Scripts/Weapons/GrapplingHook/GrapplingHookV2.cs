@@ -183,6 +183,7 @@ public class GrapplingHookV2 : MonoBehaviour {
 					if (ropeLength >= maxExtend){
 						hookStatus  = 3; // retracting
 						ropeShoot.Stop();
+						highScore.grapplingHookMiss ();
 					}
 				}
 				
@@ -311,6 +312,9 @@ public class GrapplingHookV2 : MonoBehaviour {
 		}
 		
 		if  (hookStatus != 0 && hookStatus != 3 && KeyManager.rightMouse == 2){
+			if(hookStatus == 1){
+				highScore.grapplingHookMiss();
+			}
 			ropeShoot.Stop();
 			hookStatus = 3;
 			

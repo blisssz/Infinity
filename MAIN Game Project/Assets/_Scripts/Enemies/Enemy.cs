@@ -14,7 +14,6 @@ public class Enemy : basicEnemy {
 	public GameObject henk;
 
 	override public void attackPlayer(){
-		Debug.Log (lastAttack);
 		if(lastAttack < Time.time - attackTime){
 			inAttack = true;
 			paraboleFlight ();

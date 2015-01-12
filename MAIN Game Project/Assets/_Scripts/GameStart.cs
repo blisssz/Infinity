@@ -5,16 +5,22 @@ public class GameStart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int weapon = Mathf.RoundToInt (Random.Range (1,4));
+		int weapon = Mathf.RoundToInt (Random.Range (1,6));
 		PlayerManager.useWeaponID = weapon;
 		switch(weapon){
 		case 1: 
 			selectLevel ();
 			break;
 		case 2:
-			selectLevel ();
+			Application.LoadLevel ("Doolhof");
 			break;
 		case 3: 
+			selectLevel ();
+			break;
+		case 4:
+			selectLevel ();
+			break;
+		case 5:
 			selectLevel ();
 			break;
 		default: 

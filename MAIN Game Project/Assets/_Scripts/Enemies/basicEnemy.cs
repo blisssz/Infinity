@@ -44,9 +44,6 @@ public class basicEnemy : MonoBehaviour {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
 		}
-		if (score.restart){
-			//respawn();
-		}
 		playerPosition = Player.transform.position;
 		toPlayer = new Vector3((playerPosition.x - transform.position.x), 0f, playerPosition.z - transform.position.z);
 		distanceToPlayer = toPlayer.magnitude;
@@ -54,7 +51,6 @@ public class basicEnemy : MonoBehaviour {
 			enemyAlive = false;	//STERF-
 			score.gameScore += 20;
 			score.enemiesKilled += 1;
-			highScore.totalEnemiesKilled += 1;
 		}
 		if (!enemyAlive){
 			gameObject.SetActive(false);
@@ -152,7 +148,10 @@ public class basicEnemy : MonoBehaviour {
 
 	public void applyDamage(float damage){
 		transform.GetComponent<HPmanager> ().doDamage (damage);
-		print (transform.GetComponent<HPmanager>().hp);
+	}
+
+	void OnDestroy(){
+		highScore.enemyKill ();
 	}
 
 	virtual public void attackPlayer(){

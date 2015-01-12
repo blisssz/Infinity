@@ -12,7 +12,7 @@ Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAI
 Loading C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.055 seconds
+- Completed reload, in  0.054 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -29,11 +29,51 @@ GameController:Update()
 (Filename:  Line: -1)
 
 Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.374599 ms
+UnloadTime: 0.375532 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 843.
-Total: 0.856493 ms (FindLiveObjects: 0.031721 ms CreateObjectMapping: 0.014461 ms MarkObjects: 0.247244 ms  DeleteObjects: 0.008396 ms)
+Total: 0.795848 ms (FindLiveObjects: 0.030788 ms CreateObjectMapping: 0.013994 ms MarkObjects: 0.244912 ms  DeleteObjects: 0.007930 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 
+  at Crosshair.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+GameController:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 
+  at Crosshair.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+GameController:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 
+  at Crosshair.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+GameController:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 
+  at Crosshair.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+GameController:Update()
+ 
+(Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 

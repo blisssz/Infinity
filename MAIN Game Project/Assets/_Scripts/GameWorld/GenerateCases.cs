@@ -142,7 +142,14 @@ public static class GenerateCases {
 
 	public static void WriteToFile(){
 		string x=HelpScript.toStringSpecial(Cases);
-		StreamWriter file2 = new StreamWriter(@"Assets\World\filexx.txt");
+		StreamWriter file2;
+		try{
+			file2 = new StreamWriter(@"Data/filexx.txt");
+		}
+		catch (DirectoryNotFoundException e){
+			file2 = new StreamWriter(@"Assets/filexx.txt");
+		}
+
 		file2.WriteLine(x);
 		file2.Close();
 		Debug.Log ("Succeeded");
@@ -150,8 +157,13 @@ public static class GenerateCases {
 	}
 
 	public static void ReadFromFile(){
-
-		StreamReader sr = new StreamReader(@"Assets\World\filex.txt");
+		StreamReader sr;
+		try {
+			sr = new StreamReader(@"Data/filex.txt");
+		}
+		catch (DirectoryNotFoundException e){
+			sr = new StreamReader(@"Assets/filex.txt");
+		}
 
 		for(int i=0;i<256;i++){
 
@@ -179,6 +191,18 @@ public static class GenerateCases {
 
 		}
 
+	}
+
+	public static void resetParameters(){
+		found=0;
+		FoundPositions=new List<int>();
+		VerticePositions=new List<List<int>>();
+		NearPositions=new int[8][]{new int[3]{1,2,4},new int[3]{0,3,5},new int[3]{0,3,6},new int[3]{1,2,7},new int[3]{0,5,6},new int[3]{1,4,7},new int[3]{2,4,7},new int[3]{3,5,6}};
+		Cases=new int[256][];
+		NumberOfTriangles = 0;
+		u =0;
+		FinalFoundPositions=new List<List<int>>();
+		FinalVerticePositions=new List<List<List<int>>>();
 	}
 
 }

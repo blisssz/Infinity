@@ -16,6 +16,7 @@ public class InsertMesh : MonoBehaviour {
 				}
 		mesh1.triangles = Triangles;
 		X.GetComponent<MeshFilter>().mesh = mesh1;
+		X.collider.isTrigger = true;
 	}
 	
 

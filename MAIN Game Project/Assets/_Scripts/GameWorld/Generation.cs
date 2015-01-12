@@ -9,6 +9,7 @@ public class Generation : MonoBehaviour
 		private Vector3 Position;
 	public GameObject enemy;
 	public static bool spawnEnemy;
+	public GameObject coin;
 		private static float minsize;
 		private static float maxsize;
 		private int b = 15;
@@ -16,8 +17,8 @@ public class Generation : MonoBehaviour
 		public GameObject C;
 		private Vector3[] Vertices;
 		private int[] Triangles;
-		private int up = 0;
-		private int iteration = 20;
+		private int up = 10;
+		private int iteration = 50;
 		private static float jumpDistance = 100;
 		private Vector3[] lastPositions = new Vector3[3];
 		public static Vector3[][] Moves;
@@ -58,9 +59,9 @@ public class Generation : MonoBehaviour
 				int[] newTriangles = new int[3 * (b - 1) * (2 * (b - 1) + 4)];
 				for (int j=0; j<b; j++) {
 						for (int k=0; k<b; k++) {
-								float c1 = Random.Range (-1F, 1F) * size / (b * 2);
-								float c2 = Random.Range (-1F, 1F) * size / (b * 2);
-								float c3 = Random.Range (-1F, 1F) * size / (b * 2);
+								float c1 = Random.Range (-1F, 1F) * size / (b * 5);
+								float c2 = Random.Range (-1F, 1F) * size / (b * 5);
+								float c3 = Random.Range (-1F, 1F) * size / (b * 5);
 								newVertices [b * j + k] = new Vector3 ((float)j * size / (b - 1) + c1, 0 + c2, (float)k * size / (b - 1) + (float)j * size / (b - 1) / 2f + c3) + Position;
 						}
 				}
@@ -340,6 +341,7 @@ public class Generation : MonoBehaviour
 				if(spawnEnemy){
 					enemySpawn.checkForEnemy(Position,enemy);	
 				}
+				Instantiate (coin, lastPositions[0] + new Vector3(size/2f, 0.5f, size/1.5f) ,Quaternion.identity);
 			}
 
 		}
@@ -504,18 +506,28 @@ public class Generation : MonoBehaviour
 		minsize = 3;
 		maxsize = 10;
 		jumpDistance = 12;
+		spawnEnemy = true; 
 	}
 
 	public static void blackHoleSettings(){
-		minsize = 1.5f;
+		minsize = 2.5f;
 		maxsize = 5;
 		jumpDistance = 2.5f;
+		spawnEnemy = false;
 	}
 
 	public static void pogoStickSettings(){
 		minsize = 5;
 		maxsize = 10;
 		jumpDistance = 5;
+		spawnEnemy = false;
+	}
+
+	public static void gunSettings(){
+		minsize = 2;
+		maxsize = 3;
+		jumpDistance = 1.5f;
+		spawnEnemy = true;
 	}
 
 	void settingSetter(){
@@ -523,12 +535,12 @@ public class Generation : MonoBehaviour
 		case 1:
 			pogoStickSettings ();
 			break;
-		case 2:
-			blackHoleSettings ();
-			break;
 		case 3: 
 			hookSettings ();
-			spawnEnemy = true;
+			break;
+		case 4:
+		case 5:
+			gunSettings ();
 			break;
 		default:
 			break;

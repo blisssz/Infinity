@@ -9,7 +9,7 @@ public class Generation2 :MonoBehaviour
 	public GameObject SpikePlane;
 	public List<Path> Alfa;
 	public List<Vector3> Beta;
-	private bool Updating=false;
+	private bool Updating = false;
 	private float time;
 	private int AlfaIndex;
 
@@ -53,7 +53,9 @@ public class Generation2 :MonoBehaviour
 		
 	// Use this for initialization
 	void Start ()
-	{
+	{	
+		ChunkList.positionsReset ();
+		GenerateCases.resetParameters ();
 		GameController.fallingPossible = false;
 		Updating=true;
 		ChunkList.C=gameObject;
@@ -62,11 +64,11 @@ public class Generation2 :MonoBehaviour
 		Moves.StartX ();
 		GenerateCases.GenCases ();
 		int[][] TempCases = new int[256][];
-		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
+//		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
 		GenerateCases.ReadFromFile ();
-		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
+//		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
 		GenerateCases.SwapCases ();
-		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
+//		Debug.Log (HelpScript.toStringSpecial (GenerateCases.Cases));
 		var shaderText =
 			"Shader \"Alpha Additive\" {" +
 			"Properties { _Color (\"Main Color\", Color) = (0.44,0.66,0.67,0) }" +
@@ -124,12 +126,12 @@ public class Generation2 :MonoBehaviour
 					Beta[AlfaIndex]=Alfa[AlfaIndex].Move1 ();
 					float CH=Random.Range (0,1f);
 					if(CH>0.80){
-						Debug.Log ("Split");
+//						Debug.Log ("Split");
 						Alfa.Add (new Path(Alfa[AlfaIndex].Position,SpikePlane));
 						Beta.Add (Beta[AlfaIndex]);
 					}
 				}
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMaze");
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMaze");
 			AlfaIndex++;
 			if(AlfaIndex==Alfa.Count){AlfaIndex=0;}
 		}
@@ -138,22 +140,22 @@ public class Generation2 :MonoBehaviour
 			float Tm2 = Time.realtimeSinceStartup;
 			float Tm = Time.realtimeSinceStartup;
 			ChunkList.UpdateSidesChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateSides");
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateSides");
 			Tm = Time.realtimeSinceStartup;
 			ChunkList.UpdateTrianglesChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateTriangles");
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateTriangles");
 			Tm = Time.realtimeSinceStartup;
 			ChunkList.UpdateMeshChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
 			Tm = Time.realtimeSinceStartup;
 			ChunkList.Clear ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for Clear");
-			Debug.Log (Time.realtimeSinceStartup - Tm2 + " for UpdateTotal");
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for Clear");
+//			Debug.Log (Time.realtimeSinceStartup - Tm2 + " for UpdateTotal");
 		}
 
 		if(Input.GetKeyDown(KeyCode.Q)){
 			Updating=!Updating;
-			Debug.Log("Updating off!");
+//			Debug.Log("Updating off!");
 		}
 
 		if(!ChunkList.done&&!ChunkList.Busy){
@@ -168,9 +170,9 @@ public class Generation2 :MonoBehaviour
 
 	public void ContinueCouroutine ()
 	{int Stage=ChunkList.Stage;
-		Debug.Log (Time.realtimeSinceStartup-time);
+//		Debug.Log (Time.realtimeSinceStartup-time);
 		time=Time.realtimeSinceStartup;
-		Debug.Log (Stage);
+//		Debug.Log (Stage);
 		ChunkList.Busy=true;
 		//IEnumerator a=ChunkList.UpdateDataChunksC();
 		if(Stage==0){this.StartCoroutine(ChunkList.UpdateDataChunksC());}
@@ -179,7 +181,7 @@ public class Generation2 :MonoBehaviour
 		if(Stage==3){this.StartCoroutine(ChunkList.UpdateMeshChunksC());}
 		if(Stage==4){ChunkList.done=true;
 			ChunkList.Clear ();
-			Debug.Log ("done!");
+//			Debug.Log ("done!");
 			Stage=-1;
 		}
 	}
