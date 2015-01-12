@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Options.cs" />
+     <Compile Include="Assets\_Enemies\PogoBoss\BigEyeFX.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\HitsByVelocity.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\Lava.cs" />
      <Compile Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Scripts\ModSurface.cs" />
@@ -122,11 +123,11 @@
      <Compile Include="Assets\_Scripts\Weapons\Guns\MachineGun.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Guns\Sniper.cs" />
      <Compile Include="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" />
-     <Compile Include="Assets\_Scripts\testAI.cs" />
      <Compile Include="Assets\coinPickup.cs" />
      <Compile Include="Assets\highScoreText.cs" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaShader.shader" />
      <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitAdditiveTexture.shader" />
      <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA_fog.shader" />
      <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
      <None Include="Assets\filexx.txt" />

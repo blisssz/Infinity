@@ -3,10 +3,8 @@ using System.Collections;
 
 
 // TODO
-// - Big eye spawn effect
 // - Make eye explosions and destroyed eye mesh done for normal eyes
 
-// - make better map
 // - tweak pogo stick jump height
 
 public class PogoBossEye{
@@ -45,7 +43,7 @@ public class PogoBossEye{
 		if (deadEffect != null){
 			GameObject deathFX = GameObject.Instantiate(deadEffect, eyeOB.position, eyeOB.rotation) as GameObject;
 			deathFX.transform.parent = eyeOB.parent;
-			GameObject.Destroy(deathFX, 3f);
+			GameObject.Destroy(deathFX, 10f);
 		}
 
 		GameObject.Destroy(eyeOB.gameObject);
@@ -569,8 +567,13 @@ public class PogoBoss : MonoBehaviour {
 		}
 
 		if (!fourEyesAlive){
+
+			// spawn the final eye by animation
 			bossState = BossState.FinalEye;
 			anim.SetBool("EyeBig", true);
+
+
+
 			if (anim.GetCurrentAnimatorStateInfo(5).IsTag("FinalState")){ //(finalStateHash == anim.GetCurrentAnimatorStateInfo(5).nameHash){
 				// final eye control
 				eyeBigParam.eyeControl(player.transform);
@@ -581,6 +584,11 @@ public class PogoBoss : MonoBehaviour {
 					bossState = BossState.BossDefeated;
 				}
 			}
+			else{
+				// activate the big eye effect
+				this.GetComponentInChildren<BigEyeFX>().activateFX = true;
+			}
+
 		}
 
 
