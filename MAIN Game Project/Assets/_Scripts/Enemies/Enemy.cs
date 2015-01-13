@@ -39,7 +39,7 @@ public class Enemy : basicEnemy {
 	void paraboleFlight(){
 		transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));
 		dx = bdx * Time.deltaTime * attackSpeed;
-		dy = parabole (attackX, dx);
+		dy = 3 * parabole (attackX, dx);
 		attackX += dx;
 		attackY += dy;
 		transform.Translate (0, dy, dx, Space.Self);

@@ -13,7 +13,7 @@ public class checkPoint : MonoBehaviour {
 	void Update () {
 		playerPosition = PlayerManager.playerPosition;
 		if((playerPosition - checkPointPosition).magnitude < 2){
-			GameController.spawnLocation = checkPointPosition;
+			GameController.checkPoint(checkPointPosition);
 			Destroy (gameObject);
 		}
 		//print ((playerPosition - checkPointPosition).magnitude);

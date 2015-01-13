@@ -67,6 +67,10 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public static void checkPoint(Vector3 pos){
+		spawnLocation = pos;
+		lifes = startLifes;
+	}
 
 
 

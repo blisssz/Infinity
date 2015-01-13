@@ -7,7 +7,8 @@ public class Generation : MonoBehaviour
 		public GameObject CheckPoint;
 	public GameObject endPoint;
 		private Vector3 Position;
-	public GameObject enemy;
+	public GameObject shootingEnemy;
+	public GameObject paraboleEnemy;
 	public static bool spawnEnemy;
 	public GameObject coin;
 		private static float minsize;
@@ -339,7 +340,13 @@ public class Generation : MonoBehaviour
 								iteration--;
 						}
 				if(spawnEnemy){
-					enemySpawn.checkForEnemy(Position,enemy);	
+					float enemyType = Random.value;
+					if(enemyType < 0.5){
+						enemySpawn.checkForEnemy(Position,shootingEnemy);	
+					}
+					else{
+						enemySpawn.checkForEnemy(Position,paraboleEnemy);
+					}
 				}
 				Instantiate (coin, lastPositions[0] + new Vector3(size/2f, 0.5f, size/1.5f) ,Quaternion.identity);
 			}

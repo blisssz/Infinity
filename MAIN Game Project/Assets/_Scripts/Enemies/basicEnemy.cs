@@ -78,6 +78,7 @@ public class basicEnemy : MonoBehaviour {
 	void movingCircle(){
 		transform.Rotate (0,rotationSpeed * Time.deltaTime,0, Space.Self);
 		transform.Translate (transform.forward * enemySpeed * Time.deltaTime, Space.World);
+		transform.LookAt (Player.transform);
 	}
 	
 	public void circleAroundPlayer(){
@@ -93,11 +94,11 @@ public class basicEnemy : MonoBehaviour {
 	}
 
 	public void heightCheck(){
-		if (transform.position.y < playerPosition.y + 1.8f) {
-			transform.Translate(0,enemySpeed*Time.deltaTime,0);		
+		if (transform.position.y < playerPosition.y + 2.8f) {
+			transform.Translate(0, 2 * enemySpeed*Time.deltaTime,0);		
 		}
-		if (transform.position.y > playerPosition.y + 2.2f) {
-			transform.Translate(0,-Time.deltaTime*enemySpeed,0);		
+		if (transform.position.y > playerPosition.y + 3.2f) {
+			transform.Translate(0, 2 * -Time.deltaTime*enemySpeed,0);		
 		}
 	}
 	
