@@ -147,6 +147,8 @@ public class Movement1 : MonoBehaviour {
 
 						springUpForce = transform.up * (cdamp * Vector3.Dot (rigidbody.velocity, -transform.up)
 						                                                    + L_compression * k);
+
+						//springUpForce = Vector3.ClampMagnitude(springUpForce,L_compression * 2*k);
 					}
 
 					if (Vector3.Dot(hit.normal, transform.up) < maxWalkSlope){
@@ -191,6 +193,10 @@ public class Movement1 : MonoBehaviour {
 					}
 					if (JumpState == 1 && jump_time < jump_maxtime){
 						jump_time += Time.deltaTime;
+
+						// keep springyfeet force at zero else it increases the jump force
+						springUpForce = Vector3.zero;
+
 						// jump force
 						rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude), ForceMode.Force);
 					}
