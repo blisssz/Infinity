@@ -1,0 +1,146 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:D:/Tu/Unity/Data/Managed/UnityEngine.dll
+-r:D:/Tu/Unity/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll
+-r:D:/Tu/Unity/Data/Managed/UnityEditor.dll
+-define:UNITY_4_6_1
+-define:UNITY_4_6
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_4_6_FEATURES
+-define:INCLUDE_WP_BLUE_SUPPORT
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+"Assets/UI/IndieEffects/CSharp Classes/AA.cs"
+"Assets/UI/IndieEffects/CSharp Classes/Bloom.cs"
+"Assets/UI/IndieEffects/CSharp Classes/Blur.cs"
+"Assets/UI/IndieEffects/CSharp Classes/CameraMotionBlur.cs"
+"Assets/UI/IndieEffects/CSharp Classes/ChromaticAbberation.cs"
+"Assets/UI/IndieEffects/CSharp Classes/ColorBalance.cs"
+"Assets/UI/IndieEffects/CSharp Classes/DepthOfField.cs"
+"Assets/UI/IndieEffects/CSharp Classes/FisheyeEffect.cs"
+"Assets/UI/IndieEffects/CSharp Classes/IndieEffects.cs"
+"Assets/UI/IndieEffects/CSharp Classes/MotionblurModern/ObjectBlur.cs"
+"Assets/UI/IndieEffects/CSharp Classes/MotionblurModern/motionBlurModern.cs"
+"Assets/UI/IndieEffects/CSharp Classes/Negative.cs"
+"Assets/UI/IndieEffects/CSharp Classes/Outline.cs"
+"Assets/UI/IndieEffects/CSharp Classes/SSAO_C5100.cs"
+"Assets/UI/IndieEffects/CSharp Classes/VignetteBlur.cs"
+Assets/_Enemies/PogoBoss/BigEyeFX.cs
+Assets/_Scripts/Crosshair.cs
+Assets/_Scripts/Enemies/Boss1/BOSS1script.cs
+Assets/_Scripts/Enemies/Boss1/Boss1ArmAnimations.cs
+Assets/_Scripts/Enemies/Boss1/Boss1Ball.cs
+Assets/_Scripts/Enemies/Boss1/Boss1GruntBehaviour.cs
+Assets/_Scripts/Enemies/Boss1/Boss1HitPlayer.cs
+Assets/_Scripts/Enemies/Bosses/SuperSmartOffset.cs
+Assets/_Scripts/Enemies/Bosses/gravityBoss.cs
+Assets/_Scripts/Enemies/Bosses/shatteredGlass.cs
+Assets/_Scripts/Enemies/Enemy.cs
+Assets/_Scripts/Enemies/EnemyBullet.cs
+Assets/_Scripts/Enemies/PogoBoss/PogoBoss.cs
+Assets/_Scripts/Enemies/PogoBoss/PogoBossLaser.cs
+Assets/_Scripts/Enemies/ShootingEnemy.cs
+Assets/_Scripts/Enemies/basicEnemy.cs
+Assets/_Scripts/GameStart.cs
+Assets/_Scripts/GameWorld/Chunk.cs
+Assets/_Scripts/GameWorld/ChunkList.cs
+Assets/_Scripts/GameWorld/GenGen.cs
+Assets/_Scripts/GameWorld/GenerateCases.cs
+Assets/_Scripts/GameWorld/Generation.cs
+Assets/_Scripts/GameWorld/Help.cs
+Assets/_Scripts/GameWorld/HelpScript.cs
+Assets/_Scripts/GameWorld/InsertMesh.cs
+Assets/_Scripts/GameWorld/Move.cs
+Assets/_Scripts/GameWorld/Moves.cs
+Assets/_Scripts/GameWorld/ObjectCreator.cs
+Assets/_Scripts/GameWorld/Path.cs
+Assets/_Scripts/GameWorld/PickUp.cs
+Assets/_Scripts/GameWorld/PointList.cs
+Assets/_Scripts/GameWorld/SwitchHelp.cs
+Assets/_Scripts/GameWorld/Test.cs
+Assets/_Scripts/GameWorld/TestThread/Generation3.cs
+Assets/_Scripts/GameWorld/TestThread/Job.cs
+Assets/_Scripts/GameWorld/TestThread/ThreadedJob.cs
+Assets/_Scripts/GameWorld/checkPoint.cs
+Assets/_Scripts/GameWorld/endPoint.cs
+Assets/_Scripts/GameWorld/enemySpawn.cs
+Assets/_Scripts/GameWorld/mySkyBox.cs
+Assets/_Scripts/GlobalScripts/GameController.cs
+Assets/_Scripts/GlobalScripts/KeyManager.cs
+Assets/_Scripts/GlobalScripts/Options.cs
+Assets/_Scripts/GlobalScripts/healthBar.cs
+Assets/_Scripts/GlobalScripts/highScore.cs
+Assets/_Scripts/GlobalScripts/highScoreText.cs
+Assets/_Scripts/GlobalScripts/score.cs
+Assets/_Scripts/HPmanager.cs
+Assets/_Scripts/HitsByVelocity.cs
+Assets/_Scripts/Lava.cs
+Assets/_Scripts/ModSurface.cs
+Assets/_Scripts/PickUp/coinPickup.cs
+Assets/_Scripts/PlatformMotion.cs
+Assets/_Scripts/Player/GrapplingRopeSwing.cs
+Assets/_Scripts/Player/MouseLook.cs
+Assets/_Scripts/Player/Movement1.cs
+Assets/_Scripts/Player/PlayerManager.cs
+Assets/_Scripts/Player/VelocityInfo.cs
+Assets/_Scripts/PogoBossLavaDMG.cs
+Assets/_Scripts/SoundWindScript.cs
+Assets/_Scripts/Spawner.cs
+Assets/_Scripts/UI/GunInfo/Activate.cs
+Assets/_Scripts/UI/GunInfo/BulletInfo.cs
+Assets/_Scripts/UI/GunInfo/BulletsLeft.cs
+Assets/_Scripts/UI/GunInfo/MagazinesLeft.cs
+Assets/_Scripts/UI/GunInfo/OutOfAmmo.cs
+Assets/_Scripts/UI/JetpackActivation.cs
+Assets/_Scripts/UI/PauseMenu.cs
+Assets/_Scripts/UI/PauseMenu/QuitGame.cs
+Assets/_Scripts/UI/PauseMenu/SliderValue.cs
+Assets/_Scripts/UI/SlidingBar.cs
+Assets/_Scripts/Weapons/BlackHoleGun/BlackHole.cs
+Assets/_Scripts/Weapons/BlackHoleGun/BlackHoleGun.cs
+Assets/_Scripts/Weapons/BlackHoleGun/GravityObject.cs
+Assets/_Scripts/Weapons/GrapplingHook/DynamicRope5.cs
+Assets/_Scripts/Weapons/GrapplingHook/GrapplingHook.cs
+Assets/_Scripts/Weapons/GrapplingHook/GrapplingHookV2.cs
+Assets/_Scripts/Weapons/GrapplingHook/RopeMesh.cs
+Assets/_Scripts/Weapons/GrapplingHook/RopeParams.cs
+Assets/_Scripts/Weapons/Guns/DestroyGunParticles.cs
+Assets/_Scripts/Weapons/Guns/DestroyMuzzleFlashParticles.cs
+Assets/_Scripts/Weapons/Guns/Gun.cs
+Assets/_Scripts/Weapons/Guns/HandGun.cs
+Assets/_Scripts/Weapons/Guns/MachineGun.cs
+Assets/_Scripts/Weapons/Guns/Sniper.cs
+Assets/_Scripts/Weapons/Jetpack.cs
+Assets/_Scripts/Weapons/PogoStick/PogoStick.cs
+-r:D:/Tu/Unity/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll
+-r:D:/Tu/Unity/Data/Mono\lib/mono/unity\System.Xml.Linq.dll

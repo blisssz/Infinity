@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 2b6afc2e751647145890c49825d1f2f5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature
+    100002: armlow_l
+    100004: armlow_r
+    100006: armupper_l
+    100008: armupper_r
+    100010: bodybottom
+    100012: bodymiddle
+    100014: bodytop
+    100016: Cube
+    100018: //RootNode
+    100020: wing1_l
+    100022: wing1_r
+    100024: wing2_l
+    100026: wing2_r
+    100028: wing3_l
+    100030: wing3_r
+    100032: wingbonelower_l
+    100034: wingbonelower_r
+    100036: wingboneupper_l
+    100038: wingboneupper_r
+    400000: Armature
+    400002: armlow_l
+    400004: armlow_r
+    400006: armupper_l
+    400008: armupper_r
+    400010: bodybottom
+    400012: bodymiddle
+    400014: bodytop
+    400016: Cube
+    400018: //RootNode
+    400020: wing1_l
+    400022: wing1_r
+    400024: wing2_l
+    400026: wing2_r
+    400028: wing3_l
+    400030: wing3_r
+    400032: wingbonelower_l
+    400034: wingbonelower_r
+    400036: wingboneupper_l
+    400038: wingboneupper_r
+    4300000: Cube
+    7400000: Default Take
+    7400002: ArmatureAction_002
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bodybottom
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wing1_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wing2_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wingboneupper_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wingboneupper_l/wing3_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wing1_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wing2_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wingboneupper_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wingboneupper_r/wing3_r
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction_002
+      takeName: ArmatureAction_002
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bodybottom
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wing1_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wing2_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wingboneupper_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_l/armupper_l/wingbonelower_l/wingboneupper_l/wing3_l
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wing1_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wing2_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wingboneupper_r
+        weight: 1
+      - path: Armature/bodybottom/bodymiddle/bodytop/armlow_r/armupper_r/wingbonelower_r/wingboneupper_r/wing3_r
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,2541 @@
+Initialize engine version: 4.6.0f3 (30840d631a27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics Family (ID=0x116)
+    Vendor:   Intel
+    VRAM:     64 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.113 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Daviid\Documents\Studie\Software\Github\Infinity\MAIN Game Project\executable_v0.1.4_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 4.367838 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1070.
+Total: 0.835501 ms (FindLiveObjects: 0.031255 ms CreateObjectMapping: 0.017260 ms MarkObjects: 0.287363 ms  DeleteObjects: 0.082103 ms)
+
+[0]{,}
+[1]{,3,6,5,}
+[2]{,2,7,4,}
+[3]{,4,2,3,3,5,4,}
+[4]{,1,7,4,}
+[5]{,4,1,3,3,6,4,}
+[6]{,1,7,4,2,7,4,}
+[7]{,1,4,2,2,3,1,}
+[8]{,0,6,5,}
+[9]{,0,6,5,3,6,5,}
+[10]{,5,0,2,2,7,5,}
+[11]{,0,5,3,3,2,0,}
+[12]{,1,0,6,6,7,1,}
+[13]{,0,1,3,3,6,0,}
+[14]{,1,0,2,2,7,1,}
+[15]{,1,0,2,2,3,1,}
+[16]{,1,7,2,}
+[17]{,2,1,5,5,6,2,}
+[18]{,1,7,2,2,7,4,}
+[19]{,1,2,4,4,5,1,}
+[20]{,1,7,2,1,7,4,}
+[21]{,2,1,4,4,6,2,}
+[22]{,1,7,2,1,7,4,2,7,4,}
+[23]{,1,4,2,}
+[24]{,1,7,2,0,6,5,}
+[25]{,2,1,5,5,6,2,0,6,5,}
+[26]{,1,7,2,5,0,2,2,7,5,}
+[27]{,1,2,0,0,5,1,}
+[28]{,1,7,2,1,0,6,6,7,1,}
+[29]{,2,1,0,0,6,2,}
+[30]{,1,7,2,1,0,2,2,7,1,}
+[31]{,1,0,2,}
+[32]{,0,6,3,}
+[33]{,0,6,3,3,6,5,}
+[34]{,3,0,4,4,7,3,}
+[35]{,0,3,5,5,4,0,}
+[36]{,0,6,3,1,7,4,}
+[37]{,0,6,3,4,1,3,3,6,4,}
+[38]{,3,0,4,4,7,3,1,7,4,}
+[39]{,0,3,1,1,4,0,}
+[40]{,0,6,3,0,6,5,}
+[41]{,0,6,3,0,6,5,3,6,5,}
+[42]{,3,0,5,5,7,3,}
+[43]{,0,5,3,}
+[44]{,0,6,3,1,0,6,6,7,1,}
+[45]{,0,6,3,0,1,3,3,6,0,}
+[46]{,3,0,1,1,7,3,}
+[47]{,0,1,3,}
+[48]{,1,0,6,6,7,1,}
+[49]{,0,1,5,5,6,0,}
+[50]{,1,0,4,4,7,1,}
+[51]{,1,0,4,4,5,1,}
+[52]{,1,0,6,6,7,1,1,7,4,}
+[53]{,0,1,4,4,6,0,}
+[54]{,1,0,4,4,7,1,1,7,4,}
+[55]{,0,4,1,}
+[56]{,1,0,6,6,7,1,0,6,5,}
+[57]{,0,1,5,5,6,0,0,6,5,}
+[58]{,1,0,5,5,7,1,}
+[59]{,0,5,1,}
+[60]{,1,0,6,6,7,1,1,0,6,6,7,1,}
+[61]{,0,6,1,}
+[62]{,0,7,1,}
+[63]{,}
+[64]{,0,5,3,}
+[65]{,0,5,3,3,6,5,}
+[66]{,0,5,3,2,7,4,}
+[67]{,0,5,3,4,2,3,3,5,4,}
+[68]{,3,0,4,4,7,3,}
+[69]{,0,3,6,6,4,0,}
+[70]{,3,0,4,4,7,3,2,7,4,}
+[71]{,0,3,2,2,4,0,}
+[72]{,0,5,3,0,6,5,}
+[73]{,0,5,3,0,6,5,3,6,5,}
+[74]{,0,5,3,5,0,2,2,7,5,}
+[75]{,0,5,3,0,5,3,3,2,0,}
+[76]{,3,0,6,6,7,3,}
+[77]{,0,6,3,}
+[78]{,3,0,2,2,7,3,}
+[79]{,0,2,3,}
+[80]{,2,0,5,5,7,2,}
+[81]{,0,2,6,6,5,0,}
+[82]{,2,0,5,5,7,2,2,7,4,}
+[83]{,0,2,4,4,5,0,}
+[84]{,2,0,4,4,7,2,}
+[85]{,2,0,4,4,6,2,}
+[86]{,2,0,4,4,7,2,2,7,4,}
+[87]{,0,4,2,}
+[88]{,2,0,5,5,7,2,0,6,5,}
+[89]{,0,2,6,6,5,0,0,6,5,}
+[90]{,2,0,5,5,7,2,5,0,2,2,7,5,}
+[91]{,0,5,2,}
+[92]{,2,0,6,6,7,2,}
+[93]{,0,6,2,}
+[94]{,0,7,2,}
+[95]{,}
+[96]{,0,5,3,0,6,3,}
+[97]{,0,5,3,0,6,3,3,6,5,}
+[98]{,0,5,3,3,0,4,4,7,3,}
+[99]{,0,5,3,0,3,5,5,4,0,}
+[100]{,3,0,4,4,7,3,0,6,3,}
+[101]{,0,3,6,6,4,0,0,6,3,}
+[102]{,3,0,4,4,7,3,3,0,4,4,7,3,}
+[103]{,0,4,3,}
+[104]{,0,5,3,0,6,3,0,6,5,}
+[105]{,0,5,3,0,6,3,0,6,5,3,6,5,}
+[106]{,0,5,3,3,0,5,5,7,3,}
+[107]{,0,5,3,0,5,3,}
+[108]{,3,0,6,6,7,3,0,6,3,}
+[109]{,0,6,3,0,6,3,}
+[110]{,0,7,3,}
+[111]{,}
+[112]{,6,0,5,5,7,6,}
+[113]{,0,5,6,}
+[114]{,4,0,5,5,7,4,}
+[115]{,0,5,4,}
+[116]{,6,0,4,4,7,6,}
+[117]{,0,4,6,}
+[118]{,0,7,4,}
+[119]{,}
+[120]{,6,0,5,5,7,6,0,6,5,}
+[121]{,0,5,6,0,6,5,}
+[122]{,0,7,5,}
+[123]{,}
+[124]{,0,7,6,}
+[125]{,}
+[126]{,}
+[127]{,}
+[128]{,1,4,2,}
+[129]{,1,4,2,3,6,5,}
+[130]{,1,4,2,2,7,4,}
+[131]{,1,4,2,4,2,3,3,5,4,}
+[132]{,1,4,2,1,7,4,}
+[133]{,1,4,2,4,1,3,3,6,4,}
+[134]{,1,4,2,1,7,4,2,7,4,}
+[135]{,1,4,2,1,4,2,2,3,1,}
+[136]{,2,1,5,5,6,2,}
+[137]{,2,1,5,5,6,2,3,6,5,}
+[138]{,1,2,7,7,5,1,}
+[139]{,1,2,3,3,5,1,}
+[140]{,2,1,7,7,6,2,}
+[141]{,2,1,3,3,6,2,}
+[142]{,1,7,2,}
+[143]{,1,3,2,}
+[144]{,1,4,2,1,7,2,}
+[145]{,1,4,2,2,1,5,5,6,2,}
+[146]{,1,4,2,1,7,2,2,7,4,}
+[147]{,1,4,2,1,2,4,4,5,1,}
+[148]{,1,4,2,1,7,2,1,7,4,}
+[149]{,1,4,2,2,1,4,4,6,2,}
+[150]{,1,4,2,1,7,2,1,7,4,2,7,4,}
+[151]{,1,4,2,1,4,2,}
+[152]{,2,1,5,5,6,2,1,7,2,}
+[153]{,2,1,5,5,6,2,2,1,5,5,6,2,}
+[154]{,1,2,7,7,5,1,1,7,2,}
+[155]{,1,5,2,}
+[156]{,2,1,7,7,6,2,1,7,2,}
+[157]{,1,6,2,}
+[158]{,1,7,2,1,7,2,}
+[159]{,}
+[160]{,3,1,4,4,6,3,}
+[161]{,3,1,4,4,6,3,3,6,5,}
+[162]{,1,3,7,7,4,1,}
+[163]{,1,3,5,5,4,1,}
+[164]{,3,1,4,4,6,3,1,7,4,}
+[165]{,3,1,4,4,6,3,4,1,3,3,6,4,}
+[166]{,1,3,7,7,4,1,1,7,4,}
+[167]{,1,4,3,}
+[168]{,3,1,5,5,6,3,}
+[169]{,3,1,5,5,6,3,3,6,5,}
+[170]{,3,1,5,5,7,3,}
+[171]{,1,5,3,}
+[172]{,3,1,7,7,6,3,}
+[173]{,1,6,3,}
+[174]{,1,7,3,}
+[175]{,}
+[176]{,7,1,4,4,6,7,}
+[177]{,5,1,4,4,6,5,}
+[178]{,1,4,7,}
+[179]{,1,4,5,}
+[180]{,7,1,4,4,6,7,1,7,4,}
+[181]{,1,6,4,}
+[182]{,1,4,7,1,7,4,}
+[183]{,}
+[184]{,7,1,5,5,6,7,}
+[185]{,1,6,5,}
+[186]{,1,5,7,}
+[187]{,}
+[188]{,1,6,7,}
+[189]{,}
+[190]{,}
+[191]{,}
+[192]{,5,3,2,2,4,5,}
+[193]{,5,3,2,2,4,5,3,6,5,}
+[194]{,5,3,2,2,4,5,2,7,4,}
+[195]{,5,3,2,2,4,5,4,2,3,3,5,4,}
+[196]{,7,3,2,2,4,7,}
+[197]{,6,3,2,2,4,6,}
+[198]{,7,3,2,2,4,7,2,7,4,}
+[199]{,3,2,4,}
+[200]{,3,5,6,6,2,3,}
+[201]{,3,5,6,6,2,3,3,6,5,}
+[202]{,3,5,7,7,2,3,}
+[203]{,3,2,5,}
+[204]{,7,3,2,2,6,7,}
+[205]{,3,2,6,}
+[206]{,3,7,2,}
+[207]{,}
+[208]{,7,2,4,4,5,7,}
+[209]{,6,2,4,4,5,6,}
+[210]{,7,2,4,4,5,7,2,7,4,}
+[211]{,2,4,5,}
+[212]{,2,4,7,}
+[213]{,2,6,4,}
+[214]{,2,4,7,2,7,4,}
+[215]{,}
+[216]{,7,2,6,6,5,7,}
+[217]{,2,6,5,}
+[218]{,2,5,7,}
+[219]{,}
+[220]{,2,6,7,}
+[221]{,}
+[222]{,}
+[223]{,}
+[224]{,5,3,6,6,4,5,}
+[225]{,5,3,6,6,4,5,3,6,5,}
+[226]{,5,3,7,7,4,5,}
+[227]{,3,4,5,}
+[228]{,7,3,6,6,4,7,}
+[229]{,3,6,4,}
+[230]{,3,7,4,}
+[231]{,}
+[232]{,3,6,5,}
+[233]{,3,6,5,3,6,5,}
+[234]{,3,7,5,}
+[235]{,}
+[236]{,3,7,6,}
+[237]{,}
+[238]{,}
+[239]{,}
+[240]{,7,6,4,4,5,7,}
+[241]{,6,4,5,}
+[242]{,4,5,7,}
+[243]{,}
+[244]{,6,4,7,}
+[245]{,}
+[246]{,}
+[247]{,}
+[248]{,6,5,7,}
+[249]{,}
+[250]{,}
+[251]{,}
+[252]{,}
+[253]{,}
+[254]{,}
+[255]{,}
+
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+[0]{,}
+[1]{,5,6,3,}
+[2]{,2,7,4,}
+[3]{,4,2,3,3,5,4,}
+[4]{,4,7,1,}
+[5]{,3,1,4,4,6,3,}
+[6]{,1,7,4,2,7,4,}
+[7]{,1,4,2,2,3,1,}
+[8]{,0,6,5,}
+[9]{,0,6,5,3,5,6,}
+[10]{,5,0,2,2,7,5,}
+[11]{,3,5,0,0,2,3,}
+[12]{,1,0,6,6,7,1,}
+[13]{,3,1,0,0,6,3,}
+[14]{,1,0,2,2,7,1,}
+[15]{,1,0,2,2,3,1,}
+[16]{,1,7,2,}
+[17]{,2,1,5,5,6,2,}
+[18]{,1,7,2,2,7,4,}
+[19]{,4,2,1,1,5,4,}
+[20]{,1,7,2,4,7,1,}
+[21]{,2,1,4,4,6,2,}
+[22]{,1,7,2,1,7,4,2,7,4,}
+[23]{,1,4,2,}
+[24]{,1,7,2,0,6,5,}
+[25]{,2,1,5,5,6,2,0,6,5,}
+[26]{,1,7,2,5,0,2,2,7,5,}
+[27]{,0,2,1,1,5,0,}
+[28]{,1,7,2,1,0,6,6,7,1,}
+[29]{,2,1,0,0,6,2,}
+[30]{,1,7,2,1,0,2,2,7,1,}
+[31]{,1,0,2,}
+[32]{,3,6,0,}
+[33]{,0,3,6,6,3,5,}
+[34]{,4,0,3,3,7,4,}
+[35]{,0,3,5,5,4,0,}
+[36]{,0,6,3,1,7,4,}
+[37]{,0,6,3,4,1,3,3,6,4,}
+[38]{,3,0,4,4,7,3,1,7,4,}
+[39]{,0,3,1,1,4,0,}
+[40]{,3,6,0,0,6,5,}
+[41]{,0,6,3,0,6,5,3,6,5,}
+[42]{,5,0,3,3,7,5,}
+[43]{,3,5,0,}
+[44]{,0,6,3,1,0,6,6,7,1,}
+[45]{,0,6,3,0,1,3,3,6,0,}
+[46]{,1,0,3,3,7,1,}
+[47]{,3,1,0,}
+[48]{,6,0,1,1,7,6,}
+[49]{,0,1,5,5,6,0,}
+[50]{,4,0,1,1,7,4,}
+[51]{,4,0,1,1,5,4,}
+[52]{,1,0,6,6,7,1,1,7,4,}
+[53]{,0,1,4,4,6,0,}
+[54]{,1,0,4,4,7,1,1,7,4,}
+[55]{,1,4,0,}
+[56]{,1,0,6,6,7,1,0,6,5,}
+[57]{,0,1,5,5,6,0,0,6,5,}
+[58]{,5,0,1,1,7,5,}
+[59]{,1,5,0,}
+[60]{,1,0,6,6,7,1,1,0,6,6,7,1,}
+[61]{,0,6,1,}
+[62]{,0,7,1,}
+[63]{,}
+[64]{,0,5,3,}
+[65]{,0,5,3,3,6,5,}
+[66]{,0,5,3,2,7,4,}
+[67]{,0,5,3,4,2,3,3,5,4,}
+[68]{,3,0,4,4,7,3,}
+[69]{,6,3,0,0,4,6,}
+[70]{,3,0,4,4,7,3,2,7,4,}
+[71]{,2,3,0,0,4,2,}
+[72]{,0,5,3,0,6,5,}
+[73]{,0,5,3,0,6,5,3,6,5,}
+[74]{,0,5,3,5,0,2,2,7,5,}
+[75]{,0,5,3,0,5,3,3,2,0,}
+[76]{,3,0,6,6,7,3,}
+[77]{,0,6,3,}
+[78]{,3,0,2,2,7,3,}
+[79]{,0,2,3,}
+[80]{,2,0,5,5,7,2,}
+[81]{,6,2,0,0,5,6,}
+[82]{,2,0,5,5,7,2,2,7,4,}
+[83]{,4,2,0,0,5,4,}
+[84]{,2,0,4,4,7,2,}
+[85]{,2,0,4,4,6,2,}
+[86]{,2,0,4,4,7,2,2,7,4,}
+[87]{,0,4,2,}
+[88]{,2,0,5,5,7,2,0,6,5,}
+[89]{,0,2,6,6,5,0,0,6,5,}
+[90]{,2,0,5,5,7,2,5,0,2,2,7,5,}
+[91]{,0,5,2,}
+[92]{,2,0,6,6,7,2,}
+[93]{,0,6,2,}
+[94]{,0,7,2,}
+[95]{,}
+[96]{,0,5,3,3,6,0,}
+[97]{,0,5,3,0,6,3,3,6,5,}
+[98]{,0,5,3,3,0,4,4,7,3,}
+[99]{,0,5,3,0,3,5,5,4,0,}
+[100]{,3,0,4,4,7,3,0,6,3,}
+[101]{,0,3,6,6,4,0,0,6,3,}
+[102]{,3,0,4,4,7,3,3,0,4,4,7,3,}
+[103]{,0,4,3,}
+[104]{,0,5,3,0,6,3,0,6,5,}
+[105]{,0,5,3,0,6,3,0,6,5,3,6,5,}
+[106]{,0,5,3,3,0,5,5,7,3,}
+[107]{,0,5,3,0,5,3,}
+[108]{,3,0,6,6,7,3,0,6,3,}
+[109]{,0,6,3,0,6,3,}
+[110]{,0,7,3,}
+[111]{,}
+[112]{,6,0,5,5,7,6,}
+[113]{,0,5,6,}
+[114]{,4,0,5,5,7,4,}
+[115]{,0,5,4,}
+[116]{,6,0,4,4,7,6,}
+[117]{,0,4,6,}
+[118]{,0,7,4,}
+[119]{,}
+[120]{,6,0,5,5,7,6,0,6,5,}
+[121]{,0,5,6,0,6,5,}
+[122]{,0,7,5,}
+[123]{,}
+[124]{,0,7,6,}
+[125]{,}
+[126]{,}
+[127]{,}
+[128]{,2,4,1,}
+[129]{,1,4,2,3,6,5,}
+[130]{,2,4,1,2,7,4,}
+[131]{,2,4,1,4,2,3,3,5,4,}
+[132]{,2,4,1,4,7,1,}
+[133]{,1,4,2,4,1,3,3,6,4,}
+[134]{,1,4,2,1,7,4,2,7,4,}
+[135]{,1,4,2,1,4,2,2,3,1,}
+[136]{,5,1,2,2,6,5,}
+[137]{,2,1,5,5,6,2,3,6,5,}
+[138]{,1,2,7,7,5,1,}
+[139]{,1,2,3,3,5,1,}
+[140]{,7,1,2,2,6,7,}
+[141]{,3,1,2,2,6,3,}
+[142]{,2,7,1,}
+[143]{,2,3,1,}
+[144]{,1,4,2,1,7,2,}
+[145]{,1,4,2,2,1,5,5,6,2,}
+[146]{,1,4,2,1,7,2,2,7,4,}
+[147]{,1,4,2,1,2,4,4,5,1,}
+[148]{,1,4,2,1,7,2,1,7,4,}
+[149]{,1,4,2,2,1,4,4,6,2,}
+[150]{,1,4,2,1,7,2,1,7,4,2,7,4,}
+[151]{,1,4,2,1,4,2,}
+[152]{,2,1,5,5,6,2,1,7,2,}
+[153]{,2,1,5,5,6,2,2,1,5,5,6,2,}
+[154]{,1,2,7,7,5,1,1,7,2,}
+[155]{,1,5,2,}
+[156]{,2,1,7,7,6,2,1,7,2,}
+[157]{,1,6,2,}
+[158]{,1,7,2,1,7,2,}
+[159]{,}
+[160]{,4,1,3,3,6,4,}
+[161]{,3,1,4,4,6,3,3,6,5,}
+[162]{,1,3,7,7,4,1,}
+[163]{,1,3,5,5,4,1,}
+[164]{,3,1,4,4,6,3,1,7,4,}
+[165]{,3,1,4,4,6,3,4,1,3,3,6,4,}
+[166]{,1,3,7,7,4,1,1,7,4,}
+[167]{,1,4,3,}
+[168]{,5,1,3,3,6,5,}
+[169]{,3,1,5,5,6,3,3,6,5,}
+[170]{,5,1,3,3,7,5,}
+[171]{,3,5,1,}
+[172]{,7,1,3,3,6,7,}
+[173]{,1,6,3,}
+[174]{,3,7,1,}
+[175]{,}
+[176]{,4,1,7,7,6,4,}
+[177]{,4,1,5,5,6,4,}
+[178]{,7,4,1,}
+[179]{,5,4,1,}
+[180]{,7,1,4,4,6,7,1,7,4,}
+[181]{,1,6,4,}
+[182]{,1,4,7,1,7,4,}
+[183]{,}
+[184]{,5,1,7,7,6,5,}
+[185]{,1,6,5,}
+[186]{,7,5,1,}
+[187]{,}
+[188]{,1,6,7,}
+[189]{,}
+[190]{,}
+[191]{,}
+[192]{,5,3,2,2,4,5,}
+[193]{,5,3,2,2,4,5,3,6,5,}
+[194]{,5,3,2,2,4,5,2,7,4,}
+[195]{,5,3,2,2,4,5,4,2,3,3,5,4,}
+[196]{,7,3,2,2,4,7,}
+[197]{,6,3,2,2,4,6,}
+[198]{,7,3,2,2,4,7,2,7,4,}
+[199]{,3,2,4,}
+[200]{,6,5,3,3,2,6,}
+[201]{,3,5,6,6,2,3,3,6,5,}
+[202]{,7,5,3,3,2,7,}
+[203]{,}
+[204]{,7,3,2,2,6,7,}
+[205]{,3,2,6,}
+[206]{,2,7,3,}
+[207]{,}
+[208]{,7,2,4,4,5,7,}
+[209]{,6,2,4,4,5,6,}
+[210]{,7,2,4,4,5,7,2,7,4,}
+[211]{,2,4,5,}
+[212]{,2,4,7,}
+[213]{,4,6,2,}
+[214]{,2,4,7,2,7,4,}
+[215]{,}
+[216]{,7,2,6,6,5,7,}
+[217]{,2,6,5,}
+[218]{,2,5,7,}
+[219]{,}
+[220]{,2,6,7,}
+[221]{,}
+[222]{,}
+[223]{,}
+[224]{,5,3,6,6,4,5,}
+[225]{,5,3,6,6,4,5,3,6,5,}
+[226]{,5,3,7,7,4,5,}
+[227]{,3,4,5,}
+[228]{,7,3,6,6,4,7,}
+[229]{,3,6,4,}
+[230]{,3,7,4,}
+[231]{,}
+[232]{,3,6,5,}
+[233]{,3,6,5,3,6,5,}
+[234]{,3,7,5,}
+[235]{,}
+[236]{,6,7,3,}
+[237]{,}
+[238]{,}
+[239]{,}
+[240]{,7,6,4,4,5,7,}
+[241]{,6,4,5,}
+[242]{,4,5,7,}
+[243]{,}
+[244]{,6,4,7,}
+[245]{,}
+[246]{,}
+[247]{,}
+[248]{,6,5,7,}
+[249]{,}
+[250]{,}
+[251]{,}
+[252]{,}
+[253]{,}
+[254]{,}
+[255]{,}
+
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+[0]{,}
+[1]{,5,6,3,}
+[2]{,2,7,4,}
+[3]{,4,2,3,3,5,4,}
+[4]{,4,7,1,}
+[5]{,3,1,4,4,6,3,}
+[6]{,1,7,4,2,7,4,}
+[7]{,1,4,2,2,3,1,}
+[8]{,0,6,5,}
+[9]{,0,6,5,3,5,6,}
+[10]{,5,0,2,2,7,5,}
+[11]{,3,5,0,0,2,3,}
+[12]{,1,0,6,6,7,1,}
+[13]{,3,1,0,0,6,3,}
+[14]{,1,0,2,2,7,1,}
+[15]{,1,0,2,2,3,1,}
+[16]{,1,7,2,}
+[17]{,2,1,5,5,6,2,}
+[18]{,1,7,2,2,7,4,}
+[19]{,4,2,1,1,5,4,}
+[20]{,1,7,2,4,7,1,}
+[21]{,2,1,4,4,6,2,}
+[22]{,1,7,2,1,7,4,2,7,4,}
+[23]{,1,4,2,}
+[24]{,1,7,2,0,6,5,}
+[25]{,2,1,5,5,6,2,0,6,5,}
+[26]{,1,7,2,5,0,2,2,7,5,}
+[27]{,0,2,1,1,5,0,}
+[28]{,1,7,2,1,0,6,6,7,1,}
+[29]{,2,1,0,0,6,2,}
+[30]{,1,7,2,1,0,2,2,7,1,}
+[31]{,1,0,2,}
+[32]{,3,6,0,}
+[33]{,0,3,6,6,3,5,}
+[34]{,4,0,3,3,7,4,}
+[35]{,0,3,5,5,4,0,}
+[36]{,0,6,3,1,7,4,}
+[37]{,0,6,3,4,1,3,3,6,4,}
+[38]{,3,0,4,4,7,3,1,7,4,}
+[39]{,0,3,1,1,4,0,}
+[40]{,3,6,0,0,6,5,}
+[41]{,0,6,3,0,6,5,3,6,5,}
+[42]{,5,0,3,3,7,5,}
+[43]{,3,5,0,}
+[44]{,0,6,3,1,0,6,6,7,1,}
+[45]{,0,6,3,0,1,3,3,6,0,}
+[46]{,1,0,3,3,7,1,}
+[47]{,3,1,0,}
+[48]{,6,0,1,1,7,6,}
+[49]{,0,1,5,5,6,0,}
+[50]{,4,0,1,1,7,4,}
+[51]{,4,0,1,1,5,4,}
+[52]{,1,0,6,6,7,1,1,7,4,}
+[53]{,0,1,4,4,6,0,}
+[54]{,1,0,4,4,7,1,1,7,4,}
+[55]{,1,4,0,}
+[56]{,1,0,6,6,7,1,0,6,5,}
+[57]{,0,1,5,5,6,0,0,6,5,}
+[58]{,5,0,1,1,7,5,}
+[59]{,1,5,0,}
+[60]{,1,0,6,6,7,1,1,0,6,6,7,1,}
+[61]{,0,6,1,}
+[62]{,0,7,1,}
+[63]{,}
+[64]{,0,5,3,}
+[65]{,0,5,3,3,6,5,}
+[66]{,0,5,3,2,7,4,}
+[67]{,0,5,3,4,2,3,3,5,4,}
+[68]{,3,0,4,4,7,3,}
+[69]{,6,3,0,0,4,6,}
+[70]{,3,0,4,4,7,3,2,7,4,}
+[71]{,2,3,0,0,4,2,}
+[72]{,0,5,3,0,6,5,}
+[73]{,0,5,3,0,6,5,3,6,5,}
+[74]{,0,5,3,5,0,2,2,7,5,}
+[75]{,0,5,3,0,5,3,3,2,0,}
+[76]{,3,0,6,6,7,3,}
+[77]{,0,6,3,}
+[78]{,3,0,2,2,7,3,}
+[79]{,0,2,3,}
+[80]{,2,0,5,5,7,2,}
+[81]{,6,2,0,0,5,6,}
+[82]{,2,0,5,5,7,2,2,7,4,}
+[83]{,4,2,0,0,5,4,}
+[84]{,2,0,4,4,7,2,}
+[85]{,2,0,4,4,6,2,}
+[86]{,2,0,4,4,7,2,2,7,4,}
+[87]{,0,4,2,}
+[88]{,2,0,5,5,7,2,0,6,5,}
+[89]{,0,2,6,6,5,0,0,6,5,}
+[90]{,2,0,5,5,7,2,5,0,2,2,7,5,}
+[91]{,0,5,2,}
+[92]{,2,0,6,6,7,2,}
+[93]{,0,6,2,}
+[94]{,0,7,2,}
+[95]{,}
+[96]{,0,5,3,3,6,0,}
+[97]{,0,5,3,0,6,3,3,6,5,}
+[98]{,0,5,3,3,0,4,4,7,3,}
+[99]{,0,5,3,0,3,5,5,4,0,}
+[100]{,3,0,4,4,7,3,0,6,3,}
+[101]{,0,3,6,6,4,0,0,6,3,}
+[102]{,3,0,4,4,7,3,3,0,4,4,7,3,}
+[103]{,0,4,3,}
+[104]{,0,5,3,0,6,3,0,6,5,}
+[105]{,0,5,3,0,6,3,0,6,5,3,6,5,}
+[106]{,0,5,3,3,0,5,5,7,3,}
+[107]{,0,5,3,0,5,3,}
+[108]{,3,0,6,6,7,3,0,6,3,}
+[109]{,0,6,3,0,6,3,}
+[110]{,0,7,3,}
+[111]{,}
+[112]{,6,0,5,5,7,6,}
+[113]{,0,5,6,}
+[114]{,4,0,5,5,7,4,}
+[115]{,0,5,4,}
+[116]{,6,0,4,4,7,6,}
+[117]{,0,4,6,}
+[118]{,0,7,4,}
+[119]{,}
+[120]{,6,0,5,5,7,6,0,6,5,}
+[121]{,0,5,6,0,6,5,}
+[122]{,0,7,5,}
+[123]{,}
+[124]{,0,7,6,}
+[125]{,}
+[126]{,}
+[127]{,}
+[128]{,2,4,1,}
+[129]{,1,4,2,3,6,5,}
+[130]{,2,4,1,2,7,4,}
+[131]{,2,4,1,4,2,3,3,5,4,}
+[132]{,2,4,1,4,7,1,}
+[133]{,1,4,2,4,1,3,3,6,4,}
+[134]{,1,4,2,1,7,4,2,7,4,}
+[135]{,1,4,2,1,4,2,2,3,1,}
+[136]{,5,1,2,2,6,5,}
+[137]{,2,1,5,5,6,2,3,6,5,}
+[138]{,1,2,7,7,5,1,}
+[139]{,1,2,3,3,5,1,}
+[140]{,7,1,2,2,6,7,}
+[141]{,3,1,2,2,6,3,}
+[142]{,2,7,1,}
+[143]{,2,3,1,}
+[144]{,1,4,2,1,7,2,}
+[145]{,1,4,2,2,1,5,5,6,2,}
+[146]{,1,4,2,1,7,2,2,7,4,}
+[147]{,1,4,2,1,2,4,4,5,1,}
+[148]{,1,4,2,1,7,2,1,7,4,}
+[149]{,1,4,2,2,1,4,4,6,2,}
+[150]{,1,4,2,1,7,2,1,7,4,2,7,4,}
+[151]{,1,4,2,1,4,2,}
+[152]{,2,1,5,5,6,2,1,7,2,}
+[153]{,2,1,5,5,6,2,2,1,5,5,6,2,}
+[154]{,1,2,7,7,5,1,1,7,2,}
+[155]{,1,5,2,}
+[156]{,2,1,7,7,6,2,1,7,2,}
+[157]{,1,6,2,}
+[158]{,1,7,2,1,7,2,}
+[159]{,}
+[160]{,4,1,3,3,6,4,}
+[161]{,3,1,4,4,6,3,3,6,5,}
+[162]{,1,3,7,7,4,1,}
+[163]{,1,3,5,5,4,1,}
+[164]{,3,1,4,4,6,3,1,7,4,}
+[165]{,3,1,4,4,6,3,4,1,3,3,6,4,}
+[166]{,1,3,7,7,4,1,1,7,4,}
+[167]{,1,4,3,}
+[168]{,5,1,3,3,6,5,}
+[169]{,3,1,5,5,6,3,3,6,5,}
+[170]{,5,1,3,3,7,5,}
+[171]{,3,5,1,}
+[172]{,7,1,3,3,6,7,}
+[173]{,1,6,3,}
+[174]{,3,7,1,}
+[175]{,}
+[176]{,4,1,7,7,6,4,}
+[177]{,4,1,5,5,6,4,}
+[178]{,7,4,1,}
+[179]{,5,4,1,}
+[180]{,7,1,4,4,6,7,1,7,4,}
+[181]{,1,6,4,}
+[182]{,1,4,7,1,7,4,}
+[183]{,}
+[184]{,5,1,7,7,6,5,}
+[185]{,1,6,5,}
+[186]{,7,5,1,}
+[187]{,}
+[188]{,1,6,7,}
+[189]{,}
+[190]{,}
+[191]{,}
+[192]{,5,3,2,2,4,5,}
+[193]{,5,3,2,2,4,5,3,6,5,}
+[194]{,5,3,2,2,4,5,2,7,4,}
+[195]{,5,3,2,2,4,5,4,2,3,3,5,4,}
+[196]{,7,3,2,2,4,7,}
+[197]{,6,3,2,2,4,6,}
+[198]{,7,3,2,2,4,7,2,7,4,}
+[199]{,3,2,4,}
+[200]{,6,5,3,3,2,6,}
+[201]{,3,5,6,6,2,3,3,6,5,}
+[202]{,7,5,3,3,2,7,}
+[203]{,}
+[204]{,7,3,2,2,6,7,}
+[205]{,3,2,6,}
+[206]{,2,7,3,}
+[207]{,}
+[208]{,7,2,4,4,5,7,}
+[209]{,6,2,4,4,5,6,}
+[210]{,7,2,4,4,5,7,2,7,4,}
+[211]{,2,4,5,}
+[212]{,2,4,7,}
+[213]{,4,6,2,}
+[214]{,2,4,7,2,7,4,}
+[215]{,}
+[216]{,7,2,6,6,5,7,}
+[217]{,2,6,5,}
+[218]{,2,5,7,}
+[219]{,}
+[220]{,2,6,7,}
+[221]{,}
+[222]{,}
+[223]{,}
+[224]{,5,3,6,6,4,5,}
+[225]{,5,3,6,6,4,5,3,6,5,}
+[226]{,5,3,7,7,4,5,}
+[227]{,3,4,5,}
+[228]{,7,3,6,6,4,7,}
+[229]{,3,6,4,}
+[230]{,3,7,4,}
+[231]{,}
+[232]{,3,6,5,}
+[233]{,3,6,5,3,6,5,}
+[234]{,3,7,5,}
+[235]{,}
+[236]{,6,7,3,}
+[237]{,}
+[238]{,}
+[239]{,}
+[240]{,7,6,4,4,5,7,}
+[241]{,6,4,5,}
+[242]{,4,5,7,}
+[243]{,}
+[244]{,6,4,7,}
+[245]{,}
+[246]{,}
+[247]{,}
+[248]{,6,5,7,}
+[249]{,}
+[250]{,}
+[251]{,}
+[252]{,}
+[253]{,}
+[254]{,}
+[255]{,}
+
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+[0]{,}
+[1]{,3,6,5,}
+[2]{,4,7,2,}
+[3]{,3,2,4,4,5,3,}
+[4]{,1,7,4,}
+[5]{,4,1,3,3,6,4,}
+[6]{,4,7,1,4,7,2,}
+[7]{,2,4,1,1,3,2,}
+[8]{,5,6,0,}
+[9]{,5,6,0,6,5,3,}
+[10]{,2,0,5,5,7,2,}
+[11]{,0,5,3,3,2,0,}
+[12]{,6,0,1,1,7,6,}
+[13]{,0,1,3,3,6,0,}
+[14]{,2,0,1,1,7,2,}
+[15]{,2,0,1,1,3,2,}
+[16]{,2,7,1,}
+[17]{,5,1,2,2,6,5,}
+[18]{,2,7,1,4,7,2,}
+[19]{,1,2,4,4,5,1,}
+[20]{,2,7,1,1,7,4,}
+[21]{,4,1,2,2,6,4,}
+[22]{,2,7,1,4,7,1,4,7,2,}
+[23]{,2,4,1,}
+[24]{,2,7,1,5,6,0,}
+[25]{,5,1,2,2,6,5,5,6,0,}
+[26]{,2,7,1,2,0,5,5,7,2,}
+[27]{,1,2,0,0,5,1,}
+[28]{,2,7,1,6,0,1,1,7,6,}
+[29]{,0,1,2,2,6,0,}
+[30]{,2,7,1,2,0,1,1,7,2,}
+[31]{,2,0,1,}
+[32]{,0,6,3,}
+[33]{,6,3,0,5,3,6,}
+[34]{,3,0,4,4,7,3,}
+[35]{,5,3,0,0,4,5,}
+[36]{,3,6,0,4,7,1,}
+[37]{,3,6,0,3,1,4,4,6,3,}
+[38]{,4,0,3,3,7,4,4,7,1,}
+[39]{,1,3,0,0,4,1,}
+[40]{,0,6,3,5,6,0,}
+[41]{,3,6,0,5,6,0,5,6,3,}
+[42]{,3,0,5,5,7,3,}
+[43]{,0,5,3,}
+[44]{,3,6,0,6,0,1,1,7,6,}
+[45]{,3,6,0,3,1,0,0,6,3,}
+[46]{,3,0,1,1,7,3,}
+[47]{,0,1,3,}
+[48]{,1,0,6,6,7,1,}
+[49]{,5,1,0,0,6,5,}
+[50]{,1,0,4,4,7,1,}
+[51]{,1,0,4,4,5,1,}
+[52]{,6,0,1,1,7,6,4,7,1,}
+[53]{,4,1,0,0,6,4,}
+[54]{,4,0,1,1,7,4,4,7,1,}
+[55]{,0,4,1,}
+[56]{,6,0,1,1,7,6,5,6,0,}
+[57]{,5,1,0,0,6,5,5,6,0,}
+[58]{,1,0,5,5,7,1,}
+[59]{,0,5,1,}
+[60]{,6,0,1,1,7,6,6,0,1,1,7,6,}
+[61]{,1,6,0,}
+[62]{,1,7,0,}
+[63]{,}
+[64]{,3,5,0,}
+[65]{,3,5,0,5,6,3,}
+[66]{,3,5,0,4,7,2,}
+[67]{,3,5,0,3,2,4,4,5,3,}
+[68]{,4,0,3,3,7,4,}
+[69]{,0,3,6,6,4,0,}
+[70]{,4,0,3,3,7,4,4,7,2,}
+[71]{,0,3,2,2,4,0,}
+[72]{,3,5,0,5,6,0,}
+[73]{,3,5,0,5,6,0,5,6,3,}
+[74]{,3,5,0,2,0,5,5,7,2,}
+[75]{,3,5,0,3,5,0,0,2,3,}
+[76]{,6,0,3,3,7,6,}
+[77]{,3,6,0,}
+[78]{,2,0,3,3,7,2,}
+[79]{,3,2,0,}
+[80]{,5,0,2,2,7,5,}
+[81]{,0,2,6,6,5,0,}
+[82]{,5,0,2,2,7,5,4,7,2,}
+[83]{,0,2,4,4,5,0,}
+[84]{,4,0,2,2,7,4,}
+[85]{,4,0,2,2,6,4,}
+[86]{,4,0,2,2,7,4,4,7,2,}
+[87]{,2,4,0,}
+[88]{,5,0,2,2,7,5,5,6,0,}
+[89]{,6,2,0,0,5,6,5,6,0,}
+[90]{,5,0,2,2,7,5,2,0,5,5,7,2,}
+[91]{,2,5,0,}
+[92]{,6,0,2,2,7,6,}
+[93]{,2,6,0,}
+[94]{,2,7,0,}
+[95]{,}
+[96]{,3,5,0,0,6,3,}
+[97]{,3,5,0,3,6,0,5,6,3,}
+[98]{,3,5,0,4,0,3,3,7,4,}
+[99]{,3,5,0,5,3,0,0,4,5,}
+[100]{,4,0,3,3,7,4,3,6,0,}
+[101]{,6,3,0,0,4,6,3,6,0,}
+[102]{,4,0,3,3,7,4,4,0,3,3,7,4,}
+[103]{,3,4,0,}
+[104]{,3,5,0,3,6,0,5,6,0,}
+[105]{,3,5,0,3,6,0,5,6,0,5,6,3,}
+[106]{,3,5,0,5,0,3,3,7,5,}
+[107]{,3,5,0,3,5,0,}
+[108]{,6,0,3,3,7,6,3,6,0,}
+[109]{,3,6,0,3,6,0,}
+[110]{,3,7,0,}
+[111]{,}
+[112]{,5,0,6,6,7,5,}
+[113]{,6,5,0,}
+[114]{,5,0,4,4,7,5,}
+[115]{,4,5,0,}
+[116]{,4,0,6,6,7,4,}
+[117]{,6,4,0,}
+[118]{,4,7,0,}
+[119]{,}
+[120]{,5,0,6,6,7,5,5,6,0,}
+[121]{,6,5,0,5,6,0,}
+[122]{,5,7,0,}
+[123]{,}
+[124]{,6,7,0,}
+[125]{,}
+[126]{,}
+[127]{,}
+[128]{,1,4,2,}
+[129]{,2,4,1,5,6,3,}
+[130]{,1,4,2,4,7,2,}
+[131]{,1,4,2,3,2,4,4,5,3,}
+[132]{,1,4,2,1,7,4,}
+[133]{,2,4,1,3,1,4,4,6,3,}
+[134]{,2,4,1,4,7,1,4,7,2,}
+[135]{,2,4,1,2,4,1,1,3,2,}
+[136]{,2,1,5,5,6,2,}
+[137]{,5,1,2,2,6,5,5,6,3,}
+[138]{,7,2,1,1,5,7,}
+[139]{,3,2,1,1,5,3,}
+[140]{,2,1,7,7,6,2,}
+[141]{,2,1,3,3,6,2,}
+[142]{,1,7,2,}
+[143]{,1,3,2,}
+[144]{,2,4,1,2,7,1,}
+[145]{,2,4,1,5,1,2,2,6,5,}
+[146]{,2,4,1,2,7,1,4,7,2,}
+[147]{,2,4,1,4,2,1,1,5,4,}
+[148]{,2,4,1,2,7,1,4,7,1,}
+[149]{,2,4,1,4,1,2,2,6,4,}
+[150]{,2,4,1,2,7,1,4,7,1,4,7,2,}
+[151]{,2,4,1,2,4,1,}
+[152]{,5,1,2,2,6,5,2,7,1,}
+[153]{,5,1,2,2,6,5,5,1,2,2,6,5,}
+[154]{,7,2,1,1,5,7,2,7,1,}
+[155]{,2,5,1,}
+[156]{,7,1,2,2,6,7,2,7,1,}
+[157]{,2,6,1,}
+[158]{,2,7,1,2,7,1,}
+[159]{,}
+[160]{,3,1,4,4,6,3,}
+[161]{,4,1,3,3,6,4,5,6,3,}
+[162]{,7,3,1,1,4,7,}
+[163]{,5,3,1,1,4,5,}
+[164]{,4,1,3,3,6,4,4,7,1,}
+[165]{,4,1,3,3,6,4,3,1,4,4,6,3,}
+[166]{,7,3,1,1,4,7,4,7,1,}
+[167]{,3,4,1,}
+[168]{,3,1,5,5,6,3,}
+[169]{,5,1,3,3,6,5,5,6,3,}
+[170]{,3,1,5,5,7,3,}
+[171]{,1,5,3,}
+[172]{,3,1,7,7,6,3,}
+[173]{,3,6,1,}
+[174]{,1,7,3,}
+[175]{,}
+[176]{,7,1,4,4,6,7,}
+[177]{,5,1,4,4,6,5,}
+[178]{,1,4,7,}
+[179]{,1,4,5,}
+[180]{,4,1,7,7,6,4,4,7,1,}
+[181]{,4,6,1,}
+[182]{,7,4,1,4,7,1,}
+[183]{,}
+[184]{,7,1,5,5,6,7,}
+[185]{,5,6,1,}
+[186]{,1,5,7,}
+[187]{,}
+[188]{,7,6,1,}
+[189]{,}
+[190]{,}
+[191]{,}
+[192]{,2,3,5,5,4,2,}
+[193]{,2,3,5,5,4,2,5,6,3,}
+[194]{,2,3,5,5,4,2,4,7,2,}
+[195]{,2,3,5,5,4,2,3,2,4,4,5,3,}
+[196]{,2,3,7,7,4,2,}
+[197]{,2,3,6,6,4,2,}
+[198]{,2,3,7,7,4,2,4,7,2,}
+[199]{,4,2,3,}
+[200]{,3,5,6,6,2,3,}
+[201]{,6,5,3,3,2,6,5,6,3,}
+[202]{,3,5,7,7,2,3,}
+[203]{,}
+[204]{,2,3,7,7,6,2,}
+[205]{,6,2,3,}
+[206]{,3,7,2,}
+[207]{,}
+[208]{,4,2,7,7,5,4,}
+[209]{,4,2,6,6,5,4,}
+[210]{,4,2,7,7,5,4,4,7,2,}
+[211]{,5,4,2,}
+[212]{,7,4,2,}
+[213]{,2,6,4,}
+[214]{,7,4,2,4,7,2,}
+[215]{,}
+[216]{,6,2,7,7,5,6,}
+[217]{,5,6,2,}
+[218]{,7,5,2,}
+[219]{,}
+[220]{,7,6,2,}
+[221]{,}
+[222]{,}
+[223]{,}
+[224]{,6,3,5,5,4,6,}
+[225]{,6,3,5,5,4,6,5,6,3,}
+[226]{,7,3,5,5,4,7,}
+[227]{,5,4,3,}
+[228]{,6,3,7,7,4,6,}
+[229]{,4,6,3,}
+[230]{,4,7,3,}
+[231]{,}
+[232]{,5,6,3,}
+[233]{,5,6,3,5,6,3,}
+[234]{,5,7,3,}
+[235]{,}
+[236]{,3,7,6,}
+[237]{,}
+[238]{,}
+[239]{,}
+[240]{,4,6,7,7,5,4,}
+[241]{,5,4,6,}
+[242]{,7,5,4,}
+[243]{,}
+[244]{,7,4,6,}
+[245]{,}
+[246]{,}
+[247]{,}
+[248]{,7,5,6,}
+[249]{,}
+[250]{,}
+[251]{,}
+[252]{,}
+[253]{,}
+[254]{,}
+[255]{,}
+
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Crosshair.drawCrosshair (Boolean switcher) [0x00000] in <filename unknown>:0 
+  at Crosshair.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+GameController:Update()
+ 
+(Filename:  Line: -1)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01189256 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01380086 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.0103302 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008240223 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.6168616
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02536821
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.8374763
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.837523
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.06686497
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01061249 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02726793
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.07164717
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4931865
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4782686
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04845047
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01033401 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.007740021 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04231787
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1146536
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.7140417
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.7201476
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04871845
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01139164 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01878929 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.05497646
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.07788372
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.5195541
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.518115
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.05583954
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.007157326 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008849144 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03594303
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.07467747
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4852571
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4930592
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04263306
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01135159 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02767754 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.06076622
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.09442806
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.3289642
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.3342628
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04370403
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01565647 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01492691 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03741741
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.08445263
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1824474
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1898956
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02657223
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01433659 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.006731987 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04136086
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1582794
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.6034441
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.6085567
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.05114841
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02305126 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02788067 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008700371 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01077461 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.004501343 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01919365 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01203251 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.003269196 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.007436752 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02519226 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1917143
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.09044361
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1937923
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2026644
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04224873
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01187992 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01861763 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02082253 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03201389 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.003397942 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01878071 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.009037971 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02858639 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1682987
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1774273
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.232268
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.240236
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.08373451
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01800728 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01437378 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008396149 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03995132 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01132584 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01095963 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01415062 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008796692 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01855469 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1852951
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1146755
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4728699
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.4637012
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.05591202
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.008472443 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.00917244 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01013947 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.004951477 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.004688263 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02010918 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.007135391 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01753235 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.009788513 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.006481171 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02911949 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2066517
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03742981
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.5692253
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.5690613
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.04988098
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01299477 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.00787735 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.0140667 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03110695 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.00759697 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.0217762 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.006450653 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.0112114 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01926613 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02257919 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2174091
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1322975
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.9944935
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.9872875
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.07071114
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.907349E-06 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02782059 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01162529 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01491356 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02177238 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01385117 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01892853 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01488304 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02200699 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2399845
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1350174
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.221708
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.230684
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.07604218
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.907349E-06 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.907349E-06 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01164627 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01241875 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02479744 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01199722 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01191139 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.03273392 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2251892
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.09763527
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.8302727
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.8382854
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.06827736
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+done!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.907349E-06 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.907349E-06 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02547264 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01210022 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Split
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.02032471 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.01393127 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.0116272 for UpdateMaze
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.2210236
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0.1782227
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1.176306
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+

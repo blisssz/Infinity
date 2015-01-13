@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 84252173b32c54be98a61e052d08fbb0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - percentageText: {fileID: 135590, guid: 0a49b99cf6fdf4e4aa2aa97cac280d26, type: 2}
+  - rectTransform: {fileID: 22435590, guid: 0a49b99cf6fdf4e4aa2aa97cac280d26, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
