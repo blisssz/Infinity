@@ -8,8 +8,19 @@ public class Boss1Ball : MonoBehaviour {
 	private int counter = 0;
 	private GameObject[] getSoundCount;
 	private int soundCount;
+	private GameObject boss;
+	private Vector3 gravityDirection;
 
 	void Update() {
+		if (boss == null) {
+			boss = GameObject.FindWithTag ("BOSS1");
+		} else {
+			gravityDirection = (transform.position - transform.parent.transform.position);
+			if (gravityDirection.magnitude < 5f) {
+				rigidbody.AddForce( - 15*gravityDirection);
+				print ("flop");
+			}
+		}
 		//zorgt dat het geluid niet te vaak achter elkaar wordt gespeeld
 		if (counter > 60) {
 			hasPlayedSound = false;
@@ -19,7 +30,7 @@ public class Boss1Ball : MonoBehaviour {
 		} else {
 			counter = 0;
 		}
-		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 10){
+		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 60){
 			transform.parent = null;
 		}
 
