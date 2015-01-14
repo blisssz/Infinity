@@ -321,7 +321,7 @@ Old anims -*/
 				if (Vector3.Dot(force, transform.root.transform.up) < 0.0f){
 					force *= 0f;
 				}
-				print (force);
+				//print (force);
 
 				thisOwner.rigidbody.AddForce(force * Time.deltaTime, ForceMode.Impulse);
 				

@@ -20,10 +20,10 @@ public class BOSS1script : MonoBehaviour {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
 		}
+		if (Player != null) {
 		playerPosition = Player.transform.position;
 
 		toPlayer = new Vector3(playerPosition.x - transform.position.x, playerPosition.y - transform.position.y +18, playerPosition.z - transform.position.z);
-
 		//move to player location
 		float step = (DistanceToObject (Player)-14) * Time.deltaTime;
 		if (DistanceToObject (Player) > 14 && deathAnimation == false) {
@@ -54,6 +54,7 @@ public class BOSS1script : MonoBehaviour {
 			transform.Translate (d * Time.deltaTime,Space.World);
 			transform.Rotate(Vector3.up, Time.deltaTime*80f);
 		}
+		}
 	}
 
 	float DistanceToObject(GameObject other) {
@@ -80,7 +81,8 @@ public class BOSS1script : MonoBehaviour {
 	}	
 
 	void OnDestroy(){
-		Application.LoadLevel ("Main Scene");
+		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
+			Finish.GetComponent<endPoint>().isBossLevel=true;
 	}
 
 }

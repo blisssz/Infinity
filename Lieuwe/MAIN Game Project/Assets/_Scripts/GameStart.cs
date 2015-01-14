@@ -9,7 +9,7 @@ public class GameStart : MonoBehaviour {
 		PlayerManager.useWeaponID = weapon;
 		switch(weapon){
 		case 1: 
-			selectLevel ();
+			Application.LoadLevel ("Platforms");
 			break;
 		case 2:
 			Application.LoadLevel ("Doolhof");
@@ -60,7 +60,7 @@ public class GameStart : MonoBehaviour {
 			Application.LoadLevel ("PogoStickBoss");
 			break;
 		case 6:
-			Application.LoadLevel ("PogoStickBoss");
+			Application.LoadLevel ("GrapplingHookBoss");
 			break;
 		default: 
 			Debug.Log ("wrong number");

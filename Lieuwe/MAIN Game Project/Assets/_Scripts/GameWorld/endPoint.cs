@@ -3,6 +3,7 @@ using System.Collections;
 
 public class endPoint : MonoBehaviour {
 	private float speed = 0.5f;
+	public bool isBossLevel;
 	private Vector3 endPosition;
 	public static float minDistance;
 	private float distance;
@@ -26,19 +27,20 @@ public class endPoint : MonoBehaviour {
 		//}
 		//score.inGameScore = (int)Mathf.Round(((startDistance - minDistance)/startDistance)*maxScore);
 		playerPosition = PlayerManager.playerPosition;
-		if((playerPosition - transform.position).magnitude < 5){
-			GameController.spawnLocation = new Vector3(0,2,0);
+		if((playerPosition - transform.position).magnitude < 5&&isBossLevel==false){
 			GameStart.loadBoss ();
+		}
+
+		if((playerPosition - transform.position).magnitude < 5&&isBossLevel==true){
+			Application.LoadLevel("Main scene");
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.tag.Equals ("Player")) {
-			GameController.spawnLocation = new Vector3(0,2,0);
 			Application.LoadLevel("Main scene");	
 		}
 		if(col.tag.Equals ("projectile")){
-			GameController.spawnLocation = new Vector3(0,2,0);
 			Application.LoadLevel ("Main scene");
 		}
 	}

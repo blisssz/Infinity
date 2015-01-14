@@ -327,10 +327,10 @@ public class Generation : MonoBehaviour
 						
 						if (!lastPositions [0].Equals (Vector3.zero)) {
 								Pyramid (lastPositions [0], size);
-				onIteration(lastPositions [0] + CheckPointOffset);
-								
+								onIteration(lastPositions [0] + CheckPointOffset);
+								Aftermove(lastPositions [0] + CheckPointOffset);
 						}
-			Aftermove(Position);
+
 			}
 
 		}
@@ -515,8 +515,8 @@ public class Generation : MonoBehaviour
 
 	public static void gunSettings(){
 		minsize = 2;
-		maxsize = 9;
-		jumpDistance = 4;
+		maxsize = 3;
+		jumpDistance = 1.5f;
 		spawnEnemy = true;
 	}
 
@@ -525,11 +525,19 @@ public class Generation : MonoBehaviour
 		case 1:
 			pogoStickSettings ();
 			break;
+		case 2:
+			blackHoleSettings();
+			break;
 		case 3: 
 			hookSettings ();
 			break;
 		case 4:
+			gunSettings ();
+			break;
 		case 5:
+			gunSettings ();
+			break;
+		case 6:
 			gunSettings ();
 			break;
 		default:
@@ -553,17 +561,33 @@ public class Generation : MonoBehaviour
 	}
 
 	void Aftermove(Vector3 Position){
-		float Chance=0.5f;
-		if(spawnEnemy){
-			ObjectSpawner.SpawnObject(Position, Chance, "Coin");	
-		}
-		Chance=0.1f;
-		if(true){ObjectSpawner.SpawnObject (Position, Chance, "Enemy");
+		int Choice=HelpScript.Switch(new float[5]{0.5f,0.05f,0.05f,0.2f,0.2f});
+		switch(Choice){
+		case 0:
+			ObjectSpawner.SpawnObject(Position,"Coin");
+			break;
+		case 1:
+			ObjectSpawner.SpawnObject(Position,"AmmoPack");
+			break;
+		case 2:
+			ObjectSpawner.SpawnObject(Position,"MedPack");
+			break;
+		case 3:
+			if(spawnEnemy){
+			ObjectSpawner.SpawnObject(Position,"ShootingEnemy");
+			}
+			break;
+		case 4:
+			ObjectSpawner.SpawnObject(Position,"Coin");
+			break;
+		default:
+			break;
 		}
 	}
 
 	public void onFinish (Vector3 Position){
-		Instantiate(endPoint,Position , Quaternion.identity);
+		GameObject Finish=Instantiate(endPoint,Position , Quaternion.identity) as GameObject;
+		Finish.GetComponent<endPoint>().isBossLevel=false;
 	}
 
 	public void onIteration(Vector3 Position){

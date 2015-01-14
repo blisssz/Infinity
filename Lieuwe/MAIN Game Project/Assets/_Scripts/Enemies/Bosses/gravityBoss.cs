@@ -26,8 +26,6 @@ public class gravityBoss : MonoBehaviour {
 	private bool dead;
 	public GameObject cannon;
 
-	public AudioClip impact;
-
 	// Use this for initialization
 	void Start () {
 		shatteredGlass.boss = gameObject;
@@ -67,9 +65,7 @@ public class gravityBoss : MonoBehaviour {
 
 	// If the boss gets hit by its own glasspieces, it reduces life
 	public void applyDamage(float damage){
-		audio.PlayOneShot(impact, 1.0F);
 		lifes -= 1;
-		print (lifes);
 		if (lifes <= 0) { 
 			Destroy (gameObject);
 			if(!dead){
@@ -89,7 +85,8 @@ public class gravityBoss : MonoBehaviour {
 	}
 
 	void OnDestroy(){
-		Application.LoadLevel ("Main Scene");
+		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
+			Finish.GetComponent<endPoint>().isBossLevel=true;
 	}
 
 	public static void setSmartOffset(Vector3 updir){

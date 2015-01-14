@@ -32,14 +32,15 @@ public class Boss1ArmAnimations : MonoBehaviour {
 	}
 
 	float DistanceToObject(GameObject other) {
+		if(other==null){return 0;}
 		return Vector3.Distance (this.transform.position, other.transform.position);
 	}
 
 	void OnTriggerEnter(Collider col){
 		if(col.tag.Equals("Player")){
 			//OtherScript otherscript = col.GetComponent<PlayerManager>;
-			healthBar.playerHealth -= 10;
-			print (healthBar.playerHealth);
+			GameObject Player=col.transform.root.gameObject;
+			Player.GetComponent<HPmanager>().doDamage(10);
 		}
 	}
 }

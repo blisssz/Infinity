@@ -162,7 +162,7 @@ public class Sniper : Gun {
 	
 	private void Zoom(bool status){
 		sniperCamera.enabled = status; //Enable or disable the zoomable sniper camera
-		Camera.main.GetComponent<Blur>().enabled = status; //Enable or disable the blur effect on the main camera
+		//Camera.main.GetComponent<Blur>().enabled = status; //Enable or disable the blur effect on the main camera
 	}
 
 	//Handles reload animation and synced reload-audio playback

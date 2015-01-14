@@ -17,7 +17,9 @@ public class healthBar : MonoBehaviour {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");		
 		}
+		if (Player != null){
 		playerHealth = Player.GetComponent<HPmanager>().hp;
 		Health.text = "health: " + playerHealth;
+		}
 	}
 }

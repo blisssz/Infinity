@@ -22,7 +22,7 @@ public class shatteredGlass : MonoBehaviour {
 		smartOffset = gravityBoss.getSmartOffset ();
 		//smartOffset[0] += 
 		for(int i = 0; i < 3; i++){
-			print (smartOffset[i]);
+			//print (smartOffset[i]);
 		}
 		bossToPlayer = (PlayerManager.playerPosition - transform.position) + new Vector3 (smartOffset[0],smartOffset[1],smartOffset[2]);
 		otherpieces = GameObject.FindGameObjectsWithTag ("projectile");

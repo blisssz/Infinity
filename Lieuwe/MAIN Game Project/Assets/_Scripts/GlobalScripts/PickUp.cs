@@ -5,7 +5,7 @@ public class PickUp : MonoBehaviour
 {
 		public float rotationSpeed;
 		private Vector3 pos;
-		public ParticleSystem coinPickup;
+		public GameObject coinPickup;
 		public int PickUpNumber;
 
 		// Use this for initialization
@@ -32,12 +32,14 @@ public class PickUp : MonoBehaviour
 								highScore.pickUpCoin ();
 						} else if (PickUpNumber == 1) {
 								Instantiate (coinPickup, pos, Quaternion.identity);
-								Player.GetComponent<HPmanager>().doDamage(-10);
+								Player.GetComponent<HPmanager>().doDamage(-100);
 								highScore.pickUpHealth ();
 
 			} else if (PickUpNumber == 2) {
 				Instantiate (coinPickup, pos, Quaternion.identity);
-				Player.GetComponent<HPmanager>().doDamage(-10);
+				GameObject Weapon=Player.GetComponent<PlayerManager>().getCurrentWeapon();
+				Weapon.GetComponent<Gun>().addAmmunition(100);
+
 				highScore.pickUpAmmo ();
 				
 			}

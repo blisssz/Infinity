@@ -19,7 +19,7 @@ public class Boss1Ball : MonoBehaviour {
 		} else {
 			counter = 0;
 		}
-		if((transform.position - transform.parent.transform.position).magnitude > 10){
+		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 10){
 			transform.parent = null;
 		}
 

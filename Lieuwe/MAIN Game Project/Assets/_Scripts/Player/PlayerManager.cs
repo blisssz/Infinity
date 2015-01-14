@@ -27,12 +27,11 @@ public class PlayerManager : MonoBehaviour {
 	
 	//UI
 	public GameObject UIfixed;
-	public GameObject UI;
 	private GameObject Crosshair;
 	
 	private bool switcher = false;
 	
-	public static int useWeaponID = 4;
+	public static int useWeaponID = 5;
 	
 	//	private int[] weaponID = {0, 1, 2, 3, 4};
 	
@@ -69,10 +68,6 @@ public class PlayerManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Awake () {
-
-		Instantiate(UI);
-	}
 
 	void Update () {
 		playerPosition = transform.position;

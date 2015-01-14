@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class coinPickup : MonoBehaviour {
+public class DestroySelf : MonoBehaviour {
+	public float timeleft;
 
 	// Use this for initialization
 	void Start () {
-		Destroy (gameObject, 0.5f);
+		Destroy (gameObject, timeleft);
 	}
 	
 	// Update is called once per frame

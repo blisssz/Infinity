@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 	public static int lifes;
 
 	public GameObject mainPlayer;
+	
+	public GameObject UI;
 	public static Vector3 spawnLocation;
 	public static Vector3 StartPosition;
 
@@ -21,13 +23,16 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameController.fallingPossible = true;
 		spawnLocation=this.transform.position;   //StartPostion in Level
 		keyManager = new KeyManager();
 		lifes = startLifes;
+		Instantiate(UI);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(keyManager==null){keyManager = new KeyManager();}
 		keyManager.Update();
 		if (lifes <= 0) {
 			lifes = startLifes;
@@ -61,12 +66,11 @@ public class GameController : MonoBehaviour {
 			print (lifes);
 		}
 
-		if (thePlayer.transform.position.y <= -30 && fallingPossible) {
+		if (thePlayer.transform.position.y <= -60 && fallingPossible) {
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;
 			lifes -= 1;
-			print (lifes);
 		}
 	}
 

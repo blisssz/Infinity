@@ -80,12 +80,14 @@ public class Gun : MonoBehaviour {
 			//If it hit an enemy, do damage
 			if (hit.collider.tag.Equals ("EnemyHead")){
 				//Headshot, damage x2
-				hit.transform.SendMessageUpwards("ApplyDamage", bulletDamage * 2);
+				GameObject Hitted=hit.transform.root.gameObject;
+				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage);
 				BulletInfo.instance.StartCoroutine ("Fade");
 				Instantiate(gunShotHeadshotParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			}
 			else if (hit.collider.tag.Equals("Enemy")){
-				hit.transform.SendMessageUpwards("ApplyDamage", bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
+				GameObject Hitted=hit.transform.root.gameObject;
+				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
 				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			} 
 			else{
@@ -133,6 +135,8 @@ public class Gun : MonoBehaviour {
 
 	public void addAmmunition(int amount){
 		magazineBulletsLeft += amount;
+		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 	}
 	
 	public bool getEquipStatus(){

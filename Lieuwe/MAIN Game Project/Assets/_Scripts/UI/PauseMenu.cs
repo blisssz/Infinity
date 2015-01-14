@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour {
 			Screen.showCursor = false;
 			Screen.lockCursor = true;
 			paused = false;
-			Debug.Log ("got here");
+			//Debug.Log ("got here");
 		}
 	}
 

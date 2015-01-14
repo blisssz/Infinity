@@ -35,11 +35,11 @@ public class Job : ThreadedJob
 		if(executed){
 		//Debug.Log ("Halfway there");
 		ChunkList.UpdateSurroundingChunks ();
-		Debug.Log ("Halfway there+1");
+		//Debug.Log ("Halfway there+1");
 		ChunkList.UpdateSidesChunks ();
-		Debug.Log ("Halfway there+2");
+		//Debug.Log ("Halfway there+2");
 		ChunkList.UpdateTrianglesChunks ();
-		Debug.Log ("Done");
+		//Debug.Log ("Done");
 		}
 	}
 	

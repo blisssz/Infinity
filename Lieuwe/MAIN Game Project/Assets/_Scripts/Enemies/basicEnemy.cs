@@ -146,7 +146,7 @@ public class basicEnemy : MonoBehaviour {
 		score.gameScore += 5;
 	}
 
-	public void applyDamage(float damage){
+	void applyDamage(float damage){
 		transform.GetComponent<HPmanager> ().doDamage (damage);
 	}
 

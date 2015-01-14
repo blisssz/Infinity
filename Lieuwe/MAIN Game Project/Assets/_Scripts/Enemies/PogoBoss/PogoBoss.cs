@@ -644,7 +644,8 @@ public class PogoBoss : MonoBehaviour {
 	}
 
 	void OnDestroy(){
-		Application.LoadLevel ("Main Scene");
+		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,15,0),"EndPoint");
+		Finish.GetComponent<endPoint>().isBossLevel=true;
 	}
 
 

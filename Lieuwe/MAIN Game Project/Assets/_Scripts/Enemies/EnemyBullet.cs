@@ -26,7 +26,7 @@ public class EnemyBullet : MonoBehaviour {
 		else{
 			if(col.tag.Equals("Player")){
 				Player.GetComponent<HPmanager>().doDamage (10);
-				print (healthBar.playerHealth);
+				//print (healthBar.playerHealth);
 			}
 			Destroy(this);
 		}

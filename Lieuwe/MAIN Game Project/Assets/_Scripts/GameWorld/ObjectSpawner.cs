@@ -28,8 +28,12 @@ public class ObjectSpawner : MonoBehaviour {
 		}
 	}
 
+	public static GameObject SpawnObjectWith(Vector3 Position, string a){
+			return Instantiate (GetObject (a),Position, enRotation) as GameObject;
+	}
+
 	public static void SpawnObject(Vector3 Position, string a){
-			Instantiate (GetObject (a),Position, enRotation);
+		Instantiate (GetObject (a),Position, enRotation);
 	}
 
 	public static int GetIndex(string Name){

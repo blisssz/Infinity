@@ -17,11 +17,12 @@ public class Generation3 : MonoBehaviour {
 	private float Tm;
 	public Material x;
 	private int FinishNumber=100;
-	private int iteration=0;
+	private int iteration=1;
 
 	Job myJob;
 	void Start ()
 	{
+		GameController.fallingPossible = false;
 		ChunkList.positionsReset ();
 		GameController.fallingPossible = false;
 		ChunkList.C=gameObject;
@@ -129,7 +130,7 @@ public class Generation3 : MonoBehaviour {
 			myJob.Alfa=Alfa;
 			myJob.MinOneDistance=minOneDistance;
 			myJob.b=new System.Random();
-				Debug.Log ("Starts Job");
+				//Debug.Log ("Starts Job");
 				myJob.Start (); // Don't touch any data in the job class after you called Start until IsDone is true.
 		}
 		if (myJob != null)
@@ -141,10 +142,12 @@ public class Generation3 : MonoBehaviour {
 				Beta=myJob.Beta;
 				Alfa=myJob.Alfa;
 				// Alternative to the OnFinished callback
-				myJob = null;
+				if(Alfa[AlfaIndex].executed){
 					AfterMove(Beta[AlfaIndex]);
 					onIteration(Beta[AlfaIndex]);
+					}
 					AlfaIndex++;
+					myJob = null;
 					if (AlfaIndex == Alfa.Count) {
 						AlfaIndex = 0;
 					}
@@ -231,7 +234,8 @@ public class Generation3 : MonoBehaviour {
 	}
 
 	public void onFinish (Vector3 Position){
-		Instantiate(endPoint,Position , Quaternion.identity);
+		GameObject Finish=Instantiate(endPoint,Position , Quaternion.identity) as GameObject;
+		Finish.GetComponent<endPoint>().isBossLevel=false;
 	}
 }
 	

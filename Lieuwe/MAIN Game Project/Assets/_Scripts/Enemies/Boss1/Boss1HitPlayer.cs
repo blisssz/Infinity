@@ -13,15 +13,15 @@ public class Boss1HitPlayer : MonoBehaviour {
 	void Update () {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
-			transform.LookAt (Player.transform);
+			if(Player !=null){transform.LookAt (Player.transform);}
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if(col.tag.Equals("Player")){
 			//OtherScript otherscript = col.GetComponent<PlayerManager>;
-			healthBar.playerHealth -= 20;
-			print (healthBar.playerHealth);
+			GameObject Player=col.transform.root.gameObject;
+			Player.GetComponent<HPmanager>().doDamage(20);
 		}
 	}
 }
