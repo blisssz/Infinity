@@ -101,6 +101,7 @@
      <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\PointList.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\checkPoint.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\endPoint.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\enemySpawn.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\mySkyBox.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
@@ -113,6 +114,7 @@
      <Compile Include="Assets\_Scripts\HPmanager.cs" />
      <Compile Include="Assets\_Scripts\HitsByVelocity.cs" />
      <Compile Include="Assets\_Scripts\ModSurface.cs" />
+     <Compile Include="Assets\_Scripts\PickUp\coinPickup.cs" />
      <Compile Include="Assets\_Scripts\PlatformMotion.cs" />
      <Compile Include="Assets\_Scripts\Player\GrapplingRopeSwing.cs" />
      <Compile Include="Assets\_Scripts\Player\MouseLook.cs" />

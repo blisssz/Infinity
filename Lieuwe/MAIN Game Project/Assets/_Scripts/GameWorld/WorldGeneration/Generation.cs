@@ -17,7 +17,7 @@ public class Generation : MonoBehaviour
 		public GameObject C;
 		private Vector3[] Vertices;
 		private int[] Triangles;
-		private int iteration = 0;
+		private int iteration = 1;
 		private static float jumpDistance = 100;
 		private Vector3[] lastPositions = new Vector3[3];
 		public static Vector3[][] Moves;
