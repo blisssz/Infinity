@@ -190,12 +190,15 @@ public class PogoStick : MonoBehaviour {
 		if (stateInfo.nameHash == mountHash && stateInfo.normalizedTime > 0.9f){
 			pogoState = PogoState.isUsing;
 			thisOwner.GetComponent<Movement1>().disableGroundControl();
-			//thisOwner.GetComponent<Movement1>().
+			thisOwner.GetComponent<Movement1>().enableJumping(false);
+			thisOwner.GetComponent<Movement1>().enableSpringyFeet(false);
 			lockAnimation = false;
 		}
 		else if (stateInfo.nameHash == dismountHash && stateInfo.normalizedTime > 0.9f){
 			pogoState = PogoState.inHand;
 			thisOwner.GetComponent<Movement1>().enableGroundControl();
+			thisOwner.GetComponent<Movement1>().enableJumping(true);
+			thisOwner.GetComponent<Movement1>().enableSpringyFeet(true);
 			lockAnimation = false;
 		}
 
@@ -315,9 +318,11 @@ Old anims -*/
 				
 				force += pogoMain.transform.up * (ds * pogoSpring);// - c_damp * Vector3.Dot(thisOwner.rigidbody.velocity, this.transform.up));
 
-				if (Vector3.Dot(force, -transform.root.transform.up) < 0.0f){
+				if (Vector3.Dot(force, transform.root.transform.up) < 0.0f){
 					force *= 0f;
 				}
+				print (force);
+
 				thisOwner.rigidbody.AddForce(force * Time.deltaTime, ForceMode.Impulse);
 				
 				firstContact = true;

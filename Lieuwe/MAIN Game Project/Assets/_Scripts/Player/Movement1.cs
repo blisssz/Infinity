@@ -17,10 +17,11 @@ public class Movement1 : MonoBehaviour {
 
 	// control values (some good base parameters for mass of 99kg)
 	public float v_max = 10.0f;
-	public float KpBaseVal = 100.0f;
+	public float KpBaseVal = 75.0f;
 	public float Kp {get; set;}
 	public float Ki = 10.0f;
 	public float KiClamp = 35.0f;
+	public float Lcomp = 0.3f;
 
 	public float walkForceMax = 2500.0f;	// Newton, (a 90kg Human Force is about 750N)
 	private Vector3 inputForce;
@@ -34,6 +35,8 @@ public class Movement1 : MonoBehaviour {
 
 	private Vector3 E_old = new Vector3(0.0f, 0.0f, 0.0f);
 	private Vector3 E_integral = new Vector3(0.0f, 0.0f, 0.0f);
+
+
 
 	//max walk angle;
 	public float maxWalkAngle = 45.0f;
@@ -69,6 +72,7 @@ public class Movement1 : MonoBehaviour {
 	private bool airControlEnabled;
 	private bool groundControlEnabled;
 	private bool jumpingEnabled;
+	private bool springyfeetEnabled = true;
 
 	// stat tracking
 	private float distanceTravelled = 0f;
@@ -116,6 +120,8 @@ public class Movement1 : MonoBehaviour {
 			bool left = KeyManager.left == 2;
 			bool right = KeyManager.right == 2;
 
+			Vector3 springUpForce = Vector3.zero;
+
 			// ray cast for checking if the player walks on ground;
 			RaycastHit hit;
 
@@ -131,6 +137,19 @@ public class Movement1 : MonoBehaviour {
 					JumpState = 0;
 					vfac = 1.0f;
 					jump_time = 0.0f;
+
+					// calc spring Up force
+					if (springyfeetEnabled){
+						float L0 = playerCenter2Ground_height + Lcomp;
+						float k = rigidbody.mass * Physics.gravity.magnitude / Lcomp;
+						float cdamp = 2f * Mathf.Sqrt(k*rigidbody.mass);
+						float L_compression = L0 - hit.distance;
+
+						springUpForce = transform.up * (cdamp * Vector3.Dot (rigidbody.velocity, -transform.up)
+						                                                    + L_compression * k);
+
+						//springUpForce = Vector3.ClampMagnitude(springUpForce,L_compression * 2*k);
+					}
 
 					if (Vector3.Dot(hit.normal, transform.up) < maxWalkSlope){
 						MovementState = 2;		// sliding
@@ -174,6 +193,10 @@ public class Movement1 : MonoBehaviour {
 					}
 					if (JumpState == 1 && jump_time < jump_maxtime){
 						jump_time += Time.deltaTime;
+
+						// keep springyfeet force at zero else it increases the jump force
+						springUpForce = Vector3.zero;
+
 						// jump force
 						rigidbody.AddForce (transform.up*mass*(jump_acceleration+Physics.gravity.magnitude), ForceMode.Force);
 					}
@@ -241,8 +264,10 @@ public class Movement1 : MonoBehaviour {
 
 			inputForce = U;
 
+			Vector3 outputForce = U + springUpForce;
+
 			// apply forces
-			rigidbody.AddForce (U, ForceMode.Force);
+			rigidbody.AddForce (outputForce, ForceMode.Force);
 			}
 	}
 
@@ -354,6 +379,10 @@ public class Movement1 : MonoBehaviour {
 	public void enableJumping(bool b){
 		jumpingEnabled = b;
 		JumpState = 0;
+	}
+
+	public void enableSpringyFeet(bool b){
+		springyfeetEnabled = b;
 	}
 	/// <summary>
 	/// Gets the local velocity of this rigidbody;

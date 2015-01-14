@@ -26,6 +26,10 @@ public class IndieEffects : MonoBehaviour
     public Camera myCamera; //cache camera and transform component for 
     private Transform myTransform; //performance
 
+	void Awake(){
+		DepthCam = GameObject.FindGameObjectWithTag ("SkyBoxCamera");
+	}
+
     public static void FullScreenQuad(Material renderMat) 
     {
         GL.PushMatrix();
@@ -169,7 +173,6 @@ public class IndieEffects : MonoBehaviour
     {	
         myTransform = transform;
         myCamera = GetComponent<Camera>();
-		DepthCam = GameObject.FindGameObjectWithTag ("SkyBoxCamera");
 	
         if( !useOldVersion )
         {		

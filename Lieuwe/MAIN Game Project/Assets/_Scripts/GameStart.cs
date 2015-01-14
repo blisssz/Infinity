@@ -23,6 +23,9 @@ public class GameStart : MonoBehaviour {
 		case 5:
 			selectLevel ();
 			break;
+		case 6:
+			selectLevel ();
+			break;
 		default: 
 			Debug.Log ("wrong number");
 			break;
@@ -49,6 +52,15 @@ public class GameStart : MonoBehaviour {
 			break;
 		case 3:
 			Application.LoadLevel ("GrapplingHookBoss");
+			break;
+		case 4:
+			Application.LoadLevel ("PogoStickBoss");
+			break;
+		case 5:
+			Application.LoadLevel ("PogoStickBoss");
+			break;
+		case 6:
+			Application.LoadLevel ("PogoStickBoss");
 			break;
 		default: 
 			Debug.Log ("wrong number");

@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour {
 	public static int lifes;
 
 	public GameObject mainPlayer;
-	public static Vector3 spawnLocation = new Vector3(0.0f, 2.0f, 0.0f);
+	public static Vector3 spawnLocation;
+	public static Vector3 StartPosition;
 
 	private bool mainPlayerAlive = false;
 	private GameObject thePlayer;
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		spawnLocation=this.transform.position;   //StartPostion in Level
 		keyManager = new KeyManager();
 		lifes = startLifes;
 	}
@@ -30,7 +32,7 @@ public class GameController : MonoBehaviour {
 		if (lifes <= 0) {
 			lifes = startLifes;
 			score.setToZero();
-			spawnLocation = new Vector3(0,2,0);
+			spawnLocation = StartPosition;
 			Application.LoadLevel (Application.loadedLevel);
 		}
 

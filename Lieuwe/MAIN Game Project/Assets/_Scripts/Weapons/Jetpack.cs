@@ -14,11 +14,15 @@ public class Jetpack : MonoBehaviour {
 	private float thrustSpeed = 3000;
 	private static int maxFuel = 200;
 	private int fuelLeft = maxFuel;
+
 	public int FuelLeft {
+
 		get { 
 			return fuelLeft; 
 		}
 		set {
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Fuel");}
 			fuelLeft = value;
 			sliderFill.GetComponent<SlidingBar> ().setValueFade (fuelLeft, maxFuel, true);
 		}

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class Generation3 : MonoBehaviour {
 
 	public Vector3 SpawnPosition;
+	public GameObject CheckPoint;
+	public GameObject endPoint;
 	public float minOneDistance;
 	private List<Path> Alfa;
 	private List<Vector3> Beta;
@@ -15,6 +17,7 @@ public class Generation3 : MonoBehaviour {
 	private float Tm;
 	public Material x;
 	private int FinishNumber=100;
+	private int iteration=0;
 
 	Job myJob;
 	void Start ()
@@ -116,6 +119,7 @@ public class Generation3 : MonoBehaviour {
 					AlfaIndex=Alfa.Count-1;
 				}
 				onFinish(Beta[AlfaIndex]);
+				ChunkList.UpdateNumber++;
 			}
 		Tm=Time.realtimeSinceStartup;
 		if (myJob == null&&Updating&&ChunkList.MeshingDone)
@@ -139,6 +143,7 @@ public class Generation3 : MonoBehaviour {
 				// Alternative to the OnFinished callback
 				myJob = null;
 					AfterMove(Beta[AlfaIndex]);
+					onIteration(Beta[AlfaIndex]);
 					AlfaIndex++;
 					if (AlfaIndex == Alfa.Count) {
 						AlfaIndex = 0;
@@ -190,11 +195,43 @@ public class Generation3 : MonoBehaviour {
 	}
 
 	public void AfterMove (Vector3 Position){
+		int Choice=HelpScript.Switch(new float[5]{0.5f,0.05f,0.05f,0.2f,0.2f});
+		switch(Choice){
+		case 0:
+			ObjectSpawner.SpawnObject(Position,"Coin");
+			break;
+		case 1:
+			ObjectSpawner.SpawnObject(Position,"AmmoPack");
+			break;
+		case 2:
+			ObjectSpawner.SpawnObject(Position,"MedPack");
+			break;
+		case 3:
+			ObjectSpawner.SpawnObject(Position,"ShootingEnemy");
+			break;
+		case 4:
+			ObjectSpawner.SpawnObject(Position,"Coin");
+			break;
+		default:
+			break;
+		}
 
 	}
 
-	public void onFinish (Vector3 Position){
+	public void onIteration(Vector3 Position){
+		if(iteration<ChunkList.UpdateNumber){
+		if (iteration%30 == 0) {
+			Instantiate (CheckPoint, Position, Quaternion.identity);
+		}
+		if(iteration%FinishNumber == 0){
+			//onFinish(Position);
+		}
+		iteration=ChunkList.UpdateNumber;
+		}
+	}
 
+	public void onFinish (Vector3 Position){
+		Instantiate(endPoint,Position , Quaternion.identity);
 	}
 }
 	

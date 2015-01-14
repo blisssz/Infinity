@@ -32,7 +32,7 @@ public class PlayerManager : MonoBehaviour {
 	
 	private bool switcher = false;
 	
-	public static int useWeaponID = 5;
+	public static int useWeaponID = 6;
 	
 	//	private int[] weaponID = {0, 1, 2, 3, 4};
 	
@@ -64,11 +64,16 @@ public class PlayerManager : MonoBehaviour {
 		
 		Crosshair = Instantiate(UIfixed) as GameObject;
 		Crosshair.SetActive (false);
-		Instantiate(UI);
+
 		
 	}
 	
 	// Update is called once per frame
+	void Awake () {
+
+		Instantiate(UI);
+	}
+
 	void Update () {
 		playerPosition = transform.position;
 		// spawn a tool/weapon
