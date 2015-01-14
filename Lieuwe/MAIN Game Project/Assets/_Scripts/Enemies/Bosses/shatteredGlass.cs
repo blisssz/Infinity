@@ -24,7 +24,7 @@ public class shatteredGlass : MonoBehaviour {
 		for(int i = 0; i < 3; i++){
 			print (smartOffset[i]);
 		}
-		bossToPlayer = (PlayerManager.playerPosition - transform.position) + new Vector3 (smartOffset[0],smartOffset[1] -1f,smartOffset[2]);
+		bossToPlayer = (PlayerManager.playerPosition - transform.position) + new Vector3 (smartOffset[0],smartOffset[1],smartOffset[2]);
 		otherpieces = GameObject.FindGameObjectsWithTag ("projectile");
 		rigidbody.velocity = bossToPlayer.normalized * glassSpeed;
 	}

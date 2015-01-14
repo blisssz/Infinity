@@ -11,7 +11,7 @@ public class Jetpack : MonoBehaviour {
 	private bool jetpackActive = false;
 
 	private float airControlSpeed = 1000;
-	private float thrustSpeed = 3000;
+	private float thrustSpeed = 1000;
 	private static int maxFuel = 200;
 	private int fuelLeft = maxFuel;
 

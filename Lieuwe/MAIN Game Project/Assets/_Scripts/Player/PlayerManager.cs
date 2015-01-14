@@ -32,7 +32,7 @@ public class PlayerManager : MonoBehaviour {
 	
 	private bool switcher = false;
 	
-	public static int useWeaponID = 2;
+	public static int useWeaponID = 4;
 	
 	//	private int[] weaponID = {0, 1, 2, 3, 4};
 	
