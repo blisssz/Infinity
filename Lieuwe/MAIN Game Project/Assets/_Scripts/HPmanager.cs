@@ -4,10 +4,13 @@ using System.Collections;
 public class HPmanager : MonoBehaviour {
 
 	public float hp = 100f;
+	public float maxhp = 100f;
 	public float dmgModifier = 1.0f;
+	private GameObject sliderFill;
 
 	private float velMinTreshold = 0f;
 	private float velMaxTreshold = 100f;
+
 
 	public bool velBasedDmg = false;
 
@@ -36,6 +39,13 @@ public class HPmanager : MonoBehaviour {
 			}
 
 		}
+		if(hp>maxhp){hp=maxhp;}
+		if(this.tag.Equals ("Player")){
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Health");}
+			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
+		}
+
 	}
 
 	/// <summary>
@@ -57,12 +67,24 @@ public class HPmanager : MonoBehaviour {
 				doDamage(vel, velMinTreshold, velMaxTreshold);
 			}
 		}
+		if(hp>maxhp){hp=maxhp;}
+		if(this.tag.Equals ("Player")){
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Health");}
+			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
+		}
 	}
 
 
 	public void doDamage(float dmg){
 		if (!velBasedDmg){
 			hp -= dmg * dmgModifier;
+		}
+		if(hp>maxhp){hp=maxhp;}
+		if(this.tag.Equals ("Player")){
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Health");}
+			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
 		}
 	}
 
@@ -75,6 +97,12 @@ public class HPmanager : MonoBehaviour {
 	public void doDamage(Vector3 vel, float min, float max){
 		if (vel.magnitude > min){
 			hp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
+		}
+		if(hp>maxhp){hp=maxhp;}
+		if(this.tag.Equals ("Player")){
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Health");}
+			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
 		}
 	}
 
@@ -95,7 +123,12 @@ public class HPmanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if(hp>maxhp){hp=maxhp;}
+		if(this.tag.Equals ("Player")){
+			if(sliderFill==null){
+				sliderFill = GameObject.FindWithTag ("Health");}
+			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
+		}
 	}
 	
 	// Update is called once per frame

@@ -200,13 +200,7 @@ public class PlayerManager : MonoBehaviour {
 			}
 			// remove weapon when one is already active
 			else if (key1 == true && currentWeapon != null){
-				
-				// Delete GrapplingHook
-				if (useWeaponID == 0){
-					GrapplingHook gh = currentWeapon.GetComponent<GrapplingHook>();
-					gh.DestroyAll();
-					setCrosshair (false);
-				}
+
 				
 				if (useWeaponID == 1){
 					// pogostick delete
@@ -222,7 +216,7 @@ public class PlayerManager : MonoBehaviour {
 				}
 				
 				// Delete GrapplingHookV2
-				if (useWeaponID == 0){
+				if (useWeaponID == 3||useWeaponID == 0){
 					GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
 					gh.DestroyAll();
 					setCrosshair (false);
@@ -230,6 +224,14 @@ public class PlayerManager : MonoBehaviour {
 				
 			}
 		}
+	}
+
+	public void DestroyWeapon(){
+		if( useWeaponID ==3){
+			GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+			gh.DestroyAll();
+			setCrosshair (false);
+			}
 	}
 	
 	public void setCrosshair(bool switcher){

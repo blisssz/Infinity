@@ -1,91 +1,91 @@
-Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-1064
+Base path: D:/Tu/Unity/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-2300
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=2116 outsize=784 ok=1
 Cmd: compileSnippet
-  error: 2 plat 4 at (48): incorrect number of arguments to numeric-type constructor
-  api=4 type=0 insize=1583 outsize=0 kw= ok=0
-Cmd: preprocess
-  insize=1691 outsize=1646 ok=1
-Cmd: preprocess
-  insize=4679 outsize=586 ok=1
-Cmd: preprocess
-  insize=2870 outsize=427 ok=1
-Cmd: preprocess
-  insize=5548 outsize=1290 ok=1
-Cmd: preprocess
-  insize=600 outsize=597 ok=1
-Cmd: preprocess
-  insize=5321 outsize=1789 ok=1
-Cmd: preprocess
-  insize=405 outsize=402 ok=1
-Cmd: preprocess
-  insize=33465 outsize=288 ok=1
-Cmd: preprocess
-  insize=2055 outsize=436 ok=1
-Cmd: preprocess
-  insize=2963 outsize=1462 ok=1
-Cmd: preprocess
-  insize=1466 outsize=377 ok=1
-Cmd: preprocess
-  insize=1690 outsize=437 ok=1
-Cmd: preprocess
-  insize=628 outsize=1375 ok=1
-Cmd: preprocess
-  insize=6991 outsize=271 ok=1
-Cmd: preprocess
-  insize=4144 outsize=968 ok=1
-Cmd: preprocess
-  insize=33474 outsize=288 ok=1
-Cmd: preprocess
-  insize=1097 outsize=378 ok=1
-Cmd: preprocess
-  insize=5042 outsize=791 ok=1
+  api=0 type=0 insize=1639 outsize=851 kw= ok=1
 Cmd: compileSnippet
-  error: 1 plat 4 at (120): implicit truncation of vector type
-  error: 2 plat 4 at (127): variable 'Output' used without having been completely initialized
-  api=4 type=1 insize=4436 outsize=0 kw= ok=0
-Cmd: preprocess
-  insize=1624 outsize=286 ok=1
-Cmd: preprocess
-  insize=1709 outsize=303 ok=1
-Cmd: preprocess
-  insize=1872 outsize=1514 ok=1
-Cmd: preprocess
-  insize=1823 outsize=317 ok=1
-Cmd: preprocess
-  insize=1887 outsize=404 ok=1
-Cmd: preprocess
-  insize=4424 outsize=1392 ok=1
-Cmd: preprocess
-  insize=2123 outsize=413 ok=1
-Cmd: preprocess
-  insize=11629 outsize=759 ok=1
-Cmd: preprocess
-  insize=4877 outsize=937 ok=1
+  api=0 type=1 insize=1639 outsize=3199 kw= ok=1
 Cmd: compileSnippet
-  error: 2 plat 4 at (59): incorrect number of arguments to numeric-type constructor
-  api=4 type=0 insize=4029 outsize=0 kw= ok=0
-Cmd: preprocess
-  insize=2596 outsize=1781 ok=1
-Cmd: preprocess
-  insize=1440 outsize=667 ok=1
-Cmd: preprocess
-  insize=7721 outsize=1710 ok=1
-Cmd: preprocess
-  insize=2308 outsize=1740 ok=1
-Cmd: preprocess
-  insize=301 outsize=298 ok=1
-Cmd: preprocess
-  insize=1834 outsize=1421 ok=1
-Cmd: preprocess
-  insize=3150 outsize=476 ok=1
-Cmd: preprocess
-  insize=460 outsize=457 ok=1
-Cmd: preprocess
-  insize=364 outsize=361 ok=1
-Cmd: preprocess
-  insize=1639 outsize=1140 ok=1
-Cmd: preprocess
-  insize=1429 outsize=1003 ok=1
+  api=0 type=0 insize=692 outsize=612 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=692 outsize=297 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=879 outsize=682 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=879 outsize=451 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=790 outsize=1555 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=790 outsize=297 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=908 outsize=1885 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=788 outsize=861 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=788 outsize=297 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=985 outsize=908 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=985 outsize=526 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=992 outsize=556 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=992 outsize=526 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=885 outsize=594 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=885 outsize=463 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=959 outsize=1980 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=959 outsize=566 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=911 outsize=1423 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=6232 outsize=1148 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=6232 outsize=1729 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=6232 outsize=979 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=4173 outsize=883 kw=POINT ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4173 outsize=115 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5687 outsize=621 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5687 outsize=1130 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3628 outsize=883 kw=POINT ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3628 outsize=841 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3628 outsize=1163 kw=POINT ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3151 outsize=552 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5369 outsize=1010 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5369 outsize=845 kw=LIGHTMAP_ON DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5369 outsize=1005 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5369 outsize=1027 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_ON ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5226 outsize=1058 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5226 outsize=1656 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=5226 outsize=7329 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=5226 outsize=3307 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3170 outsize=4363 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3170 outsize=3029 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3170 outsize=1152 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3170 outsize=788 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3170 outsize=697 kw=DIRECTIONAL_COOKIE ok=1

@@ -1,27 +1,64 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PauseMenu : MonoBehaviour {
 
 	public static bool paused = false;
+	private static int pauseState = 1; //1 main pause menu, 2 options, 3 video, 4 audio, 5 controls, 6 customization etc...
 	
 	public GameObject Pausemenu;
+	public GameObject Main;
+	public GameObject Options;
+	public GameObject Video;
+	public GameObject Audio;
+	public GameObject Controls;
+	public GameObject Customization;
 	public GameObject ColorPreview;
 	private Image background;
+	private Dictionary<int, GameObject> pauseScreens;
 
 	//public Image background; //currently not used
 
 	// Use this for initialization
 	void Start () {
 		background = Pausemenu.GetComponent<Image> ();
+		pauseScreens = new Dictionary<int, GameObject>();
+		pauseScreens.Add (1, Main);
+		pauseScreens.Add (2, Options);
+		pauseScreens.Add (3, Video);
+		pauseScreens.Add (4, Audio);
+		pauseScreens.Add (5, Controls);
+		pauseScreens.Add (6, Customization);
+		//etc
+
+
 		//background.CrossFadeAlpha(0f,0f,false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape) == true) {
-			togglePause ();
+			switch(pauseState){
+				case 1:
+					togglePause ();
+					break;
+				case 2:
+					//go back to main pause menu
+					switchPauseState(1);
+					break;
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+					//go back to options menu
+					switchPauseState(2);
+					break;
+				default:
+					Debug.Log ("Something went wrong or went missing");
+					break;
+			}
 		}
 	}
 
@@ -43,13 +80,7 @@ public class PauseMenu : MonoBehaviour {
 			Screen.showCursor = false;
 			Screen.lockCursor = true;
 			paused = false;
-			//Debug.Log ("got here");
 		}
-	}
-
-	public void goToNewLevel(){
-		togglePause ();
-		Application.LoadLevel ("Main Scene");
 	}
 
 	/**
@@ -96,5 +127,17 @@ public class PauseMenu : MonoBehaviour {
 		Color color = ColorPreview.transform.GetComponent<Image>().color;
 		color.b = blue;
 		ColorPreview.transform.GetComponent<Image>().color = color;
+	}
+
+	public void switchPauseState(int state){
+		int previousState = pauseState;
+		pauseState = state;
+		pauseScreens [previousState].SetActive (false);
+		pauseScreens [state].SetActive (true);
+	}
+
+	public void newLevel(){
+		Time.timeScale=1f;
+		Application.LoadLevel ("Main Scene");
 	}
 }

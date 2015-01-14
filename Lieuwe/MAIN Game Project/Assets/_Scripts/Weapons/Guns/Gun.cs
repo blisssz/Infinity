@@ -52,7 +52,7 @@ public class Gun : MonoBehaviour {
 		//Initialize a ray
 		Ray	ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
 		if(zoomed == true && redDot != null){
-			Debug.Log("reddot hit");
+			//Debug.Log("reddot hit");
 			ray = new Ray(redDot.transform.position, (redDot.transform.position - Camera.main.transform.position).normalized);
 		}
 
@@ -66,7 +66,7 @@ public class Gun : MonoBehaviour {
 
 		if (Physics.Raycast(ray, out hit, bulletRange, layerMask)){ 
 			//Raycast hit something
-			Debug.Log("raycast hit: " + hit.collider.name);
+			//Debug.Log("raycast hit: " + hit.collider.name);
 
 			//Add knockback if a rigidbody is hit
 			if(hit.rigidbody != null){
@@ -90,6 +90,11 @@ public class Gun : MonoBehaviour {
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
 				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			} 
+			else if (hit.collider.tag.Equals("Agent")){
+				GameObject Hitted=hit.transform.root.gameObject;
+				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
+				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
+			} 
 			else{
 				//Play particle emitter at hit location
 				Instantiate(gunShotParticle, hit.point, Quaternion.LookRotation(hit.normal));
@@ -97,7 +102,7 @@ public class Gun : MonoBehaviour {
 		}
 		else{ 
 			//Raycast didn't hit anything
-			Debug.Log("didn't hit anything");
+			//Debug.Log("didn't hit anything");
 			SpawnMuzzleFlash();
 		}
 

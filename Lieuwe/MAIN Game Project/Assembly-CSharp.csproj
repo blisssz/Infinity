@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,13 +39,18 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Tu/Unity/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Tu/Unity/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EvilCoptorBehaviour.cs" />
+     <Compile Include="Assets\ExplosionFX_script.cs" />
+     <Compile Include="Assets\NN_stuff\AIMotor.cs" />
+     <Compile Include="Assets\NN_stuff\AgentS.cs" />
+     <Compile Include="Assets\NN_stuff\Sensor.cs" />
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\AA.cs" />
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Bloom.cs" />
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Blur.cs" />
@@ -61,6 +66,7 @@
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Outline.cs" />
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\SSAO_C5100.cs" />
      <Compile Include="Assets\UI\IndieEffects\CSharp Classes\VignetteBlur.cs" />
+     <Compile Include="Assets\ZombieRabbitBehaviour.cs" />
      <Compile Include="Assets\_Enemies\PogoBoss\BigEyeFX.cs" />
      <Compile Include="Assets\_Scripts\Crosshair.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Boss1\BOSS1script.cs" />
@@ -78,6 +84,7 @@
      <Compile Include="Assets\_Scripts\Enemies\ShootingEnemy.cs" />
      <Compile Include="Assets\_Scripts\Enemies\basicEnemy.cs" />
      <Compile Include="Assets\_Scripts\GameStart.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\GroundDamageEffects.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\HelpScript.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\InsertMesh.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\Lava.cs" />
@@ -101,8 +108,8 @@
      <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\PointList.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\checkPoint.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\endPoint.cs" />
-     <Compile Include="Assets\_Scripts\GameWorld\enemySpawn.cs" />
      <Compile Include="Assets\_Scripts\GameWorld\mySkyBox.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\DestroySelf.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
      <Compile Include="Assets\_Scripts\GlobalScripts\Options.cs" />
@@ -114,7 +121,6 @@
      <Compile Include="Assets\_Scripts\HPmanager.cs" />
      <Compile Include="Assets\_Scripts\HitsByVelocity.cs" />
      <Compile Include="Assets\_Scripts\ModSurface.cs" />
-     <Compile Include="Assets\_Scripts\PickUp\coinPickup.cs" />
      <Compile Include="Assets\_Scripts\PlatformMotion.cs" />
      <Compile Include="Assets\_Scripts\Player\GrapplingRopeSwing.cs" />
      <Compile Include="Assets\_Scripts\Player\MouseLook.cs" />
@@ -130,9 +136,17 @@
      <Compile Include="Assets\_Scripts\UI\GunInfo\OutOfAmmo.cs" />
      <Compile Include="Assets\_Scripts\UI\JetpackActivation.cs" />
      <Compile Include="Assets\_Scripts\UI\PauseMenu.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\NavButton.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Navigation.cs" />
      <Compile Include="Assets\_Scripts\UI\PauseMenu\QuitGame.cs" />
      <Compile Include="Assets\_Scripts\UI\PauseMenu\SliderValue.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\TextHighlight.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetFullScreen.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetQuality.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetResolution.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetVSync.cs" />
      <Compile Include="Assets\_Scripts\UI\SlidingBar.cs" />
+     <Compile Include="Assets\_Scripts\UseSpawner.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHole.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
      <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
@@ -193,7 +207,7 @@
      <None Include="Assets\_Scripts\GameWorld\TextFiles\file.txt" />
      <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\ImageBloom.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Tu/Unity/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

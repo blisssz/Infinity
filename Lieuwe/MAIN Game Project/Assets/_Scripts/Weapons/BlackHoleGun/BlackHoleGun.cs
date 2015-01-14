@@ -19,8 +19,9 @@ public class BlackHoleGun : MonoBehaviour {
 
 	private static float lerpTime = 1f;
 	private static float currentLerpTime;
-	private const float scaleRate = 0.2f;
+	private const float scaleRate = 0.5f;
 	private const float maxSize = 1f;
+
 
 
 	// Use this for initialization
@@ -88,13 +89,13 @@ public class BlackHoleGun : MonoBehaviour {
 			if (Physics.Raycast(ray, out hit,10000f, layerMask)){ 
 				//Raycast hit something
 				projectile.transform.LookAt (hit.point);
-				projectile.rigidbody.AddForce(projectile.transform.forward * 1000);
+				projectile.rigidbody.AddForce(projectile.transform.forward * 5000);
 			}
 			else{ 
 				//Raycast didn't hit anything
 				projectile.transform.LookAt (hit.point);
 				projectile.transform.LookAt(ray.origin + (ray.direction * 10000f)); //Face the projectile towards the point at the end of the raycast
-				projectile.rigidbody.AddForce(projectile.transform.forward * 1000);
+				projectile.rigidbody.AddForce(projectile.transform.forward *5000);
 			}
 
 			Physics.IgnoreCollision(projectile.collider, player.collider); //Make sure the black hole orb and the player don't collide

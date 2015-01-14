@@ -10,7 +10,7 @@ public class Generation3 : MonoBehaviour {
 	public float minOneDistance;
 	private List<Path> Alfa;
 	private List<Vector3> Beta;
-	private bool Updating=false;
+	private bool Updating=true;
 	private float time;
 	private int AlfaIndex;
 	private bool MeshingDone;
@@ -22,6 +22,7 @@ public class Generation3 : MonoBehaviour {
 	Job myJob;
 	void Start ()
 	{
+		settingSetter ();
 		GameController.fallingPossible = false;
 		ChunkList.positionsReset ();
 		GameController.fallingPossible = false;
@@ -75,36 +76,36 @@ public class Generation3 : MonoBehaviour {
 	
 	void Update()
 	{	
-		if(Input.GetKeyDown(KeyCode.E)){
-			Debug.Log ("E pressed");
-			float Tm2 = Time.realtimeSinceStartup;
-			ChunkList.ToBeUpdatedPositions=ChunkList.ChunkPositions;
-			Tm = Time.realtimeSinceStartup;
-			//ChunkList.UpdateSurroundingChunks();
-			ChunkList.UpdateSidesChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateSides");
-			Tm = Time.realtimeSinceStartup;
-			ChunkList.UpdateTrianglesChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateTriangles");
-			Tm = Time.realtimeSinceStartup;
-			ChunkList.UpdateMeshChunks ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
-			Tm = Time.realtimeSinceStartup;
-			ChunkList.Clear ();
-			Debug.Log (Time.realtimeSinceStartup - Tm + " for Clear");
-			Debug.Log (Time.realtimeSinceStartup - Tm2 + " for UpdateTotal");
-		}
-		
-		if(Input.GetKeyDown(KeyCode.Q)){
-			Updating=!Updating;
-			Debug.Log("Updating " + Updating);
-			if(Updating){ 
-				//ChunkList.AA[0].color=Color.red;
-			}
-			if(!Updating){
+//		if(Input.GetKeyDown(KeyCode.E)){
+//			Debug.Log ("E pressed");
+//			float Tm2 = Time.realtimeSinceStartup;
+//			ChunkList.ToBeUpdatedPositions=ChunkList.ChunkPositions;
+//			Tm = Time.realtimeSinceStartup;
+//			//ChunkList.UpdateSurroundingChunks();
+//			ChunkList.UpdateSidesChunks ();
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateSides");
+//			Tm = Time.realtimeSinceStartup;
+//			ChunkList.UpdateTrianglesChunks ();
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateTriangles");
+//			Tm = Time.realtimeSinceStartup;
+//			ChunkList.UpdateMeshChunks ();
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for UpdateMesh");
+//			Tm = Time.realtimeSinceStartup;
+//			ChunkList.Clear ();
+//			Debug.Log (Time.realtimeSinceStartup - Tm + " for Clear");
+//			Debug.Log (Time.realtimeSinceStartup - Tm2 + " for UpdateTotal");
+//		}
+//		
+//		if(Input.GetKeyDown(KeyCode.Q)){
+//			Updating=!Updating;
+//			Debug.Log("Updating " + Updating);
+//			if(Updating){ 
+//				//ChunkList.AA[0].color=Color.red;
+//			}
+//			if(!Updating){
 				//ChunkList.AA[0].color=Color.blue;
-			}
-		}
+//			}
+//		}
 
 
 			if (Time.time % 0.1f <= Time.deltaTime){
@@ -198,7 +199,7 @@ public class Generation3 : MonoBehaviour {
 	}
 
 	public void AfterMove (Vector3 Position){
-		int Choice=HelpScript.Switch(new float[5]{0.5f,0.05f,0.05f,0.2f,0.2f});
+		int Choice=HelpScript.Switch(new float[5]{0.7f,0.05f,0.05f,0.1f,0.1f});
 		switch(Choice){
 		case 0:
 			ObjectSpawner.SpawnObject(Position,"Coin");
@@ -210,10 +211,10 @@ public class Generation3 : MonoBehaviour {
 			ObjectSpawner.SpawnObject(Position,"MedPack");
 			break;
 		case 3:
-			ObjectSpawner.SpawnObject(Position,"ShootingEnemy");
+			Spawner.addSpawnLocation(Position);
 			break;
 		case 4:
-			ObjectSpawner.SpawnObject(Position,"Coin");
+			Spawner.addSpawnLocation (Position);
 			break;
 		default:
 			break;
@@ -231,6 +232,56 @@ public class Generation3 : MonoBehaviour {
 		}
 		iteration=ChunkList.UpdateNumber;
 		}
+	}
+
+	void settingSetter(){
+		switch (PlayerManager.useWeaponID) {
+		case 1:
+			pogoStickSettings ();
+			break;
+		case 2:
+			blackHoleSettings();
+			break;
+		case 3: 
+			hookSettings ();
+			break;
+		case 4:
+			gunSettings ();
+			break;
+		case 5:
+			gunSettings ();
+			break;
+		case 6:
+			gunSettings ();
+			break;
+		default:
+			break;
+		}
+	}
+
+	public static void hookSettings(){
+		UseSpawner.setSpawnTime(3);
+		UseSpawner.setSpawnChance(1);
+		Spawner.maxSpawns = 20;
+	}
+	
+	public static void blackHoleSettings(){
+		UseSpawner.setSpawnTime(3);
+		UseSpawner.setSpawnChance(1);
+		Spawner.maxSpawns = 20;
+	}
+
+
+	public static void pogoStickSettings (){
+		UseSpawner.setSpawnTime(3);
+		UseSpawner.setSpawnChance(1);
+		Spawner.maxSpawns = 20;
+	}
+
+	public static void gunSettings(){
+		UseSpawner.setSpawnTime(1);
+		UseSpawner.setSpawnChance(0.5f);
+		Spawner.maxSpawns = 70;
 	}
 
 	public void onFinish (Vector3 Position){

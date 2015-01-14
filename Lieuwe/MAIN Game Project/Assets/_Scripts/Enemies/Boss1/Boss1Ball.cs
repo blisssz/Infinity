@@ -15,10 +15,11 @@ public class Boss1Ball : MonoBehaviour {
 		if (boss == null) {
 			boss = GameObject.FindWithTag ("BOSS1");
 		} else {
+			if(transform.parent.transform.position==null){return;}
 			gravityDirection = (transform.position - transform.parent.transform.position);
 			if (gravityDirection.magnitude < 5f) {
 				rigidbody.AddForce( - 15*gravityDirection);
-				print ("flop");
+				//print ("flop");
 			}
 		}
 		//zorgt dat het geluid niet te vaak achter elkaar wordt gespeeld
@@ -30,7 +31,7 @@ public class Boss1Ball : MonoBehaviour {
 		} else {
 			counter = 0;
 		}
-		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 60){
+		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 10){
 			transform.parent = null;
 		}
 

@@ -166,7 +166,9 @@ public class GrapplingHookV2 : MonoBehaviour {
 					localDir = Vector3.Normalize(localPos - hitMatrixW2L.MultiplyPoint(firedHook.transform.position+firedHook.transform.forward) );
 
 					hitObject = hit.transform.gameObject;
-					
+					if(hitObject.GetComponent<HPmanager>()){
+						hitObject.GetComponent<HPmanager>().doDamage(5);
+					}
 					ropeShoot.Stop();
 					if(hit.collider.tag.Equals("Enemy")){
 						hookStatus = 3;

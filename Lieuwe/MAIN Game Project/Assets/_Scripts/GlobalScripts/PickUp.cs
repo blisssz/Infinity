@@ -38,8 +38,9 @@ public class PickUp : MonoBehaviour
 			} else if (PickUpNumber == 2) {
 				Instantiate (coinPickup, pos, Quaternion.identity);
 				GameObject Weapon=Player.GetComponent<PlayerManager>().getCurrentWeapon();
+				if(Weapon.GetComponent<Gun>()){
 				Weapon.GetComponent<Gun>().addAmmunition(100);
-
+				}
 				highScore.pickUpAmmo ();
 				
 			}

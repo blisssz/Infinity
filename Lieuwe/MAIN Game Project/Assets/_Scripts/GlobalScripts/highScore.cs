@@ -13,31 +13,31 @@ public class highScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(PlayerPrefs.GetInt ("High Score") != null){
+		if(PlayerPrefs.GetInt ("High Score") != 0){
 			hiScore = PlayerPrefs.GetInt ("High Score");
 		}
 		else{ hiScore = 0;}
-		if (PlayerPrefs.GetInt ("Total enemies killed") != null) {
+		if (PlayerPrefs.GetInt ("Total enemies killed") != 0) {
 			totalEnemiesKilled = PlayerPrefs.GetInt ("Total enemies killed");		
 		}
 		else{ totalEnemiesKilled = 0; }
-		if(PlayerPrefs.GetInt ("Total coins picked up") != null){
+		if(PlayerPrefs.GetInt ("Total coins picked up") != 0){
 			totalCoinsPickedUp = PlayerPrefs.GetInt ("Total coins picked up");
 		}
 		else{ totalHealthPickedUp = 0;}
-		if(PlayerPrefs.GetInt ("Total healthPackages picked up") != null){
+		if(PlayerPrefs.GetInt ("Total healthPackages picked up") != 0){
 			totalHealthPickedUp = PlayerPrefs.GetInt ("Total coins picked up");
 		}
 		else{ totalCoinsPickedUp = 0;}
-		if(PlayerPrefs.GetInt ("Total ammoPackages picked up") != null){
+		if(PlayerPrefs.GetInt ("Total ammoPackages picked up") != 0){
 			totalAmmoPickedUp = PlayerPrefs.GetInt ("Total coins picked up");
 		}
 		else{ totalAmmoPickedUp = 0;}
-		if(PlayerPrefs.GetInt ("Total grapplinghook misses") != null){
+		if(PlayerPrefs.GetInt ("Total grapplinghook misses") != 0){
 			totalGrapplingHookMisses = PlayerPrefs.GetInt ("Total grapplinghook misses");
 		}
 		else{ totalGrapplingHookMisses = 0;}
-		if (PlayerPrefs.GetInt ("Total deaths") != null) {
+		if (PlayerPrefs.GetInt ("Total deaths") != 0) {
 			totalDeaths += 1;		
 		}
 	}

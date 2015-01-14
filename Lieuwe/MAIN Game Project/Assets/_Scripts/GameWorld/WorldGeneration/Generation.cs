@@ -514,9 +514,9 @@ public class Generation : MonoBehaviour
 	}
 
 	public static void gunSettings(){
-		minsize = 2;
-		maxsize = 3;
-		jumpDistance = 1.5f;
+		minsize = 3;
+		maxsize = 9;
+		jumpDistance = 3f;
 		spawnEnemy = true;
 	}
 

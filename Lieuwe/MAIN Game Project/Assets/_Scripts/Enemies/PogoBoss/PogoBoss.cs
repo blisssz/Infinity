@@ -151,10 +151,6 @@ public class EyeNormal : PogoBossEye{
 
 	public void eyeFindTarget(Transform target){
 
-		if (prevLookDir == null){
-			prevLookDir = eyeOB.forward;
-			prevLookRot = eyeOB.rotation;
-		}
 
 		if (eyeOpen && eyeAlive){
 			if (lookTimer == 0f){
@@ -418,6 +414,7 @@ public class PogoBoss : MonoBehaviour {
 	// etc
 	public EyeNormal[] eyeParams = new EyeNormal[4];		// index 0 == eye1 ... 3 == eye4
 	public EyeBig eyeBigParam;
+	public bool finished=false;
 
 
 	public bool setEyeHpAsMaxVelTreshold = false;
@@ -623,8 +620,13 @@ public class PogoBoss : MonoBehaviour {
 
 		// finally:
 		Destroy(this.gameObject, t);
+		if(finished==false){
+			GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
+			Finish.GetComponent<endPoint>().isBossLevel=true;
+			this.finished=true;
+		}
 	}
-
+	
 
 	private void checkPlayerPogo(){
 		player = GameObject.FindGameObjectWithTag("Player") as GameObject;
@@ -643,10 +645,6 @@ public class PogoBoss : MonoBehaviour {
 		}
 	}
 
-	void OnDestroy(){
-		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,15,0),"EndPoint");
-		Finish.GetComponent<endPoint>().isBossLevel=true;
-	}
 
 
 }

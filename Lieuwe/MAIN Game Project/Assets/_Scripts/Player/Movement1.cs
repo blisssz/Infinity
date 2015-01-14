@@ -137,7 +137,7 @@ public class Movement1 : MonoBehaviour {
 					JumpState = 0;
 					vfac = 1.0f;
 					jump_time = 0.0f;
-
+					GroundDamageEffects.doGroundDamage(this.gameObject,hit.transform.gameObject);
 					// calc spring Up force
 					if (springyfeetEnabled){
 						float L0 = playerCenter2Ground_height + Lcomp;

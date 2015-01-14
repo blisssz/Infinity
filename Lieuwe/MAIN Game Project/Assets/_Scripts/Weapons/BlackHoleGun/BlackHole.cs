@@ -104,6 +104,9 @@ public class BlackHole : MonoBehaviour {
 	//This function is called once the blackhole projectile hits a collider
 	void OnCollisionEnter(Collision collision){
 		if (shot == true){
+			if(collision.transform.root.gameObject.GetComponent<HPmanager>()){
+				collision.transform.root.gameObject.GetComponent<HPmanager>().doDamage(5);
+			}
 			if(collision.gameObject.tag.Equals("Player") == false){
 				BlackHole.AddRigidbody (player.GetComponent<GravityObject>()); //Make the player affected by the gravitational effect of the blackhole
 				transform.parent = collision.collider.transform;

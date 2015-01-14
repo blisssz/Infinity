@@ -9,6 +9,7 @@ public class BOSS1script : MonoBehaviour {
 	private Vector3 playerPosition;
 	private Vector3 toPlayer;
 	private bool deathAnimation = false;
+	private bool finished =false;
 
 	// Use this for initialization
 	void Start () {
@@ -50,9 +51,15 @@ public class BOSS1script : MonoBehaviour {
 			}
 		}
 		if (deathAnimation == true) {
+
 			Vector3 d = new Vector3(0.0f,25,0.0f);
 			transform.Translate (d * Time.deltaTime,Space.World);
 			transform.Rotate(Vector3.up, Time.deltaTime*80f);
+				if(finished==false){
+			GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
+			Finish.GetComponent<endPoint>().isBossLevel=true;
+					finished=true;
+				}
 		}
 		}
 	}
@@ -80,9 +87,5 @@ public class BOSS1script : MonoBehaviour {
 		return nearestDistanceSqr;
 	}	
 
-	void OnDestroy(){
-		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
-			Finish.GetComponent<endPoint>().isBossLevel=true;
-	}
 
 }

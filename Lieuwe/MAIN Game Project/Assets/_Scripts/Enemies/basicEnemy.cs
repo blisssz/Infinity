@@ -44,6 +44,7 @@ public class basicEnemy : MonoBehaviour {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
 		}
+		if (Player == null){return;}
 		playerPosition = Player.transform.position;
 		toPlayer = new Vector3((playerPosition.x - transform.position.x), 0f, playerPosition.z - transform.position.z);
 		distanceToPlayer = toPlayer.magnitude;
@@ -143,7 +144,6 @@ public class basicEnemy : MonoBehaviour {
 		rigidbody.AddForce ((-30 * toPlayer.normalized), ForceMode.VelocityChange);
 		applyDamage (20f);
 		alarmed = true;
-		score.gameScore += 5;
 	}
 
 	void applyDamage(float damage){
@@ -152,6 +152,7 @@ public class basicEnemy : MonoBehaviour {
 
 	void OnDestroy(){
 		highScore.enemyKill ();
+		score.gameScore += 5;
 	}
 
 	virtual public void attackPlayer(){

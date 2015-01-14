@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour {
 		}
 
 		if (mainPlayerAlive == true && Input.GetKey (KeyCode.P) == true){
+			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;
@@ -59,6 +60,7 @@ public class GameController : MonoBehaviour {
 			print (lifes);
 		}
 		if (thePlayer.GetComponent<HPmanager>().hp <= 0){
+			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;
@@ -67,6 +69,7 @@ public class GameController : MonoBehaviour {
 		}
 
 		if (thePlayer.transform.position.y <= -60 && fallingPossible) {
+			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
 			Destroy (thePlayer);
 			mainPlayerAlive = false;
 			dead = true;

@@ -68,6 +68,8 @@ public class gravityBoss : MonoBehaviour {
 		lifes -= 1;
 		if (lifes <= 0) { 
 			Destroy (gameObject);
+			GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,0,0),"EndPoint");
+			Finish.GetComponent<endPoint>().isBossLevel=true;
 			if(!dead){
 				score.gameScore += 150;
 				dead = true;
@@ -84,10 +86,6 @@ public class gravityBoss : MonoBehaviour {
 		smartCount = 0;
 	}
 
-	void OnDestroy(){
-		GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
-			Finish.GetComponent<endPoint>().isBossLevel=true;
-	}
 
 	public static void setSmartOffset(Vector3 updir){
 		smartCount++;

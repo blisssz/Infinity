@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class HelpScript : MonoBehaviour
 {
+	public static System.Random Randomo;
 
 
 
@@ -151,8 +152,10 @@ public class HelpScript : MonoBehaviour
 		}
 
 	public static float Rand(float min, float max){
-		System.Random u=new System.Random();
-		float c=(float)u.NextDouble()*(max-min)+min;
+		if(Randomo==null){
+			Randomo=new System.Random();
+		}
+		float c=(float)Randomo.NextDouble()*(max-min)+min;
 		return c;
 	}
 
