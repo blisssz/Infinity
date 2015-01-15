@@ -11,25 +11,31 @@ public class Job : ThreadedJob
 	public float MinOneDistance;
 	private float CH;
 	public System.Random b;
+	private int maxFails=12;
+	private bool executed;
+	public bool moved;
 
 	
 	protected override void ThreadFunction ()
 	{
-		bool executed=false;
+		executed=false;
+		moved=false;
+
 		//Debug.Log ("Starts");
 		CH=0;
-		if (Alfa [AlfaIndex].Impossibrah < 6) {
+		if (Alfa [AlfaIndex].Impossibrah < 12) {
 			Beta [AlfaIndex] = Alfa [AlfaIndex].Move1 ();
 			executed=Alfa[AlfaIndex].executed;
+			moved=Alfa[AlfaIndex].moved;
 			CH = HelpScript.Rand (0, 1f);
-			if (CH > 0.80) {
+			if (CH > 0.70&&moved&&executed) {
 				Alfa.Add (new Path (Alfa [AlfaIndex].Position, MinOneDistance));
 				Alfa[Alfa.Count-1].Cannot=Alfa[AlfaIndex].Cannot;
 				Beta.Add (Beta [AlfaIndex]);
 			}
-		} else if(Alfa [AlfaIndex].Impossibrah==6) {
-			//Alfa [AlfaIndex].Finish();
-			Alfa [AlfaIndex].Impossibrah=7;
+		} else if(Alfa [AlfaIndex].Impossibrah==12) {
+			Alfa [AlfaIndex].Finish();
+			Alfa [AlfaIndex].Impossibrah=13;
 		}
 
 		if(executed){

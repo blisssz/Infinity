@@ -146,12 +146,12 @@ public static class Moves  {
         for(int i=-sidex/2;i<(sidex/2+1);i++){
             for(int j=-sidey/2;j<(sidey/2+1);j++){
                 for(int k=-sidez/2;k<(sidez/2+1);k++){
-					if((i*Delta<-sidex/2*Delta+MinOneDistance||i*Delta>sidex/2*Delta-MinOneDistance)&&
+					if(!(i*Delta<-sidex/2*Delta+MinOneDistance||i*Delta>sidex/2*Delta-MinOneDistance)&&
 					   (j*Delta<-sidey/2*Delta+MinOneDistance||j*Delta>sidey/2*Delta-MinOneDistance)&&
 					   (k*Delta<-sidez/2*Delta+MinOneDistance||k*Delta>sidez/2*Delta-MinOneDistance)){
-						Points.Add(new float[5]{i*Delta+Position.x,j*Delta+Position.y,k*Delta+Position.z,PointDistance,1f});
-					} else {
 						Points.Add(new float[5]{i*Delta+Position.x,j*Delta+Position.y,k*Delta+Position.z,PointDistance,0f});
+					} else {
+						Points.Add(new float[5]{i*Delta+Position.x,j*Delta+Position.y,k*Delta+Position.z,PointDistance,1f});
 					}
 					
                 }
@@ -210,13 +210,13 @@ public static class Moves  {
                     Position5[1]=Positions4[0][1]*(i/1.5f)+Positions4[1][1]*(j/1.5f)+Positions4[2][1]*(k/1.5f)+Positions3[0][1];
                     Position5[2]=Positions4[0][2]*(i/1.5f)+Positions4[1][2]*(j/1.5f)+Positions4[2][2]*(k/1.5f)+Positions3[0][2];
 					Position5[3]=PointDistance;
-					if((i*Delta<0+MinOneDistance||i*Delta>sidex*1.5*Delta-MinOneDistance)&&
+					if(!(i*Delta<0+MinOneDistance||i*Delta>sidex*1.5*Delta-MinOneDistance)&&
                        //(j*Delta<-sidey/2+MinOneDistance||j*Delta>sidey/2-MinOneDistance)&&
                        //(k*Delta<-sidez/2+MinOneDistance||k*Delta>sidez/2-MinOneDistance)
 					   true){
-                        Position5[4]=1;
-                    } else {
                         Position5[4]=0;
+                    } else {
+                        Position5[4]=1;
                     }
                     Points.Add(Position5);
                     

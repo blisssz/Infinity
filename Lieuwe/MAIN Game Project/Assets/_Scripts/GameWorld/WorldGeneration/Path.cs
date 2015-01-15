@@ -14,10 +14,12 @@ public class Path  {
 	public int Impossibrah=0;
 	public bool moved;
 	public bool executed;
+	public int successes;
 
 
 	
 	public Path(Vector3 StartPosition, float Min){
+		successes=0;
 		Cannot = new List<int>();
 		Position=StartPosition;
 		MinOneDistance=Min;
@@ -28,7 +30,9 @@ public class Path  {
 	public Vector3 Move1 ()
 	{
 		moved=false;
+		executed=false;
 		float[] DefChances = new float[5]{0.8f,0.1f,0.2f,0.6f,0.2f};
+		//float[] DefChances = new float[5]{0.1f,0f,1f,0f,1f};
 		Chances =new float[DefChances.Length];
 		for(int i=0;i<DefChances.Length;i++){
 			if(Cannot.Contains (i)){
@@ -46,9 +50,10 @@ public class Path  {
 		Ch.Choose();
 		//Debug.Log ("StartCheck");
 		bool can=Ch.Check ();
+		if(can){successes++;}
 		//Debug.Log ("EndCheck");
 
-		if (can&&Ch.moved&&index.Count>0&& index [0] == 0) {
+		if (can){//&&index.Count>0&& index [0] == 0) {
 //			List<Move> TempUpdateList = new List<Move> ();
 //			List<int> TempIndex = new List<int> ();
 			UpdateList.Add (Ch);
@@ -66,20 +71,15 @@ public class Path  {
 			//Debug.Log ("Not Impossibrauh1");
 			Impossibrah=0;
 			
-		} else if (Ch.moved && can &&(index.Count==0|| index [0] != 0)) {
-			for (int i=0; i<index.Count; i++) {
-				index [i] = index [i] - 1;
-			}
-			index.Add (0);
-			UpdateList.Add (Ch);
-			Direction = Ch.Direction;
-			Position = Ch.EndPosition;
-			//Debug.Log ("Not Impossibrauh2");
-			Impossibrah=0;
+//		} else if (Ch.moved && can){// &&(index.Count==0|| index [0] != 0)) {
+//			UpdateList.Add (Ch);
+//			Direction = Ch.Direction;
+//			Position = Ch.EndPosition;
+//			//Debug.Log ("Not Impossibrauh2");
+//			Impossibrah=0;
 			
 		} else if (!Ch.moved && can) {
 			UpdateList.Add (Ch);
-			index.Add (0);
 			//Debug.Log ("Not Impossibrauh3");
 			Impossibrah=0;
 			

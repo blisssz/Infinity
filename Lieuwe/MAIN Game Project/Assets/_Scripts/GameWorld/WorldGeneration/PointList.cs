@@ -17,7 +17,7 @@ public static class PointList
 //			if(Points[i][4]==1){
 //				HelpScript.createCube(new Vector3(Points[i][0],Points[i][1],Points[i][2]));}
 //		}
-		
+//		
 		
 	}
 	

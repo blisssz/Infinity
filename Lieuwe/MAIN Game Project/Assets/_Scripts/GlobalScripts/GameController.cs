@@ -51,30 +51,21 @@ public class GameController : MonoBehaviour {
 			GameObject.Find("Sniper Camera").GetComponent<Camera>().enabled = false; 
 		}
 
-		if (mainPlayerAlive == true && Input.GetKey (KeyCode.P) == true){
-			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
-			Destroy (thePlayer);
-			mainPlayerAlive = false;
-			dead = true;
-			lifes -= 1;
-			print (lifes);
-		}
 		if (thePlayer.GetComponent<HPmanager>().hp <= 0){
-			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
-			Destroy (thePlayer);
-			mainPlayerAlive = false;
-			dead = true;
-			lifes -= 1;
-			print (lifes);
+			KillPlayer ();
 		}
 
 		if (thePlayer.transform.position.y <= -60 && fallingPossible) {
-			thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
-			Destroy (thePlayer);
-			mainPlayerAlive = false;
-			dead = true;
-			lifes -= 1;
+			KillPlayer ();
 		}
+	}
+
+	public void KillPlayer(){
+		thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
+		Destroy (thePlayer);
+		mainPlayerAlive = false;
+		dead = true;
+		lifes -= 1;
 	}
 
 

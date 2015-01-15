@@ -16,8 +16,9 @@ public class Generation3 : MonoBehaviour {
 	private bool MeshingDone;
 	private float Tm;
 	public Material x;
-	private int FinishNumber=100;
+	private int FinishNumber=120;
 	private int iteration=1;
+	public bool stopWhenFinished=true;
 
 	Job myJob;
 	void Start ()
@@ -114,15 +115,15 @@ public class Generation3 : MonoBehaviour {
 			//Debug.Log (Tm + " for Frame");
 			
 		}
-		if(ChunkList.UpdateNumber==FinishNumber){
-				Updating=false;
-				AlfaIndex--;
-				if(AlfaIndex==-1){
-					AlfaIndex=Alfa.Count-1;
-				}
-				onFinish(Beta[AlfaIndex]);
-				ChunkList.UpdateNumber++;
-			}
+//		if(ChunkList.UpdateNumber==FinishNumber){
+//				Updating=false;
+//				AlfaIndex--;
+//				if(AlfaIndex==-1){
+//					AlfaIndex=Alfa.Count-1;
+//				}
+//				onFinish(Beta[AlfaIndex]);
+//				ChunkList.UpdateNumber++;
+//			}
 		Tm=Time.realtimeSinceStartup;
 		if (myJob == null&&Updating&&ChunkList.MeshingDone)
 		{myJob = new Job();
@@ -143,9 +144,11 @@ public class Generation3 : MonoBehaviour {
 				Beta=myJob.Beta;
 				Alfa=myJob.Alfa;
 				// Alternative to the OnFinished callback
-				if(Alfa[AlfaIndex].executed){
-					AfterMove(Beta[AlfaIndex]);
-					onIteration(Beta[AlfaIndex]);
+					if(Alfa[AlfaIndex].moved&&Alfa[AlfaIndex].executed){
+						bool Happened=onIteration(Beta[AlfaIndex]);
+						if(!Happened){
+						AfterMove(Beta[AlfaIndex]);
+						}
 					}
 					AlfaIndex++;
 					myJob = null;
@@ -222,16 +225,19 @@ public class Generation3 : MonoBehaviour {
 
 	}
 
-	public void onIteration(Vector3 Position){
-		if(iteration<ChunkList.UpdateNumber){
-		if (iteration%30 == 0) {
-			Instantiate (CheckPoint, Position, Quaternion.identity);
+	public bool onIteration(Vector3 Position){
+		bool happened=false;
+		if (iteration%20 == 0&&iteration%FinishNumber!=0) {
+				Instantiate (CheckPoint, Position+new Vector3(0,2,0), Quaternion.identity);
+				happened=true;
 		}
 		if(iteration%FinishNumber == 0){
-			//onFinish(Position);
+			onFinish(Position);
+			happened=true;
+			if(stopWhenFinished){Updating=false;}
 		}
-		iteration=ChunkList.UpdateNumber;
-		}
+		iteration++;
+		return happened;
 	}
 
 	void settingSetter(){

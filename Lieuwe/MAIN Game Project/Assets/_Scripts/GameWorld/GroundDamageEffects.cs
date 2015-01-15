@@ -9,8 +9,15 @@ public class GroundDamageEffects {
 	public static void doGroundDamage(GameObject self, GameObject hitobj){
 
 		if (self.GetComponent<HPmanager>()){
-			if (hitobj.renderer && hitobj.renderer.material.name.Contains("Lava")){
+
+			try{
+			if (hitobj.renderer.sharedMaterial && hitobj.renderer.sharedMaterial.name.Contains("Lava")){
+
 				self.GetComponent<HPmanager>().doDamage(lavaDamage * Time.deltaTime);
+			}
+			}
+			catch (System.Exception e){
+				return;
 			}
 		}
 	}
