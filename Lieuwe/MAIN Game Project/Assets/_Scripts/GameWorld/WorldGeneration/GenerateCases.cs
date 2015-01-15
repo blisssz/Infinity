@@ -501,7 +501,19 @@ public static class GenerateCases
     public static void WriteToFile()
     {
         string x = HelpScript.toStringSpecial(Cases);
-        StreamWriter file2 = new StreamWriter(@"C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt");
+
+		Debug.Log ("Text file loc "+ System.Environment.CurrentDirectory.ToString());
+		//System.Environment.CurrentDirectory
+
+		//string fileloc = (System.Environment.CurrentDirectory.ToString()) + @"\Assets\World\TextFiles\Data.txt");
+
+		// edit file loc
+		//StreamWriter file2 = new StreamWriter(@""+ (System.Environment.CurrentDirectory) + @"\Assets\_Scripts\GameWorld\TextFiles\Data.txt");
+		// file location beta
+		StreamWriter file2 = new StreamWriter(@""+ (System.Environment.CurrentDirectory) + @"\BetaBuild_Data\Data.txt");
+
+			//new StreamWriter(@"C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt");
+
         file2.WriteLine(x);
         file2.Close();
         Debug.Log("Succeeded");
@@ -511,8 +523,9 @@ public static class GenerateCases
     public static void ReadFromFile()
     {
 
-        StreamReader sr = new StreamReader(@"C:\Users\LieuweLocht\Documents\Minor1\Assets\World\filex.txt");
-
+        //StreamReader sr = new StreamReader(@"C:\Users\LieuweLocht\Documents\Minor1\Assets\World\filex.txt");
+		//StreamReader sr = new StreamReader(@""+ (System.Environment.CurrentDirectory) + @"\Assets\_Scripts\GameWorld\TextFiles\filex.txt");
+		StreamReader sr = new StreamReader(@""+ (System.Environment.CurrentDirectory) + @"\BetaBuild_Data\filex.txt");
         for (int i=0; i<256; i++)
         {
 

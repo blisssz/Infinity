@@ -1,412 +1,454 @@
 Initialize engine version: 4.6.1f1 (d1db7a1b5196)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
-    Vendor:   Intel
-    VRAM:     128 MB
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: NVIDIA Quadro FX 880M (ID=0xa3c)
+    Vendor:   NVIDIA
+    VRAM:     978 MB
 Default GameObject Tag: Player already registered
  
 (Filename:  Line: 67)
 
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.042 seconds
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.087 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\LieuweLocht\Documents\MAIN Game Project\Beta Release_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Erik Veldhuis\Documents\GitHub\Infinity\Lieuwe\MAIN Game Project\Beta Release_Data\Managed\System.dll (this message is harmless)
 NullReferenceException: Object reference not set to an instance of an object
   at PauseMenu.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
 WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
-UnloadTime: 2.865156 ms
+UnloadTime: 5.256877 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1828.
-Total: 1.179350 ms (FindLiveObjects: 0.036143 ms CreateObjectMapping: 0.019187 ms MarkObjects: 0.738042 ms  DeleteObjects: 0.053545 ms)
+Total: 2.633571 ms (FindLiveObjects: 0.084684 ms CreateObjectMapping: 0.061588 ms MarkObjects: 1.526893 ms  DeleteObjects: 0.095591 ms)
 
-UnloadTime: 0.321275 ms
+UnloadTime: 0.649250 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1988.
-Total: 1.179796 ms (FindLiveObjects: 0.037928 ms CreateObjectMapping: 0.020972 ms MarkObjects: 0.790695 ms  DeleteObjects: 0.008924 ms)
+Total: 2.499486 ms (FindLiveObjects: 0.071212 ms CreateObjectMapping: 0.066079 ms MarkObjects: 1.603880 ms  DeleteObjects: 0.013472 ms)
 
-UnloadTime: 12.834529 ms
+UnloadTime: 18.062256 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1105 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 6.516993 ms (FindLiveObjects: 0.073179 ms CreateObjectMapping: 0.125386 ms MarkObjects: 0.831301 ms  DeleteObjects: 5.106056 ms)
+Unloading 595 unused Assets to reduce memory usage. Loaded Objects now: 1884.
+Total: 12.541700 ms (FindLiveObjects: 0.168086 ms CreateObjectMapping: 0.178351 ms MarkObjects: 1.748229 ms  DeleteObjects: 9.505877 ms)
 
-UnloadTime: 0.377945 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.530563 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 1.260115 ms (FindLiveObjects: 0.058900 ms CreateObjectMapping: 0.022310 ms MarkObjects: 0.858966 ms  DeleteObjects: 0.007585 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2108.
+Total: 2.798450 ms (FindLiveObjects: 0.103289 ms CreateObjectMapping: 0.070570 ms MarkObjects: 1.694980 ms  DeleteObjects: 0.012831 ms)
 
-2
+IsolatedStorageException: Could not find a part of the path "C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at GenerateCases.WriteToFile () [0x00000] in <filename unknown>:0 
+  at Generation3.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename:  Line: -1)
 
-1
+UnloadTime: 4.234885 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 181 unused Assets to reduce memory usage. Loaded Objects now: 1884.
+Total: 3.798629 ms (FindLiveObjects: 0.117404 ms CreateObjectMapping: 0.073778 ms MarkObjects: 2.003567 ms  DeleteObjects: 0.873152 ms)
+
+UnloadTime: 0.461275 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2044.
+Total: 2.637420 ms (FindLiveObjects: 0.186050 ms CreateObjectMapping: 0.068004 ms MarkObjects: 1.685998 ms  DeleteObjects: 0.023737 ms)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-0
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-2
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 42.014862 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 454 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 5.072590 ms (FindLiveObjects: 0.059793 ms CreateObjectMapping: 0.074071 ms MarkObjects: 0.872799 ms  DeleteObjects: 3.727693 ms)
-
-2
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 19.062820 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 543 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 5.468830 ms (FindLiveObjects: 0.055777 ms CreateObjectMapping: 0.071394 ms MarkObjects: 0.801851 ms  DeleteObjects: 4.203360 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 0.352957 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 1.212370 ms (FindLiveObjects: 0.053099 ms CreateObjectMapping: 0.021864 ms MarkObjects: 0.819699 ms  DeleteObjects: 0.007585 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 19.759809 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 556 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 4.993610 ms (FindLiveObjects: 0.057115 ms CreateObjectMapping: 0.072733 ms MarkObjects: 0.792034 ms  DeleteObjects: 3.741526 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 0.328861 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 1.227988 ms (FindLiveObjects: 0.053992 ms CreateObjectMapping: 0.022310 ms MarkObjects: 0.827731 ms  DeleteObjects: 0.007585 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 15.402505 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 558 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 5.271603 ms (FindLiveObjects: 0.077641 ms CreateObjectMapping: 0.098167 ms MarkObjects: 0.839779 ms  DeleteObjects: 3.910196 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 0.377053 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 1.251191 ms (FindLiveObjects: 0.053992 ms CreateObjectMapping: 0.022757 ms MarkObjects: 0.825054 ms  DeleteObjects: 0.035251 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 18.659441 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 555 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 4.947203 ms (FindLiveObjects: 0.056223 ms CreateObjectMapping: 0.072287 ms MarkObjects: 0.803636 ms  DeleteObjects: 3.676378 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 0.352957 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
-Total: 1.212816 ms (FindLiveObjects: 0.053992 ms CreateObjectMapping: 0.023203 ms MarkObjects: 0.813006 ms  DeleteObjects: 0.007139 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 18.332363 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-Unloading 545 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 5.038678 ms (FindLiveObjects: 0.057115 ms CreateObjectMapping: 0.073625 ms MarkObjects: 0.846472 ms  DeleteObjects: 3.708060 ms)
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
 
-UnloadTime: 0.373037 ms
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+Scene::raycastClosestShape: The maximum distance must be greater than zero!
+ 
+(Filename: ..\..\Physics\src\NpScene.cpp Line: 2538)
+
+UnloadTime: 36.616581 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2191 unused Assets to reduce memory usage. Loaded Objects now: 1945.
+Total: 17.102495 ms (FindLiveObjects: 0.204013 ms CreateObjectMapping: 0.619097 ms MarkObjects: 1.990094 ms  DeleteObjects: 13.562410 ms)
+
+UnloadTime: 0.501052 ms
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2162.
-Total: 1.264577 ms (FindLiveObjects: 0.055330 ms CreateObjectMapping: 0.023203 ms MarkObjects: 0.840672 ms  DeleteObjects: 0.007585 ms)
+Total: 2.777278 ms (FindLiveObjects: 0.089175 ms CreateObjectMapping: 0.073778 ms MarkObjects: 1.970206 ms  DeleteObjects: 0.014114 ms)
 
-Succeeded
+IsolatedStorageException: Could not find a part of the path "C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at GenerateCases.WriteToFile () [0x00000] in <filename unknown>:0 
+  at Generation3.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename:  Line: -1)
 
-[0]{,}
-[1]{,11,10,7,}
-[2]{,6,9,11,}
-[3]{,6,9,10,6,10,7,}
-[4]{,10,8,4,}
-[5]{,8,4,7,8,7,11,}
-[6]{,10,8,4,6,9,11,}
-[7]{,8,4,7,8,7,9,7,6,9,}
-[8]{,2,8,9,}
-[9]{,2,8,9,11,10,7,}
-[10]{,2,8,11,2,11,6,}
-[11]{,2,8,10,2,10,6,10,7,6,}
-[12]{,2,4,10,2,10,9,}
-[13]{,2,4,7,2,7,9,7,11,9,}
-[14]{,2,4,10,2,10,6,10,11,6,}
-[15]{,2,4,7,2,7,6,}
-[16]{,3,5,7,}
-[17]{,3,5,11,3,11,10,}
-[18]{,3,5,7,6,9,11,}
-[19]{,3,5,6,3,6,10,6,9,10,}
-[20]{,3,5,7,10,8,4,}
-[21]{,3,5,11,3,11,4,11,8,4,}
-[22]{,3,5,7,10,8,4,6,9,11,}
-[23]{,3,5,6,3,6,4,6,9,4,9,8,4,}
-[24]{,3,5,7,2,8,9,}
-[25]{,3,5,11,3,11,10,2,8,9,}
-[26]{,3,5,7,2,8,11,2,11,6,}
-[27]{,3,5,6,3,6,10,6,2,10,2,8,10,}
-[28]{,3,5,7,2,4,10,2,10,9,}
-[29]{,3,5,11,3,11,4,11,9,4,9,2,4,}
-[30]{,3,5,7,2,4,10,2,10,6,10,11,6,}
-[31]{,3,5,6,3,6,4,6,2,4,}
-[32]{,1,6,5,}
-[33]{,1,6,5,11,10,7,}
-[34]{,1,9,11,1,11,5,}
-[35]{,1,9,10,1,10,5,10,7,5,}
-[36]{,1,6,5,10,8,4,}
-[37]{,1,6,5,8,4,7,8,7,11,}
-[38]{,1,9,11,1,11,5,10,8,4,}
-[39]{,1,9,8,1,8,5,8,4,5,4,7,5,}
-[40]{,1,6,5,2,8,9,}
-[41]{,1,6,5,2,8,9,11,10,7,}
-[42]{,1,2,8,1,8,5,8,11,5,}
-[43]{,1,2,8,1,8,5,8,10,5,10,7,5,}
-[44]{,1,6,5,2,4,10,2,10,9,}
-[45]{,1,6,5,2,4,7,2,7,9,7,11,9,}
-[46]{,1,2,4,1,4,5,4,10,5,10,11,5,}
-[47]{,1,2,4,1,4,5,4,7,5,}
-[48]{,1,6,7,1,7,3,}
-[49]{,1,6,11,1,11,3,11,10,3,}
-[50]{,1,9,11,1,11,3,11,7,3,}
-[51]{,1,9,10,1,10,3,}
-[52]{,1,6,7,1,7,3,10,8,4,}
-[53]{,1,6,11,1,11,3,11,8,3,8,4,3,}
-[54]{,1,9,11,1,11,3,11,7,3,10,8,4,}
-[55]{,1,9,8,1,8,3,8,4,3,}
-[56]{,1,6,7,1,7,3,2,8,9,}
-[57]{,1,6,11,1,11,3,11,10,3,2,8,9,}
-[58]{,1,2,8,1,8,3,8,11,3,11,7,3,}
-[59]{,1,2,8,1,8,3,8,10,3,}
-[60]{,1,6,7,1,7,3,2,4,10,2,10,9,}
-[61]{,1,6,11,1,11,3,11,9,3,9,4,3,9,2,4,}
-[62]{,1,2,4,1,4,3,4,10,3,10,7,3,10,11,7,}
-[63]{,1,2,4,1,4,3,}
-[64]{,3,4,0,}
-[65]{,3,4,0,11,10,7,}
-[66]{,3,4,0,6,9,11,}
-[67]{,3,4,0,6,9,10,6,10,7,}
-[68]{,3,10,8,3,8,0,}
-[69]{,3,7,11,3,11,0,11,8,0,}
-[70]{,3,10,8,3,8,0,6,9,11,}
-[71]{,3,7,6,3,6,0,6,9,0,9,8,0,}
-[72]{,3,4,0,2,8,9,}
-[73]{,3,4,0,2,8,9,11,10,7,}
-[74]{,3,4,0,2,8,11,2,11,6,}
-[75]{,3,4,0,2,8,10,2,10,6,10,7,6,}
-[76]{,3,10,9,3,9,0,9,2,0,}
-[77]{,3,7,11,3,11,0,11,9,0,9,2,0,}
-[78]{,3,10,11,3,11,0,11,6,0,6,2,0,}
-[79]{,3,7,6,3,6,0,6,2,0,}
-[80]{,4,0,5,4,5,7,}
-[81]{,4,0,5,4,5,10,5,11,10,}
-[82]{,4,0,5,4,5,7,6,9,11,}
-[83]{,4,0,5,4,5,10,5,6,10,6,9,10,}
-[84]{,0,5,7,0,7,8,7,10,8,}
-[85]{,0,5,11,0,11,8,}
-[86]{,0,5,7,0,7,8,7,10,8,6,9,11,}
-[87]{,0,5,6,0,6,8,6,9,8,}
-[88]{,4,0,5,4,5,7,2,8,9,}
-[89]{,4,0,5,4,5,10,5,11,10,2,8,9,}
-[90]{,4,0,5,4,5,7,2,8,11,2,11,6,}
-[91]{,4,0,5,4,5,10,5,6,10,6,8,10,6,2,8,}
-[92]{,0,5,7,0,7,2,7,10,2,10,9,2,}
-[93]{,0,5,11,0,11,2,11,9,2,}
-[94]{,0,5,7,0,7,2,7,10,2,10,6,2,10,11,6,}
-[95]{,0,5,6,0,6,2,}
-[96]{,3,4,0,1,6,5,}
-[97]{,3,4,0,1,6,5,11,10,7,}
-[98]{,3,4,0,1,9,11,1,11,5,}
-[99]{,3,4,0,1,9,10,1,10,5,10,7,5,}
-[100]{,3,10,8,3,8,0,1,6,5,}
-[101]{,3,7,11,3,11,0,11,8,0,1,6,5,}
-[102]{,3,10,8,3,8,0,1,9,11,1,11,5,}
-[103]{,3,7,5,3,5,0,5,1,0,1,8,0,1,9,8,}
-[104]{,3,4,0,1,6,5,2,8,9,}
-[105]{,3,4,0,1,6,5,2,8,9,11,10,7,}
-[106]{,3,4,0,1,2,8,1,8,5,8,11,5,}
-[107]{,3,4,0,1,2,8,1,8,5,8,10,5,10,7,5,}
-[108]{,3,10,9,3,9,0,9,2,0,1,6,5,}
-[109]{,3,7,11,3,11,0,11,9,0,9,2,0,1,6,5,}
-[110]{,3,10,11,3,11,0,11,5,0,5,2,0,5,1,2,}
-[111]{,3,7,5,3,5,0,5,1,0,1,2,0,}
-[112]{,4,0,1,4,1,7,1,6,7,}
-[113]{,4,0,1,4,1,10,1,6,10,6,11,10,}
-[114]{,4,0,1,4,1,7,1,9,7,9,11,7,}
-[115]{,4,0,1,4,1,10,1,9,10,}
-[116]{,0,1,6,0,6,8,6,7,8,7,10,8,}
-[117]{,0,1,6,0,6,8,6,11,8,}
-[118]{,0,1,9,0,9,8,9,11,8,11,10,8,11,7,10,}
-[119]{,0,1,9,0,9,8,}
-[120]{,4,0,1,4,1,7,1,6,7,2,8,9,}
-[121]{,4,0,1,4,1,10,1,6,10,6,11,10,2,8,9,}
-[122]{,4,0,1,4,1,7,1,2,7,2,11,7,2,8,11,}
-[123]{,4,0,1,4,1,10,1,2,10,2,8,10,}
-[124]{,0,1,6,0,6,2,6,7,2,7,9,2,7,10,9,}
-[125]{,0,1,6,0,6,2,6,11,2,11,9,2,}
-[126]{,0,1,2,7,10,11,}
-[127]{,0,1,2,}
-[128]{,0,2,1,}
-[129]{,0,2,1,11,10,7,}
-[130]{,0,2,1,6,9,11,}
-[131]{,0,2,1,6,9,10,6,10,7,}
-[132]{,0,2,1,10,8,4,}
-[133]{,0,2,1,8,4,7,8,7,11,}
-[134]{,0,2,1,10,8,4,6,9,11,}
-[135]{,0,2,1,8,4,7,8,7,9,7,6,9,}
-[136]{,0,8,9,0,9,1,}
-[137]{,0,8,9,0,9,1,11,10,7,}
-[138]{,0,8,11,0,11,1,11,6,1,}
-[139]{,0,8,10,0,10,1,10,7,1,7,6,1,}
-[140]{,0,4,10,0,10,1,10,9,1,}
-[141]{,0,4,7,0,7,1,7,11,1,11,9,1,}
-[142]{,0,4,10,0,10,1,10,11,1,11,6,1,}
-[143]{,0,4,7,0,7,1,7,6,1,}
-[144]{,0,2,1,3,5,7,}
-[145]{,0,2,1,3,5,11,3,11,10,}
-[146]{,0,2,1,3,5,7,6,9,11,}
-[147]{,0,2,1,3,5,6,3,6,10,6,9,10,}
-[148]{,0,2,1,3,5,7,10,8,4,}
-[149]{,0,2,1,3,5,11,3,11,4,11,8,4,}
-[150]{,0,2,1,3,5,7,10,8,4,6,9,11,}
-[151]{,0,2,1,3,5,6,3,6,4,6,9,4,9,8,4,}
-[152]{,0,8,9,0,9,1,3,5,7,}
-[153]{,0,8,9,0,9,1,3,5,11,3,11,10,}
-[154]{,0,8,11,0,11,1,11,6,1,3,5,7,}
-[155]{,0,8,10,0,10,1,10,3,1,3,6,1,3,5,6,}
-[156]{,0,4,10,0,10,1,10,9,1,3,5,7,}
-[157]{,0,4,3,0,3,1,3,5,1,5,9,1,5,11,9,}
-[158]{,0,4,10,0,10,1,10,11,1,11,6,1,3,5,7,}
-[159]{,0,4,3,0,3,1,3,5,1,5,6,1,}
-[160]{,0,2,6,0,6,5,}
-[161]{,0,2,6,0,6,5,11,10,7,}
-[162]{,0,2,9,0,9,5,9,11,5,}
-[163]{,0,2,9,0,9,5,9,10,5,10,7,5,}
-[164]{,0,2,6,0,6,5,10,8,4,}
-[165]{,0,2,6,0,6,5,8,4,7,8,7,11,}
-[166]{,0,2,9,0,9,5,9,11,5,10,8,4,}
-[167]{,0,2,9,0,9,5,9,8,5,8,7,5,8,4,7,}
-[168]{,0,8,9,0,9,5,9,6,5,}
-[169]{,0,8,9,0,9,5,9,6,5,11,10,7,}
-[170]{,0,8,11,0,11,5,}
-[171]{,0,8,10,0,10,5,10,7,5,}
-[172]{,0,4,10,0,10,5,10,9,5,9,6,5,}
-[173]{,0,4,7,0,7,5,7,11,5,11,6,5,11,9,6,}
-[174]{,0,4,10,0,10,5,10,11,5,}
-[175]{,0,4,7,0,7,5,}
-[176]{,0,2,6,0,6,3,6,7,3,}
-[177]{,0,2,6,0,6,3,6,11,3,11,10,3,}
-[178]{,0,2,9,0,9,3,9,11,3,11,7,3,}
-[179]{,0,2,9,0,9,3,9,10,3,}
-[180]{,0,2,6,0,6,3,6,7,3,10,8,4,}
-[181]{,0,2,6,0,6,3,6,11,3,11,4,3,11,8,4,}
-[182]{,0,2,9,0,9,3,9,11,3,11,7,3,10,8,4,}
-[183]{,0,2,9,0,9,3,9,8,3,8,4,3,}
-[184]{,0,8,9,0,9,3,9,6,3,6,7,3,}
-[185]{,0,8,9,0,9,3,9,6,3,6,10,3,6,11,10,}
-[186]{,0,8,11,0,11,3,11,7,3,}
-[187]{,0,8,10,0,10,3,}
-[188]{,0,4,10,0,10,3,10,9,3,9,7,3,9,6,7,}
-[189]{,0,4,3,6,11,9,}
-[190]{,0,4,10,0,10,3,10,11,3,11,7,3,}
-[191]{,0,4,3,}
-[192]{,2,1,3,2,3,4,}
-[193]{,2,1,3,2,3,4,11,10,7,}
-[194]{,2,1,3,2,3,4,6,9,11,}
-[195]{,2,1,3,2,3,4,6,9,10,6,10,7,}
-[196]{,2,1,3,2,3,8,3,10,8,}
-[197]{,2,1,3,2,3,8,3,7,8,7,11,8,}
-[198]{,2,1,3,2,3,8,3,10,8,6,9,11,}
-[199]{,2,1,3,2,3,8,3,7,8,7,9,8,7,6,9,}
-[200]{,1,3,4,1,4,9,4,8,9,}
-[201]{,1,3,4,1,4,9,4,8,9,11,10,7,}
-[202]{,1,3,4,1,4,6,4,8,6,8,11,6,}
-[203]{,1,3,4,1,4,6,4,8,6,8,7,6,8,10,7,}
-[204]{,1,3,10,1,10,9,}
-[205]{,1,3,7,1,7,9,7,11,9,}
-[206]{,1,3,10,1,10,6,10,11,6,}
-[207]{,1,3,7,1,7,6,}
-[208]{,2,1,5,2,5,4,5,7,4,}
-[209]{,2,1,5,2,5,4,5,11,4,11,10,4,}
-[210]{,2,1,5,2,5,4,5,7,4,6,9,11,}
-[211]{,2,1,5,2,5,4,5,6,4,6,10,4,6,9,10,}
-[212]{,2,1,5,2,5,8,5,7,8,7,10,8,}
-[213]{,2,1,5,2,5,8,5,11,8,}
-[214]{,2,1,5,2,5,8,5,7,8,7,10,8,6,9,11,}
-[215]{,2,1,5,2,5,8,5,6,8,6,9,8,}
-[216]{,1,5,7,1,7,9,7,4,9,4,8,9,}
-[217]{,1,5,11,1,11,9,11,10,9,10,8,9,10,4,8,}
-[218]{,1,5,7,1,7,6,7,4,6,4,11,6,4,8,11,}
-[219]{,1,5,6,4,8,10,}
-[220]{,1,5,7,1,7,9,7,10,9,}
-[221]{,1,5,11,1,11,9,}
-[222]{,1,5,7,1,7,6,7,10,6,10,11,6,}
-[223]{,1,5,6,}
-[224]{,2,6,5,2,5,4,5,3,4,}
-[225]{,2,6,5,2,5,4,5,3,4,11,10,7,}
-[226]{,2,9,11,2,11,4,11,5,4,5,3,4,}
-[227]{,2,9,10,2,10,4,10,7,4,7,3,4,7,5,3,}
-[228]{,2,6,5,2,5,8,5,3,8,3,10,8,}
-[229]{,2,6,5,2,5,8,5,3,8,3,11,8,3,7,11,}
-[230]{,2,9,11,2,11,8,11,5,8,5,10,8,5,3,10,}
-[231]{,2,9,8,3,7,5,}
-[232]{,3,4,8,3,8,5,8,9,5,9,6,5,}
-[233]{,3,4,8,3,8,5,8,9,5,9,6,5,11,10,7,}
-[234]{,3,4,8,3,8,5,8,11,5,}
-[235]{,3,4,8,3,8,5,8,10,5,10,7,5,}
-[236]{,3,10,9,3,9,5,9,6,5,}
-[237]{,3,7,11,3,11,5,11,9,5,9,6,5,}
-[238]{,3,10,11,3,11,5,}
-[239]{,3,7,5,}
-[240]{,2,6,7,2,7,4,}
-[241]{,2,6,11,2,11,4,11,10,4,}
-[242]{,2,9,11,2,11,4,11,7,4,}
-[243]{,2,9,10,2,10,4,}
-[244]{,2,6,7,2,7,8,7,10,8,}
-[245]{,2,6,11,2,11,8,}
-[246]{,2,9,11,2,11,8,11,7,8,7,10,8,}
-[247]{,2,9,8,}
-[248]{,4,8,9,4,9,7,9,6,7,}
-[249]{,4,8,9,4,9,10,9,6,10,6,11,10,}
-[250]{,4,8,11,4,11,7,}
-[251]{,4,8,10,}
-[252]{,6,7,10,6,10,9,}
-[253]{,6,11,9,}
-[254]{,7,10,11,}
-[255]{,}
-
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 8.302752 ms
+UnloadTime: 3.977622 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 3429 unused Assets to reduce memory usage. Loaded Objects now: 420.
-Total: 26.823418 ms (FindLiveObjects: 0.102183 ms CreateObjectMapping: 0.212845 ms MarkObjects: 5.214041 ms  DeleteObjects: 20.916403 ms)
+Unloading 174 unused Assets to reduce memory usage. Loaded Objects now: 1945.
+Total: 3.997510 ms (FindLiveObjects: 0.125744 ms CreateObjectMapping: 0.076986 ms MarkObjects: 2.351929 ms  DeleteObjects: 0.777561 ms)
+
+UnloadTime: 0.585095 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2090.
+Total: 3.078808 ms (FindLiveObjects: 0.127668 ms CreateObjectMapping: 0.070570 ms MarkObjects: 2.252489 ms  DeleteObjects: 0.013472 ms)
+
+UnloadTime: 33.830322 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 542 unused Assets to reduce memory usage. Loaded Objects now: 1945.
+Total: 9.863221 ms (FindLiveObjects: 0.078269 ms CreateObjectMapping: 0.132159 ms MarkObjects: 2.098516 ms  DeleteObjects: 6.803659 ms)
+
+UnloadTime: 0.540186 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2162.
+Total: 3.045447 ms (FindLiveObjects: 0.103931 ms CreateObjectMapping: 0.073778 ms MarkObjects: 2.229393 ms  DeleteObjects: 0.016038 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at GenerateCases.WriteToFile () [0x00000] in <filename unknown>:0 
+  at Generation3.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 2.831810 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1757 unused Assets to reduce memory usage. Loaded Objects now: 415.
+Total: 6.495072 ms (FindLiveObjects: 0.191182 ms CreateObjectMapping: 0.075703 ms MarkObjects: 1.281179 ms  DeleteObjects: 4.495355 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseMenu.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 0.873793 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1947.
+Total: 3.574727 ms (FindLiveObjects: 0.068646 ms CreateObjectMapping: 0.065438 ms MarkObjects: 2.577756 ms  DeleteObjects: 0.153972 ms)
+
+UnloadTime: 0.497844 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2164.
+Total: 4.046910 ms (FindLiveObjects: 0.089817 ms CreateObjectMapping: 0.073136 ms MarkObjects: 3.063411 ms  DeleteObjects: 0.021171 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\LieuweLocht\Documents\Minor1\Assets\World\Data.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at GenerateCases.WriteToFile () [0x00000] in <filename unknown>:0 
+  at Generation3.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 3.564463 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1757 unused Assets to reduce memory usage. Loaded Objects now: 415.
+Total: 6.758109 ms (FindLiveObjects: 0.125744 ms CreateObjectMapping: 0.074420 ms MarkObjects: 1.604521 ms  DeleteObjects: 4.305455 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at PauseMenu.Start () [0x00000] in <filename unknown>:0 
