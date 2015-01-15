@@ -5,6 +5,7 @@ Druk de Rechtermuisknop om te schieten of met herladen.
 
 
 Toetsen van 1 wisselt het wapen tussen aan en uit.
+Als men een gun heeft geeft 2 de JetPack, spatie om te gebruiken.
 
 Indrukken van W is vooruit.
 Indrukken van A is linksopzij.
