@@ -65,7 +65,7 @@ public class Move {
 			
 		case 3:
             values=new float[3];
-			minDistance = 15;
+			minDistance = 25;
 			maxDistance = 60;
 			values[0] =  HelpScript.Rand(minDistance, maxDistance);
             values[1] = HelpScript.Rand (-100, 100);
@@ -111,12 +111,16 @@ public class Move {
         case 1:
 			Points=Moves.CheckSphere(StartPosition, values[0], MinOneDistance);
             possible=PointList.CheckPoints(Points);
+			Cannot.Add(1);
             break;
             
         case 2:
             EndPosition = StartPosition + (new Vector3 (0, values[0], 0));
 			Points=Moves.CheckBox (StartPosition, EndPosition, 6, MinOneDistance);
             possible = PointList.CheckPoints(Points);
+			Cannot.Add(3);
+			Cannot.Add(2);
+			Cannot.Add(4);
             break;
             
         case 3:
@@ -124,17 +128,20 @@ public class Move {
             EndPosition = StartPosition + AngleChanger * (new Vector3 (values[0], 0, 0));
             Vector3 Diff = (EndPosition - StartPosition).normalized;
             float[][] Points1=Moves.CheckBox (StartPosition, EndPosition, 6, MinOneDistance);
-            float[][] Points2=Moves.CheckBox (StartPosition + Diff * 15 - new Vector3 (0, 12, 0), EndPosition - Diff * 15 - new Vector3 (0, 12, 0), 6, 0);
+            float[][] Points2=Moves.CheckBox (StartPosition + Diff * 7 - new Vector3 (0, 12, 0), EndPosition - Diff * 7 - new Vector3 (0, 12, 0), 6, 0);
 			Points = new float[Points1.Length + Points2.Length/*+NewUpdate3.Length*/][];
 			Points1.CopyTo (Points, 0);
 			Points2.CopyTo (Points, Points1.Length);
             possible=PointList.CheckPoints (Points);
+			Cannot.Add(4);
             break;
             
         case 4:
             EndPosition = StartPosition + (new Vector3 (0, -values[0], 0));
 			Points=Moves.CheckBox (StartPosition, EndPosition, 6, MinOneDistance);
             possible = PointList.CheckPoints(Points);
+			Cannot.Add(2);
+			Cannot.Add(4);
             break;
             
         case 5:
@@ -151,7 +158,6 @@ public class Move {
 	public void Execute ()
 	{
 
-        moved = false;
 		switch (Choice) {
         case 0:   
             AngleChanger = Quaternion.Euler (0, values[1]  + Direction.eulerAngles.y - 90, values[2]);
@@ -164,7 +170,6 @@ public class Move {
             
         case 1:
 			Update = (Moves.Sphere (StartPosition, values[0], 0 ));
-            Cannot.Add(1);
 			PointList.AddPoints(Points);
             ChunkList.UpdateDataChunks (Update);
             break;
@@ -173,9 +178,6 @@ public class Move {
             EndPosition = StartPosition + (new Vector3 (0, values[0], 0));
             Update = Moves.Box (StartPosition, EndPosition, 6, 0);
             Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
-            Cannot.Add(3);
-            Cannot.Add(2);
-            Cannot.Add(4);
 			PointList.AddPoints(Points);
             ChunkList.UpdateDataChunks (Update);
             break;
@@ -192,7 +194,6 @@ public class Move {
             NewUpdate2.CopyTo (Update, NewUpdate1.Length);
             //NewUpdate3.CopyTo (NewUpdate,NewUpdate2.Length);
             Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
-            Cannot.Add(4);
 			PointList.AddPoints(Points);
             ChunkList.UpdateDataChunks (Update);
             break;
@@ -201,7 +202,6 @@ public class Move {
             EndPosition = StartPosition + (new Vector3 (0, -values[0], 0));
             Update = (Moves.Box (StartPosition, EndPosition, 6, 0));
             Direction = Quaternion.LookRotation (EndPosition - StartPosition, Vector3.up);
-            Cannot.Add(2);
 			PointList.AddPoints(Points);
             ChunkList.UpdateDataChunks (Update);
             break;

@@ -454,7 +454,7 @@ public class Generation : MonoBehaviour
 		
 		
 				Position = SpawnPosition;
-				for (int i=0; i<300; i++) {
+				for (int i=0; i<210; i++) {
 						float[] Chances = new float[3]{80f,0f,0f};
 						int caseSwitch = SwitchHelp.Switch (Chances);
 						switch (caseSwitch) {
@@ -592,7 +592,7 @@ public class Generation : MonoBehaviour
 
 	public void onIteration(Vector3 Position){
 		if (iteration%30 == 0) {
-			Instantiate (CheckPoint, Position, Quaternion.identity);
+			Instantiate (CheckPoint, Position+new Vector3(0,2,0), Quaternion.identity);
 		}
 		if(iteration%200 == 0){
 			onFinish(Position);

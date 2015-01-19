@@ -11,14 +11,20 @@ public class PickUp : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+		if(PickUpNumber==2){
 				transform.Rotate (90, 0, 0);
+		}
 				pos = transform.position;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				transform.Rotate (0, 0, rotationSpeed * Time.deltaTime);
+		if(PickUpNumber==0||PickUpNumber==1){
+		transform.Rotate (0, rotationSpeed * Time.deltaTime, 0);
+		} else {
+			transform.Rotate (0,0, rotationSpeed * Time.deltaTime);
+		}
 		}
 
 		void OnTriggerEnter (Collider col)

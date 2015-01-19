@@ -29,7 +29,7 @@ public class UseSpawner : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 
 		if ( Time.frameCount % spawnTimer == 0 && Random.value < spawnChance){

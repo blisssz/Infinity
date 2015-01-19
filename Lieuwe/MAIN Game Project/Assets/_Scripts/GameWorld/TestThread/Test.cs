@@ -16,34 +16,32 @@ public class Test {
 	public Test(){}
 
 	public void Execute () {
-		bool moved=false;
-		Debug.Log ("Starts");
+		bool executed=false;
+		//Debug.Log ("Starts");
 		CH=0;
-		if (Alfa [AlfaIndex].Impossibrah < 6) {
+		if (Alfa [AlfaIndex].Impossibrah < 12) {
 			Beta [AlfaIndex] = Alfa [AlfaIndex].Move1 ();
-			moved=Alfa[AlfaIndex].moved;
+			executed=Alfa[AlfaIndex].executed;
 			CH = HelpScript.Rand (0, 1f);
-			if (CH > 0.80) {
+			if (CH > 0.70) {
 				Alfa.Add (new Path (Alfa [AlfaIndex].Position, MinOneDistance));
+				Alfa[Alfa.Count-1].Cannot=Alfa[AlfaIndex].Cannot;
 				Beta.Add (Beta [AlfaIndex]);
 			}
-		} else if(Alfa [AlfaIndex].Impossibrah==6) {
-			//Alfa [AlfaIndex].Finish();
-			Alfa [AlfaIndex].Impossibrah=7;
+		} else if(Alfa [AlfaIndex].Impossibrah==12) {
+			Alfa [AlfaIndex].Finish();
+			Alfa [AlfaIndex].Impossibrah=13;
 		}
-		AlfaIndex++;
-		if (AlfaIndex == Alfa.Count) {
-			AlfaIndex = 0;
-		}
-		//if(moved){
-			Debug.Log ("Halfway there");
+		
+		if(executed){
+			//Debug.Log ("Halfway there");
 			ChunkList.UpdateSurroundingChunks ();
-			Debug.Log ("Halfway there+1");
+			//Debug.Log ("Halfway there+1");
 			ChunkList.UpdateSidesChunks ();
-			Debug.Log ("Halfway there+2");
+			//Debug.Log ("Halfway there+2");
 			ChunkList.UpdateTrianglesChunks ();
-			Debug.Log ("Done");
-		//}
+			//Debug.Log ("Done");
+		}
 	}
 	
 
