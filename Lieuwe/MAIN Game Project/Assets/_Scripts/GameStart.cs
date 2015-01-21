@@ -3,10 +3,42 @@ using System.Collections;
 
 public class GameStart : MonoBehaviour {
 
+	private static int StartLifes=10;
+
 	// Use this for initialization
 	void Start () {
 		int weapon = Mathf.RoundToInt (Random.Range (1,6));
 		PlayerManager.useWeaponID = weapon;
+		GameController.lifes=StartLifes;
+		switch(weapon){
+		case 1: 
+			Application.LoadLevel ("Platforms");
+			break;
+		case 2:
+			Application.LoadLevel ("Doolhof");
+			break;
+		case 3: 
+			selectLevel ();
+			break;
+		case 4:
+			selectLevel ();
+			break;
+		case 5:
+			selectLevel ();
+			break;
+		case 6:
+			selectLevel ();
+			break;
+		default: 
+			Debug.Log ("wrong number");
+			break;
+		}
+	}
+
+	public static void loadNormal () {
+		int weapon = Mathf.RoundToInt (Random.Range (1,6));
+		PlayerManager.useWeaponID = weapon;
+		GameController.lifes=StartLifes;
 		switch(weapon){
 		case 1: 
 			Application.LoadLevel ("Platforms");
@@ -32,7 +64,7 @@ public class GameStart : MonoBehaviour {
 		}
 	}
 	
-		void selectLevel(){
+		static void selectLevel(){
 			int level = Mathf.RoundToInt(Random.value);
 			if(level == 0){
 				Application.LoadLevel ("Platforms");

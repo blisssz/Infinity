@@ -43,4 +43,9 @@ public class JetpackActivation : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		textValue.CrossFadeAlpha (0f, 1f, false);
 	}
+
+	public void SetActive(bool active){
+		fuelStatus.SetActive (active);
+	}
+	
 }

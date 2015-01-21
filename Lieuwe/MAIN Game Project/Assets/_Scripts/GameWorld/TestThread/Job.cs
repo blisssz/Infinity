@@ -11,7 +11,7 @@ public class Job : ThreadedJob
 	public float MinOneDistance;
 	private float CH;
 	public System.Random b;
-	private int maxFails=12;
+	public static int maxFails=12;
 	private bool executed;
 	public bool moved;
 
@@ -23,7 +23,7 @@ public class Job : ThreadedJob
 
 		//Debug.Log ("Starts");
 		CH=0;
-		if (Alfa [AlfaIndex].Impossibrah < 12) {
+		if (Alfa [AlfaIndex].Impossibrah < maxFails) {
 			Beta [AlfaIndex] = Alfa [AlfaIndex].Move1 ();
 			executed=Alfa[AlfaIndex].executed;
 			moved=Alfa[AlfaIndex].moved;
@@ -33,7 +33,7 @@ public class Job : ThreadedJob
 				Alfa[Alfa.Count-1].Cannot=Alfa[AlfaIndex].Cannot;
 				Beta.Add (Beta [AlfaIndex]);
 			}
-		} else if(Alfa [AlfaIndex].Impossibrah==12) {
+		} else if(Alfa [AlfaIndex].Impossibrah==maxFails) {
 			Alfa [AlfaIndex].Finish();
 			Alfa [AlfaIndex].Impossibrah=13;
 		}

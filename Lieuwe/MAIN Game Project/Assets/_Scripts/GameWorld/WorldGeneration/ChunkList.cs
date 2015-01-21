@@ -13,6 +13,9 @@ public static class ChunkList {
 	private static List<Chunk> Chunks = new List<Chunk>();
 	public static List<int[]> ToBeUpdatedPositions = new List<int[]>();
 	public static List<int[]> ChunkPositions=new List<int[]>();
+	public static List<Chunk> ToBeUpdatedChunks= new List<Chunk>();
+	private static List<float> Times=new List<float>();
+	private static int TotalUpdateNumber=0;
 	public static int sizeChunk = 16;
 	public static bool Busy=false;
 	public static bool MeshingDone=true;
@@ -98,8 +101,10 @@ public static class ChunkList {
 	}
 
 	public static void UpdateSidesChunks(){
+		ToBeUpdatedChunks=new List<Chunk>();
 		for(int i=0;i<ToBeUpdatedPositions.Count;i++){
 			GetChunk(ToBeUpdatedPositions[i]).UpdateSides();
+			ToBeUpdatedChunks.Add (GetChunk(ToBeUpdatedPositions[i]));
 		}
 		Stage=4;
 	}
@@ -262,28 +267,35 @@ public static class ChunkList {
 	}
 	
 	public static IEnumerator UpdateMeshChunksC(){
-
+		//adasd
+		yield return null;
+		float Tm=Time.realtimeSinceStartup;
 		for(int i=0;i<ToBeUpdatedPositions.Count;i++){
-			GetChunk(ToBeUpdatedPositions[i]).UpdateMesh();
-			if(i%10==0){yield return null;}
+			ToBeUpdatedChunks[i].UpdateMesh();
+			if(Time.realtimeSinceStartup>0.008+Tm){
+				Tm=Time.realtimeSinceStartup;
+				yield return null;
+			}
+			//if(i%10==0){yield return null;}
 		}
 		Stage=4;
 		Busy=false;
 		ChunkList.Clear ();
 		UpdateNumber++;
 		ChunkList.MeshingDone=true;
+		Times.Sort();
 
 	}
 
-	public static void positionsReset(){
+	public static void Reset(){
 		Chunks = new List<Chunk>();
 		ToBeUpdatedPositions = new List<int[]>();
 		ChunkPositions=new List<int[]>();
-		sizeChunk = 16;
+		ToBeUpdatedChunks= new List<Chunk>();
 		Busy=false;
-		
-		rib=1f;
-		
+		MeshingDone=true;
+		UpdateNumber=0;
+		AA=new List<Material>();
 		done=true;
 		Stage=-1;
 	}

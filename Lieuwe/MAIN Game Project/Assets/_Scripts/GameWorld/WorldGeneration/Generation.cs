@@ -17,10 +17,13 @@ public class Generation : MonoBehaviour
 		public GameObject C;
 		private Vector3[] Vertices;
 		private int[] Triangles;
-		private int iteration = 1;
+		private int iteration = 0;
 		private static float jumpDistance = 100;
 		private Vector3[] lastPositions = new Vector3[3];
 		public static Vector3[][] Moves;
+		public static int FinishNumber=120;
+		public static int CheckPointNumber=20;
+		private static float ChanceOnAmmo=0.05f;
 	
 		public Vector3[][] AddAllDirections (Vector3[][] Movs)
 		{
@@ -311,10 +314,11 @@ public class Generation : MonoBehaviour
 
 		void Move (int o)
 		{
+			Vector3 CheckPointOffset=Vector3.zero;
 
 				for (int i=0; i<Moves[o].Length; i++) {
 						float size = Random.Range (minsize, maxsize);
-						Vector3 CheckPointOffset = new Vector3 (size / 2f, 5f, size / 1.5f);
+						CheckPointOffset = new Vector3 (size / 2f, 5f, size / 1.5f);
 						Vector3 SizeOffset = new Vector3 (size / 2f, size / 2f, size / 2f);
 						lastPositions [0] = lastPositions [1];
 						lastPositions [1] = lastPositions [2];
@@ -327,11 +331,13 @@ public class Generation : MonoBehaviour
 						
 						if (!lastPositions [0].Equals (Vector3.zero)) {
 								Pyramid (lastPositions [0], size);
-								onIteration(lastPositions [0] + CheckPointOffset);
-								Aftermove(lastPositions [0] + CheckPointOffset);
 						}
 
 			}
+		if (!lastPositions [0].Equals (Vector3.zero)&&!CheckPointOffset.Equals (Vector3.zero)) {
+			onIteration(lastPositions [0] + CheckPointOffset);
+			Aftermove(lastPositions [0] + CheckPointOffset);
+		}
 
 		}
 
@@ -453,7 +459,8 @@ public class Generation : MonoBehaviour
 				//GameObject x = CreateCube (a, minsize * 10);
 		
 		
-				Position = SpawnPosition;
+				Position = SpawnPosition-new Vector3(minsize/2,-1,minsize/2);
+				//Pyramid (Position-new Vector3(minsize/2,-1,minsize/2),minsize);
 				for (int i=0; i<210; i++) {
 						float[] Chances = new float[3]{80f,0f,0f};
 						int caseSwitch = SwitchHelp.Switch (Chances);
@@ -497,6 +504,7 @@ public class Generation : MonoBehaviour
 		maxsize = 10;
 		jumpDistance = 12;
 		spawnEnemy = true; 
+		ChanceOnAmmo=0f;
 	}
 
 	public static void blackHoleSettings(){
@@ -504,6 +512,7 @@ public class Generation : MonoBehaviour
 		maxsize = 5;
 		jumpDistance = 2.5f;
 		spawnEnemy = false;
+		ChanceOnAmmo=0f;
 	}
 
 	public static void pogoStickSettings(){
@@ -511,6 +520,9 @@ public class Generation : MonoBehaviour
 		maxsize = 10;
 		jumpDistance = 5;
 		spawnEnemy = false;
+		CheckPointNumber=10;
+		FinishNumber=60;
+		ChanceOnAmmo=0f;
 	}
 
 	public static void gunSettings(){
@@ -518,6 +530,7 @@ public class Generation : MonoBehaviour
 		maxsize = 9;
 		jumpDistance = 3f;
 		spawnEnemy = true;
+		ChanceOnAmmo=0.05f;
 	}
 
 	void settingSetter(){
@@ -561,7 +574,7 @@ public class Generation : MonoBehaviour
 	}
 
 	void Aftermove(Vector3 Position){
-		int Choice=HelpScript.Switch(new float[5]{0.5f,0.05f,0.05f,0.2f,0.2f});
+		int Choice=HelpScript.Switch(new float[5]{0.5f,0.05f,ChanceOnAmmo,0.2f,0.2f});
 		switch(Choice){
 		case 0:
 			ObjectSpawner.SpawnObject(Position,"Coin");
@@ -591,12 +604,13 @@ public class Generation : MonoBehaviour
 	}
 
 	public void onIteration(Vector3 Position){
-		if (iteration%30 == 0) {
+		iteration++;
+		if(iteration%FinishNumber == 0){
+			onFinish(Position);
+			return;
+		}
+		if (iteration%CheckPointNumber == 0) {
 			Instantiate (CheckPoint, Position+new Vector3(0,2,0), Quaternion.identity);
 		}
-		if(iteration%200 == 0){
-			onFinish(Position);
-		}
-		iteration++;
 	}
 }

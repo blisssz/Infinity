@@ -29,6 +29,7 @@ public class Gun : MonoBehaviour {
 	private GameObject muzzleFlashInstance; 
 	private int knockback = 10;
 	private int playerKnockback = 0; //200 would probably be a good value when used
+	private int bulletsInMagazine;
 
 	void Update(){
 		//Make sure all muzzleflashes stay at the tip of the gun
@@ -90,11 +91,11 @@ public class Gun : MonoBehaviour {
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
 				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			} 
-			else if (hit.collider.tag.Equals("Agent")){
+			/*else if (hit.collider.tag.Equals("Agent")){
 				GameObject Hitted=hit.transform.root.gameObject;
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
 				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
-			} 
+			} */
 			else{
 				//Play particle emitter at hit location
 				Instantiate(gunShotParticle, hit.point, Quaternion.LookRotation(hit.normal));
@@ -140,6 +141,12 @@ public class Gun : MonoBehaviour {
 
 	public void addAmmunition(int amount){
 		magazineBulletsLeft += amount;
+		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
+	}
+
+	public void addMagazines(int amount){
+		magazineBulletsLeft += amount*bulletsInMagazine;
 		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
 		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 	}

@@ -40,11 +40,7 @@ public class HPmanager : MonoBehaviour {
 
 		}
 		if(hp>maxhp){hp=maxhp;}
-		if(this.tag.Equals ("Player")){
-			if(sliderFill==null){
-				sliderFill = GameObject.FindWithTag ("Health");}
-			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
-		}
+		UpdateSlider ();
 
 	}
 
@@ -68,11 +64,7 @@ public class HPmanager : MonoBehaviour {
 			}
 		}
 		if(hp>maxhp){hp=maxhp;}
-		if(this.tag.Equals ("Player")){
-			if(sliderFill==null){
-				sliderFill = GameObject.FindWithTag ("Health");}
-			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
-		}
+		UpdateSlider ();
 	}
 
 
@@ -81,11 +73,7 @@ public class HPmanager : MonoBehaviour {
 			hp -= dmg * dmgModifier;
 		}
 		if(hp>maxhp){hp=maxhp;}
-		if(this.tag.Equals ("Player")){
-			if(sliderFill==null){
-				sliderFill = GameObject.FindWithTag ("Health");}
-			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
-		}
+		UpdateSlider ();
 	}
 
 	/// <summary>
@@ -99,11 +87,7 @@ public class HPmanager : MonoBehaviour {
 			hp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
 		}
 		if(hp>maxhp){hp=maxhp;}
-		if(this.tag.Equals ("Player")){
-			if(sliderFill==null){
-				sliderFill = GameObject.FindWithTag ("Health");}
-			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
-		}
+		UpdateSlider ();
 	}
 
 
@@ -120,19 +104,23 @@ public class HPmanager : MonoBehaviour {
 		velMaxTreshold = max;
 	}
 
+	public void setMaxHP(float newHP){
+		maxhp = newHP;
+	} 
+
 
 	// Use this for initialization
 	void Start () {
 		if(hp>maxhp){hp=maxhp;}
+		UpdateSlider ();
+	}
+	
+	// Update is called once per frame
+	public void UpdateSlider () {
 		if(this.tag.Equals ("Player")){
 			if(sliderFill==null){
 				sliderFill = GameObject.FindWithTag ("Health");}
 			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

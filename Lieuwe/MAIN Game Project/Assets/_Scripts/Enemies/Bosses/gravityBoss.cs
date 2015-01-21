@@ -37,7 +37,9 @@ public class gravityBoss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(Player == null){Player = GameObject.FindGameObjectWithTag ("Player");}
+		if (Player == null){return;}
 		else{transform.LookAt (Player.transform);}
 		if(Time.time > lastShot + reloadTime){
 			Shoot();

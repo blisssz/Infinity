@@ -11,10 +11,17 @@ public class checkPointList  {
 		return ObjectList.Count-1;
 	}
 
+	public static void Reset(){
+		ObjectList=new List<checkPoint>();
+		ActiveID=-1;
+	}
+
 
 
 	public static void Activate(int ID){
+		if(ActiveID>-1){
 		ObjectList[ActiveID].DeActivate();
+		}
 		ActiveID=ID;
 		ObjectList[ActiveID].Activate();
 	}

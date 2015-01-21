@@ -1,91 +1,106 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BOSS1script : MonoBehaviour {
+public class BOSS1script : MonoBehaviour
+{
 	
-	public float speed;
-	public GameObject Player;
-	public GameObject Boss1DeathSound;
-	private Vector3 playerPosition;
-	private Vector3 toPlayer;
-	private bool deathAnimation = false;
-	private bool finished =false;
+		public float speed;
+		public GameObject Player;
+		public GameObject Boss1DeathSound;
+		private Vector3 playerPosition;
+		private Vector3 toPlayer;
+		private bool deathAnimation = false;
+		private bool finished = false;
 
-	// Use this for initialization
-	void Start () {
-	}
+		// Use this for initialization
+		void Start ()
+		{
+		}
 	
-	// Update is called once per frame
-	void Update () {
-		//get player location
-		if (Player == null) {
-			Player = GameObject.FindWithTag ("Player");
-		}
-		if (Player != null) {
-		playerPosition = Player.transform.position;
-
-		toPlayer = new Vector3(playerPosition.x - transform.position.x, playerPosition.y - transform.position.y +18, playerPosition.z - transform.position.z);
-		//move to player location
-		float step = (DistanceToObject (Player)-14) * Time.deltaTime;
-		if (DistanceToObject (Player) > 14 && deathAnimation == false) {
-						transform.Translate (toPlayer * step * Time.deltaTime, Space.World);
+		// Update is called once per frame
+		void Update ()
+		{
+				//get player location
+				if (Player == null) {
+						Player = GameObject.FindWithTag ("Player");
 				}
-		if(DistanceToObject (Player) < 23)
-				{
-						transform.Rotate (Vector3.up, Time.deltaTime * 50f);
-				}
-		//check if dead
-		if (returnNearestObjectDistance ("Boss1Balls") > 100) {
-			Destroy (this.gameObject,10);
-			if (deathAnimation == false) {
-				GameObject soundbody;
-				soundbody = Instantiate(Boss1DeathSound, (transform.position - new Vector3(0,1.2f,0)), transform.rotation) as GameObject;
-			}
-			deathAnimation = true;
+				if (Player != null) {
+						playerPosition = Player.transform.position;
 
-			GameObject[] names = GameObject.FindGameObjectsWithTag("Boss1Balls");
-			
-			foreach(GameObject item in names)
-			{
-				Destroy(item,10);
-			}
-		}
-		if (deathAnimation == true) {
-
-			Vector3 d = new Vector3(0.0f,25,0.0f);
-			transform.Translate (d * Time.deltaTime,Space.World);
-			transform.Rotate(Vector3.up, Time.deltaTime*80f);
-				if(finished==false){
-			GameObject Finish=ObjectSpawner.SpawnObjectWith(this.transform.position + new Vector3(0,5,0),"EndPoint");
-			Finish.GetComponent<endPoint>().isBossLevel=true;
-					finished=true;
-				}
-		}
-		}
-	}
-
-	float DistanceToObject(GameObject other) {
-		return Vector3.Distance (this.transform.position, other.transform.position);
-	}
-
-	float returnNearestObjectDistance(string gtag) {
-		float nearestDistanceSqr= Mathf.Infinity;
-		GameObject[] taggedGameObjects= GameObject.FindGameObjectsWithTag(gtag); 
-	GameObject:Transform nearestObj = null;
+						toPlayer = new Vector3 (playerPosition.x - transform.position.x, playerPosition.y - transform.position.y + 18, playerPosition.z - transform.position.z);
+						//move to player location
+				float step;
+			//if (toPlayer.y<0f) {
+				toPlayer.y=0f;
+			//}
+						if (DistanceToObject (Player) > 14 && deathAnimation == false) {
+							step = (DistanceToObject (Player) - 14) * Time.deltaTime;
+								transform.Translate (toPlayer * step * Time.deltaTime, Space.World);
+						}
+						if (DistanceToObject (Player) <= 14 && deathAnimation == false) {
+								step = (DistanceToObject (Player) - 0) * Time.deltaTime;
+								transform.Translate (new Vector3 (this.transform.position.x, toPlayer.y, this.transform.position.z) * step * Time.deltaTime, Space.World);
+						}
 		
-		// loop through each tagged object, remembering nearest one found
-		foreach(GameObject obj in taggedGameObjects) {
+						if (DistanceToObject (Player) < 23) {
+								transform.Rotate (Vector3.up, Time.deltaTime * 50f);
+						}
+
+
+						//check if dead
+						if (returnNearestObjectDistance ("Boss1Balls") > 100) {
+								Destroy (this.gameObject, 10);
+								if (deathAnimation == false) {
+										GameObject soundbody;
+										soundbody = Instantiate (Boss1DeathSound, (transform.position - new Vector3 (0, 1.2f, 0)), transform.rotation) as GameObject;
+								}
+								deathAnimation = true;
+
+								GameObject[] names = GameObject.FindGameObjectsWithTag ("Boss1Balls");
 			
-			Vector3 objectPos= obj.transform.position;
-			float distanceSqr= (objectPos - transform.position).sqrMagnitude;
-			
-			if (distanceSqr < nearestDistanceSqr) {
-				nearestObj = obj.transform;
-				nearestDistanceSqr = distanceSqr;
-			}
+								foreach (GameObject item in names) {
+										Destroy (item, 10);
+								}
+						}
+						if (deathAnimation == true) {
+
+								Vector3 d = new Vector3 (0.0f, 25, 0.0f);
+								transform.Translate (d * Time.deltaTime, Space.World);
+								transform.Rotate (Vector3.up, Time.deltaTime * 80f);
+								if (finished == false) {
+										GameObject Finish = ObjectSpawner.SpawnObjectWith (this.transform.position + new Vector3 (0, 5, 0), "EndPoint");
+										Finish.GetComponent<endPoint> ().isBossLevel = true;
+										finished = true;
+								}
+						}
+				}
 		}
-		return nearestDistanceSqr;
-	}	
+
+		float DistanceToObject (GameObject other)
+		{
+				return Vector3.Distance (this.transform.position, other.transform.position);
+		}
+
+		float returnNearestObjectDistance (string gtag)
+		{
+				float nearestDistanceSqr = Mathf.Infinity;
+				GameObject[] taggedGameObjects = GameObject.FindGameObjectsWithTag (gtag); 
+				GameObject:
+				Transform nearestObj = null;
+		
+				// loop through each tagged object, remembering nearest one found
+				foreach (GameObject obj in taggedGameObjects) {
+			
+						Vector3 objectPos = obj.transform.position;
+						float distanceSqr = (objectPos - transform.position).sqrMagnitude;
+			
+						if (distanceSqr < nearestDistanceSqr) {
+								nearestObj = obj.transform;
+								nearestDistanceSqr = distanceSqr;
+						}
+				}
+				return nearestDistanceSqr;
+		}	
 
 
 }

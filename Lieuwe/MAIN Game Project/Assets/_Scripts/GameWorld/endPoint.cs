@@ -5,43 +5,43 @@ public class endPoint : MonoBehaviour {
 	private float speed = 0.5f;
 	public bool isBossLevel;
 	private Vector3 endPosition;
-	public static float minDistance;
-	private float distance;
-	private float startDistance;
-	private int maxScore = 200;
-	private Vector3 playerPosition;
+//	public static float minDistance;
+//	private float distance;
+//	private float startDistance;
+//	private int maxScore = 200;
+//	private Vector3 playerPosition;
 
 	// Use this for initialization
 	void Start () {		
 		endPosition = transform.position;
-		startDistance = (PlayerManager.playerPosition - endPosition).magnitude;
-		minDistance = startDistance;
+//		startDistance = (PlayerManager.playerPosition - endPosition).magnitude;
+//		minDistance = startDistance;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		transform.Rotate (speed, speed, speed);
-		//distance = (PlayerManager.playerPosition - endPosition).magnitude;
-		//if (distance < minDistance){
-		//	minDistance = distance;
-		//}
-		//score.inGameScore = (int)Mathf.Round(((startDistance - minDistance)/startDistance)*maxScore);
-		playerPosition = PlayerManager.playerPosition;
-		if((playerPosition - transform.position).magnitude < 5&&isBossLevel==false){
+
+
+	void OnTriggerEnter(Collider col){
+		if (col.tag.Equals ("Player")&&isBossLevel==false) {
+			OnTriggered();
+			GameStart.loadBoss ();	
+		}
+		if(col.tag.Equals ("projectile")&&isBossLevel==false){
+			OnTriggered();
 			GameStart.loadBoss ();
 		}
-
-		if((playerPosition - transform.position).magnitude < 5&&isBossLevel==true){
-			Application.LoadLevel("Main scene");
+		if (col.tag.Equals ("Player")&&isBossLevel==true) {
+			OnTriggered();
+			GameStart.loadNormal ();	
+		}
+		if(col.tag.Equals ("projectile")&&isBossLevel==true){
+			OnTriggered();
+			GameStart.loadNormal ();
 		}
 	}
 
-	void OnTriggerEnter(Collider col){
-		if (col.tag.Equals ("Player")) {
-			Application.LoadLevel("Main scene");	
-		}
-		if(col.tag.Equals ("projectile")){
-			Application.LoadLevel ("Main scene");
-		}
+	private static void OnTriggered(){
+		GameController.AddLifes(3);
+		score.scoreUp(100);
 	}
 }

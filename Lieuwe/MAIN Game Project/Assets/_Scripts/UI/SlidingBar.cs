@@ -15,10 +15,7 @@ public class SlidingBar : MonoBehaviour {
 		image = this.GetComponent<Image>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	//Smooth not implemented
 	public void setValueFade(float newValue, float maxValue, bool smooth){
@@ -26,6 +23,7 @@ public class SlidingBar : MonoBehaviour {
 		rectTransform.anchorMax = new Vector2(percentage, rectTransform.anchorMax.y);
 		percentageText.GetComponent<SliderValue>().setIntPercentage(percentage);
 	}
+
 
 
 }

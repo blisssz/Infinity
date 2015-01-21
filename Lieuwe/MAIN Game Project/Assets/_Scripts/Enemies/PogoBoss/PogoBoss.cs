@@ -18,6 +18,8 @@ public class PogoBossEye{
 	public GameObject deadEyeOb;
 	public GameObject deadEffect;
 
+	public SoundObjectSpawner soundSpawner{get; set;}
+
 	public PogoBossEye(){
 		eyeAlive = true;
 	}
@@ -39,6 +41,7 @@ public class PogoBossEye{
 		if (deadEyeOb != null){
 			GameObject deadOB = GameObject.Instantiate(deadEyeOb, eyeOB.position, eyeOB.rotation) as GameObject;
 			deadOB.transform.parent = eyeOB.parent;
+			soundSpawner.InstantiateSound(eyeOB.position, "Hurt1");
 		}
 		if (deadEffect != null){
 			GameObject deathFX = GameObject.Instantiate(deadEffect, eyeOB.position, eyeOB.rotation) as GameObject;
@@ -236,6 +239,7 @@ public class EyeNormal : PogoBossEye{
 
 				// assign dmg scale and time to laser
 				PogoBossLaser pbl = laserOB.AddComponent<PogoBossLaser>();
+				pbl.soundSpawner = soundSpawner;
 				pbl.lifetime = fireTime;
 				pbl.DMG = laserDMG;
 
@@ -372,6 +376,7 @@ public class EyeBig : PogoBossEye{
 			laser.transform.parent = eyeOB;
 
 			PogoBossLaser pbl = laser.AddComponent<PogoBossLaser>();
+			pbl.soundSpawner = soundSpawner;
 			pbl.lifetime = laserLife;
 			pbl.DMG = DMG;
 
@@ -443,6 +448,11 @@ public class PogoBoss : MonoBehaviour {
 
 	private int finalStateHash = Animator.StringToHash("BigEye.BigEyeIdle");
 
+	private bool finalSound = false;
+
+	// sound stuff
+	public SoundObjectSpawner soundSpawner;
+
 
 	// Use this for initialization
 	void Start () {
@@ -455,7 +465,12 @@ public class PogoBoss : MonoBehaviour {
 
 		eyeTransfArray = new Transform[5];
 
-
+		if (GetComponent<SoundObjectSpawner>()){
+			soundSpawner = GetComponent<SoundObjectSpawner>();
+		}
+		else{
+			Debug.Log (this.gameObject.name + " has no SoundObjectSpawner Component");
+		}
 
 		// initiate eye HPs
 		foreach (Transform t in GetComponentsInChildren<Transform>()){
@@ -468,6 +483,7 @@ public class PogoBoss : MonoBehaviour {
 					eyeParams[i].eyeHP.velBasedDmg = dmgOnVelHitsOnly;
 					eyeParams[i].eyeHP.setMinMaxVel(minVelHit, maxVelHit);
 					eyeParams[i].setEyeOB(t);
+					eyeParams[i].soundSpawner = soundSpawner;
 					eyeTransfArray[i] = t;				
 
 					if (setEyeHpAsMaxVelTreshold){
@@ -483,6 +499,7 @@ public class PogoBoss : MonoBehaviour {
 				eyeBigParam.eyeHP.velBasedDmg = dmgOnVelHitsOnly;
 				eyeBigParam.eyeHP.setMinMaxVel(minVelHit, maxVelHit);
 				eyeBigParam.setEyeOB(t);
+				eyeBigParam.soundSpawner = soundSpawner;
 
 				eyeBigParam.eyeHP.dmgModifier = 0f; // start in godmode
 
@@ -553,17 +570,24 @@ public class PogoBoss : MonoBehaviour {
 
 
 			//eyeTransfArray[i].LookAt(player.transform.position);
+			if (player != null){
 
-			eyeParams[i].eyeFindTarget( player.transform); //eyeTransfArray[i],
-			if (i == 0){
-				fourEyesAlive = eyeParams[0].eyeAlive;
-			}
-			else{
-				fourEyesAlive = fourEyesAlive || eyeParams[i].eyeAlive;
+				eyeParams[i].eyeFindTarget( player.transform); //eyeTransfArray[i],
+				if (i == 0){
+					fourEyesAlive = eyeParams[0].eyeAlive;
+				}
+				else{
+					fourEyesAlive = fourEyesAlive || eyeParams[i].eyeAlive;
+				}
 			}
 		}
 
 		if (!fourEyesAlive){
+
+			if (bossState ==BossState.FourEyes){
+				// sound of last spawn
+				soundSpawner.InstantiateSound(this.transform.position, "Hurt2");
+			}
 
 			// spawn the final eye by animation
 			bossState = BossState.FinalEye;
@@ -573,17 +597,30 @@ public class PogoBoss : MonoBehaviour {
 
 			if (anim.GetCurrentAnimatorStateInfo(5).IsTag("FinalState")){ //(finalStateHash == anim.GetCurrentAnimatorStateInfo(5).nameHash){
 				// final eye control
-				eyeBigParam.eyeControl(player.transform);
+				if (player != null){
+					eyeBigParam.eyeControl(player.transform);
+				}
 				eyeBigParam.eyeHP.dmgModifier = 1f; 			// remove from godmode
 
 				// boss defeated?
 				if (eyeBigParam.eyeAlive == false){
+
+					if (bossState != BossState.BossDefeated){
+						// play sound
+						if (finalSound == false){
+							soundSpawner.InstantiateSound(transform.position, "Dead");
+							finalSound = true;
+						}
+					}
+
 					bossState = BossState.BossDefeated;
+
 				}
 			}
 			else{
 				// activate the big eye effect
 				this.GetComponentInChildren<BigEyeFX>().activateFX = true;
+
 			}
 
 		}
@@ -631,16 +668,19 @@ public class PogoBoss : MonoBehaviour {
 	private void checkPlayerPogo(){
 		player = GameObject.FindGameObjectWithTag("Player") as GameObject;
 
-		// if no pogo:
-		if (player.GetComponent<PlayerManager>().getCurrentWeapon() == null || PlayerManager.useWeaponID != 1){
-			if (!player.GetComponent<HitsByVelocity>()){
-				player.AddComponent<HitsByVelocity>();
+		if (player != null){
+
+			// if no pogo:
+			if (player.GetComponent<PlayerManager>().getCurrentWeapon() == null || PlayerManager.useWeaponID != 1){
+				if (!player.GetComponent<HitsByVelocity>()){
+					player.AddComponent<HitsByVelocity>();
+				}
 			}
-		}
-		else{
-			if (player.GetComponent<HitsByVelocity>()){
-				Destroy(player.GetComponent<HitsByVelocity>());
-				print ("destroy component");
+			else{
+				if (player.GetComponent<HitsByVelocity>()){
+					Destroy(player.GetComponent<HitsByVelocity>());
+					print ("destroy component");
+				}
 			}
 		}
 	}

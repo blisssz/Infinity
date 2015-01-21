@@ -27,8 +27,31 @@ public class ObjectCreator : MonoBehaviour
 		mesh.RecalculateNormals ();
 		mesh.RecalculateBounds ();
 		mesh.Optimize ();
-		plane.GetComponent<MeshCollider> ().mesh = mesh;
-		plane.GetComponent<MeshFilter> ().mesh = mesh;
+		plane.GetComponent<MeshCollider> ().sharedMesh = mesh;
+		plane.GetComponent<MeshFilter> ().sharedMesh = mesh;
+		Renderer A = plane.GetComponent<MeshRenderer> ();
+		A.material = F;
+		return plane;
+	}
+
+	public static GameObject Creator2 (Vector3[] Vertices, int[] Triangles, Material F, Vector3 Position)
+	{
+		GameObject plane = GameObject.CreatePrimitive (PrimitiveType.Plane);
+		Mesh mesh = new Mesh ();
+		int L = Triangles.Length;
+		Vector2[] newUV = new Vector2[L];
+		plane.name="Chunk["+Position.x+","+Position.y+","+Position.z+"]";
+
+		
+		plane.transform.position = Position;
+		mesh.vertices = Vertices;
+		mesh.uv = newUV;
+		mesh.triangles = Triangles;
+		mesh.RecalculateNormals ();
+		mesh.RecalculateBounds ();
+		mesh.Optimize ();
+		plane.GetComponent<MeshCollider> ().sharedMesh = mesh;
+		plane.GetComponent<MeshFilter> ().sharedMesh = mesh;
 		Renderer A = plane.GetComponent<MeshRenderer> ();
 		A.material = F;
 		return plane;
@@ -62,8 +85,8 @@ public class ObjectCreator : MonoBehaviour
 
 		
 		plane.transform.position = Position;
-		plane.GetComponent<MeshCollider> ().mesh = mesh;
-		plane.GetComponent<MeshFilter> ().mesh = mesh;
+		plane.GetComponent<MeshCollider> ().sharedMesh = mesh;
+		plane.GetComponent<MeshFilter> ().sharedMesh = mesh;
 		Renderer A = plane.GetComponent<MeshRenderer> ();
 		A.material = F;
 		return plane;

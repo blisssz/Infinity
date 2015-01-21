@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class highScore : MonoBehaviour {
-	private static int  hiScore;
+	public static int  hiScore;
 	private static int totalEnemiesKilled;
 	private static int totalCoinsPickedUp;
 	private static int totalAmmoPickedUp;
@@ -43,11 +43,7 @@ public class highScore : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if (hiScore < score.getGameScore()){
-			hiScore = score.getGameScore ();
-		}
-	}
+
 
 	public static int getHighScore(){
 		return hiScore;

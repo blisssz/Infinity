@@ -8,6 +8,7 @@ public class BlackHoleGun : MonoBehaviour {
 	public GameObject blackHole;
 	public GameObject gunPoint;
 	public GameObject Gun;
+	public AudioClip audioShoot;
 
 
 	private GameObject player;
@@ -57,7 +58,8 @@ public class BlackHoleGun : MonoBehaviour {
 			if (currentLerpTime > lerpTime) {
 				currentLerpTime = lerpTime;
 			}
-			
+
+			if(projectile!=null){
 			//lerp the projectile from the instantiation point to it's endpoint using a coserp function
 			float perc = currentLerpTime / lerpTime;
 			perc = 1f - Mathf.Cos(perc * Mathf.PI * 0.5f); //coserp function
@@ -69,11 +71,13 @@ public class BlackHoleGun : MonoBehaviour {
 				projectile.transform.localScale += new Vector3(scale,scale,scale);
 				glow.startSize = projectile.transform.localScale.x * 0.25f; //Change the size of the particles of the glow particle system
 			}
+			}
 		}
 
 		//Shoot it when the player releases the left mouse button.
 		if(firereleased == true){
-
+			if(projectile!=null){
+			AudioSource.PlayClipAtPoint(audioShoot, transform.position, 1.5f);
 			//Set the strength of the Black hole according to the current size
 			projectile.GetComponent<BlackHole>().gravity *= projectile.transform.localScale.x;
 			projectile.GetComponent<BlackHole>().radius *= projectile.transform.localScale.x;
@@ -102,6 +106,7 @@ public class BlackHoleGun : MonoBehaviour {
 			projectile.GetComponent<BlackHole>().enabled = true; //only let the blackhole check for a collision once it has been shot
 			projectile.GetComponent<BlackHole>().shot = true; //activate the gravitational effect of the blackhole
 		}
+		}
 
 		//Remove the black hole orb when the player clicks the right mouse button
 		if (retract == true){
@@ -119,6 +124,7 @@ public class BlackHoleGun : MonoBehaviour {
 		}
 	}
 
-	void OnDestroy(){if(GameController.dead){Destroy(projectile); destroyBlackHole ();}}
+	void OnDestroy(){if(GameController.dead){
+			Destroy(projectile); destroyBlackHole ();}}
 
 }

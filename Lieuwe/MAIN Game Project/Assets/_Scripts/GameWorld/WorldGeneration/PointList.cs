@@ -20,6 +20,10 @@ public static class PointList
 //		
 		
 	}
+
+	public static void Reset(){
+		PointsLst=new List<float[]>();
+	}
 	
 	public static bool CheckPoints(float[][] Points){
 		bool IsPossible=true;

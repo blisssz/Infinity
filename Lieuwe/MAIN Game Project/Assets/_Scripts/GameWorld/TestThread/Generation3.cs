@@ -19,13 +19,14 @@ public class Generation3 : MonoBehaviour {
 	private int FinishNumber=120;
 	private int iteration=1;
 	public bool stopWhenFinished=true;
+	private bool Finished;
+	private static float ChanceOnAmmo=0.05f;
 
 	Job myJob;
 	void Start ()
 	{
 		settingSetter ();
-		GameController.fallingPossible = false;
-		ChunkList.positionsReset ();
+		Finished=false;
 		GameController.fallingPossible = false;
 		ChunkList.C=gameObject;
 		time=Time.realtimeSinceStartup;
@@ -34,7 +35,7 @@ public class Generation3 : MonoBehaviour {
 		if(GenerateCases.done==false){
 		GenerateCases.GenCases2 ();
 //        GenerateCases.SwapCases();
-        GenerateCases.WriteToFile();
+//        GenerateCases.WriteToFile();
 			GenerateCases.done=true;
 		}
 //		int[][] TempCases = new int[256][];
@@ -77,6 +78,13 @@ public class Generation3 : MonoBehaviour {
 	
 	void Update()
 	{	
+		if(ChunkList.Stage==0){
+			ChunkList.Stage=1;
+		}
+
+		if(myJob==null&&ChunkList.Busy==false&&ChunkList.MeshingDone==false){
+			StartMeshing();
+		}
 //		if(Input.GetKeyDown(KeyCode.E)){
 //			Debug.Log ("E pressed");
 //			float Tm2 = Time.realtimeSinceStartup;
@@ -110,11 +118,7 @@ public class Generation3 : MonoBehaviour {
 
 
 			if (Time.time % 0.1f <= Time.deltaTime){
-		Tm=Time.realtimeSinceStartup - Tm;
-		if(true){//Tm>0.01){
-			//Debug.Log (Tm + " for Frame");
-			
-		}
+			CheckAlfa();
 //		if(ChunkList.UpdateNumber==FinishNumber){
 //				Updating=false;
 //				AlfaIndex--;
@@ -140,6 +144,7 @@ public class Generation3 : MonoBehaviour {
 			if (myJob.Update())
 			{
 				ChunkList.MeshingDone=false;
+				ChunkList.Stage=0;
 				AlfaIndex=myJob.AlfaIndex;
 				Beta=myJob.Beta;
 				Alfa=myJob.Alfa;
@@ -159,9 +164,7 @@ public class Generation3 : MonoBehaviour {
 			}
 		}
 
-			if(myJob==null&&ChunkList.Busy==false&&ChunkList.MeshingDone==false){
-				StartMeshing();
-			}
+
 
 		
 		Tm=Time.realtimeSinceStartup - Tm;
@@ -202,7 +205,9 @@ public class Generation3 : MonoBehaviour {
 	}
 
 	public void AfterMove (Vector3 Position){
-		int Choice=HelpScript.Switch(new float[5]{0.7f,0.05f,0.05f,0.1f,0.1f});
+
+		ObjectSpawner.SpawnObject(Position+new Vector3(0.75f,1,0.5f),"TunnelLight");
+		int Choice=HelpScript.Switch(new float[5]{0.7f,0.05f,ChanceOnAmmo,0.1f,0.1f});
 		switch(Choice){
 		case 0:
 			ObjectSpawner.SpawnObject(Position,"Coin");
@@ -214,10 +219,10 @@ public class Generation3 : MonoBehaviour {
 			ObjectSpawner.SpawnObject(Position,"MedPack");
 			break;
 		case 3:
-			Spawner.addSpawnLocation(Position);
+			Spawner.addSpawnLocation(Position);//,EnemyTypes.bunny1);
 			break;
 		case 4:
-			Spawner.addSpawnLocation (Position);
+			Spawner.addSpawnLocation (Position);//,EnemyTypes.flying1);
 			break;
 		default:
 			break;
@@ -269,12 +274,14 @@ public class Generation3 : MonoBehaviour {
 		UseSpawner.setSpawnTime(3);
 		UseSpawner.setSpawnChance(1);
 		Spawner.maxSpawns = 20;
+		ChanceOnAmmo=0f;
 	}
 	
 	public static void blackHoleSettings(){
 		UseSpawner.setSpawnTime(3);
 		UseSpawner.setSpawnChance(1);
 		Spawner.maxSpawns = 20;
+		ChanceOnAmmo=0f;
 	}
 
 
@@ -282,6 +289,7 @@ public class Generation3 : MonoBehaviour {
 		UseSpawner.setSpawnTime(3);
 		UseSpawner.setSpawnChance(1);
 		Spawner.maxSpawns = 20;
+		ChanceOnAmmo=0f;
 	}
 
 	public static void gunSettings(){
@@ -293,6 +301,19 @@ public class Generation3 : MonoBehaviour {
 	public void onFinish (Vector3 Position){
 		GameObject Finish=Instantiate(endPoint,Position , Quaternion.identity) as GameObject;
 		Finish.GetComponent<endPoint>().isBossLevel=false;
+		Finished=true;
+	}
+
+	public void CheckAlfa(){
+		if(Finished){
+			return;
+		}
+		for(int i=0;i<Alfa.Count;i++){
+			if(Alfa[i].Impossibrah<Job.maxFails){
+				return;
+			}
+		}
+			onFinish (Beta[0]);
 	}
 }
 	

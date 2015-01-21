@@ -15,18 +15,24 @@ public class PogoBossLaser : MonoBehaviour {
 	public bool LERP = false;
 	private Vector3 fromOffset;
 	private Vector3 toOffset;
-	private Transform target;
+	public Transform target;
+
+	public GameObject SoundGameObject;
+	public SoundObjectSpawner soundSpawner;
 
 	void Update () {
 
 		RaycastHit hit;
+
+		float d = 0f;
 
 		// simple quadratic function for scale from 0 to 1 to 0;
 		float xyS = xyScale * (-1f/(0.25f*lifetime*lifetime) *Mathf.Pow(t - 0.5f*lifetime, 2f) + 1f);
 		t += Time.deltaTime;
 
 		if (Physics.Raycast(transform.position, transform.forward, out hit, 10000f) ){
-			transform.localScale = new Vector3(xyS, xyS, hit.distance);
+			d = hit.distance;
+			transform.localScale = new Vector3(xyS, xyS, d);
 			if (!hasHit && hit.transform.tag == "Player"){
 				hasHit = true;
 				hit.transform.GetComponent<HPmanager>().doDamage (DMG);
@@ -37,7 +43,22 @@ public class PogoBossLaser : MonoBehaviour {
 			transform.localScale = new Vector3(xyS, xyS, 10000f);
 		}
 
+		if( Camera.main != null){
+
+
+			float d2 =  Vector3.Dot ((Camera.main.transform.position - transform.position), transform.forward);
+
+			if (d2 < d){
+
+				d = d2;
+			}
+			Vector3 pos = this.transform.position + this.transform.forward * d;
+			playSound(pos);
+		}
+
+
 		if (LERP == true && target != null){
+
 			lerp2Target();
 		}
 
@@ -52,6 +73,20 @@ public class PogoBossLaser : MonoBehaviour {
 		target = tr;
 		fromOffset = from;
 		toOffset = to;
+	}
+
+	private void playSound(Vector3 pos){
+		if (Time.frameCount % 10 == 0){
+			soundSpawner.InstantiateSound(pos, "Laser");
+
+		//	if (GetComponent<SoundObjectSpawner>()){
+				//GetComponent<SoundObjectSpawner>().InstantiateRandomSound(pos, Quaternion.identity);//InstantiateSound(pos, Quaternion.identity);
+
+		//		GetComponent<SoundObjectSpawner>().InstantiateSound(pos, "tag");
+		//	}
+
+			//Instantiate(SoundGameObject, transform.position, Quaternion.identity);
+		}
 	}
 
 	private void lerp2Target(){

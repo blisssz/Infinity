@@ -29,7 +29,6 @@ public class score : MonoBehaviour {
 
 	public static void setToZero(){
 		gameScore = 0;
-		endPoint.minDistance = Mathf.Infinity;
 	}
 
 	IEnumerator stopRestart() {
@@ -39,5 +38,9 @@ public class score : MonoBehaviour {
 
 	public static void scoreUp(int x){
 		gameScore += x;
+		if (highScore.getHighScore() < gameScore){
+			highScore.hiScore = gameScore;
+		}
 	}
+
 }

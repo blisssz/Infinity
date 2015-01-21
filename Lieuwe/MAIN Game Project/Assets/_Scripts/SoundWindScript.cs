@@ -13,9 +13,10 @@ public class SoundWindScript : MonoBehaviour {
 	void Update () {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
-		}
+		}if (Player != null) {
 		gameObject.audio.volume = -0.1f+0.01f*Player.rigidbody.velocity.magnitude;
 		gameObject.audio.pitch = 0.4f+0.02f*Player.rigidbody.velocity.magnitude;
+		}
 	}
 
 }

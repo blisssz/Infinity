@@ -10,16 +10,16 @@ public class basicEnemy : MonoBehaviour {
 	private float rotationSpeed;
 	private Vector3 enemyRotation;
 	private GrapplingRopeSwing ropeSwing;
-
+	private float animationStart;
+	
 	//Player info
 	public GameObject Player;
 	private Vector3 playerPosition;
 	private Vector3 toPlayer;
 	private float distanceToPlayer;
-
+	private bool playerNear;
+	
 	//Enemy state
-	public float noOfLifes;
-	private float enemyLife;
 	private bool alarmed;
 	public float sightLength;
 	private bool enemyAlive;
@@ -31,12 +31,13 @@ public class basicEnemy : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		noOfLifes = 2;
-		enemyLife = noOfLifes;
 		enemyAlive = true;
 		spawnPosition = transform.position;
 		perimeter = Mathf.PI * 2 * radius;
 		rotationSpeed = 360 / (perimeter / enemySpeed);
+		animationStart = Random.value;
+		animation ["Default Take"].time = animationStart;
+		animation ["ArmatureAction_002"].time = animationStart;
 	}
 	
 	// Update is called once per frame
@@ -44,7 +45,7 @@ public class basicEnemy : MonoBehaviour {
 		if (Player == null) {
 			Player = GameObject.FindWithTag ("Player");
 		}
-		if (Player == null){return;}
+		if (Player == null) {return;}
 		playerPosition = Player.transform.position;
 		toPlayer = new Vector3((playerPosition.x - transform.position.x), 0f, playerPosition.z - transform.position.z);
 		distanceToPlayer = toPlayer.magnitude;
@@ -56,10 +57,13 @@ public class basicEnemy : MonoBehaviour {
 		if (!enemyAlive){
 			gameObject.SetActive(false);
 		}
-		if (distanceToPlayer <= sightLength || inAttack == true){
+		lookForPlayer ();
+		if ( playerNear || inAttack == true){
+			alarmed = true;
 			attackPlayer();
 		}
 		else {
+			//print (alarmed);
 			if(alarmed == true){
 				moveTowardsPlayer();
 			}
@@ -70,7 +74,7 @@ public class basicEnemy : MonoBehaviour {
 				transform.Translate(0, enemySpeed * Time.deltaTime, 0);
 			}
 			if(transform.position.y > spawnPosition.y + 0.2f){
-				transform.Translate(0, enemySpeed * Time.deltaTime, 0);
+				transform.Translate(0, -enemySpeed * Time.deltaTime, 0);
 			}
 		}
 		transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));
@@ -92,31 +96,32 @@ public class basicEnemy : MonoBehaviour {
 		}
 		heightCheck ();
 	}
-
+	
 	public void heightCheck(){
-		if (transform.position.y < playerPosition.y + 1.8f) {
-			transform.Translate(0,enemySpeed*Time.deltaTime,0);		
+		if (transform.position.y < playerPosition.y + 2.8f) {
+			transform.Translate(0, 2 * enemySpeed*Time.deltaTime,0);		
 		}
-		if (transform.position.y > playerPosition.y + 2.2f) {
-			transform.Translate(0,-Time.deltaTime*enemySpeed,0);		
+		if (transform.position.y > playerPosition.y + 3.2f) {
+			transform.Translate(0, 2 * -Time.deltaTime*enemySpeed,0);		
 		}
 	}
 	
 	void moveTowardsPlayer(){
-		transform.Translate (toPlayer.normalized * chasingSpeed * Time.deltaTime, Space.World);
+		transform.LookAt (Player.transform);
+		transform.Translate (transform.forward * chasingSpeed * Time.deltaTime, Space.World);
 		heightCheck ();
 	}
 	
 	void lookForPlayer(){
-		transform.Translate (Vector3.forward, Space.Self);
-		transform.LookAt (Player.transform);
-		Ray sight = new Ray (transform.position, transform.forward);
-		RaycastHit hit;
-		if(Physics.Raycast(sight, sightLength)){
-			if(Physics.Raycast(sight, out hit)){
-				if(hit.collider == Player){
-					alarmed = true;
-				}	}	}
+		if(distanceToPlayer <= sightLength) {
+			playerNear = true;
+			alarmed = true;
+		}
+		else { playerNear = false; }
+		if(distanceToPlayer > 20) {
+			playerNear = false;
+			alarmed = false;
+		}
 	}	
 	
 	//void attackPlayer (){
@@ -125,7 +130,6 @@ public class basicEnemy : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col){
 		if (col.tag.Equals("Environment")){
-			enemySpeed *= 1;
 			transform.Rotate (0,180,0);
 		}
 		if (col.tag.Equals ("Player")) {
@@ -133,31 +137,32 @@ public class basicEnemy : MonoBehaviour {
 		}
 	}
 	
-	void respawn(){
-		this.gameObject.SetActive(true);
-		enemyAlive = true;
-		transform.position = spawnPosition;
-		alarmed = false;
-	}
-
+	//	void respawn(){
+	//		this.gameObject.SetActive(true);
+	//		enemyAlive = true;
+	//		transform.position = spawnPosition;
+	//		alarmed = false;
+	//	}
+	
 	public void hookHit(){
-		rigidbody.AddForce ((-30 * toPlayer.normalized), ForceMode.VelocityChange);
 		applyDamage (20f);
-		alarmed = true;
 	}
-
-	void applyDamage(float damage){
+	
+	public void applyDamage(float damage){
 		transform.GetComponent<HPmanager> ().doDamage (damage);
+		rigidbody.AddForce ((-30 * toPlayer.normalized), ForceMode.VelocityChange);
+		alarmed = true;
+		//score.gameScore += 5;
 	}
-
+	
 	void OnDestroy(){
 		highScore.enemyKill ();
-		score.gameScore += 5;
+		score.gameScore += 5; 
 	}
-
+	
 	virtual public void attackPlayer(){
 	}
-
+	
 	virtual public void afterTrigger(string tag){
 	}
 }
