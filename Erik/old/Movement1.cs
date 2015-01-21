@@ -46,6 +46,9 @@ public class Movement1 : MonoBehaviour {
 	public float jump_acceleration = 5.0f;	// [m/s^2], when g == 0.0
 	public float jump_maxtime = 0.4f;
 	private float jump_time = 0.0f;
+	private float extra_jump_timer = 0.0f;
+	public  float extra_jump_time = 0.3f;
+	private bool allow_extra_jump = true;
 
 	private Vector3 V_inherit = new Vector3(0.0f, 0.0f, 0.0f);
 
@@ -114,7 +117,6 @@ public class Movement1 : MonoBehaviour {
 //			bool shiftKey = KeyManager.leftShift == 2;
 
 			bool jump = KeyManager.jump == 2;
-
 			bool forward = KeyManager.forward == 2;
 			bool backward = KeyManager.backward == 2;
 			bool left = KeyManager.left == 2;
@@ -134,9 +136,18 @@ public class Movement1 : MonoBehaviour {
 
 				if (center2hitPos.magnitude < playerCenter2Ground_height && JumpState != 1){
 					MovementState = 0;
-					JumpState = 0;
+
+					// make sure that space is not pressed so that jump resets and is not spammable.
+					if (jump != true){
+						JumpState = 0;
+						jump_time = 0.0f;
+						extra_jump_timer = Time.realtimeSinceStartup;
+					}
+
 					vfac = 1.0f;
-					jump_time = 0.0f;
+
+
+					GroundDamageEffects.doGroundDamage(this.gameObject,hit.transform.gameObject);
 
 					// calc spring Up force
 					if (springyfeetEnabled){
@@ -170,11 +181,19 @@ public class Movement1 : MonoBehaviour {
 					}
 				}
 				else{
-					MovementState = 1;
+					MovementState = 1; // not touching ground
+					if (Time.realtimeSinceStartup - extra_jump_timer < extra_jump_time){
+						allow_extra_jump = true;
+						JumpState = 0;
+					}
 				}
 			}
 			else{
-				MovementState = 1;	// not touching ground
+				MovementState = 1; // not touching ground
+				if (Time.realtimeSinceStartup - extra_jump_timer < extra_jump_time){
+					allow_extra_jump = true;
+					JumpState = 0;
+				}
 			}
 
 
@@ -185,10 +204,11 @@ public class Movement1 : MonoBehaviour {
 					
 					E_integral = new Vector3(0, 0, 0);		// reset integral
 
-					if (JumpState == 0 && MovementState != 1){
+					if (JumpState == 0 && (MovementState != 1 || allow_extra_jump)){
 						//V_inherit = rigidbody.velocity;
 						JumpState = 1;
 						MovementState = 1;
+						allow_extra_jump = false;
 
 					}
 					if (JumpState == 1 && jump_time < jump_maxtime){
@@ -206,6 +226,7 @@ public class Movement1 : MonoBehaviour {
 				}
 				else if (MovementState == 1){
 					JumpState = 2;
+					//jumpingEnabled = false;
 				}
 			}
 

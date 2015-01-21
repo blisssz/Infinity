@@ -5,17 +5,17 @@ using UnityEngine.UI;
 public class Jetpack : MonoBehaviour {
 
 	private GameObject player;
-	private GameObject sliderFill;
+	private static GameObject sliderFill;
 	private Movement1 movementController;
 	private bool playerAirborne;
-	private bool jetpackActive = false;
+	private static bool jetpackActive = false;
 
 	private float airControlSpeed = 1000;
 	private float thrustSpeed = 1000;
 	private static int maxFuel = 200;
-	private int fuelLeft = maxFuel;
+	private static int fuelLeft = maxFuel;
 
-	public int FuelLeft {
+	public static int FuelLeft {
 
 		get { 
 			return fuelLeft; 
@@ -23,8 +23,11 @@ public class Jetpack : MonoBehaviour {
 		set {
 			if(sliderFill==null){
 				sliderFill = GameObject.FindWithTag ("Fuel");}
+
 			fuelLeft = value;
+			if(sliderFill!=null){
 			sliderFill.GetComponent<SlidingBar> ().setValueFade (fuelLeft, maxFuel, true);
+			}
 		}
 	}
 	
@@ -33,6 +36,7 @@ public class Jetpack : MonoBehaviour {
 		player = GameObject.FindWithTag ("Player");
 		movementController = player.GetComponent<Movement1> ();
 		sliderFill = GameObject.FindWithTag ("Fuel");
+
 	}
 
 	void Update () {
@@ -98,5 +102,12 @@ public class Jetpack : MonoBehaviour {
 		}
 
 
+	}
+
+	public static void reset(){
+		FuelLeft=maxFuel;
+		jetpackActive = !jetpackActive;
+		JetpackActivation.instance.StopAllCoroutines();
+		JetpackActivation.instance.fuelStatus.SetActive(false);
 	}
 }

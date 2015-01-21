@@ -10,7 +10,7 @@ public class ShootingEnemy : basicEnemy {
 	override public void attackPlayer (){
 		circleAroundPlayer ();
 		if(lastShot < Time.time - reloadingTime){
-			Instantiate(EnemyBullet, (transform.position - new Vector3(0,1.2f,0)), transform.rotation); 
+			Instantiate(EnemyBullet, (transform.position - new Vector3(0,1.2f,0)), transform.rotation);
 			lastShot = Time.time;
 		}
 	}

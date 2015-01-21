@@ -5,8 +5,7 @@ using System.Collections;
 /// Pogo stick, Attach this to a PogoStick GameObject
 /// </summary>
 public class PogoStick : MonoBehaviour {
-	// Todo
-	// Sound fx
+
 
 	private Transform thisOwner;
 
@@ -100,6 +99,9 @@ public class PogoStick : MonoBehaviour {
 	private int mountHash;
 	private int dismountHash;
 
+	// sounds
+
+	public AudioClip springSound;
 
 	// Use this for initialization
 	void Start () {
@@ -285,25 +287,30 @@ Old anims -*/
 				Vector3 velocityDir = velocity.normalized;
 				
 				if (firstContact == false){
+					// play compressing sound 
+					this.gameObject.audio.PlayOneShot(springSound);
 					// let the hitted object know that he was hit
 					noticeHitObjectGotHit(hit.transform.gameObject, velocity);
 					// can only compress with a high enough velocity in up dir;
 					velSigned = Vector3.Dot (velocity, this.transform.up);
 				}
-				float ds = Mathf.Min(pogoHeight - hit.distance, maxCompression);
+				float ds =Mathf.Clamp(pogoHeight - hit.distance, -maxCompression, maxCompression);// Mathf.Min(pogoHeight - hit.distance, maxCompression);
 				
 				if (velSigned > upVelTreshhold){
 					// clamp ds some more, helpfull for no sudden change in ds when velocity downward is low
-					ds = Mathf.Min(ds, maxCompression* velSigned/upVelTreshhold + maxCompression*0.21f);
-
+					ds = Mathf.Clamp(ds,0f, maxCompression* (velSigned* velSigned) / (upVelTreshhold*upVelTreshhold) + maxCompression*0.5f);//Mathf.Min(ds, maxCompression* velSigned/upVelTreshhold + maxCompression*0.21f);
 				}
 				
 				if ((ds - ds_old) < 0f){
+					if (springCompressing == true){
+					//	this.gameObject.audio.PlayOneShot(springSound);
+					}
 					springCompressing = false;
 				}
 				else{
 					springCompressing = true;
-					// play compressing sound 
+
+
 				}
 				
 				// offset pogo by factor ds for jump effect so you know when to apply force to increase junp or decrease.
@@ -321,7 +328,7 @@ Old anims -*/
 				if (Vector3.Dot(force, transform.root.transform.up) < 0.0f){
 					force *= 0f;
 				}
-				print (force);
+				//print (force);
 
 				thisOwner.rigidbody.AddForce(force * Time.deltaTime, ForceMode.Impulse);
 				

@@ -265,7 +265,7 @@ public class Chunk
 																Debug.Log (1000);
 														}
 														int VerticeListNumber=GetVerticeList(MaterialNumber);
-														VerticesNeeded[VerticeListNumber].Add (Vertices2 [i + x [uu], j + y [uu], k + z [uu],d[uu]]);
+															VerticesNeeded[VerticeListNumber].Add (Vertices2 [i + x [uu], j + y [uu], k + z [uu],d[uu]]-HelpScript.IntToVec3 (Position2, sizeChunk));
 //														if (VerticesNeeded [uu] == new Vector3 (0, 0, 0) && (i == 0 && j == 0 && k + z [uu] < 15)) {
 //																Debug.Log ("lol");
 //														}
@@ -293,7 +293,7 @@ public class Chunk
 		}
 		zero=new List<GameObject>();
 		for(int i=0; i<VerticesNeeded.Count;i++){
-				zero.Add (ObjectCreator.Creator (VerticesNeeded[i].ToArray (), Triangles[i], ChunkList.AA[MaterialList[i]-1], HelpScript.IntToVec3 (Position2, sizeChunk)));
+				zero.Add (ObjectCreator.Creator2 (VerticesNeeded[i].ToArray (), Triangles[i], ChunkList.AA[MaterialList[i]-1], HelpScript.IntToVec3 (Position2, sizeChunk)));
 		}
 		}
 }

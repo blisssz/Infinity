@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour {
 	//UI
 	public GameObject UIfixed;
 	private GameObject Crosshair;
+	private bool started=false;
 	
 	private bool switcher = false;
 	
@@ -41,6 +42,15 @@ public class PlayerManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
+		if(Application.loadedLevelName.Equals("Doolhof")){
+			Camera[] Cameras=GetComponentsInChildren<Camera>();
+			for(int i=0; i<Cameras.Length;i++){
+				if(Cameras[i].name.Equals ("Main Camera")){
+					Cameras[i].farClipPlane=100;
+				}
+			}
+		}
 		
 		currentWeapon = null;
 		
@@ -63,6 +73,8 @@ public class PlayerManager : MonoBehaviour {
 		
 		Crosshair = Instantiate(UIfixed) as GameObject;
 		Crosshair.SetActive (false);
+		SwitchWeapon();
+
 
 		
 	}
@@ -70,73 +82,82 @@ public class PlayerManager : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
+//		if(!started){
+//			SwitchWeapon();
+//			started=true;
+//		}
 		playerPosition = transform.position;
 		// spawn a tool/weapon
+//		bool key1 = KeyManager.key1 == 1;
+//		if(key1){
+//			SwitchWeapon();
+//		}
+	}
+
+	public void DestroyWeapon(){
+		if( useWeaponID ==3){
+			GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
+			gh.DestroyAll();
+			setCrosshair (false);
+			}
+	}
+	
+	public void setCrosshair(bool switcher){
+		Crosshair.SetActive (switcher);
+	}
+	
+	public GameObject getCurrentWeapon(){
+		return currentWeapon;
+	}
+
+
+	public void SwitchWeapon(){
 		if (hasWeapon == false){
 			
-			bool key1 = KeyManager.key1 == 1; // tap key once
+			 // tap key once
 			
 			// Spawn handgun
-			if (key1 == true && useWeaponID == 4){
+			if (useWeaponID == 4||useWeaponID == 5||useWeaponID == 6){
 				if (switcher == false){
 					if(currentWeapon == null){
+						if(useWeaponID==4){
 						currentWeapon = Instantiate(handGun, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.6f + weaponAttachObject.transform.up * 0.1f , weaponAttachObject.transform.rotation) as GameObject;
+						}	else if(useWeaponID==5){
+							currentWeapon = Instantiate(SMG, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.375f + weaponAttachObject.transform.forward * 0.21f , weaponAttachObject.transform.rotation) as GameObject;
+						}	else if(useWeaponID==6){
+							currentWeapon = Instantiate(sniper, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.433f + weaponAttachObject.transform.forward * 0.25f , weaponAttachObject.transform.rotation) as GameObject;
+						}	
 						currentWeapon.transform.parent = weaponAttachObject.transform;
 						Activate.setActiveCustom(true);
 						(Instantiate (jetpack, this.transform.position, this.transform.rotation) as GameObject).transform.parent = weaponAttachObject.transform;
 					}
 					switcher = true;
 					setCrosshair(true);
-					currentWeapon.GetComponent<HandGun>().equip(true);
-				}
-				else {
-					switcher = false;
-					setCrosshair(false);
-					currentWeapon.GetComponent<HandGun>().equip(false);
-				}
-			}
-			
-			//Spawn SMG
-			if (key1 == true && useWeaponID == 5){
-				if (switcher == false){
-					if(currentWeapon == null){
-						currentWeapon = Instantiate(SMG, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.375f + weaponAttachObject.transform.forward * 0.21f , weaponAttachObject.transform.rotation) as GameObject;
-						currentWeapon.transform.parent = weaponAttachObject.transform;
-						Activate.setActiveCustom(true);
-						(Instantiate (jetpack, this.transform.position, this.transform.rotation) as GameObject).transform.parent = weaponAttachObject.transform;
+					if(useWeaponID==4){
+						currentWeapon.GetComponent<HandGun>().equip(true);
+					}	else if(useWeaponID==5){
+						currentWeapon.GetComponent<MachineGun>().equip(true);
+					}	else if(useWeaponID==6){
+						currentWeapon.GetComponent<Sniper>().equip(true);
 					}
-					switcher = true;
-					setCrosshair(true);
-					currentWeapon.GetComponent<MachineGun>().equip(true);
-				}
-				else {
-					switcher = false;
-					setCrosshair(false);
-					currentWeapon.GetComponent<MachineGun>().equip(false);
-				}
-			}
 
-			//Spawn Sniper
-			if (key1 == true && useWeaponID == 6){
-				if (switcher == false){
-					if(currentWeapon == null){
-						currentWeapon = Instantiate(sniper, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.433f + weaponAttachObject.transform.forward * 0.25f , weaponAttachObject.transform.rotation) as GameObject;
-						currentWeapon.transform.parent = weaponAttachObject.transform;
-						Activate.setActiveCustom(true);
-						(Instantiate (jetpack, this.transform.position, this.transform.rotation) as GameObject).transform.parent = weaponAttachObject.transform;
-					}
-					switcher = true;
-					currentWeapon.GetComponent<Sniper>().equip(true);
 				}
 				else {
 					switcher = false;
-					currentWeapon.GetComponent<Sniper>().equip(false);
+					setCrosshair(false);
+					if(useWeaponID==4){
+						currentWeapon.GetComponent<HandGun>().equip(false);
+					}	else if(useWeaponID==5){
+						currentWeapon.GetComponent<MachineGun>().equip(false);
+					}	else if(useWeaponID==6){
+						currentWeapon.GetComponent<Sniper>().equip(false);
+					}
 				}
 			}
 			
 			
 			// spawn weapon / tool
-			if (key1 == true && currentWeapon == null){
+			if (currentWeapon == null){
 				
 				// spawn grapplingHook
 				if (useWeaponID == 0){
@@ -199,8 +220,8 @@ public class PlayerManager : MonoBehaviour {
 				
 			}
 			// remove weapon when one is already active
-			else if (key1 == true && currentWeapon != null){
-
+			else if (currentWeapon != null){
+				
 				
 				if (useWeaponID == 1){
 					// pogostick delete
@@ -224,21 +245,5 @@ public class PlayerManager : MonoBehaviour {
 				
 			}
 		}
-	}
-
-	public void DestroyWeapon(){
-		if( useWeaponID ==3){
-			GrapplingHookV2 gh = currentWeapon.GetComponent<GrapplingHookV2>();
-			gh.DestroyAll();
-			setCrosshair (false);
-			}
-	}
-	
-	public void setCrosshair(bool switcher){
-		Crosshair.SetActive (switcher);
-	}
-	
-	public GameObject getCurrentWeapon(){
-		return currentWeapon;
 	}
 }

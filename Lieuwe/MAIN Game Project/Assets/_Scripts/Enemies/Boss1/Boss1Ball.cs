@@ -14,11 +14,11 @@ public class Boss1Ball : MonoBehaviour {
 	void Update() {
 		if (boss == null) {
 			boss = GameObject.FindWithTag ("BOSS1");
-		} else {
+		} else if(transform.parent!=null){
 			if(transform.parent.transform.position==null){return;}
 			gravityDirection = (transform.position - transform.parent.transform.position);
 			if (gravityDirection.magnitude < 5f) {
-				rigidbody.AddForce( - 15*gravityDirection);
+				rigidbody.AddForce( - 12*gravityDirection);
 				//print ("flop");
 			}
 		}

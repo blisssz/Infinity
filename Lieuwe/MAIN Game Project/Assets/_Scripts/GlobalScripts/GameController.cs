@@ -5,7 +5,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 	public static bool fallingPossible;
 	public static bool dead;
-	private static int startLifes = 3;
+	private static int startLifes = 10;
 	public static int lifes;
 
 	public GameObject mainPlayer;
@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameController.fallingPossible = true;
+		AudioList.StartX ();
 		spawnLocation=this.transform.position;   //StartPostion in Level
 		keyManager = new KeyManager();
 		lifes = startLifes;
@@ -35,10 +36,10 @@ public class GameController : MonoBehaviour {
 		if(keyManager==null){keyManager = new KeyManager();}
 		keyManager.Update();
 		if (lifes <= 0) {
-			lifes = startLifes;
+			ResetAll();
 			score.setToZero();
 			spawnLocation = StartPosition;
-			Application.LoadLevel (Application.loadedLevel);
+			Application.LoadLevel ("StartMenu");
 		}
 
 		// simple spawner
@@ -55,17 +56,29 @@ public class GameController : MonoBehaviour {
 			KillPlayer ();
 		}
 
-		if (thePlayer.transform.position.y <= -60 && fallingPossible) {
+		if (thePlayer.transform.position.y <= -20 && fallingPossible) {
 			KillPlayer ();
 		}
 	}
 
 	public void KillPlayer(){
+		Jetpack.reset();
 		thePlayer.GetComponent<PlayerManager>().DestroyWeapon();
 		Destroy (thePlayer);
 		mainPlayerAlive = false;
 		dead = true;
 		lifes -= 1;
+	}
+
+	public static void ResetAll(){
+		checkPointList.Reset();
+		ChunkList.Reset ();
+		PointList.Reset();
+			
+	}
+
+	public static void AddLifes(int number){
+		lifes+=number;
 	}
 
 

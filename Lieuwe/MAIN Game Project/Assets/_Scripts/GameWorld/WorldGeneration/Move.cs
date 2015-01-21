@@ -38,7 +38,7 @@ public class Move {
 		switch (Choice) {
 		case 0:
             values=new float[3];
-			float minDistance = 25;
+			float minDistance = 30;
 			float maxDistance = 60;
 			values[0] =  HelpScript.Rand(minDistance, maxDistance);
             values[1] = HelpScript.Rand (-100, 100);
@@ -56,7 +56,7 @@ public class Move {
 			
 		case 2:
 			values=new float[3];
-            minDistance = 15;
+            minDistance = 20;
             maxDistance = 30;
             values[0] =  HelpScript.Rand(minDistance, maxDistance);
 			moved = true;
@@ -65,7 +65,7 @@ public class Move {
 			
 		case 3:
             values=new float[3];
-			minDistance = 25;
+			minDistance = 35;
 			maxDistance = 60;
 			values[0] =  HelpScript.Rand(minDistance, maxDistance);
             values[1] = HelpScript.Rand (-100, 100);
@@ -76,7 +76,7 @@ public class Move {
 			
 		case 4:
 			values=new float[1];
-			minDistance = 15;
+			minDistance = 20;
 			maxDistance = 30;
 			values[0] = HelpScript.Rand (minDistance, maxDistance);
 			moved = true;
@@ -128,7 +128,7 @@ public class Move {
             EndPosition = StartPosition + AngleChanger * (new Vector3 (values[0], 0, 0));
             Vector3 Diff = (EndPosition - StartPosition).normalized;
             float[][] Points1=Moves.CheckBox (StartPosition, EndPosition, 6, MinOneDistance);
-            float[][] Points2=Moves.CheckBox (StartPosition + Diff * 7 - new Vector3 (0, 12, 0), EndPosition - Diff * 7 - new Vector3 (0, 12, 0), 6, 0);
+            float[][] Points2=Moves.CheckBox (StartPosition + Diff * 12 - new Vector3 (0, 12, 0), EndPosition - Diff * 12 - new Vector3 (0, 12, 0), 6, 0);
 			Points = new float[Points1.Length + Points2.Length/*+NewUpdate3.Length*/][];
 			Points1.CopyTo (Points, 0);
 			Points2.CopyTo (Points, Points1.Length);
@@ -187,7 +187,7 @@ public class Move {
             EndPosition = StartPosition + AngleChanger * (new Vector3 (values[0], 0, 0));
             Vector3 Diff = (EndPosition - StartPosition).normalized;
             float[][] NewUpdate1 = (Moves.Box (StartPosition, EndPosition, 6, 0));
-            float[][] NewUpdate2 = (Moves.Box (StartPosition + Diff * 15 - new Vector3 (0, 12, 0), EndPosition - Diff * 15 - new Vector3 (0, 12, 0), 6, 2));
+            float[][] NewUpdate2 = (Moves.Box (StartPosition + Diff * 12 - new Vector3 (0, 12, 0), EndPosition - Diff * 12 - new Vector3 (0, 12, 0), 6, 2));
             //float[][] NewUpdate3 = (Moves.Box (Position+Diff*12+new Vector3(0,12,0), Position2-Diff*12+new Vector3(0,12,0), 6, 1));
             Update = new float[NewUpdate1.Length + NewUpdate2.Length/*+NewUpdate3.Length*/][];
             NewUpdate1.CopyTo (Update, 0);
