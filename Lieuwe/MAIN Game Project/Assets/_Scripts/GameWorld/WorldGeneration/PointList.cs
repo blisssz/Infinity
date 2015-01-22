@@ -26,7 +26,7 @@ public static class PointList
 	}
 	
 	public static bool CheckPoints(float[][] Points){
-		bool IsPossible=true;
+//		bool IsPossible=true;
 		for(int i=0; i<Points.Length;i++){
 			for(int j=0; j<PointsLst.Count;j++){
 				if(Points[i][4]==0){

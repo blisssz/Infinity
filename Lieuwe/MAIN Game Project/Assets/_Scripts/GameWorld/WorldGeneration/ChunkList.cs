@@ -134,10 +134,10 @@ public static class ChunkList {
 			
 			if(ToBeUpdatedPositions[u][0]==X[0]&&ToBeUpdatedPositions[u][1]==X[1]&&ToBeUpdatedPositions[u][2]==X[2]){
 				yes=true;
-				break;}
+				return;}
 		}
 		if(!yes){
-			Chunk B=GetChunk (X);
+			GetChunk (X);
 			ToBeUpdatedPositions.Add (X);
 		}
 	}

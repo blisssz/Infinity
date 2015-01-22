@@ -30,6 +30,7 @@ public class Movement1 : MonoBehaviour {
 	public float A_obj = 1.0f;
 	
 	public float slideControlFac = 0.1f;
+	public Vector3 DeltaPosition;
 	
 	public float playerCenter2Ground_height = 0.6f;
 	
@@ -269,7 +270,7 @@ public class Movement1 : MonoBehaviour {
 				if (MovementState == 2){
 					U *= slideControlFac;
 				}
-				else{ // head bob
+				else if(PlayerManager.useWeaponID!=6){ // head bob
 					headBob(headBobAmp, headBobFreq);
 				}
 			}
@@ -346,9 +347,10 @@ public class Movement1 : MonoBehaviour {
 		// v factor of how fast bob
 		// head bob
 		headBobTime += Time.deltaTime * (rigidbody.velocity.magnitude - V_inherit.magnitude)/v_max;
-		playerCam.transform.position = playerCam.transform.parent.transform.position + playerCam.transform.up * Mathf.Sin(headBobTime*freq)* amp *iheadFac;
+		DeltaPosition=playerCam.transform.up * Mathf.Sin(headBobTime*freq)* amp *iheadFac;
+		playerCam.transform.position = playerCam.transform.parent.transform.position;
 		weaponCam.transform.position = playerCam.transform.position;
-		
+
 		if ((rigidbody.velocity.magnitude - V_inherit.magnitude) > 0.9f){
 			iheadFac = Mathf.Min(iheadFac+ 0.10f, 1.0f);
 			iheadFac = 1.0f;

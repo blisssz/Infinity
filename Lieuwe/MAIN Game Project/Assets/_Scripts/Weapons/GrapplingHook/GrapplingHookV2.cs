@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GrapplingHookV2 : MonoBehaviour {
@@ -164,18 +164,20 @@ public class GrapplingHookV2 : MonoBehaviour {
 					
 					localPos = hitMatrixW2L.MultiplyPoint(firedHook.transform.position);
 					localDir = Vector3.Normalize(localPos - hitMatrixW2L.MultiplyPoint(firedHook.transform.position+firedHook.transform.forward) );
-
+					string S=hit.transform.root.tagS;
 					hitObject = hit.transform.gameObject;
-					if(hitObject.GetComponent<HPmanager>()){
-						hitObject.GetComponent<HPmanager>().doDamage(5);
+					if(hitObject.GetComponent<HPmanager>()!=null){
+						hitObject.GetComponent<HPmanager>().doDamage(30);
 					}
-					ropeShoot.Stop();
-					if(hit.collider.tag.Equals("Enemy")){
+					if(hitObject.tag.Equals("Enemy")){
 						hookStatus = 3;
-						enemy = hit.transform.gameObject.GetComponent<basicEnemy>();
-						enemy.hookHit();
+						//enemy = hit.transform.gameObject.GetComponent<basicEnemy>();
+						//enemy.hookHit();
 						ropeShoot.Stop ();
 					}
+					ropeShoot.Stop();
+
+
 					
 				}
 				else{

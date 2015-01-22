@@ -160,7 +160,7 @@ public static class GenerateCases
 
     public static int FindinBetween(int Corner1, int Corner2)
     {
-        int answer = -1;
+        //int answer = -1;
         if (Corner1 == 0 && Corner2 == 1 || Corner2 == 0 && Corner1 == 1)
         {
             return 0;
@@ -340,8 +340,8 @@ public static class GenerateCases
                 int index2 = getRealValue(i, 4);
                 if (a [b [index2]] == 0)
                 {
-                    int a1 = getRealValue(index2 - Direction, 4);
-                    int a2 = getRealValue(index2, 4);
+                    //int a1 = getRealValue(index2 - Direction, 4);
+                   // int a2 = getRealValue(index2, 4);
                     StartLine(b [getRealValue(index2 - Direction, 4)], a, b [index2], newPlane);
                     break;
                 }

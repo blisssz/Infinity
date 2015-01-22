@@ -200,8 +200,8 @@ public class Chunk
 
 	public int sumCube2 (int bin1, int bin2, int bin3)
 	{
-		int sum = 0;
-		int number=0;
+//		int sum = 0;
+//		int number=0;
 		List<int> Values=new List<int>();
 		List<int> Frequency=new List<int>();
 		

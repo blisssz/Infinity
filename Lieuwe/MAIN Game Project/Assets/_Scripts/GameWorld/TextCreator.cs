@@ -23,12 +23,15 @@ public class TextCreator  {
 			} else if(Char==';'){
 				enters++;
 				Position=StartPosition+EnterOffSet*enters;
-			} else {
-			GameObject Letter=ObjectSpawner.SpawnObjectWith(Position,"Letters/Text" + Char);
+			} else{
+				GameObject Letter=ObjectSpawner.SpawnObjectWith(Position,"Letters/Text" + Char);
+			Letter.AddComponent<Letter>();
+				Letter.AddComponent("Rigidbody");
+				Letter.rigidbody.useGravity = false;
+				Letter.AddComponent("MeshCollider");
 			SizeLetter=Letter.renderer.bounds.size.x;
 			Position+=OffSet+new Vector3(-SizeLetter,0,0);
 			}
-		}
-
+			}
 	}
 }

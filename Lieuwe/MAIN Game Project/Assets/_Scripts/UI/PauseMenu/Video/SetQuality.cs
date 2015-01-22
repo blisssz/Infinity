@@ -19,7 +19,8 @@ public class SetQuality : Navigation {
 	{
 		base.changeSetting (on);
 		QualitySettings.SetQualityLevel (currentSetting);
+		QualitySettings.vSyncCount = SetVSync.currentVsyncState;
 		setText (settings[currentSetting]);
 	}
-
+	
 }

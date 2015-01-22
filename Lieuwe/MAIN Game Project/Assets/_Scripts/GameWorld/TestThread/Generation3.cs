@@ -62,7 +62,7 @@ public class Generation3 : MonoBehaviour {
 
 		ChunkList.AA.Add ( new Material (shaderText));
 		ChunkList.AA.Add ( x);
-		Vector3[] b=new Vector3[4]{new Vector3(0,0,0),new Vector3(0,3,0),new Vector3(3,0,0),new Vector3(0,0,3)};
+//		Vector3[] b=new Vector3[4]{new Vector3(0,0,0),new Vector3(0,3,0),new Vector3(3,0,0),new Vector3(0,0,3)};
 		//ChunkList.UpdateDataChunks(Moves.Box(b,1));
 		Path Important=new Path(SpawnPosition,minOneDistance);
 		Important.UpdateList.Add (new Move(5, SpawnPosition,minOneDistance,Important));
@@ -207,7 +207,7 @@ public class Generation3 : MonoBehaviour {
 	public void AfterMove (Vector3 Position){
 
 		ObjectSpawner.SpawnObject(Position+new Vector3(0.75f,1,0.5f),"TunnelLight");
-		int Choice=HelpScript.Switch(new float[5]{0.7f,0.05f,ChanceOnAmmo,0.1f,0.1f});
+		int Choice=HelpScript.Switch(new float[5]{0.7f,ChanceOnAmmo+1,0.05f,0.1f,0.1f});
 		switch(Choice){
 		case 0:
 			ObjectSpawner.SpawnObject(Position,"Coin");
@@ -219,10 +219,10 @@ public class Generation3 : MonoBehaviour {
 			ObjectSpawner.SpawnObject(Position,"MedPack");
 			break;
 		case 3:
-			Spawner.addSpawnLocation(Position);//,EnemyTypes.bunny1);
+			Spawner.addSpawnLocation(Position, EnemyTypes.bunny1);
 			break;
 		case 4:
-			Spawner.addSpawnLocation (Position);//,EnemyTypes.flying1);
+			Spawner.addSpawnLocation (Position, EnemyTypes.flying1);
 			break;
 		default:
 			break;

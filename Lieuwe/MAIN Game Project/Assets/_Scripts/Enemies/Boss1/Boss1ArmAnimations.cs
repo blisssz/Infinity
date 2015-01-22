@@ -20,7 +20,7 @@ public class Boss1ArmAnimations : MonoBehaviour {
 	
 	if (animator) {
 			//get the current state
-			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo (0);
+			//AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo (0);
 
 			if (DistanceToObject (Player) <18){
 				animator.SetBool("attack",true);

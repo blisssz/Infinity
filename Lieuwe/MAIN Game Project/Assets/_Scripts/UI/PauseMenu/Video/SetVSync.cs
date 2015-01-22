@@ -3,7 +3,8 @@ using System.Collections;
 
 public class SetVSync : Navigation {
 	
-	
+	public static int currentVsyncState = 1;
+
 	// Use this for initialization
 	void Awake () {
 		currentSetting = 1;
@@ -17,8 +18,10 @@ public class SetVSync : Navigation {
 		QualitySettings.vSyncCount = boolToInt (on);
 		if(on == true){
 			setText ("ON");
+			currentVsyncState = 1;
 		}else{
 			setText ("OFF");
+			currentVsyncState = 0;
 		}
 	}
 

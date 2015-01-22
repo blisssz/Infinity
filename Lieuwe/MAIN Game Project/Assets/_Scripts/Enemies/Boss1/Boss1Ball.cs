@@ -10,12 +10,14 @@ public class Boss1Ball : MonoBehaviour {
 	private int soundCount;
 	private GameObject boss;
 	private Vector3 gravityDirection;
+	public AudioSource GotHit;
 
 	void Update() {
 		if (boss == null) {
 			boss = GameObject.FindWithTag ("BOSS1");
+			GotHit=this.GetComponent<AudioSource>();
 		} else if(transform.parent!=null){
-			if(transform.parent.transform.position==null){return;}
+			//if(transform.parent.transform.position==null){return;}
 			gravityDirection = (transform.position - transform.parent.transform.position);
 			if (gravityDirection.magnitude < 5f) {
 				rigidbody.AddForce( - 12*gravityDirection);
@@ -31,8 +33,9 @@ public class Boss1Ball : MonoBehaviour {
 		} else {
 			counter = 0;
 		}
-		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 10){
+		if(transform.parent!=null&&(transform.position - transform.parent.transform.position).magnitude > 6){
 			transform.parent = null;
+			GotHit.Play();
 		}
 
 	}

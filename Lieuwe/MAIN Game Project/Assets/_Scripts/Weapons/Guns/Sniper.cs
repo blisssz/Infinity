@@ -23,16 +23,17 @@ public class Sniper : Gun {
 	private const float lerptime = 0.1f;
 	private float startingFOV;
 	private const float zoomFOV = 30f;
-	private const float scrollSpeed = 25f;
+	private const float scrollSpeed = 250f;
 
 	private bool shot = false;
 	private float easeOut = 3f; //Handle a ease out of the zooming animation
 
-	private const int bulletsInMagazine = 3;
+
 	private const int startingMagazines = 5;
 
 	// Use this for initialization
 	void Awake () {
+		bulletsInMagazine = 3;
 		magazineBulletsLeft = startingMagazines * bulletsInMagazine;
 		bulletRange = 10000f;
 		bulletOffset = 0f;
@@ -42,6 +43,7 @@ public class Sniper : Gun {
 		timeStamp = Time.time;
 		bulletsLeftInMagazine = bulletsInMagazine;
 		anim = GetComponent<Animator>();
+
 	}
 
 	void Start () {
@@ -90,6 +92,7 @@ public class Sniper : Gun {
 			//If left shift is held down, aim
 			if (aim == true) {
 				anim.SetBool(zoomHash, true);
+				//Camera.main.GetComponent<IndieEffects>().enabled=true;
 			}
 			else if(aimhold == true){
 				if(reloading == true){
@@ -113,6 +116,7 @@ public class Sniper : Gun {
 			}
 			else if(aimRelease == true){
 				anim.SetBool(zoomHash, false);
+				//Camera.main.GetComponent<IndieEffects>().enabled=false;
 			}
 			else if(camerazoomed == true){
 				foreach(Camera camera in cameras){
@@ -178,6 +182,8 @@ public class Sniper : Gun {
 
 		AudioSource.PlayClipAtPoint(audioReload, transform.position, 1f);
 		anim.SetBool(reloadHash, false);
+		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 
 		yield return new WaitForSeconds (reloadTime - (0.7f + extraTime));
 		yield return new WaitForSeconds (0.525f);

@@ -143,7 +143,6 @@ public class AA : MonoBehaviour
 		// DLAA antialiasing ...........................................................
 		
 			fxRes.RT.anisoLevel = 0;	
-			var interim = fxRes.RT;
 			IndieEffects.FullScreenQuad(dlaa);			
 			IndieEffects.FullScreenQuad(dlaa);					
 		}

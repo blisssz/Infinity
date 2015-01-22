@@ -1,10 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PickUp : MonoBehaviour
 {
 		public float rotationSpeed;
-		private Vector3 pos;
 		public GameObject coinPickup;
 		public int PickUpNumber;
 		private bool Started;
@@ -44,16 +43,16 @@ public class PickUp : MonoBehaviour
 						GameObject Player = col.transform.root.gameObject;
 						Destroy (gameObject);
 						if (PickUpNumber == 0) {
-								Instantiate (coinPickup, pos, Quaternion.identity);
+								Instantiate (coinPickup, this.transform.position, Quaternion.identity);
 								score.scoreUp (10);
 								highScore.pickUpCoin ();
 						} else if (PickUpNumber == 1) {
-								Instantiate (coinPickup, pos, Quaternion.identity);
+								Instantiate (coinPickup, this.transform.position, Quaternion.identity);
 								Player.GetComponent<HPmanager> ().doDamage (-50);
 								highScore.pickUpHealth ();
 
 						} else if (PickUpNumber == 2) {
-								Instantiate (coinPickup, pos, Quaternion.identity);
+								Instantiate (coinPickup, this.transform.position, Quaternion.identity);
 								GameObject Weapon = Player.GetComponent<PlayerManager> ().getCurrentWeapon ();
 								if (Weapon.GetComponent<Gun> ()) {
 										Weapon.GetComponent<Gun> ().addMagazines(2);

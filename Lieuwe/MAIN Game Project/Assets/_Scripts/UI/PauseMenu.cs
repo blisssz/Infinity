@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour {
 	public static bool paused = false;
 	private static int pauseState = 1; //1 main pause menu, 2 options, 3 video, 4 audio, 5 controls, 6 customization etc...
 	
+	public AudioClip soundClick;
+
 	public GameObject Pausemenu;
 	public GameObject Main;
 	public GameObject Options;
@@ -16,14 +18,11 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject Controls;
 	public GameObject Customization;
 	public GameObject ColorPreview;
-	private Image background;
+	
 	private Dictionary<int, GameObject> pauseScreens;
-
-	//public Image background; //currently not used
-
+	
 	// Use this for initialization
 	void Start () {
-		background = Pausemenu.GetComponent<Image> ();
 		pauseScreens = new Dictionary<int, GameObject>();
 		pauseScreens.Add (1, Main);
 		pauseScreens.Add (2, Options);
@@ -32,9 +31,6 @@ public class PauseMenu : MonoBehaviour {
 		pauseScreens.Add (5, Controls);
 		pauseScreens.Add (6, Customization);
 		//etc
-
-
-		//background.CrossFadeAlpha(0f,0f,false);
 	}
 	
 	// Update is called once per frame
@@ -64,6 +60,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void togglePause(){
 		if (PauseMenu.paused == false) {
+			//Pause the game
 			Screen.lockCursor = false;
 			Screen.showCursor = true;
 			paused = true;
@@ -73,14 +70,21 @@ public class PauseMenu : MonoBehaviour {
 			Time.timeScale = 0.0f;
 		} 
 		else {
-			Time.timeScale = 1f;
-			GameObject.FindGameObjectWithTag ("Player").GetComponent<MouseLook>().enabled = true;
-			GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>().enabled = true;
-			toggleGUI(Pausemenu, false);
+			//Unpause the game
+			unPause ();
 			Screen.showCursor = false;
 			Screen.lockCursor = true;
-			paused = false;
 		}
+	}
+
+	public void unPause(){
+		//Unpause the game
+		playAudio (soundClick, 0.5f);
+		Time.timeScale = 1f;
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<MouseLook>().enabled = true;
+		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>().enabled = true;
+		toggleGUI(Pausemenu, false);
+		paused = false;
 	}
 
 	/**
@@ -130,6 +134,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void switchPauseState(int state){
+		playAudio (soundClick, 0.5f);
 		int previousState = pauseState;
 		pauseState = state;
 		pauseScreens [previousState].SetActive (false);
@@ -137,7 +142,24 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void newLevel(){
-		Time.timeScale=1f;
+		unPause ();
+		Screen.showCursor = false;
+		Screen.lockCursor = true;
 		Application.LoadLevel ("Main Scene");
+	}
+
+	public void quitToMenu() {
+		unPause ();
+		Application.LoadLevel ("StartMenu");
+	}
+
+	private void playAudio (AudioClip clip, float volume){
+		Time.timeScale = 1f;
+		AudioSource.PlayClipAtPoint(clip, new Vector3(0,0,0), volume);
+		Time.timeScale = 0f;
+	}
+
+	public void playClickAudio(){
+		playAudio (soundClick, 0.5f);
 	}
 }

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using System.Collections.Generic;
 
 public class Navigation : MonoBehaviour {
 
@@ -9,21 +8,8 @@ public class Navigation : MonoBehaviour {
 
 	public int currentSetting;
 	public int maxSetting;
-
-
-	// Use this for initialization
-	void Start () {
-
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		//Debug.Log (Screen.GetResolution);
-//		foreach (Resolution resolution in Screen.GetResolution) {
-//			Debug.Log (resolution.width + "px x " + resolution.height + "px @" + resolution.refreshRate + "Hz");
-//		}
-		//Debug.Log ((Screen.GetResolution).Length);
-	}
+	public AudioClip soundClick;
 
 	public void setText (string text){
 		displayText.text = text;	
@@ -31,11 +17,29 @@ public class Navigation : MonoBehaviour {
 
 	public virtual void changeSetting (bool up){
 		if(up == true){
+			if(currentSetting != maxSetting){
+				playAudio (soundClick, 0.5f);
+			}
 			currentSetting++;
 		}
 		else{
-			currentSetting--;	
+			if(currentSetting != 0){
+				playAudio (soundClick, 0.5f);
+			}
+			currentSetting--;
 		}
 		currentSetting = Mathf.Clamp (currentSetting, 0, maxSetting);
+	}
+
+	private void playAudio (AudioClip clip){
+		Time.timeScale = 1f;
+		AudioSource.PlayClipAtPoint(clip, new Vector3(0,0,0));
+		Time.timeScale = 0f;
+	}
+
+	private void playAudio (AudioClip clip, float volume){
+		Time.timeScale = 1f;
+		AudioSource.PlayClipAtPoint(clip, new Vector3(0,0,0), volume);
+		Time.timeScale = 0f;
 	}
 }

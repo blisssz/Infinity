@@ -51,8 +51,9 @@ public class BOSS1script : MonoBehaviour
 						if (returnNearestObjectDistance ("Boss1Balls") > 100) {
 								Destroy (this.gameObject, 10);
 								if (deathAnimation == false) {
-										GameObject soundbody;
-										soundbody = Instantiate (Boss1DeathSound, (transform.position - new Vector3 (0, 1.2f, 0)), transform.rotation) as GameObject;
+										//GameObject soundbody;
+								//		/*soundbody = */
+					Instantiate (Boss1DeathSound, (transform.position - new Vector3 (0, 1.2f, 0)), transform.rotation);
 								}
 								deathAnimation = true;
 
@@ -85,8 +86,7 @@ public class BOSS1script : MonoBehaviour
 		{
 				float nearestDistanceSqr = Mathf.Infinity;
 				GameObject[] taggedGameObjects = GameObject.FindGameObjectsWithTag (gtag); 
-				GameObject:
-				Transform nearestObj = null;
+				//GameObject:Transform nearestObj = null;
 		
 				// loop through each tagged object, remembering nearest one found
 				foreach (GameObject obj in taggedGameObjects) {
@@ -95,7 +95,7 @@ public class BOSS1script : MonoBehaviour
 						float distanceSqr = (objectPos - transform.position).sqrMagnitude;
 			
 						if (distanceSqr < nearestDistanceSqr) {
-								nearestObj = obj.transform;
+								//nearestObj = obj.transform;
 								nearestDistanceSqr = distanceSqr;
 						}
 				}

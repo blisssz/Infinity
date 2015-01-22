@@ -1,0 +1,88 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class CrosshairPreview : MonoBehaviour {
+	
+	public GameObject LeftCrosshair;
+	public GameObject RightCrosshair;
+	public GameObject UpperCrosshair;
+	public GameObject LowerCrosshair;
+	public SetLength setLengthPanel;
+	public SetThickness setThicknessPanel;
+	public SetSpread setSpreadPanel;
+
+	public static CrosshairPreview thisObject;
+	
+	void Awake(){
+		thisObject = this;
+		setLength (setLengthPanel.currentSetting);
+		setThickness (setThicknessPanel.currentSetting);
+		setSpread (setSpreadPanel.currentSetting);
+	}
+	
+	/**
+	 * A function for setting the length of the crosshairs in pixels
+	 */
+	public void setLength(float length){
+		RectTransform leftCrosshair = LeftCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform rightCrosshair = RightCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform upperCrosshair = UpperCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform lowerCrosshair = LowerCrosshair.transform.GetComponent<RectTransform>();
+		
+		leftCrosshair.sizeDelta = new Vector2(length, leftCrosshair.sizeDelta.y);
+		rightCrosshair.sizeDelta = new Vector2(length, rightCrosshair.sizeDelta.y);
+		upperCrosshair.sizeDelta = new Vector2(upperCrosshair.sizeDelta.x, length);
+		lowerCrosshair.sizeDelta = new Vector2(lowerCrosshair.sizeDelta.x, length);
+	}
+	
+	/**
+	 * A function for setting the thickness of the crosshairs in pixels
+	 */
+	public void setThickness(float thickness){
+		RectTransform leftCrosshair = LeftCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform rightCrosshair = RightCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform upperCrosshair = UpperCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform lowerCrosshair = LowerCrosshair.transform.GetComponent<RectTransform>();
+		
+		leftCrosshair.sizeDelta = new Vector2(leftCrosshair.sizeDelta.x, thickness);
+		rightCrosshair.sizeDelta = new Vector2(rightCrosshair.sizeDelta.x, thickness);
+		upperCrosshair.sizeDelta = new Vector2(thickness, upperCrosshair.sizeDelta.y);
+		lowerCrosshair.sizeDelta = new Vector2(thickness, lowerCrosshair.sizeDelta.y);
+	}
+	
+	/**
+	 * A function for setting the spread of the crosshairs in pixels from the center
+	 */
+	public void setSpread(float spread){
+		RectTransform leftCrosshair = LeftCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform rightCrosshair = RightCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform upperCrosshair = UpperCrosshair.transform.GetComponent<RectTransform>();
+		RectTransform lowerCrosshair = LowerCrosshair.transform.GetComponent<RectTransform>();
+		
+		leftCrosshair.localPosition = new Vector3 (-spread, 0, 0);
+		rightCrosshair.localPosition = new Vector3 (spread, 0, 0);
+		upperCrosshair.localPosition = new Vector3 (0, spread, 0);
+		lowerCrosshair.localPosition = new Vector3 (0, -spread, 0);
+	}
+	
+	/**
+	 * A function for changing the color of the crosshairs
+	 */
+	public void setColor(Color color){
+		LeftCrosshair.transform.GetComponent<Image>().color = color;
+		RightCrosshair.transform.GetComponent<Image>().color = color;
+		UpperCrosshair.transform.GetComponent<Image>().color = color;
+		LowerCrosshair.transform.GetComponent<Image>().color = color;
+	}
+	
+	/**
+	 * A function for changing only the alpha value of the current color of the crosshairs
+	 */
+	public void setTransparency(float transparency){
+		Color color = LeftCrosshair.transform.GetComponent<Image>().color;
+		color.a = transparency;
+		setColor(color);
+	}
+	
+}

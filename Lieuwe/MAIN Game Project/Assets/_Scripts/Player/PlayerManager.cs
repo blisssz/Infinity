@@ -26,13 +26,13 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject jetpack;
 	
 	//UI
-	public GameObject UIfixed;
-	private GameObject Crosshair;
+	public GameObject Crosshair;
+	public AudioSource Sound;
 	private bool started=false;
 	
 	private bool switcher = false;
 	
-	public static int useWeaponID = 5;
+	public static int useWeaponID = 6;
 	
 	//	private int[] weaponID = {0, 1, 2, 3, 4};
 	
@@ -42,12 +42,22 @@ public class PlayerManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
+		Sound=GetComponent<AudioSource>();
 		if(Application.loadedLevelName.Equals("Doolhof")){
 			Camera[] Cameras=GetComponentsInChildren<Camera>();
 			for(int i=0; i<Cameras.Length;i++){
 				if(Cameras[i].name.Equals ("Main Camera")){
 					Cameras[i].farClipPlane=100;
+					Cameras[i].clearFlags=CameraClearFlags.SolidColor;
+				}
+			}
+		}
+
+		if(useWeaponID==6){
+			Camera[] Cameras=GetComponentsInChildren<Camera>();
+			for(int i=0; i<Cameras.Length;i++){
+				if(Cameras[i].name.Equals ("Main Camera")){
+					//Cameras[i].clearFlags=CameraClearFlags.Skybox;
 				}
 			}
 		}
@@ -69,9 +79,13 @@ public class PlayerManager : MonoBehaviour {
 			if (child.name.Equals ("Player_Head")){
 				playerHeadObject = child.gameObject;
 			}
+
+			if (child.name.Equals("Main Camera")&&useWeaponID!=6){
+				child.gameObject.AddComponent<CameraShake>();
+			}
 		}
 		
-		Crosshair = Instantiate(UIfixed) as GameObject;
+
 		Crosshair.SetActive (false);
 		SwitchWeapon();
 
@@ -139,6 +153,7 @@ public class PlayerManager : MonoBehaviour {
 						currentWeapon.GetComponent<MachineGun>().equip(true);
 					}	else if(useWeaponID==6){
 						currentWeapon.GetComponent<Sniper>().equip(true);
+						setCrosshair(false);
 					}
 
 				}

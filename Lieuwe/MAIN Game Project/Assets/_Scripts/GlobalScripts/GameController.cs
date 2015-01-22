@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public GameObject UI;
 	public static Vector3 spawnLocation;
 	public static Vector3 StartPosition;
+	public GameObject UIfixed;
 
 	private bool mainPlayerAlive = false;
 	private GameObject thePlayer;
@@ -23,12 +24,17 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		GameController.fallingPossible = true;
 		AudioList.StartX ();
 		spawnLocation=this.transform.position;   //StartPostion in Level
 		keyManager = new KeyManager();
 		lifes = startLifes;
+
 		Instantiate(UI);
+		UIfixed = Instantiate(UIfixed) as GameObject;
+		LivesScript.SetLives (lifes);
+		Jetpack.reset();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +51,7 @@ public class GameController : MonoBehaviour {
 		// simple spawner
 		if (mainPlayerAlive == false && mainPlayer != null){
 			thePlayer = GameObject.Instantiate(mainPlayer, spawnLocation, Quaternion.identity) as GameObject;
+			thePlayer.GetComponent<PlayerManager>().Crosshair=UIfixed;
 			playerPosition = mainPlayer.transform.position;
 			mainPlayerAlive = true;
 			dead = false;
@@ -68,6 +75,9 @@ public class GameController : MonoBehaviour {
 		mainPlayerAlive = false;
 		dead = true;
 		lifes -= 1;
+		LivesScript.SetLives (lifes);
+		Vignetting.FadeTheAlpha(100f);
+
 	}
 
 	public static void ResetAll(){
@@ -79,6 +89,7 @@ public class GameController : MonoBehaviour {
 
 	public static void AddLifes(int number){
 		lifes+=number;
+		LivesScript.SetLives (lifes);
 	}
 
 

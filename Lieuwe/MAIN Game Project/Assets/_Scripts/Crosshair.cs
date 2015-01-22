@@ -11,22 +11,11 @@ public class Crosshair : MonoBehaviour {
 	public GameObject UpperCrosshair;
 	public GameObject LowerCrosshair;
 
-	void Awake(){
-		drawCrosshair (false);
-	}
+	public static Crosshair thisObject;
 
-	void Update() {
-		bool key1 = KeyManager.key1 == 1; // tap key once
-		if (key1 == true) {
-			if (switcher == false) {
-				drawCrosshair (true);
-				switcher = true;
-			} 
-			else {
-				drawCrosshair (false);
-				switcher = false;
-			}
-		}
+	void Awake(){
+//		drawCrosshair (false);
+		thisObject = this;
 	}
 
 	/**

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HPmanager : MonoBehaviour {
@@ -10,6 +10,9 @@ public class HPmanager : MonoBehaviour {
 
 	private float velMinTreshold = 0f;
 	private float velMaxTreshold = 100f;
+	private float TimeOfLastHit;
+	public AudioClip X;
+	public AudioSource Sound;
 
 
 	public bool velBasedDmg = false;
@@ -23,24 +26,26 @@ public class HPmanager : MonoBehaviour {
 	/// <param name="max">Max.</param>
 	/// <param name="all">If set to <c>true</c> all.</param>
 	public void doDamage(float dmg, Vector3 vel, float min, float max, bool all){
+		float DeltaHp=0;
 		if (all){
-			hp -= dmg * dmgModifier;
+			DeltaHp=- dmg * dmgModifier;
 			if (vel.magnitude > min){
-				hp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
+				DeltaHp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
 			}
 		}
 
 		else{
 			if (!velBasedDmg){
-				hp -= dmg * dmgModifier;
+				DeltaHp =- dmg * dmgModifier;
 			}
 			else if (vel.magnitude > min){
-				hp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
+				DeltaHp =- Mathf.Min(vel.magnitude, max) * dmgModifier;
 			}
 
 		}
+		hp+=DeltaHp;
 		if(hp>maxhp){hp=maxhp;}
-		UpdateSlider ();
+		UpdateSlider (DeltaHp);
 
 	}
 
@@ -51,29 +56,32 @@ public class HPmanager : MonoBehaviour {
 	/// <param name="vel">Vel.</param>
 	/// <param name="all">If set to <c>true</c> ignores dmg on velocity OR dmg function</param>
 	public void doDamage(float dmg, Vector3 vel, bool all){
+		float DeltaHp=0;
 		if (all){
-			hp -= dmg * dmgModifier;
+			DeltaHp =- dmg * dmgModifier;
 
 		}
 		else{
 			if (!velBasedDmg){
-				hp -= dmg * dmgModifier;
+				DeltaHp =- dmg * dmgModifier;
 			}
 			else{
 				doDamage(vel, velMinTreshold, velMaxTreshold);
 			}
 		}
 		if(hp>maxhp){hp=maxhp;}
-		UpdateSlider ();
+		UpdateSlider (DeltaHp);
 	}
 
 
 	public void doDamage(float dmg){
+		float DeltaHp=0;
 		if (!velBasedDmg){
-			hp -= dmg * dmgModifier;
+			DeltaHp = -dmg * dmgModifier;
+			hp +=DeltaHp;
 		}
 		if(hp>maxhp){hp=maxhp;}
-		UpdateSlider ();
+		UpdateSlider (DeltaHp);
 	}
 
 	/// <summary>
@@ -83,11 +91,13 @@ public class HPmanager : MonoBehaviour {
 	/// <param name="min">Minimum.</param>
 	/// <param name="max">Max.</param>
 	public void doDamage(Vector3 vel, float min, float max){
+		float DeltaHp=0;
 		if (vel.magnitude > min){
-			hp -= Mathf.Min(vel.magnitude, max) * dmgModifier;
+			DeltaHp=-Mathf.Min(vel.magnitude, max) * dmgModifier;
+			hp +=DeltaHp;
 		}
 		if(hp>maxhp){hp=maxhp;}
-		UpdateSlider ();
+		UpdateSlider (DeltaHp);
 	}
 
 
@@ -112,15 +122,32 @@ public class HPmanager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if(hp>maxhp){hp=maxhp;}
-		UpdateSlider ();
+		UpdateSlider (0);
+		Sound=this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
-	public void UpdateSlider () {
-		if(this.tag.Equals ("Player")){
+	public void UpdateSlider (float DeltaHp) {
+		if(this.tagS.Equals ("Player")){
 			if(sliderFill==null){
 				sliderFill = GameObject.FindWithTag ("Health");}
 			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
+			if(TimeOfLastHit+1<Time.realtimeSinceStartup&&DeltaHp<0){
+				TimeOfLastHit=Time.realtimeSinceStartup;
+				GameObject Player=this.gameObject;
+
+				Player.GetComponent<PlayerManager>().Sound.pitch=HelpScript.Rand(0.8f,1.2f);
+				Player.GetComponent<PlayerManager>().Sound.Play();
+
+			}
+		}
+
+		if(this.tagS.Equals ("Enemy")||this.tagS.Equals ("EnemyHead")&&DeltaHp<0){
+			if(Sound==null){
+				Sound=this.GetComponent<AudioSource>();
+			}
+			Sound.pitch=HelpScript.Rand(0.8f,1.2f);
+			Sound.Play();
 		}
 	}
 }

@@ -25,6 +25,9 @@ public class gravityBoss : MonoBehaviour {
 	public GameObject weakPoint;
 	private bool dead;
 	public GameObject cannon;
+	public AudioClip CannonSound;
+	public AudioClip HitSound;
+	private float TimeSinceHit;
 
 	// Use this for initialization
 	void Start () {
@@ -63,6 +66,7 @@ public class gravityBoss : MonoBehaviour {
 			}
 			glassPieces[i] = Instantiate (glass, cannon.transform.position + new Vector3(glassOffset[0],glassOffset[1], glassOffset[2]), Quaternion.identity) as shatteredGlass;
 		}
+		AudioSource.PlayClipAtPoint(CannonSound,transform.position,4f);
 	}
 
 	// If the boss gets hit by its own glasspieces, it reduces life
@@ -77,6 +81,10 @@ public class gravityBoss : MonoBehaviour {
 				dead = true;
 			}
 
+		}
+		if(TimeSinceHit+2<Time.realtimeSinceStartup){
+			TimeSinceHit=Time.realtimeSinceStartup;
+			AudioSource.PlayClipAtPoint(HitSound,transform.position,4f);
 		}
 	}
 

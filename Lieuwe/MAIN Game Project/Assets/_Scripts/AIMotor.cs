@@ -120,6 +120,7 @@ public class AIMotor {
 				}
 			}
 			catch (System.Exception e){
+				Debug.Log (e);
 			}
 
 			return forceUpOut;

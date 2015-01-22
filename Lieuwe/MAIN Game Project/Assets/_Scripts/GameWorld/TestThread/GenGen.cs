@@ -44,25 +44,25 @@ public class GenGen : MonoBehaviour {
 				"}" +
 				"}";
 		
-		var shaderText2 =
-			"Shader \"Alpha Additive\" {" +
-				"Properties { _Color (\"Main Color\", Color) = (0.66,0.44,0.37,0) }" +
-				"SubShader {" +
-				"	Tags { \"Queue\" = \"Transparent\" }" +
-				"	Pass {" +
-				"		ColorMask RGB" +
-				"		Material { Diffuse [_Color] Ambient [_Color] }" +
-				"		Lighting On" +
-				"		SetTexture [_Dummy] { combine primary double, primary }" +
-				"	}" +
-				"}" +
-				"}";
+//		var shaderText2 =
+//			"Shader \"Alpha Additive\" {" +
+//				"Properties { _Color (\"Main Color\", Color) = (0.66,0.44,0.37,0) }" +
+//				"SubShader {" +
+//				"	Tags { \"Queue\" = \"Transparent\" }" +
+//				"	Pass {" +
+//				"		ColorMask RGB" +
+//				"		Material { Diffuse [_Color] Ambient [_Color] }" +
+//				"		Lighting On" +
+//				"		SetTexture [_Dummy] { combine primary double, primary }" +
+//				"	}" +
+//				"}" +
+//				"}";
 		
 		minOneDistance=30;
 		ChunkList.AA.Add ( new Material (shaderText));
 		ChunkList.AA.Add ( x);
 		ChunkList.AA[1].color=Color.red;
-		Vector3[] b=new Vector3[4]{new Vector3(0,0,0),new Vector3(0,3,0),new Vector3(3,0,0),new Vector3(0,0,3)};
+		//Vector3[] b=new Vector3[4]{new Vector3(0,0,0),new Vector3(0,3,0),new Vector3(3,0,0),new Vector3(0,0,3)};
 		//ChunkList.UpdateDataChunks(Moves.Box(b,1));
 		Path Important=new Path(SpawnPosition,minOneDistance);
 		Important.UpdateList.Add (new Move(5, SpawnPosition,minOneDistance,Important));

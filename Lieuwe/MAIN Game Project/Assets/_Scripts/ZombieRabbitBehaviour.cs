@@ -106,6 +106,7 @@ public class ZombieRabbitBehaviour : MonoBehaviour {
 		GameObject gobj = GameObject.FindGameObjectWithTag("Player");
 		if (gobj != null){
 			gobj.GetComponent<HPmanager>().doDamage(dmg);
+			CameraShake.shakeMainCamera();
 		}
 	}
 	

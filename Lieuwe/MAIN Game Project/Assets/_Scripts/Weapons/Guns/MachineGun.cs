@@ -24,7 +24,7 @@ public class MachineGun : Gun {
 	private const float bulletOffsetHip = 0.06f;
 	private const float bulletOffsetZoomed = 0.001f;
 
-	private const int bulletsInMagazine = 100;
+//	private const int 
 	private const int startingMagazines = 5;
 
 //	private Vector3 totalRotation = new Vector3(0,0,0);
@@ -35,6 +35,7 @@ public class MachineGun : Gun {
 
 	// Use this for initialization
 	void Awake () {
+		bulletsInMagazine = 100;
 		magazineBulletsLeft = startingMagazines * bulletsInMagazine;
 		bulletRange = 1000f;
 		bulletOffset = bulletOffsetHip;
@@ -44,6 +45,7 @@ public class MachineGun : Gun {
 		timeStamp = Time.time;
 		bulletsLeftInMagazine = bulletsInMagazine;
 		anim = GetComponent<Animator>();
+
 	}
 
 	void Start () {
@@ -225,6 +227,8 @@ public class MachineGun : Gun {
 		yield return new WaitForSeconds (1.50f);
 
 		AudioSource.PlayClipAtPoint(reloadAttach, transform.position, 1f);
+		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 
 		yield return new WaitForSeconds (reloadTime - (2f + extraTime));
 

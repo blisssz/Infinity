@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -636,8 +636,8 @@ public class PogoBoss : MonoBehaviour {
 
 	private void eyeFindTarget(GameObject player, float t){
 
-		float rad = Random.Range (0f, 1f) * 2f * Mathf.PI;
-		Vector3 lookDir = new Vector3(Mathf.Cos (rad),0 , Mathf.Sin(rad));
+		//float rad = Random.Range (0f, 1f) * 2f * Mathf.PI;
+		//Vector3 lookDir = new Vector3(Mathf.Cos (rad),0 , Mathf.Sin(rad));
 
 		if (player != null){
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum EnemyTypes{undefined, flying1, bunny1}
+public enum EnemyTypes{undefined, flying1, bunny1, flying2}
 
 public class SpawnInfo{
 	public Vector3 spawnLocation;
@@ -239,33 +239,48 @@ public class Spawner {
 	}
 
 	private static EnemyTypes getEnemyTypeByChances(){
-
+		
 		List<float> chanceList = new List<float>();
+		chanceList.Add (0f);
 		float accumulatedChance = 0f;
-
+		
 		for (int i = 0; i < enemySpawnParams.Length; i++){
 			chanceList.Add(enemySpawnParams[i].createSpawnerChance + accumulatedChance);
 			accumulatedChance += enemySpawnParams[i].createSpawnerChance;
+			
 		}
-
+		
 		float rnd = Random.Range(0f, accumulatedChance);
-
-		int lastIndex = -1;
-		float flipper = 0f;
-
-		float chanceI = 10000;
-
-		int ii = -1;
-		while (rnd < chanceI){
-			ii++;
-			chanceI = chanceList[ii];
-			if (ii == (chanceList.Count -1)){
-				break;
+		
+		int lastIndex = 0;
+		float max = 0;
+		if (chanceList.Count != 0){
+			max = chanceList[0];
+			
+			for (int i = 1; i < chanceList.Count; i++){
+				if (rnd > max){
+					max = chanceList[i];
+					lastIndex = i-1;
+				}
 			}
 		}
-
-		return enemySpawnParams[ii].enemyType;
-
+		return enemySpawnParams[lastIndex].enemyType;
+		
 	}
-
+	
+	private static float getMaxListValue(List<float> L){
+		float max = 0;
+		if (L.Count != 0){
+			max = L[0];
+			
+			for (int i = 1; i < L.Count; i++){
+				if (max < L[i]){
+					max = L[i];
+				}
+			}
+		}
+		
+		return max;
+	}
+	
 }

@@ -90,6 +90,7 @@ public class SoundObjectSpawner : MonoBehaviour {
 		}
 		catch (System.Exception e){
 			Debug.Log ("tag: <|" + soundTag + "|> does not exist");
+			Debug.Log (e);
 		}
 	}
 	

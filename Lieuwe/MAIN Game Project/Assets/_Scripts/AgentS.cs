@@ -13,7 +13,7 @@ public class AgentS : MonoBehaviour {
 	public float globalFitnessFac = 1f;
 	public int globalTrackFrames = 30;		// frame count to track globalFitness with strength globalFitnessStrength
 
-	public string tag = "Agent";	// must be set in the editor else it doesnt work
+	public string tagS = "Agent";	// must be set in the editor else it doesnt work
 	private SensorProximity[] sensorArray;
 	private GameObject[] friendlyArray;
 
@@ -127,7 +127,7 @@ public class AgentS : MonoBehaviour {
 
 		sensorArray = SensorProximity.createSensors(this.transform, nSensors, 180f, 1f, 0.5f, 0.3f);
 		aimotor = new AIMotor(this.gameObject, cp);
-		this.tag = tag;
+		this.tag = tagS;
 
 		trackFitness = 0f;
 	}
@@ -482,7 +482,7 @@ public class AgentS : MonoBehaviour {
 	/// </summary>
 	private float PSO(float groupDistance, float minGroupDistance){
 		float rotAngle = 0f;
-		friendlyArray = GameObject.FindGameObjectsWithTag(this.tag);
+		friendlyArray = GameObject.FindGameObjectsWithTag(this.tagS);
 
 		/*
 		 * <-unity bug-> clone object without instantiating while using find with tag, also not showing up in the hierachy. Restarting unity fixes it.

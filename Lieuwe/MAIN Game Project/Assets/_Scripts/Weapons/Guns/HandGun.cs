@@ -11,11 +11,12 @@ public class HandGun : Gun {
 	private int ReloadHash = Animator.StringToHash("Reload");
 	private int isFiring = Animator.StringToHash("isFiring");
 	private int ShootStateHash = Animator.StringToHash("Base Layer.HandsGun1Shoot");
-	private const int bulletsInMagazine = 18;
+//	private const int 
 	private const int startingMagazines = 5;
 	
 	// Use this for initialization
 	void Awake () {
+		bulletsInMagazine = 18;
 		magazineBulletsLeft = startingMagazines * bulletsInMagazine;
 		bulletRange = 1000f;
 		bulletOffset = 0f;
@@ -25,6 +26,7 @@ public class HandGun : Gun {
 		timeStamp = Time.time;
 		bulletsLeftInMagazine = bulletsInMagazine;
 		anim = GetComponent<Animator>();
+
 	}
 
 	void Start () {
@@ -88,6 +90,8 @@ public class HandGun : Gun {
 	IEnumerator reload() {
 		anim.SetTrigger (ReloadHash);
 		yield return new WaitForSeconds (0.65f);
+		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 		AudioSource.PlayClipAtPoint(audioReload, transform.position, 1f);
 	}
 

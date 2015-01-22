@@ -42,9 +42,9 @@ public class ObjectSpawner : MonoBehaviour {
 				return i;
 			}
 		}
-		string S=Name + ".prefab";
+		//string S=Name + ".prefab";
 		//Debug.Log (S);
-		Object C=Resources.Load(S);
+		//Object C=Resources.Load(S);
 		if(Resources.Load( Name)!=null){
 			ObjectList.Add ((GameObject)Resources.Load(Name));
 				Names.Add (Name);} 

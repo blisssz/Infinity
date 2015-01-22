@@ -449,14 +449,14 @@ public class Generation : MonoBehaviour
 				GameController.fallingPossible = true;
 				settingSetter ();
 				setMoves();
-				Vector3 a = new Vector3 (0, 2, 0);
+		//		Vector3 a = new Vector3 (0, 2, 0);
 				//GameObject x = CreatePlane (a, minsize * 10);
-				Vector3 b = new Vector3 (10, 2, 0);
+//				Vector3 b = new Vector3 (10, 2, 0);
 
 				Moves = AddAllDirections (Moves);
 
-				a = new Vector3 (0, 20, 0);
-				//GameObject x = CreateCube (a, minsize * 10);
+		//		a = new Vector3 (0, 20, 0);
+		//		//GameObject x = CreateCube (a, minsize * 10);
 		
 		
 				Position = SpawnPosition-new Vector3(minsize/2,-1,minsize/2);

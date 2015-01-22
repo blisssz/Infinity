@@ -158,7 +158,7 @@ public class SensorProximity {
 		return sensorValues[1];
 	}
 
-	public string ToString(){
+	public override string ToString(){
 		string output = "";
 
 		output += "Sensor: " + transform.name + ", id: "+ transform.GetInstanceID() + " sensors values: <(" + sensorValues[0] + ","  +sensorValues[1]+ ")>";

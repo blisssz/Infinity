@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GrapplingHook : MonoBehaviour {
@@ -183,7 +183,7 @@ public class GrapplingHook : MonoBehaviour {
 					hitObject = hit.transform.gameObject;
 
 					ropeShoot.Stop();
-					if(hit.collider.tag.Equals("Enemy")){
+					if(hit.collider.tagS.Equals("Enemy")){
 						hookStatus = 3;
 						enemy = hit.transform.gameObject.GetComponent<basicEnemy>();
 						enemy.hookHit();

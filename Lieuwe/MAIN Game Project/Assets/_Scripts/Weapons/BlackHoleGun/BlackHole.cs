@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -32,7 +32,7 @@ public class BlackHole : MonoBehaviour {
 			{	//attract all rigidbodies that are affected by the gravity of the blackhole towards the black hole (if within range)
 				if(target != null){
 					// Make it possible to shoot projectiles at boss/enemies 
-					if(target.tag.Equals ("projectile")){
+					if(target.tagS.Equals ("projectile")){
 						float dist = (transform.position - target.transform.position).magnitude;
 							if(dist < radius){
 								Vector3 projectileForce = gravity * transform.forward * (radius - dist);
@@ -105,7 +105,7 @@ public class BlackHole : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if (shot == true){
 			if(collision.transform.root.gameObject.GetComponent<HPmanager>()){
-				collision.transform.root.gameObject.GetComponent<HPmanager>().doDamage(5);
+				collision.transform.root.gameObject.GetComponent<HPmanager>().doDamage(15);
 			}
 			if(collision.gameObject.tag.Equals("Player") == false){
 				BlackHole.AddRigidbody (player.GetComponent<GravityObject>()); //Make the player affected by the gravitational effect of the blackhole

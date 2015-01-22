@@ -14,6 +14,10 @@ public class Jetpack : MonoBehaviour {
 	private float thrustSpeed = 1000;
 	private static int maxFuel = 200;
 	private static int fuelLeft = maxFuel;
+	private AudioSource Sound;
+	public float minVolume;
+	public float maxVolume;
+	private bool Volume;
 
 	public static int FuelLeft {
 
@@ -26,7 +30,7 @@ public class Jetpack : MonoBehaviour {
 
 			fuelLeft = value;
 			if(sliderFill!=null){
-			sliderFill.GetComponent<SlidingBar> ().setValueFade (fuelLeft, maxFuel, true);
+			sliderFill.GetComponent<SlidingBar> ().setValueJetpack (fuelLeft, maxFuel, true);
 			}
 		}
 	}
@@ -36,7 +40,11 @@ public class Jetpack : MonoBehaviour {
 		player = GameObject.FindWithTag ("Player");
 		movementController = player.GetComponent<Movement1> ();
 		sliderFill = GameObject.FindWithTag ("Fuel");
-
+		Sound=this.GetComponent<AudioSource>();
+		if(Volume){
+			Sound.volume=minVolume;
+			Volume=false;
+		}
 	}
 
 	void Update () {
@@ -55,6 +63,7 @@ public class Jetpack : MonoBehaviour {
 		}
 
 		if(jetpackActive == true && player != null && FuelLeft > 0){
+
 			//Change this control later to the spacebar?
 			bool spaceHold = KeyManager.jump == 2;
 			bool forward = KeyManager.forward == 2;
@@ -75,6 +84,10 @@ public class Jetpack : MonoBehaviour {
 			}
 
 			if (spaceHold) {
+				if(!Volume){
+					Sound.volume=maxVolume;
+					Volume=true;
+				}
 				player.rigidbody.AddForce(0,thrustSpeed * thrustMultiplier,0);
 
 				if (forward == true){
@@ -95,10 +108,22 @@ public class Jetpack : MonoBehaviour {
 
 				FuelLeft--;
 			}
+			if (!spaceHold) {
+				if(Volume){
+					Sound.volume=minVolume;
+					Volume=false;
+				}
+			}
 		}
 		else{
 			//Player is null
+			if(Volume){
+				Sound.volume=minVolume;
+				Volume=false;
+			}
+			if(player==null){
 			player = GameObject.FindWithTag ("Player");
+			}
 		}
 
 
@@ -106,8 +131,10 @@ public class Jetpack : MonoBehaviour {
 
 	public static void reset(){
 		FuelLeft=maxFuel;
-		jetpackActive = !jetpackActive;
+		jetpackActive = true;
+		if(JetpackActivation.instance!=null){
 		JetpackActivation.instance.StopAllCoroutines();
-		JetpackActivation.instance.fuelStatus.SetActive(false);
+			JetpackActivation.instance.Reset();
+		}
 	}
 }

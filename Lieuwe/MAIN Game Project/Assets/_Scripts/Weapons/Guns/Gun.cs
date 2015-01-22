@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour {
 	private GameObject muzzleFlashInstance; 
 	private int knockback = 10;
 	private int playerKnockback = 0; //200 would probably be a good value when used
-	private int bulletsInMagazine;
+	protected int bulletsInMagazine;
 
 	void Update(){
 		//Make sure all muzzleflashes stay at the tip of the gun
@@ -79,17 +79,19 @@ public class Gun : MonoBehaviour {
 			SpawnMuzzleFlash();
 
 			//If it hit an enemy, do damage
-			if (hit.collider.tag.Equals ("EnemyHead")){
+			if (hit.collider.tagS.Equals ("EnemyHead")){
 				//Headshot, damage x2
 				GameObject Hitted=hit.transform.root.gameObject;
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage);
 				BulletInfo.instance.StartCoroutine ("Fade");
 				Instantiate(gunShotHeadshotParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			}
-			else if (hit.collider.tag.Equals("Enemy")){
+			else if (hit.collider.tagS.Equals("Enemy")){
 				GameObject Hitted=hit.transform.root.gameObject;
+				if(Hitted.GetComponent<HPmanager>()){
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)
 				Instantiate(gunShotHitParticle, hit.point, Quaternion.LookRotation(hit.normal));
+				}
 			} 
 			/*else if (hit.collider.tag.Equals("Agent")){
 				GameObject Hitted=hit.transform.root.gameObject;
@@ -124,8 +126,8 @@ public class Gun : MonoBehaviour {
 			magazineBulletsLeft = 0;
 		}
 
-		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
-		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
+//		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
+//		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 		timeStamp = Time.time + reloadTime;
 	}
 
@@ -140,12 +142,15 @@ public class Gun : MonoBehaviour {
 	}
 
 	public void addAmmunition(int amount){
-		magazineBulletsLeft += amount;
+		//Debug.Log (bulletsInMagazine);
+		magazineBulletsLeft = +amount;
 		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
 		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();
 	}
 
 	public void addMagazines(int amount){
+		//Debug.Log (bulletsInMagazine);
+		//int x=amount*bulletsInMagazine;
 		magazineBulletsLeft += amount*bulletsInMagazine;
 		MagazinesLeft.textValue.text = magazineBulletsLeft.ToString();
 		BulletsLeft.textValue.text = bulletsLeftInMagazine.ToString();

@@ -8,7 +8,10 @@ public class QuitGame : MonoBehaviour {
 	}
 
 	public void quitToMenu() {
-		Time.timeScale = 1f;
 		Application.LoadLevel ("StartMenu");
+	}
+
+	public void startGame() {
+		Application.LoadLevel ("Main Scene");
 	}
 }
