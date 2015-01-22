@@ -79,14 +79,14 @@ public class Gun : MonoBehaviour {
 			SpawnMuzzleFlash();
 
 			//If it hit an enemy, do damage
-			if (hit.collider.tagS.Equals ("EnemyHead")){
+			if (hit.collider.tag.Equals ("EnemyHead")){
 				//Headshot, damage x2
 				GameObject Hitted=hit.transform.root.gameObject;
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage);
 				BulletInfo.instance.StartCoroutine ("Fade");
 				Instantiate(gunShotHeadshotParticle, hit.point, Quaternion.LookRotation(hit.normal));
 			}
-			else if (hit.collider.tagS.Equals("Enemy")){
+			else if (hit.collider.tag.Equals("Enemy")){
 				GameObject Hitted=hit.transform.root.gameObject;
 				if(Hitted.GetComponent<HPmanager>()){
 				Hitted.GetComponent<HPmanager>().doDamage(bulletDamage); //Tell the hit gameObject that it should execute a function called ApplyDamage with the parameter bulletDamage (i.e. ApplyDamage(bulletDamage);)

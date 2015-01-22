@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour {
 	//UI
 	public GameObject Crosshair;
 	public AudioSource Sound;
-	private bool started=false;
+//	private bool started=false;
 	
 	private bool switcher = false;
 	
@@ -42,6 +42,7 @@ public class PlayerManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Crosshair=GameController.Crosshair;
 		Sound=GetComponent<AudioSource>();
 		if(Application.loadedLevelName.Equals("Doolhof")){
 			Camera[] Cameras=GetComponentsInChildren<Camera>();

@@ -48,7 +48,7 @@ public class PanelSwitcher : MonoBehaviour {
 		panelNames.Add (4, "HANDGUN");
 		panelNames.Add (5, "SMG");
 		panelNames.Add (6, "SNIPER RIFLE");
-		if(PlayerManager.useWeaponID != null){
+		if(PlayerManager.useWeaponID != 0){
 			currentWeaponId = PlayerManager.useWeaponID;
 			updateOtherWeaponsPanel();
 		}
@@ -56,12 +56,12 @@ public class PanelSwitcher : MonoBehaviour {
 
 	public void updateOtherWeaponsPanel(){
 		if (weaponsSetCorrectly == false) {
-			if(PlayerManager.useWeaponID != null){
+			if(PlayerManager.useWeaponID != 0){
 				currentWeaponId = PlayerManager.useWeaponID;
 			}
 
 			int currentWeaponIdCopy;
-			if(currentWeaponId != null){
+			if(currentWeaponId != 0){
 				currentWeaponIdCopy = currentWeaponId;
 				weaponsSetCorrectly = true;
 			}else{
@@ -86,8 +86,8 @@ public class PanelSwitcher : MonoBehaviour {
 	}
 
 	public void setCurrentWeaponPanel(){
-		if(currentWeaponId == null){
-			if(PlayerManager.useWeaponID != null){
+		if(currentWeaponId ==0){
+			if(PlayerManager.useWeaponID != 0){
 				currentWeaponId = PlayerManager.useWeaponID;
 				setPanel (currentWeaponId);
 			}else{

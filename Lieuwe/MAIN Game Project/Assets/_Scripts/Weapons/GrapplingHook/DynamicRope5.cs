@@ -95,8 +95,8 @@ public class DynamicRope5 : MonoBehaviour {
 			//Vector3 ropeDirection; 
 			//Vector3 offsetPosition = transform.position + mainBodyOffset;//transform.up * mainBodyOffset;
 			
-			Vector3 centripetalF;
-			Vector3 velTang;
+			//Vector3 centripetalF;
+			//Vector3 velTang;
 
 			bool ropeChanged = false;
 			

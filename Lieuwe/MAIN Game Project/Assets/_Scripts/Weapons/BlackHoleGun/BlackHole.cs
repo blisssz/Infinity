@@ -32,7 +32,7 @@ public class BlackHole : MonoBehaviour {
 			{	//attract all rigidbodies that are affected by the gravity of the blackhole towards the black hole (if within range)
 				if(target != null){
 					// Make it possible to shoot projectiles at boss/enemies 
-					if(target.tagS.Equals ("projectile")){
+					if(target.tag.Equals ("projectile")){
 						float dist = (transform.position - target.transform.position).magnitude;
 							if(dist < radius){
 								Vector3 projectileForce = gravity * transform.forward * (radius - dist);

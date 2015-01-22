@@ -107,7 +107,7 @@ public class PogoStick : MonoBehaviour {
 	void Start () {
 		thisOwner = this.transform.root;
 		
-		Vector3 offset = thisOwner.position + thisOwner.up * offsetY + thisOwner.forward * offsetZ;
+//		Vector3 offset = thisOwner.position + thisOwner.up * offsetY + thisOwner.forward * offsetZ;
 		this.transform.parent = thisOwner;
 		// find Animation Component
 		foreach (Transform t in transform.GetComponentsInChildren<Transform>()){
@@ -284,7 +284,7 @@ Old anims -*/
 				// bounce
 				
 				Vector3 velocity = this.transform.root.rigidbody.velocity;
-				Vector3 velocityDir = velocity.normalized;
+//				Vector3 velocityDir = velocity.normalized;
 				
 				if (firstContact == false){
 					// play compressing sound 

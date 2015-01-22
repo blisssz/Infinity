@@ -51,7 +51,7 @@ public class UseSpawner : MonoBehaviour {
 
 			if (player != null){
 
-				int pick = Random.Range (0, enemyParams.Length);
+//				int pick = Random.Range (0, enemyParams.Length);
 
 			//	GameObject enemyObj = Spawner.Spawn (enemyParams[pick].enemy, player, 4);
 				EnemyTypes etype;

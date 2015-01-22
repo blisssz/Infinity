@@ -12,7 +12,7 @@ public class Sniper : Gun {
 	private int fireHash = Animator.StringToHash("Fire");
 	private int reloadHash = Animator.StringToHash("Reload");
 	private int zoomHash = Animator.StringToHash("Zoom");
-	private int shootState = Animator.StringToHash("Base Layer.SNIPERSHOT");
+//	private int shootState = Animator.StringToHash("Base Layer.SNIPERSHOT");
 	private int aimState = Animator.StringToHash("Base Layer.SNIPERAIMIDLE");
 
 	private List<Camera> cameras = new List<Camera>();

@@ -8,7 +8,7 @@ public class BigEyeFX : MonoBehaviour {
 
 
 	public float mainSize = 1.0f;
-	private float fac = 0.0f;
+//	private float fac = 0.0f;
 
 	private float time = 0f;
 	public float totTime = 5f;

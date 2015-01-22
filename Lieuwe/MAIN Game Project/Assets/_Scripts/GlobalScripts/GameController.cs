@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	public static Vector3 spawnLocation;
 	public static Vector3 StartPosition;
 	public GameObject UIfixed;
+	public static GameObject Crosshair;
 
 	private bool mainPlayerAlive = false;
 	private GameObject thePlayer;
@@ -32,7 +33,7 @@ public class GameController : MonoBehaviour {
 		lifes = startLifes;
 
 		Instantiate(UI);
-		UIfixed = Instantiate(UIfixed) as GameObject;
+		Crosshair = Instantiate(UIfixed) as GameObject;
 		LivesScript.SetLives (lifes);
 		Jetpack.reset();
 	}
@@ -46,6 +47,7 @@ public class GameController : MonoBehaviour {
 			score.setToZero();
 			spawnLocation = StartPosition;
 			Application.LoadLevel ("StartMenu");
+			Screen.showCursor=true;
 		}
 
 		// simple spawner

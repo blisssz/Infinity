@@ -54,7 +54,7 @@ public class ZombieRabbitBehaviour : MonoBehaviour {
 		if (alive){
 			bool playerAttention = agentS.targetsMainTarget;
 			AnimatorStateInfo astate = anim.GetCurrentAnimatorStateInfo (0);
-			bool attack = (astate.nameHash == attackHash);
+//			bool attack = (astate.nameHash == attackHash);
 			
 			if (agentS.stopped == true){
 				anim.SetFloat("Speed", 0f);

@@ -12,7 +12,7 @@ public class SensorProximity {
 	public float proxMaxRange = 3f;
 	public float collisionRange = 0.5f;
 
-	private bool invertSensor = false;
+	//private bool invertSensor = false;
 	private bool invertProx = false;
 
 	public bool sensorActive = true;
@@ -99,7 +99,7 @@ public class SensorProximity {
 	}
 
 	public void setInvertSensor(bool b){
-		invertSensor = b;
+		//invertSensor = b;
 	}
 
 	public void setInvertProximity(bool b){

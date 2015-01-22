@@ -128,7 +128,7 @@ public class HPmanager : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void UpdateSlider (float DeltaHp) {
-		if(this.tagS.Equals ("Player")){
+		if(this.tag.Equals ("Player")){
 			if(sliderFill==null){
 				sliderFill = GameObject.FindWithTag ("Health");}
 			sliderFill.GetComponent<SlidingBar> ().setValueFade (hp, 100f, false);
@@ -142,7 +142,7 @@ public class HPmanager : MonoBehaviour {
 			}
 		}
 
-		if(this.tagS.Equals ("Enemy")||this.tagS.Equals ("EnemyHead")&&DeltaHp<0){
+		if(this.tag.Equals ("Enemy")||this.tag.Equals ("EnemyHead")&&DeltaHp<0){
 			if(Sound==null){
 				Sound=this.GetComponent<AudioSource>();
 			}

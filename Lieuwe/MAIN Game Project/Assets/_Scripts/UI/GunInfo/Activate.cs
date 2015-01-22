@@ -7,12 +7,14 @@ public class Activate : MonoBehaviour {
 
 	private static GameObject thisObject;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		thisObject = gameObject;
 		setActiveCustom (false);
 	}
 
 	public static void setActiveCustom(bool active){
+		//if(thisObject!=null){
 		thisObject.SetActive (active);
+		//}
 	}
 }

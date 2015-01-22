@@ -166,16 +166,15 @@ public class GrapplingHook : MonoBehaviour {
 					ropeSwing.L_desired = (ropePointEnd - ropePointStart).magnitude;
 
 					// make it parent to hit object;
-					Vector3 hitScale = hit.transform.lossyScale;
-					Vector3 currentScale = firedHook.transform.localScale;
+//					Vector3 hitScale = hit.transform.lossyScale;
+//					Vector3 currentScale = firedHook.transform.localScale;
 					//firedHook.transform.localScale = new Vector3(currentScale.x/hitScale.x, currentScale.y/hitScale.y, currentScale.z/hitScale.z);
-					GameObject emptyObject = new GameObject();
 					//emptyObject.transform.parent = hit.transform;
 
 					//
 
 					Matrix4x4 hitMatrixW2L = hit.transform.worldToLocalMatrix;
-					Matrix4x4 hitMatrixL2W = hit.transform.localToWorldMatrix;
+//					Matrix4x4 hitMatrixL2W = hit.transform.localToWorldMatrix;
 
 					localPos = hitMatrixW2L.MultiplyPoint(firedHook.transform.position);
 					localDir = Vector3.Normalize(localPos - hitMatrixW2L.MultiplyPoint(firedHook.transform.position+firedHook.transform.forward) );
@@ -183,7 +182,7 @@ public class GrapplingHook : MonoBehaviour {
 					hitObject = hit.transform.gameObject;
 
 					ropeShoot.Stop();
-					if(hit.collider.tagS.Equals("Enemy")){
+					if(hit.collider.tag.Equals("Enemy")){
 						hookStatus = 3;
 						enemy = hit.transform.gameObject.GetComponent<basicEnemy>();
 						enemy.hookHit();
@@ -224,7 +223,7 @@ public class GrapplingHook : MonoBehaviour {
 				}
 
 				else{
-					Matrix4x4 hitMatrixW2L = hitObject.transform.worldToLocalMatrix;
+//					Matrix4x4 hitMatrixW2L = hitObject.transform.worldToLocalMatrix;
 					Matrix4x4 hitMatrixL2W = hitObject.transform.localToWorldMatrix;
 				
 				

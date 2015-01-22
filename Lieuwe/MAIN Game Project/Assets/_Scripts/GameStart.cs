@@ -4,7 +4,7 @@ using System.Collections;
 public class GameStart : MonoBehaviour {
 
 	private static int StartLifes=10;
-	public static int currentBossScene =0;
+	public static int currentBossScene =1;
 
 	// Use this for initialization
 	void Start () {
