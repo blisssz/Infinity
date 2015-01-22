@@ -156,8 +156,10 @@ public class basicEnemy : MonoBehaviour {
 	}
 	
 	void OnDestroy(){
+		if(transform.GetComponent<HPmanager> ().hp<=0){
 		highScore.enemyKill ();
 		score.gameScore += 5; 
+		}
 	}
 	
 	virtual public void attackPlayer(){

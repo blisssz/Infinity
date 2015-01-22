@@ -8,7 +8,8 @@ public class GameStart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int weapon = Mathf.RoundToInt (Random.Range (1,6));
+		LivesScript.SetLives (StartLifes);
+		int weapon = HelpScript.Switch(new float[7]{0,1,1,1,1,1,1});
 		PlayerManager.useWeaponID = weapon;
 		GameController.ResetAll();
 		currentBossScene =0;
@@ -40,7 +41,7 @@ public class GameStart : MonoBehaviour {
 	public static void loadNormal () {
 		currentBossScene =0;
 		GameController.ResetAll();
-		int weapon = Mathf.RoundToInt (Random.Range (1,6));
+		int weapon = HelpScript.Switch(new float[7]{0,1,1,1,1,1,1});
 		PlayerManager.useWeaponID = weapon;
 		switch(weapon){
 		case 1: 

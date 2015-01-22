@@ -24,6 +24,10 @@ public class ServerCommunication : MonoBehaviour {
 	void Update() {
 		if (shouldI) {
 			StartCoroutine(login(username, password));
+			if (ServerCommunication.loggedIn) {
+				ServerCommunication.sendHighscore();
+				ServerCommunication.sendAchievements();
+			}
 			shouldI = false;
 		}
 		if (goRegister) {
@@ -35,6 +39,9 @@ public class ServerCommunication : MonoBehaviour {
 	void Awake() {
 		if (shouldI) {
 			StartCoroutine(login(username, password));
+			StartCoroutine (getHighscore());
+			StartCoroutine (getAchievements());
+			print (hiScore);
 			shouldI = false;
 		}
 	}
@@ -114,18 +121,5 @@ public class ServerCommunication : MonoBehaviour {
 	private void startRoutines(){
 		StartCoroutine (getHighscore ());
 		StartCoroutine (getAchievements ());
-	}
-
-	private void endRoutines() {
-
-	}
-	
-
-	public static void setUsername(string str) {
-		username = str;
-	}
-
-	public static void setPassword(string str) {
-		password = str;
 	}
 }

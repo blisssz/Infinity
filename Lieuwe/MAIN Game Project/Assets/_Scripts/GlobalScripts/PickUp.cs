@@ -49,7 +49,7 @@ public class PickUp : MonoBehaviour
 						} else if (PickUpNumber == 1) {
 								Instantiate (coinPickup, this.transform.position, Quaternion.identity);
 								Player.GetComponent<HPmanager> ().doDamage (-50);
-								highScore.pickUpHealth ();
+								//highScore.pickUpHealth ();
 
 						} else if (PickUpNumber == 2) {
 								Instantiate (coinPickup, this.transform.position, Quaternion.identity);
@@ -57,7 +57,7 @@ public class PickUp : MonoBehaviour
 								if (Weapon.GetComponent<Gun> ()) {
 										Weapon.GetComponent<Gun> ().addMagazines(2);
 								}
-								highScore.pickUpAmmo ();
+								//highScore.pickUpAmmo ();
 				
 						}
 				}

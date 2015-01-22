@@ -60,6 +60,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void togglePause(){
 		if (PauseMenu.paused == false) {
+			AudioListener.pause=true;
 			//Pause the game
 			Screen.lockCursor = false;
 			Screen.showCursor = true;
@@ -72,6 +73,7 @@ public class PauseMenu : MonoBehaviour {
 		else {
 			//Unpause the game
 			unPause ();
+			AudioListener.pause=false;
 			Screen.showCursor = false;
 			Screen.lockCursor = true;
 		}

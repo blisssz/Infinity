@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Credits : MonoBehaviour {
 
-	public AudioSource Shooting;
 
 	// Use this for initialization
 	void Start () {
@@ -34,8 +33,6 @@ public class Credits : MonoBehaviour {
 		             "  Bas Dado;"
 		             );
 
-		AudioList.StartX();
-		AudioList.Add(Shooting, false);
 	}
 
 	IEnumerator tijd() {

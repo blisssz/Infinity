@@ -8,10 +8,12 @@ public class QuitGame : MonoBehaviour {
 	}
 
 	public void quitToMenu() {
+		GameController.ResetAll();
 		Application.LoadLevel ("StartMenu");
 	}
 
 	public void startGame() {
+		GameController.ResetAll();
 		Application.LoadLevel ("Main Scene");
 	}
 }

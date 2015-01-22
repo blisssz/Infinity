@@ -30,24 +30,27 @@ public class GameController : MonoBehaviour {
 		AudioList.StartX ();
 		spawnLocation=this.transform.position;   //StartPostion in Level
 		keyManager = new KeyManager();
-		lifes = startLifes;
-
 		Instantiate(UI);
 		Crosshair = Instantiate(UIfixed) as GameObject;
-		LivesScript.SetLives (lifes);
+		lifes=LivesScript.lifes;
 		Jetpack.reset();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		lifes=LivesScript.lifes;
 		if(keyManager==null){keyManager = new KeyManager();}
 		keyManager.Update();
 		if (lifes <= 0) {
 			ResetAll();
 			score.setToZero();
 			spawnLocation = StartPosition;
-			Application.LoadLevel ("Credits");
 			Screen.showCursor=true;
+			if(!Application.loadedLevel.Equals ("Credits")){
+				Application.LoadLevel ("Credits");
+				LivesScript.lifes=10;
+
+			}
 		}
 
 		// simple spawner

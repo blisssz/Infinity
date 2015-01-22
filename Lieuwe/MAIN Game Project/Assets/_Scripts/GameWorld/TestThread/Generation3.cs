@@ -207,7 +207,7 @@ public class Generation3 : MonoBehaviour {
 	public void AfterMove (Vector3 Position){
 
 		ObjectSpawner.SpawnObject(Position+new Vector3(0.75f,1,0.5f),"TunnelLight");
-		int Choice=HelpScript.Switch(new float[5]{0.7f,ChanceOnAmmo+1,0.05f,0.1f,0.1f});
+		int Choice=HelpScript.Switch(new float[5]{0.7f,ChanceOnAmmo,0.05f,0.1f,0.1f});
 		switch(Choice){
 		case 0:
 			ObjectSpawner.SpawnObject(Position,"Coin");
