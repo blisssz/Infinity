@@ -50,11 +50,12 @@ public class BossHP : MonoBehaviour {
 		switch(GameStart.currentBossScene){
 			case 1:
 				//pogostickboss
-				if(gravitybossinstance == null){
+				if(pogoBoss == null){
 					pogoBoss = GameObject.Find("PogoBossBody").GetComponent<PogoBoss>();
 				}else{
 					currentHP = 0f;
 					for (int i = 0; i < 4; i++){
+						Debug.Log ("HP of eye " + i + " " + pogoBoss.eyeParams[i].eyeHP.getHP());
 						currentHP += Mathf.Clamp (pogoBoss.eyeParams[i].eyeHP.getHP(), 0, 30f);
 					}
 					currentHP += Mathf.Clamp (pogoBoss.eyeBigParam.eyeHP.getHP(), 0, 30f);
@@ -83,7 +84,7 @@ public class BossHP : MonoBehaviour {
 					boss1Balls = GameObject.FindGameObjectsWithTag("Boss1Balls");
 				}else{
 					foreach (GameObject ball in boss1Balls){
-						if(ball.transform.parent.name.Equals ("BOSS1_prefab")){
+						if(ball.transform.parent != null){
 							currentHP++;
 						}
 					}

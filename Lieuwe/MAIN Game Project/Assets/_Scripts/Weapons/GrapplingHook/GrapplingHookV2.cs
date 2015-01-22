@@ -164,7 +164,7 @@ public class GrapplingHookV2 : MonoBehaviour {
 					
 					localPos = hitMatrixW2L.MultiplyPoint(firedHook.transform.position);
 					localDir = Vector3.Normalize(localPos - hitMatrixW2L.MultiplyPoint(firedHook.transform.position+firedHook.transform.forward) );
-					string S=hit.transform.root.tag;
+//					string S=hit.transform.root.tag;
 					hitObject = hit.transform.gameObject;
 					if(hitObject.GetComponent<HPmanager>()!=null){
 						hitObject.GetComponent<HPmanager>().doDamage(30);

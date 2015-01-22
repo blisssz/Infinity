@@ -109,6 +109,10 @@ public class Generation : MonoBehaviour
 				//		for (int j=0; j<Vertices.Length; j++) {
 				//				}
 				GameObject x = ObjectCreator.Creator (newVertices, newTriangles, F, Position);
+		float f=HelpScript.Rand(0f,10f);
+		if(f<1){
+		//x.AddComponent<PlatformUpDown>();
+		}
 				return x;
 		}
 	

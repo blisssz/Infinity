@@ -52,7 +52,7 @@ public class ZombieRabbitBehaviour : MonoBehaviour {
 	void Update () {
 		
 		if (alive){
-			bool playerAttention = agentS.targetsMainTarget;
+//			bool playerAttention = agentS.targetsMainTarget;
 			AnimatorStateInfo astate = anim.GetCurrentAnimatorStateInfo (0);
 //			bool attack = (astate.nameHash == attackHash);
 			

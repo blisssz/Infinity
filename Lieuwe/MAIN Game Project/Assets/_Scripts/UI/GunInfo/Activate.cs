@@ -13,8 +13,14 @@ public class Activate : MonoBehaviour {
 	}
 
 	public static void setActiveCustom(bool active){
-		//if(thisObject!=null){
+		if(thisObject!=null){
 		thisObject.SetActive (active);
-		//}
+		}
+	}
+
+	public static void SetCrossHair(float amount){
+		if(thisObject!=null){
+		Crosshair.thisObject.setSpread(amount);
+		}
 	}
 }

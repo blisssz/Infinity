@@ -13,7 +13,7 @@ public class SlidingBar : MonoBehaviour {
 	private float OldValue;
 	
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		OldValue=100f;
 		rectTransform = this.GetComponent<RectTransform>();
 		image = this.GetComponent<Image>();

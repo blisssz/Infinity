@@ -32,7 +32,7 @@ public class PlayerManager : MonoBehaviour {
 	
 	private bool switcher = false;
 	
-	public static int useWeaponID = 6;
+	public static int useWeaponID = 5;
 	
 	//	private int[] weaponID = {0, 1, 2, 3, 4};
 	
@@ -102,11 +102,11 @@ public class PlayerManager : MonoBehaviour {
 //			started=true;
 //		}
 		playerPosition = transform.position;
-		// spawn a tool/weapon
-//		bool key1 = KeyManager.key1 == 1;
-//		if(key1){
-//			SwitchWeapon();
-//		}
+//		 spawn a tool/weapon
+		bool key1 = KeyManager.key1 == 1;
+		if(key1){
+			SwitchWeapon();
+		}
 	}
 
 	public void DestroyWeapon(){
@@ -139,6 +139,7 @@ public class PlayerManager : MonoBehaviour {
 						currentWeapon = Instantiate(handGun, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.6f + weaponAttachObject.transform.up * 0.1f , weaponAttachObject.transform.rotation) as GameObject;
 						}	else if(useWeaponID==5){
 							currentWeapon = Instantiate(SMG, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.375f + weaponAttachObject.transform.forward * 0.21f , weaponAttachObject.transform.rotation) as GameObject;
+							//Activate.SetCrossHair(25f);
 						}	else if(useWeaponID==6){
 							currentWeapon = Instantiate(sniper, weaponAttachObject.transform.position - weaponAttachObject.transform.right * 0.543f + weaponAttachObject.transform.up * 0.433f + weaponAttachObject.transform.forward * 0.25f , weaponAttachObject.transform.rotation) as GameObject;
 						}	
@@ -146,6 +147,7 @@ public class PlayerManager : MonoBehaviour {
 						Activate.setActiveCustom(true);
 						(Instantiate (jetpack, this.transform.position, this.transform.rotation) as GameObject).transform.parent = weaponAttachObject.transform;
 					}
+					Activate.setActiveCustom(true);
 					switcher = true;
 					setCrosshair(true);
 					if(useWeaponID==4){
@@ -160,6 +162,7 @@ public class PlayerManager : MonoBehaviour {
 				}
 				else {
 					switcher = false;
+					Activate.setActiveCustom(false);
 					setCrosshair(false);
 					if(useWeaponID==4){
 						currentWeapon.GetComponent<HandGun>().equip(false);

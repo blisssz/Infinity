@@ -21,12 +21,12 @@ public class highScore : MonoBehaviour {
 				hiScore = PlayerPrefs.GetInt ("High Score");
 			}
 			else{ hiScore = 0;}
-//			if (PlayerPrefsX.GetBoolArray ("Achievements") != null) {
-//				achievements = PlayerPrefsX.GetBoolArray("Achievements");
-//			}
-//			else{ 
-//				achievements = new bool[calcSum(noOfAchievements, 5)];
-//			}
+			if (PlayerPrefsX.GetBoolArray ("Achievements") != null) {
+				achievements = PlayerPrefsX.GetBoolArray("Achievements");
+			}
+			else{ 
+				achievements = new bool[calcSum(noOfAchievements, 5)];
+			}
 		}
 		else{
 			StartCoroutine(getStatus ());
@@ -91,7 +91,7 @@ public class highScore : MonoBehaviour {
 		PlayerPrefs.SetInt ("Total ammopackages picked up", totalCoinsPickedUp);
 		PlayerPrefs.SetInt ("Total grapplinghook misses", totalGrapplingHookMisses);
 		PlayerPrefs.SetInt ("Total deaths", totalDeaths);
-//		PlayerPrefsX.SetBoolArray ("Achievements", achievements);
+		PlayerPrefsX.SetBoolArray ("Achievements", achievements);
 	}
 
 	public static void enemyKill(){

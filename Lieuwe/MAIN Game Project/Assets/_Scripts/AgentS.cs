@@ -89,7 +89,7 @@ public class AgentS : MonoBehaviour {
 
 	// flying parameters
 	public bool flying = false;
-	private float updownValue = 0f;	// 0f = nothing - down + up
+//	private float updownValue = 0f;	// 0f = nothing - down + up
 	private float fflip = 1f;
 	private float dUp = 0f;
 	private float dDown = 0f;

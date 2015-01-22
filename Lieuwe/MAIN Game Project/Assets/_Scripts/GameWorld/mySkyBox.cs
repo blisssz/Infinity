@@ -11,7 +11,7 @@ public class mySkyBox : MonoBehaviour {
 	public float skyBoxSize; 			// square box for convinience, this value is no visual box
 	//public float skyBoxScaleFac = 1f;
 
-	private Vector3 worldBoxCenter = new Vector3(0, 0, 0); //always origin
+//	private Vector3 worldBoxCenter = new Vector3(0, 0, 0); //always origin
 
 	private GameObject skyCam;
 	private Camera skyboxCamera;

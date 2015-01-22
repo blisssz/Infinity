@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour {
 			ResetAll();
 			score.setToZero();
 			spawnLocation = StartPosition;
-			Application.LoadLevel ("StartMenu");
+			Application.LoadLevel ("Credits");
 			Screen.showCursor=true;
 		}
 

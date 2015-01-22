@@ -4,14 +4,14 @@ using System.Collections;
 public class shatteredGlass : MonoBehaviour {
 	private Vector3 dir;
 	private Vector3 bossToPlayer;
-	private float[] offs = new float[3];
+//	private float[] offs = new float[3];
 	public float glassSpeed;
 	public GameObject[] otherpieces;
 	public static GameObject boss;
 	public static float[] playerOffset = new float[3];
 	private float minDistance = Mathf.Infinity;
 	private Vector3 minToPlayer;
-	private Vector3 updatedDirection;
+//	private Vector3 updatedDirection;
 	private Vector3 toPlayer;
 	private float[] smartOffset;
 	private GameObject Player;
@@ -57,7 +57,7 @@ public class shatteredGlass : MonoBehaviour {
 	public void missDirection(){
 		minDistance = toPlayer.magnitude;
 		minToPlayer = toPlayer;
-		updatedDirection = (transform.position - boss.transform.position) + minToPlayer;
+//		updatedDirection = (transform.position - boss.transform.position) + minToPlayer;
 	}
 
 	void OnDestroy(){

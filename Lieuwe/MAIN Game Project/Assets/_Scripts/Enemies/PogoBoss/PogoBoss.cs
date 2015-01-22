@@ -20,10 +20,6 @@ public class PogoBossEye{
 
 	public SoundObjectSpawner soundSpawner{get; set;}
 
-	public PogoBossEye(){
-		eyeAlive = true;
-	}
-
 	public void setEyeOB(Transform eye){
 		eyeOB = eye;
 	}
@@ -94,7 +90,7 @@ public class EyeNormal : PogoBossEye{
 	private float rad;
 
 	private Vector3 lookDir;
-	private Vector3 prevLookDir;	
+//	private Vector3 prevLookDir;	
 	private Quaternion prevLookRot;
 	private float interpTime = 0.1f;
 	private float interpFac = 0f;
@@ -170,7 +166,7 @@ public class EyeNormal : PogoBossEye{
 
 			if (lookTimer > lookTime){
 				lookTimer = 0f;
-				prevLookDir = lookDir;
+//				prevLookDir = lookDir;
 				prevLookRot = Quaternion.LookRotation(lookDir);
 			}
 
@@ -446,7 +442,7 @@ public class PogoBoss : MonoBehaviour {
 
 	private int[] eyeAliveState = new int[] {0, 0, 0, 0, 0}; // 0 == alive 1 == just died, 2 == dead 
 
-	private int finalStateHash = Animator.StringToHash("BigEye.BigEyeIdle");
+//	private int finalStateHash = Animator.StringToHash("BigEye.BigEyeIdle");
 
 	private bool finalSound = false;
 
@@ -579,7 +575,7 @@ public class PogoBoss : MonoBehaviour {
 				else{
 					fourEyesAlive = fourEyesAlive || eyeParams[i].eyeAlive;
 				}
-			}
+			} else {fourEyesAlive=true;}
 		}
 
 		if (!fourEyesAlive){

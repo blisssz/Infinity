@@ -40,6 +40,9 @@ public static class AudioList  {
 
 	public static int Add(AudioSource X, bool Background){
 		if(Background){
+			if(BackGroundList==null){
+				StartX ();
+			}
 			BackGroundList.Add (X);
 			BackGroundVolumes.Add (X.volume);
 			X.volume=X.volume*VolumeFactorBG;

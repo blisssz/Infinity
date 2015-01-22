@@ -16,6 +16,11 @@ public class Crosshair : MonoBehaviour {
 	void Awake(){
 //		drawCrosshair (false);
 		thisObject = this;
+		//if(PlayerManager!=null){
+			if(PlayerManager.useWeaponID==5){
+				this.setSpread(25f);
+			}
+		//}
 	}
 
 	/**

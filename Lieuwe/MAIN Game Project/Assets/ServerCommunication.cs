@@ -7,19 +7,61 @@ public class ServerCommunication : MonoBehaviour {
 	static WWWForm achievementForm;
 	static WWW test;
 	static string url;
-	static string username = "David";
-	static string password = "ik";
-	public static bool loggedIn = true;
+	public static string username = "54455";
+	public static string password = "ik";
+	public static bool loggedIn;
+	public static bool shouldI;
+	public static bool goRegister;
 
 	public static int hiScore;
 	public static bool[] achievements = new bool[highScore.getSum()];
 
+
 	void Start() {
-//		sendHighscore ();
-//		StartCoroutine (sendAchievements ());
-//		StartCoroutine(login ());
-//		StartCoroutine (getHighscore ());
-		StartCoroutine (getAchievements ());
+		goRegister = true;
+	}
+
+	void Update() {
+		if (shouldI) {
+			StartCoroutine(login(username, password));
+			shouldI = false;
+		}
+		if (goRegister) {
+			StartCoroutine(register(username, password));
+			goRegister = false;
+		}
+	}
+
+	void Awake() {
+		if (shouldI) {
+			StartCoroutine(login(username, password));
+			shouldI = false;
+		}
+	}
+
+	public IEnumerator register(string username, string password){
+		form = new WWWForm ();
+		form.AddField ("username", username);
+		form.AddField ("password", password);
+		url = "drproject.twi.tudelft.nl:8088/new_account";
+		test = new WWW (url, form);
+		yield return test;
+		if(int.Parse(test.text) == 1){
+			loggedIn = true;
+		}
+	}
+
+	public IEnumerator login(string username, string password) {
+		loginForm = new WWWForm ();
+		loginForm.AddField ("username", username);
+		loginForm.AddField ("password", password);
+		url = "drproject.twi.tudelft.nl:8088/unity_login";
+		test = new WWW (url, loginForm);
+		yield return test;
+		print (test.text + " want david is een koning");
+		if (bool.Parse (test.text)) {
+			loggedIn = true;
+		}
 	}
 
 	public static void sendHighscore() {
@@ -31,7 +73,7 @@ public class ServerCommunication : MonoBehaviour {
 		test = new WWW(url, form);
 	}
 
-	public static IEnumerator getHighscore() {
+	public IEnumerator getHighscore() {
 		form = new WWWForm ();
 		form.AddField ("Username", username);
 		url = "drproject.twi.tudelft.nl:8088/getHighscore";
@@ -41,7 +83,7 @@ public class ServerCommunication : MonoBehaviour {
 		hiScore = (int.Parse (test.text));
 	}
 
-	public static IEnumerator getAchievements() {
+	public IEnumerator getAchievements() {
 		achievementForm = new WWWForm ();
 		achievementForm.AddField ("Username", username);
 		url = "drproject.twi.tudelft.nl:8088/getAchievements";
@@ -61,8 +103,7 @@ public class ServerCommunication : MonoBehaviour {
 		}
 	}
 
-	public static IEnumerator sendAchievements() {
-		yield return new WaitForSeconds (0.5f);
+	public static void sendAchievements() {
 		achievementForm = new WWWForm ();
 		achievementForm.AddField ("Achievement", highScore.getAchievements ());
 		achievementForm.AddField ("Username", username);
@@ -70,18 +111,13 @@ public class ServerCommunication : MonoBehaviour {
 		test = new WWW (url, achievementForm);
 	}
 
-	public static IEnumerator login() {
-		loginForm = new WWWForm ();
-		loginForm.AddField ("username", username);
-		loginForm.AddField ("password", password);
-		url = "drproject.twi.tudelft.nl:8088/unity_login";
-		test = new WWW (url, loginForm);
-		yield return test;
-		print (test.text + " want david is een koning");
-		if (bool.Parse (test.text)) {
-			loggedIn = true;
-			print (loggedIn);
-		}
+	private void startRoutines(){
+		StartCoroutine (getHighscore ());
+		StartCoroutine (getAchievements ());
+	}
+
+	private void endRoutines() {
+
 	}
 	
 
