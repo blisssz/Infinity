@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cbceb9698991d9041b937ed519d0cfe5
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - CheckPoint: {fileID: 100000, guid: 3dea4174e5eb6b346b553659a7062392, type: 2}
+  - endPoint: {fileID: 173882, guid: 141c99334e873174aa443af8534906e9, type: 2}
+  - enemy: {instanceID: 0}
+  - coin: {instanceID: 0}
+  - F: {fileID: 2100000, guid: 223d9f4d18d83e04aa49a70a7e28ecc3, type: 2}
+  - C: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{7CEFB8DB-A1AF-6033-C098-BD631EE6C780}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_64;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\LivesScript.cs" />
+     <Compile Include="Assets\LoginButton.cs" />
+     <Compile Include="Assets\PlayerPrefsX.cs" />
+     <Compile Include="Assets\ServerCommunication.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\AA.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Bloom.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Blur.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\CameraMotionBlur.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\ChromaticAbberation.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\ColorBalance.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\DepthOfField.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\FisheyeEffect.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\IndieEffects.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\MotionblurModern\ObjectBlur.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\MotionblurModern\motionBlurModern.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Negative.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\Outline.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\SSAO_C5100.cs" />
+     <Compile Include="Assets\UI\IndieEffects\CSharp Classes\VignetteBlur.cs" />
+     <Compile Include="Assets\_Enemies\PogoBoss\BigEyeFX.cs" />
+     <Compile Include="Assets\_Enemies\PogoBoss\SoundObjectSpawner.cs" />
+     <Compile Include="Assets\_Scenes\PlatformUpDown.cs" />
+     <Compile Include="Assets\_Scripts\AIMotor.cs" />
+     <Compile Include="Assets\_Scripts\AddAudio.cs" />
+     <Compile Include="Assets\_Scripts\AgentS.cs" />
+     <Compile Include="Assets\_Scripts\Crosshair.cs" />
+     <Compile Include="Assets\_Scripts\Empty.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\BOSS1script.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1ArmAnimations.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1Ball.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1GruntBehaviour.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Boss1\Boss1HitPlayer.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Bosses\SuperSmartOffset.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Bosses\gravityBoss.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Bosses\shatteredGlass.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyBullet.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\PogoBoss\PogoBoss.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\PogoBoss\PogoBossLaser.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\ShootingEnemy.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\basicEnemy.cs" />
+     <Compile Include="Assets\_Scripts\EvilCoptorBehaviour.cs" />
+     <Compile Include="Assets\_Scripts\ExplosionFX_script.cs" />
+     <Compile Include="Assets\_Scripts\GameStart.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\Credits.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\GroundDamageEffects.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\HelpScript.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\InsertMesh.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\Lava.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\Letter.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\ObjectCreator.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\ObjectSpawner.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\PogoBossLavaDMG.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\SwitchHelp.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TestThread\GenGen.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TestThread\Generation3.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TestThread\Job.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TestThread\Test.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TestThread\ThreadedJob.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\TextCreator.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Chunk.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\ChunkList.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\GenerateCases.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Generation.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Help.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Move.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Moves.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\Path.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\WorldGeneration\PointList.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\checkPoint.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\checkPointList.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\endPoint.cs" />
+     <Compile Include="Assets\_Scripts\GameWorld\mySkyBox.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\AudioList.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\DestroySelf.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\GameController.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\KeyManager.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\Options.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\PickUp.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\healthBar.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\highScore.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\highScoreText.cs" />
+     <Compile Include="Assets\_Scripts\GlobalScripts\score.cs" />
+     <Compile Include="Assets\_Scripts\HPmanager.cs" />
+     <Compile Include="Assets\_Scripts\HitsByVelocity.cs" />
+     <Compile Include="Assets\_Scripts\ModSurface.cs" />
+     <Compile Include="Assets\_Scripts\PlatformMotion.cs" />
+     <Compile Include="Assets\_Scripts\Player\CameraShake.cs" />
+     <Compile Include="Assets\_Scripts\Player\GrapplingRopeSwing.cs" />
+     <Compile Include="Assets\_Scripts\Player\MouseLook.cs" />
+     <Compile Include="Assets\_Scripts\Player\Movement1.cs" />
+     <Compile Include="Assets\_Scripts\Player\PlayerManager.cs" />
+     <Compile Include="Assets\_Scripts\Player\VelocityInfo.cs" />
+     <Compile Include="Assets\_Scripts\Sensor.cs" />
+     <Compile Include="Assets\_Scripts\SoundWindScript.cs" />
+     <Compile Include="Assets\_Scripts\Spawner.cs" />
+     <Compile Include="Assets\_Scripts\UI\BossHP.cs" />
+     <Compile Include="Assets\_Scripts\UI\EnemyHealthbar.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\Activate.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\BulletInfo.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\BulletsLeft.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\MagazinesLeft.cs" />
+     <Compile Include="Assets\_Scripts\UI\GunInfo\OutOfAmmo.cs" />
+     <Compile Include="Assets\_Scripts\UI\JetpackActivation.cs" />
+     <Compile Include="Assets\_Scripts\UI\MainMenuPanelSwitcher.cs" />
+     <Compile Include="Assets\_Scripts\UI\MainMenuPauseScreen.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Audio\SetSoundtrack.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Audio\SetVolume.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Controls\DropDown.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Controls\DropDownHighlight.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Controls\NavText.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Controls\PanelSwitcher.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\CoroutineUtil.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\CrosshairPreview.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\SetLength.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\SetSpread.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\SetThickness.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\SetTransparency.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Customization\UseCrosshair.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\NavButton.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\NavSliderButton.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Navigation.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\NavigationSlider.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\QuitGame.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\SliderValue.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\TextHighlight.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetFullScreen.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetQuality.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetResolution.cs" />
+     <Compile Include="Assets\_Scripts\UI\PauseMenu\Video\SetVSync.cs" />
+     <Compile Include="Assets\_Scripts\UI\SlidingBar.cs" />
+     <Compile Include="Assets\_Scripts\UI\Vignetting.cs" />
+     <Compile Include="Assets\_Scripts\UseSpawner.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHole.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\BlackHoleGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\BlackHoleGun\GravityObject.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\DynamicRope5.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\GrapplingHook.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\GrapplingHookV2.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeMesh.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\GrapplingHook\RopeParams.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\DestroyGunParticles.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\DestroyMuzzleFlashParticles.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\Gun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\HandGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\MachineGun.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Guns\Sniper.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Jetpack.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\PogoStick\PogoStick.cs" />
+     <Compile Include="Assets\_Scripts\ZombieRabbitBehaviour.cs" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\Chromabberation.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaShader.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitColor.shader" />
+     <None Include="Assets\_Scripts\GameWorld\TextFiles\Data.txt" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\ColorBalance.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\FXAA3Console.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitAdditiveTexture.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Internal\_NormalsDepth.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\DNBased\DOFShader - BoxBlur.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA_fog.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\CameraMotionBlur.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\BossEye.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\FisheyeShader.shader" />
+     <None Include="Assets\_Scripts\GameWorld\TextFiles\filex.txt" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\Outline.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\BlurCurve.shader" />
+     <None Include="Assets\_Scripts\GameWorld\TextFiles\filexx.txt" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\BlurShader - Simple.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\LavaUnlitShader.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\FXAA2.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\DNBased\MotionBlurModern.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\StarBloom.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\FXAAPreset2.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\RadialBlur.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\DNBased\0tacunSSAO.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\Vignette.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\MotionBlurBasic.shader" />
+     <None Include="Assets\_Enemies\PogoBoss\UnlitAdditive.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\FXAAPreset3.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\SSAA.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\negative.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\Grass.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\DNBased\Bunell Disk SSAO.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\DNBased\DOFShader.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\ThreeMixedColorA.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test1.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\IndieRadialBlur.shader" />
+     <None Include="Assets\_Enemies\PogoBossRoom\PogoBoss\Shaders\sh_test2.shader" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\RadialBlurVF.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\DLAA.shader" />
+     <None Include="Assets\UI\IndieEffects\AA Shaders\NFAA.shader" />
+     <None Include="Assets\_Scripts\GameWorld\TextFiles\file.txt" />
+     <None Include="Assets\UI\IndieEffects\ShaderDir\Normal\ImageBloom.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
