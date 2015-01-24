@@ -1,0 +1,49 @@
+Base path: D:/Tu/Unity/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-6-4000
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=1 insize=692 outsize=425 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=908 outsize=1452 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=985 outsize=429 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=885 outsize=1967 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=959 outsize=1616 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=911 outsize=2170 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=6232 outsize=645 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=4173 outsize=841 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5687 outsize=1148 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5687 outsize=1095 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3628 outsize=1361 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5369 outsize=845 kw=LIGHTMAP_ON DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=5226 outsize=190 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=5226 outsize=319 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=5226 outsize=1342 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5226 outsize=435 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=5226 outsize=687 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=5226 outsize=2836 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3170 outsize=3307 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3170 outsize=4363 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=3170 outsize=3169 kw=DIRECTIONAL ok=1
+Unhandled exception: Readfile from pipe failed. GLE=De pipe is beëindigd.
+
+
+Quitting shader compiler process

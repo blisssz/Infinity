@@ -1,0 +1,51 @@
+Base path: D:/Tu/Unity/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-4-7816
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=8 type=0 insize=692 outsize=2470 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=790 outsize=1150 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=908 outsize=8052 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=788 outsize=531 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=985 outsize=563 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=992 outsize=856 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=992 outsize=429 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=885 outsize=522 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=959 outsize=447 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=911 outsize=447 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4173 outsize=115 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5687 outsize=1705 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3628 outsize=1045 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3151 outsize=182 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5226 outsize=1173 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5226 outsize=4508 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5226 outsize=868 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5226 outsize=613 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3170 outsize=894 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3170 outsize=3053 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3170 outsize=755 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3170 outsize=2704 kw=POINT_COOKIE ok=1
+Unhandled exception: Readfile from pipe failed. GLE=De pipe is beëindigd.
+
+
+Quitting shader compiler process

@@ -1,0 +1,43 @@
+Base path: D:/Tu/Unity/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-8-7192
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=1 insize=879 outsize=551 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=908 outsize=2040 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=885 outsize=919 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=959 outsize=2170 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=4173 outsize=920 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4173 outsize=115 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5687 outsize=985 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3628 outsize=883 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=5226 outsize=4510 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=5226 outsize=2665 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5226 outsize=4865 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5226 outsize=1331 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5226 outsize=1875 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3170 outsize=699 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3170 outsize=857 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3170 outsize=4331 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3170 outsize=636 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=3170 outsize=4404 kw=SPOT ok=1
+Unhandled exception: Readfile from pipe failed. GLE=De pipe is beëindigd.
+
+
+Quitting shader compiler process
